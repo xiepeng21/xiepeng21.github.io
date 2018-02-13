@@ -2,21 +2,42 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>xiepeng21.cn/2018-02-11/hello-world/</loc>
+    <loc>http://xiepeng21.cn/board/index.html</loc>
+    
+    <lastmod>2018-02-13T03:02:46.399Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://xiepeng21.cn/schedule/index.html</loc>
+    
+    <lastmod>2018-02-13T03:02:31.526Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://xiepeng21.cn/categories/index.html</loc>
+    
+    <lastmod>2018-02-13T03:02:15.982Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://xiepeng21.cn/hello-world.html</loc>
     
     <lastmod>2018-02-12T05:57:20.988Z</lastmod>
     
   </url>
   
   <url>
-    <loc>xiepeng21.cn/pictures/index.html</loc>
+    <loc>http://xiepeng21.cn/pictures/index.html</loc>
     
     <lastmod>2018-02-11T12:02:42.879Z</lastmod>
     
   </url>
   
   <url>
-    <loc>xiepeng21.cn/hadoop/index.html</loc>
+    <loc>http://xiepeng21.cn/hadoop/index.html</loc>
     
     <lastmod>2018-02-11T09:37:11.410Z</lastmod>
     

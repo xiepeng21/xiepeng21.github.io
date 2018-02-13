@@ -5,9 +5,9 @@
   <subtitle>己所不欲，勿施于人</subtitle>
   <link href="/atom.xml" rel="self"/>
   
-  <link href="xiepeng21.cn/"/>
+  <link href="http://xiepeng21.cn/"/>
   <updated>2018-02-12T05:57:20.988Z</updated>
-  <id>xiepeng21.cn/</id>
+  <id>http://xiepeng21.cn/</id>
   
   <author>
     <name>Peng Xie</name>
@@ -18,8 +18,8 @@
   
   <entry>
     <title>Hello World</title>
-    <link href="xiepeng21.cn/2018-02-11/hello-world/"/>
-    <id>xiepeng21.cn/2018-02-11/hello-world/</id>
+    <link href="http://xiepeng21.cn/hello-world.html"/>
+    <id>http://xiepeng21.cn/hello-world.html</id>
     <published>2018-02-11T06:53:29.393Z</published>
     <updated>2018-02-12T05:57:20.988Z</updated>
     
