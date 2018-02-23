@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title><![CDATA[Hello World]]></title>
-    <url>%2Fhello-world.html</url>
-    <content type="text"><![CDATA[Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick StartCreate a new post1$ hexo new "My New Post" More info: Writing Run server1$ hexo server More info: Server Generate static files1$ hexo generate More info: Generating Deploy to remote sites1$ hexo deploy More info: Deployment]]></content>
+    <title><![CDATA[常用Markdown语法文章写作格式]]></title>
+    <url>%2F%E5%B8%B8%E7%94%A8Markdown%E8%AF%AD%E6%B3%95%E6%96%87%E7%AB%A0%E5%86%99%E4%BD%9C%E6%A0%BC%E5%BC%8F.html</url>
+    <content type="text"><![CDATA[什么是Markdown？Markdown是一种轻量级的「标记语言」，通常为程序员群体所用，目前它已是全球最大的技术分享网站 GitHub 和技术问答网站 StackOverFlow 的御用书写格式。另外有越来越多的作家和写作爱好者也用Markdown语法进行写作，因为它能让人优雅地沉浸式记录，专注内容而不是纠结排版。下面将介绍7种常用的Markdown语法文章写作格式。 0 标题在markdown语法中，标题共分为六级，用#后面跟一个空格加上标题文字的形式即可。#的个数就是标题的级数。 123# 一级标题## 二级标题### 三级标题 一级标题二级标题三级标题1 列表1.1 无序列表1234- 列表1- 列表2 - 列表2.1- 列表3 列表1 列表2 列表2.1 列表31.2 有序列表 123451. 列表12. 列表2 1. 列表2.1 2. 列表2.23. 列表3 列表1 列表2 列表2.1 列表2.2 列表32 引用 1&gt; 知识就是力量！ --培根 知识就是力量！ –培根 3 粗体和斜体 123*这是斜体***这是粗体** 这是斜体 这是粗体 4 链接与图片12345#### 插入链接[百度](http://www.baidu.com &quot;百度&quot;)#### 插入图片![百度](http://offlintab.firefoxchina.cn/static/img/search/baidu_web.png &quot;百度图标&quot;) 插入链接百度 插入图片 5 分割线123这是第一部分内容，下面是华丽丽的分割线***这是第二部分内容 这是第一部分内容，下面是华丽丽的分割线 这是第二部分内容 6 表格1234身高 | 体重 | 年龄---|---|---175cm | 80kg | 30170cm | 70kg | 45 身高 体重 年龄 175cm 80kg 30 170cm 70kg 45 注：推荐使用markdown语法的编辑器编辑文章，例如有道云笔记或是MarkdownPad,如果忘记了Markdown语法，还可以用辅助工具栏上面的按钮，可视化输入代码，但熟悉了之后，最好直接键入代码，达到心中无尘，码字入神的境界。 参考 【简明版】有道云笔记Markdown指南 MarkdownPad编辑器]]></content>
   </entry>
 </search>
