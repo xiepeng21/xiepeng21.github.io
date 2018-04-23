@@ -2,30 +2,44 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://xiepeng21.cn/%E5%85%B3%E4%BA%8E%E7%A7%91%E5%AD%A6%E8%8C%83%E5%BC%8F%E7%9A%84%E6%84%9F%E6%82%9F.html</loc>
+    <loc>http://xiepeng21.cn/%E6%95%B0%E5%AD%A6%E4%B9%8B%E7%BE%8E%E7%AC%AC%E4%BA%8C%E7%89%88%E8%AF%BB%E5%90%8E%E6%84%9F.html</loc>
     
-    <lastmod>2018-04-20T10:30:17.543Z</lastmod>
+    <lastmod>2018-04-23T11:57:41.793Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://xiepeng21.cn/%E3%80%90%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E3%80%91%E9%98%B2%E6%AD%A2%E8%BF%87%E6%8B%9F%E5%90%88%E7%9A%84%E6%96%B9%E6%B3%95.html</loc>
+    <loc>http://xiepeng21.cn/%E5%85%B3%E4%BA%8E%E7%A7%91%E5%AD%A6%E8%8C%83%E5%BC%8F%E7%9A%84%E6%84%9F%E6%82%9F.html</loc>
     
-    <lastmod>2018-04-20T10:15:14.597Z</lastmod>
+    <lastmod>2018-04-23T11:57:29.202Z</lastmod>
     
   </url>
   
   <url>
     <loc>http://xiepeng21.cn/%E5%B8%B8%E7%94%A8Markdown%E8%AF%AD%E6%B3%95%E6%96%87%E7%AB%A0%E5%86%99%E4%BD%9C%E6%A0%BC%E5%BC%8F.html</loc>
     
-    <lastmod>2018-03-05T03:36:25.074Z</lastmod>
+    <lastmod>2018-04-23T11:53:48.715Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://xiepeng21.cn/%E6%95%B0%E5%AD%A6%E4%B9%8B%E7%BE%8E%E7%AC%AC%E4%BA%8C%E7%89%88%E8%AF%BB%E5%90%8E%E6%84%9F.html</loc>
+    <loc>http://xiepeng21.cn/%E3%80%90%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E3%80%91%E9%98%B2%E6%AD%A2%E8%BF%87%E6%8B%9F%E5%90%88%E7%9A%84%E6%96%B9%E6%B3%95.html</loc>
     
-    <lastmod>2018-03-05T03:30:17.774Z</lastmod>
+    <lastmod>2018-04-23T11:51:23.524Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://xiepeng21.cn/tags/index.html</loc>
+    
+    <lastmod>2018-04-23T11:49:55.473Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://xiepeng21.cn/categories/index.html</loc>
+    
+    <lastmod>2018-04-23T11:34:52.555Z</lastmod>
     
   </url>
   
@@ -40,27 +54,6 @@
     <loc>http://xiepeng21.cn/schedule/index.html</loc>
     
     <lastmod>2018-02-13T03:02:31.526Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://xiepeng21.cn/categories/index.html</loc>
-    
-    <lastmod>2018-02-13T03:02:15.982Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://xiepeng21.cn/pictures/index.html</loc>
-    
-    <lastmod>2018-02-11T12:02:42.879Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://xiepeng21.cn/hadoop/index.html</loc>
-    
-    <lastmod>2018-02-11T09:37:11.410Z</lastmod>
     
   </url>
   
