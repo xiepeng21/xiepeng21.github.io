@@ -325,7 +325,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://xiepeng21.cn/从排序数组中删除重复项.html">
+    <link itemprop="mainEntityOfPage" href="http://xiepeng21.cn/只出现一次的数字.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Peng Xie">
@@ -344,7 +344,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/从排序数组中删除重复项.html" itemprop="url">从排序数组中删除重复项</a></h1>
+                <a class="post-title-link" href="/只出现一次的数字.html" itemprop="url">只出现一次的数字</a></h1>
         
 
         <div class="post-meta">
@@ -356,7 +356,7 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-07-16T22:29:00+08:00">2018-07-16</time>
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-07-17T20:35:00+08:00">2018-07-17</time>
             
 
             
@@ -377,7 +377,7 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2018-07-16T22:36:09+08:00">2018-07-16</time>
+              <time title="更新于" itemprop="dateModified" datetime="2018-07-17T20:37:56+08:00">2018-07-17</time>
             
           </span>
 
@@ -429,11 +429,11 @@
       
         
           
-            <h5 id="要求："><a href="#要求：" class="headerlink" title="要求："></a>要求：</h5><p>给定一个排序数组，你需要在原地删除重复出现的元素，使得每个元素只出现一次，返回移除后数组的新长度。（不要使用额外的数组空间，你必须在原地修改输入数组并在使用O（1）额外空间的条件下完成）。</p>
-<h5 id="示例："><a href="#示例：" class="headerlink" title="示例："></a>示例：</h5><p>给定数组 nums = [1,1,2],<br>函数应该返回新的长度 2, 并且原数组 nums 的前两个元素被修改为 1, 2。你不需要考虑数组中超出新长度后面的元素。</p>
-<h5 id="分析："><a href="#分析：" class="headerlink" title="分析："></a>分析：</h5><p>遍历一遍数组，将不重复的数字保留，重复的数字覆盖，并删除末尾剩余的数字。</p>
-<h5 id="代码（python3）"><a href="#代码（python3）" class="headerlink" title="代码（python3）:"></a>代码（python3）:</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">class Solution:</span><br><span class="line">    def removeDuplicates(self, nums):</span><br><span class="line">        &quot;&quot;&quot;</span><br><span class="line">        :type nums: List[int]</span><br><span class="line">        :rtype: int</span><br><span class="line">        &quot;&quot;&quot;</span><br><span class="line">        k = 0</span><br><span class="line">        for i in range(1,len(nums)):</span><br><span class="line">            if nums[i] != nums[k]:</span><br><span class="line">                k = k+1</span><br><span class="line">                nums[k] = nums[i]</span><br><span class="line">        del nums[k+1:len(nums)]</span><br><span class="line">        return len(nums)</span><br></pre></td></tr></table></figure>
-<h5 id="参考资料："><a href="#参考资料：" class="headerlink" title="参考资料："></a>参考资料：</h5><p>1、LintCode（100）删除排序数组中的重复数字 <a href="https://blog.csdn.net/fly_yr/article/details/51548657" target="_blank" rel="noopener">https://blog.csdn.net/fly_yr/article/details/51548657</a></p>
+            <h5 id="要求："><a href="#要求：" class="headerlink" title="要求："></a>要求：</h5><p>给定一个非空整数数组，除了某个元素只出现一次以外，其余每个元素均出现两次。找出那个只出现了一次的元素。（算法应该具有线性时间复杂度）</p>
+<h5 id="示例："><a href="#示例：" class="headerlink" title="示例："></a>示例：</h5><p>（1）<br>输入: [2,2,1]<br><br>输出: 1<br><br>（2）<br>输入: [4,1,2,1,2]<br><br>输出: 4</p>
+<h5 id="分析："><a href="#分析：" class="headerlink" title="分析："></a>分析：</h5><p>为了找出只出现一次的元素，可以先将所有元素出现的次数变为一次，然后对所有元素求和，乘以2倍，减去原来数组元素的和，即为只出现一次的元素的值。</p>
+<h5 id="代码："><a href="#代码：" class="headerlink" title="代码："></a>代码：</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">class Solution:</span><br><span class="line">    def singleNumber(self, nums):</span><br><span class="line">        &quot;&quot;&quot;</span><br><span class="line">        :type nums: List[int]</span><br><span class="line">        :rtype: int</span><br><span class="line">        &quot;&quot;&quot;</span><br><span class="line">        return sum(set(nums))*2 - sum(nums)</span><br></pre></td></tr></table></figure>
+<h5 id="参考资料："><a href="#参考资料：" class="headerlink" title="参考资料："></a>参考资料：</h5><p>1、LeetCode 136. 只出现一次的数字 Python <a href="https://blog.csdn.net/ma412410029/article/details/80511684" target="_blank" rel="noopener">https://blog.csdn.net/ma412410029/article/details/80511684</a></p>
 
           
         
@@ -494,7 +494,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://xiepeng21.cn/Hexo常用命令.html">
+    <link itemprop="mainEntityOfPage" href="http://xiepeng21.cn/存在重复.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Peng Xie">
@@ -513,7 +513,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/Hexo常用命令.html" itemprop="url">Hexo常用命令</a></h1>
+                <a class="post-title-link" href="/存在重复.html" itemprop="url">存在重复</a></h1>
         
 
         <div class="post-meta">
@@ -525,7 +525,7 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-04-23T21:22:00+08:00">2018-04-23</time>
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-07-17T20:31:00+08:00">2018-07-17</time>
             
 
             
@@ -546,7 +546,7 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2018-04-23T21:37:28+08:00">2018-04-23</time>
+              <time title="更新于" itemprop="dateModified" datetime="2018-07-17T20:35:03+08:00">2018-07-17</time>
             
           </span>
 
@@ -562,7 +562,7 @@
                 <span class="post-meta-item-text">分类于</span>
               
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/经验技巧/" itemprop="url" rel="index"><span itemprop="name">经验技巧</span></a></span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/算法/" itemprop="url" rel="index"><span itemprop="name">算法</span></a></span>
 
                 
                 
@@ -597,14 +597,14 @@
 
       
         
-          <p>hexo的基本命令有13个，但平时发布文章，经常用的命令只有下列几个：<br>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/Hexo常用命令.html#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
+          
+            <h5 id="要求："><a href="#要求：" class="headerlink" title="要求："></a>要求：</h5><p>给定一个整数数组，判断是否存在重复元素。<br>如果任何值在数组中出现至少两次，函数返回 true。如果数组中每个元素都不相同，则返回 false。</p>
+<h5 id="示例："><a href="#示例：" class="headerlink" title="示例："></a>示例：</h5><p>(1)<br>输入: [1,2,3,1]<br><br>输出: true <br><br>(2)<br>输入: [1,2,3,4]<br><br>输出: false <br><br>(3)<br>输入: [1,1,1,3,3,4,3,2,4,2]<br><br>输出: true</p>
+<h5 id="分析："><a href="#分析：" class="headerlink" title="分析："></a>分析：</h5><p>直接元素之间比较，会很容易想到用两个for循环来进行元素间判断，但是这种方法会超时，所以不使用这种方法；可以通过将数组转换成集合，然后判断转换前的数组和集合的长度是否相等，如果相等，则没有重复元素，如果不相等，则存在重复元素。（这种方法，很巧妙，也应用了集合的特性）。</p>
+<h5 id="代码："><a href="#代码：" class="headerlink" title="代码："></a>代码：</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">class Solution:</span><br><span class="line">    def containsDuplicate(self, nums):</span><br><span class="line">        &quot;&quot;&quot;</span><br><span class="line">        :type nums: List[int]</span><br><span class="line">        :rtype: bool</span><br><span class="line">        &quot;&quot;&quot;</span><br><span class="line">        if (len(nums) != len(set(nums))):</span><br><span class="line">            return True</span><br><span class="line">        else:</span><br><span class="line">            return False</span><br></pre></td></tr></table></figure>
+<h5 id="参考资料："><a href="#参考资料：" class="headerlink" title="参考资料："></a>参考资料：</h5><p>1、LeetCode-containsDuplicate-存在重复 <a href="https://segmentfault.com/a/1190000014325206" target="_blank" rel="noopener">https://segmentfault.com/a/1190000014325206</a></p>
+
+          
         
       
     </div>
@@ -663,7 +663,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://xiepeng21.cn/关于科学范式的感悟.html">
+    <link itemprop="mainEntityOfPage" href="http://xiepeng21.cn/旋转数组.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Peng Xie">
@@ -682,7 +682,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/关于科学范式的感悟.html" itemprop="url">关于科学范式的感悟</a></h1>
+                <a class="post-title-link" href="/旋转数组.html" itemprop="url">旋转数组</a></h1>
         
 
         <div class="post-meta">
@@ -694,7 +694,7 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-04-20T18:29:16+08:00">2018-04-20</time>
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-07-17T20:27:00+08:00">2018-07-17</time>
             
 
             
@@ -715,7 +715,7 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2018-04-23T19:57:29+08:00">2018-04-23</time>
+              <time title="更新于" itemprop="dateModified" datetime="2018-07-17T20:30:51+08:00">2018-07-17</time>
             
           </span>
 
@@ -731,7 +731,7 @@
                 <span class="post-meta-item-text">分类于</span>
               
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/随笔感悟/" itemprop="url" rel="index"><span itemprop="name">随笔感悟</span></a></span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/算法/" itemprop="url" rel="index"><span itemprop="name">算法</span></a></span>
 
                 
                 
@@ -766,14 +766,14 @@
 
       
         
-          <p>一个国家的科学发展，在于体制机制和科学思想（文化氛围、理念），它就相当于科学发展的土壤。<br>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/关于科学范式的感悟.html#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
+          
+            <h5 id="要求："><a href="#要求：" class="headerlink" title="要求："></a>要求：</h5><p>给定一个数组，将数组中的元素向右移动 k 个位置，其中 k 是非负数。</p>
+<h5 id="示例："><a href="#示例：" class="headerlink" title="示例："></a>示例：</h5><p>（1）<br>输入: [1,2,3,4,5,6,7] 和 k = 3<br>输出: [5,6,7,1,2,3,4]解释:<br>向右旋转 1 步: [7,1,2,3,4,5,6]<br>向右旋转 2 步: [6,7,1,2,3,4,5]<br>向右旋转 3 步: [5,6,7,1,2,3,4] <br><br>（2）<br>输入: [-1,-100,3,99] 和 k = 2<br>输出: [3,99,-1,-100]<br>解释:<br>向右旋转 1 步: [99,-1,-100,3]<br>向右旋转 2 步: [3,99,-1,-100]</p>
+<h5 id="分析："><a href="#分析：" class="headerlink" title="分析："></a>分析：</h5><p>将前k个元素移动到数组的后半部分，将后(n-k)个元素移动到数组的前半部分。</p>
+<h5 id="代码："><a href="#代码：" class="headerlink" title="代码："></a>代码：</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">class Solution:</span><br><span class="line">    def rotate(self, nums, k):</span><br><span class="line">        &quot;&quot;&quot;</span><br><span class="line">        :type nums: List[int]</span><br><span class="line">        :type k: int</span><br><span class="line">        :rtype: void Do not return anything, modify nums in-place instead.</span><br><span class="line">        &quot;&quot;&quot;</span><br><span class="line">        n = len(nums) - k  </span><br><span class="line">        nums[:] = nums[n:] + nums[:n]</span><br></pre></td></tr></table></figure>
+<h5 id="拓展："><a href="#拓展：" class="headerlink" title="拓展："></a>拓展：</h5><p>1、这是一个直观的算法操作，以切片（分块）的方式操作数组，比较符合人的思维，但是要注重观察示例特征，否则容易陷入单个元素移动的怪圈。<br><br>2、nums[:] = 和 nums = 的区别：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; a = list(range(10))</span><br><span class="line">&gt;&gt;&gt; b = a</span><br><span class="line">&gt;&gt;&gt; a[:] = [0, 0, 0] # changes what a and b both refer to</span><br><span class="line">&gt;&gt;&gt; b</span><br><span class="line">[0, 0, 0]</span><br><span class="line"></span><br><span class="line">&gt;&gt;&gt; a = list(range(10))</span><br><span class="line">&gt;&gt;&gt; b = a</span><br><span class="line">&gt;&gt;&gt; a = [0, 0, 0] # a now refers to a different list than b</span><br><span class="line">&gt;&gt;&gt; b</span><br><span class="line">[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]</span><br></pre></td></tr></table></figure></p>
+
+          
         
       
     </div>
@@ -821,7 +821,7 @@
 
   
   <nav class="pagination">
-    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right"></i></a>
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><span class="space">&hellip;</span><a class="page-number" href="/page/4/">4</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right"></i></a>
   </nav>
 
 
@@ -868,7 +868,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">6</span>
+                    <span class="site-state-item-count">10</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -1017,7 +1017,7 @@
   </span>
   <span class="author" itemprop="copyrightHolder">Peng Xie</span></span>
   <span class="post-meta-divider">|</span>
-  <span class="post-count">博客全站共3.2k字</span>
+  <span class="post-count">博客全站共4.7k字</span>
   
   
 

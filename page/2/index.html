@@ -325,7 +325,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://xiepeng21.cn/【机器学习】防止过拟合的方法.html">
+    <link itemprop="mainEntityOfPage" href="http://xiepeng21.cn/买卖股票的最佳时机Ⅱ.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Peng Xie">
@@ -344,7 +344,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/【机器学习】防止过拟合的方法.html" itemprop="url">【机器学习】防止过拟合的方法</a></h1>
+                <a class="post-title-link" href="/买卖股票的最佳时机Ⅱ.html" itemprop="url">买卖股票的最佳时机Ⅱ</a></h1>
         
 
         <div class="post-meta">
@@ -356,7 +356,7 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-04-20T18:00:29+08:00">2018-04-20</time>
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-07-17T20:23:00+08:00">2018-07-17</time>
             
 
             
@@ -377,7 +377,7 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2018-04-23T19:51:23+08:00">2018-04-23</time>
+              <time title="更新于" itemprop="dateModified" datetime="2018-07-17T20:31:23+08:00">2018-07-17</time>
             
           </span>
 
@@ -393,7 +393,7 @@
                 <span class="post-meta-item-text">分类于</span>
               
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/机器学习/" itemprop="url" rel="index"><span itemprop="name">机器学习</span></a></span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/算法/" itemprop="url" rel="index"><span itemprop="name">算法</span></a></span>
 
                 
                 
@@ -428,14 +428,14 @@
 
       
         
-          <h1 id="什么是过拟合"><a href="#什么是过拟合" class="headerlink" title="什么是过拟合"></a>什么是过拟合</h1><p>从训练样本中尽可能学出适用于所有潜在样本的“普遍规律”，这样才能在遇到新样本时做出正确的判别。然而，当学习器把训练样本学得“太好”了的时候，很可能已经把训练样本自身的一些特点当作了所有潜在样本都会具有的一般性质，这样就会导致泛化性能下降。这种现象在机器学习中称为“过拟合”（overfitting）。<br>与过拟合相对的是“欠拟合”（underfitting），这是指对训练样本的一般性质尚未学好。<br>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/【机器学习】防止过拟合的方法.html#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
+          
+            <h5 id="要求："><a href="#要求：" class="headerlink" title="要求："></a>要求：</h5><p>给定一个数组，它的第 i 个元素是一支给定股票第 i 天的价格。<br>设计一个算法来计算你所能获取的最大利润。你可以尽可能地完成更多的交易（多次买卖一支股票）。<br>注意：你不能同时参与多笔交易（你必须在再次购买前出售掉之前的股票）。</p>
+<h5 id="示例："><a href="#示例：" class="headerlink" title="示例："></a>示例：</h5><p>（1）输入: [7,1,5,3,6,4]<br>输出: 7<br>解释: 在第 2 天（股票价格 = 1）的时候买入，在第 3 天（股票价格 = 5）的时候卖出, 这笔交易所能获得利润 = 5-1 = 4 。<br>     随后，在第 4 天（股票价格 = 3）的时候买入，在第 5 天（股票价格 = 6）的时候卖出, 这笔交易所能获得利润 = 6-3 = 3 。<br><br>（2）输入: [1,2,3,4,5]<br>输出: 4<br>解释: 在第 1 天（股票价格 = 1）的时候买入，在第 5 天 （股票价格 = 5）的时候卖出, 这笔交易所能获得利润 = 5-1 = 4 。<br>     注意你不能在第 1 天和第 2 天接连购买股票，之后再将它们卖出。<br>     因为这样属于同时参与了多笔交易，你必须在再次购买前出售掉之前的股票。<br><br>（3）输入: [7,6,4,3,1]<br>输出: 0<br>解释: 在这种情况下, 没有交易完成, 所以最大利润为 0。</p>
+<h5 id="分析："><a href="#分析：" class="headerlink" title="分析："></a>分析：</h5><p>通过比较相邻两个值的大小，低价买入，高价卖出，然后计算收益，另外考虑不买入和不卖出的特殊情况。</p>
+<h5 id="代码："><a href="#代码：" class="headerlink" title="代码："></a>代码：</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line">class Solution:</span><br><span class="line">    def maxProfit(self, prices):</span><br><span class="line">        &quot;&quot;&quot;</span><br><span class="line">        :type prices: List[int]</span><br><span class="line">        :rtype: int</span><br><span class="line">        &quot;&quot;&quot;</span><br><span class="line">        status = 0</span><br><span class="line">        length = len(prices)</span><br><span class="line">        result = 0</span><br><span class="line">        buy = 0</span><br><span class="line">        sell = 0</span><br><span class="line">        #当列表为空或者只有一位时，返回0</span><br><span class="line">        if length &lt;= 1:</span><br><span class="line">            return 0</span><br><span class="line">        else:</span><br><span class="line">            #遍历列表</span><br><span class="line">            for x in range(length-1):</span><br><span class="line">                #当状态为未买入，并且后一位的值大于前一位值时，买入，并且把状态改为买入</span><br><span class="line">                if status == 0 and prices[x] &lt; prices[x+1]:</span><br><span class="line">                    buy = prices[x]</span><br><span class="line">                    status = 1</span><br><span class="line">                #当状态为买入，并且后一位的值小于等于前一位值时，卖出，并且把状态改为未买入，累计result</span><br><span class="line">                elif status == 1 and prices[x] &gt;= prices[x+1]:</span><br><span class="line">                    sell = prices[x]</span><br><span class="line">                    result = result + sell - buy</span><br><span class="line">                    status = 0 # 正常情况最后状态一定是未买入，即status=0</span><br><span class="line">                    </span><br><span class="line">            #用来排除[5,4,3,2,1]这种一直没有买入的情况</span><br><span class="line">            if status == 0 and sell == 0:</span><br><span class="line">                result = 0</span><br><span class="line">            #用来解决[1,2,3,4,5]这种一直没有卖出的情况</span><br><span class="line">            elif status == 1:</span><br><span class="line">                result = result + prices[length-1] - buy</span><br><span class="line">            return result</span><br></pre></td></tr></table></figure>
+<h5 id="参考资料："><a href="#参考资料：" class="headerlink" title="参考资料："></a>参考资料：</h5><p>1、买卖股票的最佳时机 II-Python-LeetCode <a href="https://blog.csdn.net/linfeng886/article/details/80070804" target="_blank" rel="noopener">https://blog.csdn.net/linfeng886/article/details/80070804</a></p>
+
+          
         
       
     </div>
@@ -494,7 +494,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://xiepeng21.cn/数学之美第二版读后感.html">
+    <link itemprop="mainEntityOfPage" href="http://xiepeng21.cn/从排序数组中删除重复项.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Peng Xie">
@@ -513,7 +513,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/数学之美第二版读后感.html" itemprop="url">数学之美第二版读后感</a></h1>
+                <a class="post-title-link" href="/从排序数组中删除重复项.html" itemprop="url">从排序数组中删除重复项</a></h1>
         
 
         <div class="post-meta">
@@ -525,7 +525,7 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-03-05T10:33:12+08:00">2018-03-05</time>
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-07-16T22:29:00+08:00">2018-07-16</time>
             
 
             
@@ -546,7 +546,7 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2018-04-23T19:57:41+08:00">2018-04-23</time>
+              <time title="更新于" itemprop="dateModified" datetime="2018-07-16T22:36:09+08:00">2018-07-16</time>
             
           </span>
 
@@ -562,7 +562,7 @@
                 <span class="post-meta-item-text">分类于</span>
               
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/随笔感悟/" itemprop="url" rel="index"><span itemprop="name">随笔感悟</span></a></span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/算法/" itemprop="url" rel="index"><span itemprop="name">算法</span></a></span>
 
                 
                 
@@ -597,17 +597,14 @@
 
       
         
-          <h2 id="感悟："><a href="#感悟：" class="headerlink" title="感悟："></a>感悟：</h2><ul>
-<li>一个正确的数学模型形式上通常是简单的。从这本书中，领会到了，google背后算法的力量，数学的力量，大数据的力量。</li>
-<li>正确的数学模型可以将一个计算量看似很大的问题的计算复杂度大大降低，这便是数学的妙用。</li>
-<li>数学是描述世间万般表象背后规律的最好工具，它是简单的，它是美的。
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/数学之美第二版读后感.html#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
+          
+            <h5 id="要求："><a href="#要求：" class="headerlink" title="要求："></a>要求：</h5><p>给定一个排序数组，你需要在原地删除重复出现的元素，使得每个元素只出现一次，返回移除后数组的新长度。（不要使用额外的数组空间，你必须在原地修改输入数组并在使用O（1）额外空间的条件下完成）。</p>
+<h5 id="示例："><a href="#示例：" class="headerlink" title="示例："></a>示例：</h5><p>给定数组 nums = [1,1,2],<br>函数应该返回新的长度 2, 并且原数组 nums 的前两个元素被修改为 1, 2。你不需要考虑数组中超出新长度后面的元素。</p>
+<h5 id="分析："><a href="#分析：" class="headerlink" title="分析："></a>分析：</h5><p>遍历一遍数组，将不重复的数字保留，重复的数字覆盖，并删除末尾剩余的数字。</p>
+<h5 id="代码（python3）"><a href="#代码（python3）" class="headerlink" title="代码（python3）:"></a>代码（python3）:</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">class Solution:</span><br><span class="line">    def removeDuplicates(self, nums):</span><br><span class="line">        &quot;&quot;&quot;</span><br><span class="line">        :type nums: List[int]</span><br><span class="line">        :rtype: int</span><br><span class="line">        &quot;&quot;&quot;</span><br><span class="line">        k = 0</span><br><span class="line">        for i in range(1,len(nums)):</span><br><span class="line">            if nums[i] != nums[k]:</span><br><span class="line">                k = k+1</span><br><span class="line">                nums[k] = nums[i]</span><br><span class="line">        del nums[k+1:len(nums)]</span><br><span class="line">        return len(nums)</span><br></pre></td></tr></table></figure>
+<h5 id="参考资料："><a href="#参考资料：" class="headerlink" title="参考资料："></a>参考资料：</h5><p>1、LintCode（100）删除排序数组中的重复数字 <a href="https://blog.csdn.net/fly_yr/article/details/51548657" target="_blank" rel="noopener">https://blog.csdn.net/fly_yr/article/details/51548657</a></p>
+
+          
         
       
     </div>
@@ -666,7 +663,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://xiepeng21.cn/常用Markdown语法文章写作格式.html">
+    <link itemprop="mainEntityOfPage" href="http://xiepeng21.cn/Hexo常用命令.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Peng Xie">
@@ -685,7 +682,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/常用Markdown语法文章写作格式.html" itemprop="url">常用Markdown语法文章写作格式</a></h1>
+                <a class="post-title-link" href="/Hexo常用命令.html" itemprop="url">Hexo常用命令</a></h1>
         
 
         <div class="post-meta">
@@ -697,7 +694,7 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-02-23T18:42:57+08:00">2018-02-23</time>
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-04-23T21:22:00+08:00">2018-04-23</time>
             
 
             
@@ -718,7 +715,7 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2018-04-23T19:53:48+08:00">2018-04-23</time>
+              <time title="更新于" itemprop="dateModified" datetime="2018-04-23T21:37:28+08:00">2018-04-23</time>
             
           </span>
 
@@ -769,10 +766,10 @@
 
       
         
-          <p>什么是Markdown？Markdown是一种轻量级的「标记语言」，通常为程序员群体所用，目前它已是全球最大的技术分享网站 GitHub 和技术问答网站 StackOverFlow 的御用书写格式。另外有越来越多的作家和写作爱好者也用Markdown语法进行写作，因为它能让人优雅地沉浸式记录，专注内容而不是纠结排版。下面将介绍7种常用的Markdown语法文章写作格式。<br>
+          <p>hexo的基本命令有13个，但平时发布文章，经常用的命令只有下列几个：<br>
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/常用Markdown语法文章写作格式.html#more" rel="contents">
+            <a class="btn" href="/Hexo常用命令.html#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
@@ -824,7 +821,7 @@
 
   
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="page-number current">2</span>
+    <a class="extend prev" rel="prev" href="/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><a class="page-number" href="/page/4/">4</a><a class="extend next" rel="next" href="/page/3/"><i class="fa fa-angle-right"></i></a>
   </nav>
 
 
@@ -871,7 +868,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">6</span>
+                    <span class="site-state-item-count">10</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -1020,7 +1017,7 @@
   </span>
   <span class="author" itemprop="copyrightHolder">Peng Xie</span></span>
   <span class="post-meta-divider">|</span>
-  <span class="post-count">博客全站共3.2k字</span>
+  <span class="post-count">博客全站共4.7k字</span>
   
   
 
