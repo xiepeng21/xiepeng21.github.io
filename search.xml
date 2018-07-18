@@ -1,6 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[两个数组的交集Ⅱ]]></title>
+    <url>%2F%E4%B8%A4%E4%B8%AA%E6%95%B0%E7%BB%84%E7%9A%84%E4%BA%A4%E9%9B%86%E2%85%A1.html</url>
+    <content type="text"><![CDATA[要求：给定两个数组，写一个方法来计算它们的交集。 示例：给定 nums1 = [1, 2, 2, 1], nums2 = [2, 2], 返回 [2, 2]. 分析：先对两个数组由小到大排序，用两个指针index1和index2遍历两个数组，比较对应元素的大小，如果相等，则添加进result数组，如果不相等，元素小的数组指针加一，最终其中一个数组遍历结束，就停止程序。 代码：1234567891011121314151617181920212223class Solution: def intersect(self, nums1, nums2): &quot;&quot;&quot; :type nums1: List[int] :type nums2: List[int] :rtype: List[int] &quot;&quot;&quot; result = [] nums1.sort() nums2.sort() index1, index2 = 0, 0 n1, n2 = len(nums1), len(nums2) while index1 &lt; n1 and index2 &lt; n2: if nums1[index1] == nums2[index2]: result.append(nums1[index1]) index1 += 1 index2 += 1 elif nums1[index1] &gt; nums2[index2]: index2 += 1 else: index1 += 1 return result 参考资料：1、两数组的交 II https://blog.csdn.net/guoziqing506/article/details/51569488]]></content>
+      <categories>
+        <category>算法</category>
+      </categories>
+      <tags>
+        <tag>数组</tag>
+        <tag>python</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[只出现一次的数字]]></title>
     <url>%2F%E5%8F%AA%E5%87%BA%E7%8E%B0%E4%B8%80%E6%AC%A1%E7%9A%84%E6%95%B0%E5%AD%97.html</url>
     <content type="text"><![CDATA[要求：给定一个非空整数数组，除了某个元素只出现一次以外，其余每个元素均出现两次。找出那个只出现了一次的元素。（算法应该具有线性时间复杂度） 示例：（1）输入: [2,2,1]输出: 1（2）输入: [4,1,2,1,2]输出: 4 分析：为了找出只出现一次的元素，可以先将所有元素出现的次数变为一次，然后对所有元素求和，乘以2倍，减去原来数组元素的和，即为只出现一次的元素的值。 代码：1234567class Solution: def singleNumber(self, nums): &quot;&quot;&quot; :type nums: List[int] :rtype: int &quot;&quot;&quot; return sum(set(nums))*2 - sum(nums) 参考资料：1、LeetCode 136. 只出现一次的数字 Python https://blog.csdn.net/ma412410029/article/details/80511684]]></content>
