@@ -1,6 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[使用pyecharts绘制关系图]]></title>
+    <url>%2F%E4%BD%BF%E7%94%A8pyecharts%E7%BB%98%E5%88%B6%E5%85%B3%E7%B3%BB%E5%9B%BE.html</url>
+    <content type="text"><![CDATA[首先介绍下什么是pyecharts, 它是使用Echarts来生成图表的一个python库，我们知道Echarts是百度的一个开源数据可视化javascript库，提供了大量的图表样例，功能十分强大，用起来很方便。今天我们就用pyecharts来绘制一个关系图。 最终效果 接下来，讲一讲实现步骤： 安装pyecharts（以Ubuntu系统为例）: 1$ pip install pyecharts 或者1234$ git clone https://github.com/pyecharts/pyecharts.git$ cd pyecharts$ pip install -r requirements.txt$ python setup.py install 代码实现12345678910111213141516171819from pyecharts import Graphnodes = [&#123;&quot;name&quot;: &quot;node1&quot;, &quot;symbolSize&quot;: 10&#125;, &#123;&quot;name&quot;: &quot;node2&quot;, &quot;symbolSize&quot;: 20&#125;, &#123;&quot;name&quot;: &quot;node3&quot;, &quot;symbolSize&quot;: 30&#125;, &#123;&quot;name&quot;: &quot;node4&quot;, &quot;symbolSize&quot;: 40&#125;, &#123;&quot;name&quot;: &quot;node5&quot;, &quot;symbolSize&quot;: 50&#125;, &#123;&quot;name&quot;: &quot;node6&quot;, &quot;symbolSize&quot;: 40&#125;, &#123;&quot;name&quot;: &quot;node7&quot;, &quot;symbolSize&quot;: 30&#125;, &#123;&quot;name&quot;: &quot;node8&quot;, &quot;symbolSize&quot;: 20&#125;]links = []for i in nodes: for j in nodes: links.append(&#123;&quot;source&quot;: i.get(&apos;name&apos;), &quot;target&quot;: j.get(&apos;name&apos;)&#125;)graph = Graph(&quot;关系图-环形布局示例&quot;)graph.add(&quot;&quot;, nodes, links, is_label_show=True, graph_repulsion=8000, graph_layout=&apos;circular&apos;, label_text_color=None)graph.render(&quot;graph.html&quot;) 最后，还要提到的一点是，以上只是简单的示例，仅供学习，实际使用过程中，需要适当调整代码，达到更好的效果，或选用其他可视化方式。 参考资料 https://github.com/pyecharts/pyecharts pyecharts http://echarts.baidu.com/ echarts https://mp.weixin.qq.com/s?__biz=MzI5NDY1MjQzNA==&amp;mid=2247487437&amp;idx=1&amp;sn=0a79cfc2870cdfe87ce32d73bd64483f&amp;chksm=ec5ed0b0db2959a609b22be2ebdc792132f40870ce56c10856085acbd24cca5c2971e03c63e9&amp;scene=21#wechat_redirect 人生苦短，我要用pyecharts画图]]></content>
+      <categories>
+        <category>经验技巧</category>
+      </categories>
+      <tags>
+        <tag>可视化</tag>
+        <tag>python</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[加一]]></title>
     <url>%2F%E5%8A%A0%E4%B8%80.html</url>
     <content type="text"><![CDATA[要求：给定一个非负整数组成的非空数组，在该数的基础上加一，返回一个新的数组。最高位数字存放在数组的首位， 数组中每个元素只存储一个数字。你可以假设除了整数 0 之外，这个整数不会以零开头。 示例：（1）输入: [1,2,3]输出: [1,2,4]解释: 输入数组表示数字 123。（2）输入: [4,3,2,1]输出: [4,3,2,2]解释: 输入数组表示数字 4321。 分析：从后向前判断每个元素，如有进位，将进位符flag置为1，将元素所在位变为0；若无进位，将元素所在位+1，并将进位符置0，最后判断进位符标志，如果为1，则在数组第0位增加一个元素1。 代码：123456789101112131415161718class Solution: def plusOne(self, digits): &quot;&quot;&quot; :type digits: List[int] :rtype: List[int] &quot;&quot;&quot; flag = 1 for i in range(len(digits)-1,-1,-1): if flag + digits[i] == 10: digits[i] = 0 flag = 1 else: digits[i] = digits[i] + flag flag = 0 if flag == 1: digits.insert(0,1) return digits 参考资料：1、leetcode 66.Plus One python https://blog.csdn.net/mario_mmh/article/details/79845181]]></content>
