@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://xiepeng21.cn/"/>
-  <updated>2018-10-04T15:03:07.682Z</updated>
+  <updated>2018-10-05T04:01:30.529Z</updated>
   <id>http://xiepeng21.cn/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Two Sum</title>
+    <link href="http://xiepeng21.cn/Two-Sum.html"/>
+    <id>http://xiepeng21.cn/Two-Sum.html</id>
+    <published>2018-10-05T03:54:00.000Z</published>
+    <updated>2018-10-05T04:01:30.529Z</updated>
+    
+    <content type="html"><![CDATA[<h5 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h5><p>Given an array of integers, return indices of the two numbers such that they add up to a specific target.<br>You may assume that each input would have exactly one solution, and you may not use the same element twice.<br><a id="more"></a></p><h5 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h5><p>Given nums = [2, 7, 11, 15], target = 9,<br>Because nums[0] + nums[1] = 2 + 7 = 9,<br>return [0, 1].</p><h5 id="算法思路"><a href="#算法思路" class="headerlink" title="算法思路"></a>算法思路</h5><p>比较容易想到的是，用两个循环，两两元素之和与目标数比较，但是算法复杂度为O（n^2）,会超时。另一种办法是用字典和枚举，用字典存储查询过的值和索引，用枚举来遍历整个列表，算法复杂度为O（n）,所以推荐用第二种方法。</p><h5 id="代码实现（python3）"><a href="#代码实现（python3）" class="headerlink" title="代码实现（python3）"></a>代码实现（python3）</h5><p>方法一：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">class Solution:</span><br><span class="line">    def twoSum(self, nums, target):</span><br><span class="line">        &quot;&quot;&quot;</span><br><span class="line">        :type nums: List[int]</span><br><span class="line">        :type target: int</span><br><span class="line">        :rtype: List[int]</span><br><span class="line">        &quot;&quot;&quot;</span><br><span class="line">        r = []</span><br><span class="line">        l = len(nums)</span><br><span class="line">        for i in range(l):</span><br><span class="line">            for j in range(l):</span><br><span class="line">                if nums[i] + nums[j] == target and i != j:</span><br><span class="line">                    return i,j</span><br><span class="line">        r = r.append(i,j)</span><br><span class="line">        return r</span><br></pre></td></tr></table></figure></p><p>方法二：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">class Solution:</span><br><span class="line">    def twoSum(self, nums, target):</span><br><span class="line">        &quot;&quot;&quot;</span><br><span class="line">        :type nums: List[int]</span><br><span class="line">        :type target: int</span><br><span class="line">        :rtype: List[int]</span><br><span class="line">        &quot;&quot;&quot;</span><br><span class="line">        collected = &#123;&#125;</span><br><span class="line">        for i,x in enumerate(nums):</span><br><span class="line">            diff = target-x</span><br><span class="line">            if diff in collected:</span><br><span class="line">                return [collected[diff], i]</span><br><span class="line">            collected[x] = i</span><br></pre></td></tr></table></figure></p><h5 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h5><ol><li><a href="https://www.tutorialspoint.com/python/python_dictionary.htm" target="_blank" rel="noopener">https://www.tutorialspoint.com/python/python_dictionary.htm</a> Python - Dictionary</li><li><a href="https://www.geeksforgeeks.org/enumerate-in-python/" target="_blank" rel="noopener">https://www.geeksforgeeks.org/enumerate-in-python/</a> Enumerate() in Python</li><li><a href="https://leetcode.com/problems/two-sum/" target="_blank" rel="noopener">https://leetcode.com/problems/two-sum/</a> two-sum</li></ol>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h5 id=&quot;问题描述&quot;&gt;&lt;a href=&quot;#问题描述&quot; class=&quot;headerlink&quot; title=&quot;问题描述&quot;&gt;&lt;/a&gt;问题描述&lt;/h5&gt;&lt;p&gt;Given an array of integers, return indices of the two numbers such that they add up to a specific target.&lt;br&gt;You may assume that each input would have exactly one solution, and you may not use the same element twice.&lt;br&gt;
+    
+    </summary>
+    
+      <category term="算法" scheme="http://xiepeng21.cn/categories/%E7%AE%97%E6%B3%95/"/>
+    
+    
+      <category term="python" scheme="http://xiepeng21.cn/tags/python/"/>
+    
+      <category term="算法" scheme="http://xiepeng21.cn/tags/%E7%AE%97%E6%B3%95/"/>
+    
+  </entry>
   
   <entry>
     <title>使用pyecharts绘制关系图</title>
