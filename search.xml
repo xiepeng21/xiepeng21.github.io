@@ -1,6 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[Add Two Numbers]]></title>
+    <url>%2FAdd-Two-Numbers.html</url>
+    <content type="text"><![CDATA[问题描述You are given two non-empty linked lists representing two non-negative integers. The digits are stored in reverse order and each of their nodes contain a single digit. Add the two numbers and return it as a linked list. You may assume the two numbers do not contain any leading zero, except the number 0 itself. 示例Input: (2 -&gt; 4 -&gt; 3) + (5 -&gt; 6 -&gt; 4)Output: 7 -&gt; 0 -&gt; 8Explanation: 342 + 465 = 807. 算法思路在这个问题中，有两种解决思路，第一种是先将输入的链表计算结果转换成字符串，再转成链表输出；第二种是直接采用链表操作。总的来说，第一种方法更易于理解，执行效率更高（runtime is 116ms），第二种方法更加复杂，耗时更长(runtime is 288ms),所以推荐使用方法一。 代码实现（Python3）方法一：1234567891011121314151617181920class Solution: def addTwoNumbers(self, l1, l2): twoSum = str(int(self.getNumber(l1)) + int(self.getNumber(l2))) return self.constructList(twoSum) def getNumber(self, head): current, res = head, [] while current: res.append(str(current.val)) current = current.next return &apos;&apos;.join(res[::-1]) # reverse res def constructList(self, num): head = ListNode(int(num[-1])) # get the last element current = head for i in range(len(num) - 2, -1, -1): # range(start, stop, step) node = ListNode(int(num[i])) current.next = node current = current.next return head 方法二：12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152535455# Definition for singly-linked list.# class ListNode(object):# def __init__(self, x):# self.val = x# self.next = Noneclass Solution(object): def addTwoNumbers(self, l1, l2): &quot;&quot;&quot; :type l1: ListNode :type l2: ListNode :rtype: ListNode &quot;&quot;&quot; # Carry over place holder. carry = 0 # Create a dummy head, tail node to keep track of the start and end of the list dummy_head = tail = ListNode(0) # While there are elements in either list we add them while l1 or l2: # Get the two element values, if there is not a node use 0 num_one = l1.val if l1 else 0 num_two = l2.val if l2 else 0 # Get the new total with two numbers plus the carry over new_sum = num_one + num_two + carry # Check to see if the number will create a carry if new_sum &gt; 9: # Set the tail node equal to the new node. tail.next = ListNode(new_sum - 10) # Set a carry because the number was larger than 10 carry = 1 else: tail.next = ListNode(new_sum) carry = 0 # Set the tail node to the new tail. tail = tail.next # Set the current nodes to the next number if l1: l1 = l1.next if l2: l2 = l2.next # Once the adding has been completed if there is still a carry append a new node if carry: tail.next = ListNode(carry) # Return the first number set, dummy head was just a place holder. The tail would point to the last node and not the first number in the linked list. return dummy_head.next 参考资料 https://stackoverflow.com/questions/31633635/what-is-the-meaning-of-inta-1-in-python What is the meaning of “int(a[::-1])” in Python? https://stackoverflow.com/questions/930397/getting-the-last-element-of-a-list-in-python Getting the last element of a list in Python https://www.pythoncentral.io/pythons-range-function-explained/ Python’s range() Function Explained https://leetcode.com/problems/add-two-numbers/ Add Two Numbers]]></content>
+      <categories>
+        <category>算法</category>
+      </categories>
+      <tags>
+        <tag>算法</tag>
+        <tag>python</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[Two Sum]]></title>
     <url>%2FTwo-Sum.html</url>
     <content type="text"><![CDATA[问题描述Given an array of integers, return indices of the two numbers such that they add up to a specific target.You may assume that each input would have exactly one solution, and you may not use the same element twice. 示例Given nums = [2, 7, 11, 15], target = 9,Because nums[0] + nums[1] = 2 + 7 = 9,return [0, 1]. 算法思路比较容易想到的是，用两个循环，两两元素之和与目标数比较，但是算法复杂度为O（n^2）,会超时。另一种办法是用字典和枚举，用字典存储查询过的值和索引，用枚举来遍历整个列表，算法复杂度为O（n）,所以推荐用第二种方法。 代码实现（python3）方法一：123456789101112131415class Solution: def twoSum(self, nums, target): &quot;&quot;&quot; :type nums: List[int] :type target: int :rtype: List[int] &quot;&quot;&quot; r = [] l = len(nums) for i in range(l): for j in range(l): if nums[i] + nums[j] == target and i != j: return i,j r = r.append(i,j) return r 方法二：12345678910111213class Solution: def twoSum(self, nums, target): &quot;&quot;&quot; :type nums: List[int] :type target: int :rtype: List[int] &quot;&quot;&quot; collected = &#123;&#125; for i,x in enumerate(nums): diff = target-x if diff in collected: return [collected[diff], i] collected[x] = i 参考资料 https://www.tutorialspoint.com/python/python_dictionary.htm Python - Dictionary https://www.geeksforgeeks.org/enumerate-in-python/ Enumerate() in Python https://leetcode.com/problems/two-sum/ two-sum]]></content>
@@ -8,8 +20,8 @@
         <category>算法</category>
       </categories>
       <tags>
-        <tag>python</tag>
         <tag>算法</tag>
+        <tag>python</tag>
       </tags>
   </entry>
   <entry>
@@ -32,8 +44,8 @@
         <category>算法</category>
       </categories>
       <tags>
-        <tag>数组</tag>
         <tag>python</tag>
+        <tag>数组</tag>
       </tags>
   </entry>
   <entry>
@@ -44,8 +56,8 @@
         <category>算法</category>
       </categories>
       <tags>
-        <tag>数组</tag>
         <tag>python</tag>
+        <tag>数组</tag>
       </tags>
   </entry>
   <entry>
@@ -56,8 +68,8 @@
         <category>算法</category>
       </categories>
       <tags>
-        <tag>数组</tag>
         <tag>python</tag>
+        <tag>数组</tag>
       </tags>
   </entry>
   <entry>
@@ -68,8 +80,8 @@
         <category>算法</category>
       </categories>
       <tags>
-        <tag>数组</tag>
         <tag>python</tag>
+        <tag>数组</tag>
       </tags>
   </entry>
   <entry>
@@ -80,8 +92,8 @@
         <category>算法</category>
       </categories>
       <tags>
-        <tag>数组</tag>
         <tag>python</tag>
+        <tag>数组</tag>
       </tags>
   </entry>
   <entry>
@@ -92,8 +104,8 @@
         <category>算法</category>
       </categories>
       <tags>
-        <tag>数组</tag>
         <tag>python</tag>
+        <tag>数组</tag>
       </tags>
   </entry>
   <entry>
@@ -104,8 +116,8 @@
         <category>算法</category>
       </categories>
       <tags>
-        <tag>数组</tag>
         <tag>python</tag>
+        <tag>数组</tag>
       </tags>
   </entry>
   <entry>

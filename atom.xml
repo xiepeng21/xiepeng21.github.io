@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://xiepeng21.cn/"/>
-  <updated>2018-10-05T04:01:30.529Z</updated>
+  <updated>2018-10-06T02:04:52.232Z</updated>
   <id>http://xiepeng21.cn/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Add Two Numbers</title>
+    <link href="http://xiepeng21.cn/Add-Two-Numbers.html"/>
+    <id>http://xiepeng21.cn/Add-Two-Numbers.html</id>
+    <published>2018-10-06T02:03:00.000Z</published>
+    <updated>2018-10-06T02:04:52.232Z</updated>
+    
+    <content type="html"><![CDATA[<h5 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h5><p>You are given two non-empty linked lists representing two non-negative integers. The digits are stored in reverse order and each of their nodes contain a single digit. Add the two numbers and return it as a linked list.</p><p>You may assume the two numbers do not contain any leading zero, except the number 0 itself.<br><a id="more"></a></p><h5 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h5><p>Input: (2 -&gt; 4 -&gt; 3) + (5 -&gt; 6 -&gt; 4)<br>Output: 7 -&gt; 0 -&gt; 8<br>Explanation: 342 + 465 = 807.</p><h5 id="算法思路"><a href="#算法思路" class="headerlink" title="算法思路"></a>算法思路</h5><p>在这个问题中，有两种解决思路，第一种是先将输入的链表计算结果转换成字符串，再转成链表输出；第二种是直接采用链表操作。总的来说，第一种方法更易于理解，执行效率更高（runtime is 116ms），第二种方法更加复杂，耗时更长(runtime is 288ms),所以推荐使用方法一。</p><h5 id="代码实现（Python3）"><a href="#代码实现（Python3）" class="headerlink" title="代码实现（Python3）"></a>代码实现（Python3）</h5><p>方法一：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">class Solution:</span><br><span class="line">    def addTwoNumbers(self, l1, l2):</span><br><span class="line">        twoSum = str(int(self.getNumber(l1)) + int(self.getNumber(l2)))</span><br><span class="line">        return self.constructList(twoSum)</span><br><span class="line">    </span><br><span class="line">    def getNumber(self, head):</span><br><span class="line">        current, res = head, []</span><br><span class="line">        while current:</span><br><span class="line">            res.append(str(current.val))</span><br><span class="line">            current = current.next</span><br><span class="line">        return &apos;&apos;.join(res[::-1]) # reverse res</span><br><span class="line"></span><br><span class="line">    def constructList(self, num):</span><br><span class="line">        head = ListNode(int(num[-1])) # get the last element</span><br><span class="line">        current = head</span><br><span class="line">        for i in range(len(num) - 2, -1, -1): # range(start, stop, step)</span><br><span class="line">            node = ListNode(int(num[i]))</span><br><span class="line">            current.next = node</span><br><span class="line">            current = current.next</span><br><span class="line">        return head</span><br></pre></td></tr></table></figure></p><p>方法二：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br></pre></td><td class="code"><pre><span class="line"># Definition for singly-linked list.</span><br><span class="line"># class ListNode(object):</span><br><span class="line">#     def __init__(self, x):</span><br><span class="line">#         self.val = x</span><br><span class="line">#         self.next = None</span><br><span class="line"></span><br><span class="line">class Solution(object):</span><br><span class="line">    def addTwoNumbers(self, l1, l2):</span><br><span class="line">        &quot;&quot;&quot;</span><br><span class="line">        :type l1: ListNode</span><br><span class="line">        :type l2: ListNode</span><br><span class="line">        :rtype: ListNode</span><br><span class="line">        &quot;&quot;&quot;</span><br><span class="line">        </span><br><span class="line">        # Carry over place holder.</span><br><span class="line">        carry = 0</span><br><span class="line">        </span><br><span class="line">        # Create a dummy head, tail node to keep track of the start and end of the list</span><br><span class="line">        dummy_head = tail = ListNode(0)</span><br><span class="line">        </span><br><span class="line">        # While there are elements in either list we add them</span><br><span class="line">        while l1 or l2:</span><br><span class="line">            </span><br><span class="line">            # Get the two element values, if there is not a node use 0</span><br><span class="line">            num_one = l1.val if l1 else 0</span><br><span class="line">            num_two = l2.val if l2 else 0</span><br><span class="line">            </span><br><span class="line">            # Get the new total with two numbers plus the carry over</span><br><span class="line">            new_sum = num_one + num_two + carry</span><br><span class="line">            </span><br><span class="line">            # Check to see if the number will create a carry</span><br><span class="line">            if new_sum &gt; 9:</span><br><span class="line">                # Set the tail node equal to the new node.</span><br><span class="line">                tail.next = ListNode(new_sum - 10)</span><br><span class="line">                # Set a carry because the number was larger than 10</span><br><span class="line">                carry = 1</span><br><span class="line">            else:</span><br><span class="line">                tail.next = ListNode(new_sum)</span><br><span class="line">                carry = 0</span><br><span class="line">                </span><br><span class="line">            # Set the tail node to the new tail.</span><br><span class="line">            tail = tail.next </span><br><span class="line">            </span><br><span class="line">            # Set the current nodes to the next number</span><br><span class="line">            if l1:</span><br><span class="line">                l1 = l1.next</span><br><span class="line">            if l2:</span><br><span class="line">                l2 = l2.next</span><br><span class="line">        </span><br><span class="line">        # Once the adding has been completed if there is still a carry append a new node</span><br><span class="line">        if carry:</span><br><span class="line">            tail.next = ListNode(carry)</span><br><span class="line">            </span><br><span class="line">        # Return the first number set, dummy head was just a place holder. The tail would point to the last node and not the first number in the linked list.</span><br><span class="line">        return dummy_head.next</span><br></pre></td></tr></table></figure></p><h5 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h5><ol><li><a href="https://stackoverflow.com/questions/31633635/what-is-the-meaning-of-inta-1-in-python" target="_blank" rel="noopener">https://stackoverflow.com/questions/31633635/what-is-the-meaning-of-inta-1-in-python</a> What is the meaning of “int(a[::-1])” in Python?</li><li><a href="https://stackoverflow.com/questions/930397/getting-the-last-element-of-a-list-in-python" target="_blank" rel="noopener">https://stackoverflow.com/questions/930397/getting-the-last-element-of-a-list-in-python</a> Getting the last element of a list in Python</li><li><a href="https://www.pythoncentral.io/pythons-range-function-explained/" target="_blank" rel="noopener">https://www.pythoncentral.io/pythons-range-function-explained/</a> Python’s range() Function Explained</li><li><a href="https://leetcode.com/problems/add-two-numbers/" target="_blank" rel="noopener">https://leetcode.com/problems/add-two-numbers/</a> Add Two Numbers</li></ol>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h5 id=&quot;问题描述&quot;&gt;&lt;a href=&quot;#问题描述&quot; class=&quot;headerlink&quot; title=&quot;问题描述&quot;&gt;&lt;/a&gt;问题描述&lt;/h5&gt;&lt;p&gt;You are given two non-empty linked lists representing two non-negative integers. The digits are stored in reverse order and each of their nodes contain a single digit. Add the two numbers and return it as a linked list.&lt;/p&gt;
+&lt;p&gt;You may assume the two numbers do not contain any leading zero, except the number 0 itself.&lt;br&gt;
+    
+    </summary>
+    
+      <category term="算法" scheme="http://xiepeng21.cn/categories/%E7%AE%97%E6%B3%95/"/>
+    
+    
+      <category term="算法" scheme="http://xiepeng21.cn/tags/%E7%AE%97%E6%B3%95/"/>
+    
+      <category term="python" scheme="http://xiepeng21.cn/tags/python/"/>
+    
+  </entry>
   
   <entry>
     <title>Two Sum</title>
@@ -34,9 +59,9 @@
       <category term="算法" scheme="http://xiepeng21.cn/categories/%E7%AE%97%E6%B3%95/"/>
     
     
-      <category term="python" scheme="http://xiepeng21.cn/tags/python/"/>
-    
       <category term="算法" scheme="http://xiepeng21.cn/tags/%E7%AE%97%E6%B3%95/"/>
+    
+      <category term="python" scheme="http://xiepeng21.cn/tags/python/"/>
     
   </entry>
   
@@ -82,9 +107,9 @@
       <category term="算法" scheme="http://xiepeng21.cn/categories/%E7%AE%97%E6%B3%95/"/>
     
     
-      <category term="数组" scheme="http://xiepeng21.cn/tags/%E6%95%B0%E7%BB%84/"/>
-    
       <category term="python" scheme="http://xiepeng21.cn/tags/python/"/>
+    
+      <category term="数组" scheme="http://xiepeng21.cn/tags/%E6%95%B0%E7%BB%84/"/>
     
   </entry>
   
@@ -106,9 +131,9 @@
       <category term="算法" scheme="http://xiepeng21.cn/categories/%E7%AE%97%E6%B3%95/"/>
     
     
-      <category term="数组" scheme="http://xiepeng21.cn/tags/%E6%95%B0%E7%BB%84/"/>
-    
       <category term="python" scheme="http://xiepeng21.cn/tags/python/"/>
+    
+      <category term="数组" scheme="http://xiepeng21.cn/tags/%E6%95%B0%E7%BB%84/"/>
     
   </entry>
   
@@ -130,9 +155,9 @@
       <category term="算法" scheme="http://xiepeng21.cn/categories/%E7%AE%97%E6%B3%95/"/>
     
     
-      <category term="数组" scheme="http://xiepeng21.cn/tags/%E6%95%B0%E7%BB%84/"/>
-    
       <category term="python" scheme="http://xiepeng21.cn/tags/python/"/>
+    
+      <category term="数组" scheme="http://xiepeng21.cn/tags/%E6%95%B0%E7%BB%84/"/>
     
   </entry>
   
@@ -154,9 +179,9 @@
       <category term="算法" scheme="http://xiepeng21.cn/categories/%E7%AE%97%E6%B3%95/"/>
     
     
-      <category term="数组" scheme="http://xiepeng21.cn/tags/%E6%95%B0%E7%BB%84/"/>
-    
       <category term="python" scheme="http://xiepeng21.cn/tags/python/"/>
+    
+      <category term="数组" scheme="http://xiepeng21.cn/tags/%E6%95%B0%E7%BB%84/"/>
     
   </entry>
   
@@ -178,9 +203,9 @@
       <category term="算法" scheme="http://xiepeng21.cn/categories/%E7%AE%97%E6%B3%95/"/>
     
     
-      <category term="数组" scheme="http://xiepeng21.cn/tags/%E6%95%B0%E7%BB%84/"/>
-    
       <category term="python" scheme="http://xiepeng21.cn/tags/python/"/>
+    
+      <category term="数组" scheme="http://xiepeng21.cn/tags/%E6%95%B0%E7%BB%84/"/>
     
   </entry>
   
@@ -202,9 +227,9 @@
       <category term="算法" scheme="http://xiepeng21.cn/categories/%E7%AE%97%E6%B3%95/"/>
     
     
-      <category term="数组" scheme="http://xiepeng21.cn/tags/%E6%95%B0%E7%BB%84/"/>
-    
       <category term="python" scheme="http://xiepeng21.cn/tags/python/"/>
+    
+      <category term="数组" scheme="http://xiepeng21.cn/tags/%E6%95%B0%E7%BB%84/"/>
     
   </entry>
   
@@ -226,9 +251,9 @@
       <category term="算法" scheme="http://xiepeng21.cn/categories/%E7%AE%97%E6%B3%95/"/>
     
     
-      <category term="数组" scheme="http://xiepeng21.cn/tags/%E6%95%B0%E7%BB%84/"/>
-    
       <category term="python" scheme="http://xiepeng21.cn/tags/python/"/>
+    
+      <category term="数组" scheme="http://xiepeng21.cn/tags/%E6%95%B0%E7%BB%84/"/>
     
   </entry>
   
