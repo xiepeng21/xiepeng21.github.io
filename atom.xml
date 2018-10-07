@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://xiepeng21.cn/"/>
-  <updated>2018-10-06T02:04:52.232Z</updated>
+  <updated>2018-10-07T03:54:04.708Z</updated>
   <id>http://xiepeng21.cn/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Longest Substring Without Repeating Characters</title>
+    <link href="http://xiepeng21.cn/Longest-Substring-Without-Repeating-Characters.html"/>
+    <id>http://xiepeng21.cn/Longest-Substring-Without-Repeating-Characters.html</id>
+    <published>2018-10-07T03:52:00.000Z</published>
+    <updated>2018-10-07T03:54:04.708Z</updated>
+    
+    <content type="html"><![CDATA[<h5 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h5><p>Given a string, find the length of the longest substring without repeating characters.<br><a id="more"></a></p><h5 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h5><ul><li>Example 1:</li></ul><p>Input: “abcabcbb”<br>Output: 3<br>Explanation: The answer is “abc”, with the length of 3. </p><ul><li>Example 2:</li></ul><p>Input: “bbbbb”<br>Output: 1<br>Explanation: The answer is “b”, with the length of 1.</p><ul><li>Example 3:</li></ul><p>Input: “pwwkew”<br>Output: 3<br>Explanation: The answer is “wke”, with the length of 3.<br>             Note that the answer must be a substring, “pwke” is a subsequence and not a substring. </p><h5 id="算法思路"><a href="#算法思路" class="headerlink" title="算法思路"></a>算法思路</h5><p>该问题可以简化成查找一个字符串中最长的不重复字符子串，返回子串的长度。第一种方法用到了枚举和字典，感觉有点绕，我没有理解清楚；第二种方法采用了字符串的split方法，很巧妙，不过比较难想到。两种方法相比，第二种方法运行时间更短（84ms &lt; 88ms）,推荐使用第二种方法，感兴趣的朋友可以研究下第一种方法。</p><p>方法一：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">class Solution(object):</span><br><span class="line">    def lengthOfLongestSubstring(self, s):</span><br><span class="line">        dic, res, start, = &#123;&#125;, 0, 0</span><br><span class="line">        for i, ch in enumerate(s):</span><br><span class="line">            # when char already in dictionary</span><br><span class="line">            if ch in dic:</span><br><span class="line">                # check length from start of string to index</span><br><span class="line">                res = max(res, i-start)</span><br><span class="line">                # update start of string index to the next index</span><br><span class="line">                start = max(start, dic[ch]+1)</span><br><span class="line">            # add/update char to/of dictionary </span><br><span class="line">            dic[ch] = i</span><br><span class="line">        # answer is either in the begining/middle OR some mid to the end of string</span><br><span class="line">        return max(res, len(s)-start)</span><br></pre></td></tr></table></figure></p><p>方法二：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">class Solution:</span><br><span class="line">    def lengthOfLongestSubstring(self, s):</span><br><span class="line">        &quot;&quot;&quot;</span><br><span class="line">        :type s: str</span><br><span class="line">        :rtype: int</span><br><span class="line">        &quot;&quot;&quot;</span><br><span class="line">        maxnum,num,ss =0,0,&apos;&apos;</span><br><span class="line">        for each in s:</span><br><span class="line">            if each in ss:</span><br><span class="line">                ss = ss.split(each)[-1]+each # ‘’+each</span><br><span class="line">                num =len(ss)</span><br><span class="line">            else:</span><br><span class="line">                num += 1</span><br><span class="line">                ss += each</span><br><span class="line">                if num&gt;=maxnum:</span><br><span class="line">                    maxnum = num</span><br><span class="line">        return maxnum</span><br></pre></td></tr></table></figure></p><h5 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h5><ol><li><a href="https://www.w3schools.com/python/ref_string_split.asp" target="_blank" rel="noopener">https://www.w3schools.com/python/ref_string_split.asp</a> Python String split() Method</li><li><a href="https://leetcode.com/problems/longest-substring-without-repeating-characters/" target="_blank" rel="noopener">https://leetcode.com/problems/longest-substring-without-repeating-characters/</a> longest-substring-without-repeating-characters</li></ol>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h5 id=&quot;问题描述&quot;&gt;&lt;a href=&quot;#问题描述&quot; class=&quot;headerlink&quot; title=&quot;问题描述&quot;&gt;&lt;/a&gt;问题描述&lt;/h5&gt;&lt;p&gt;Given a string, find the length of the longest substring without repeating characters.&lt;br&gt;
+    
+    </summary>
+    
+      <category term="算法" scheme="http://xiepeng21.cn/categories/%E7%AE%97%E6%B3%95/"/>
+    
+    
+      <category term="算法" scheme="http://xiepeng21.cn/tags/%E7%AE%97%E6%B3%95/"/>
+    
+      <category term="python" scheme="http://xiepeng21.cn/tags/python/"/>
+    
+  </entry>
   
   <entry>
     <title>Add Two Numbers</title>
