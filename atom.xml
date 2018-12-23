@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://xiepeng21.cn/"/>
-  <updated>2018-11-07T14:21:06.076Z</updated>
+  <updated>2018-12-23T15:43:01.570Z</updated>
   <id>http://xiepeng21.cn/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>如何计算经过CNN（卷积神经网络）卷积后的图片大小</title>
+    <link href="http://xiepeng21.cn/CNN_Image_Size.html"/>
+    <id>http://xiepeng21.cn/CNN_Image_Size.html</id>
+    <published>2018-12-23T15:36:00.000Z</published>
+    <updated>2018-12-23T15:43:01.570Z</updated>
+    
+    <content type="html"><![CDATA[<p>对于给定的一张图片，如下图，32×32大小的输入图片经过一次卷积之后，如何得到28×28的feature maps?<br><a id="more"></a><br><img src="https://i.loli.net/2018/12/23/5c1fac8bbfa94.png" alt="Screenshot_2018-09-29-15-31-03-61.png"></p><p>设卷积前的图像大小为n×n, 过滤器大小为f×f, padding(填充)为p, stride(步长)为 s, 则卷积后的图像 m×m 大小为：<br>m = (n+2p-f)/s + 1.（如果商不为整数，向下取整）</p><p>(32+0-5)/1 + 1 = 28. 所以上图中的输入图片经过一次卷积之后，得到了28×28的feature maps.</p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;对于给定的一张图片，如下图，32×32大小的输入图片经过一次卷积之后，如何得到28×28的feature maps?&lt;br&gt;
+    
+    </summary>
+    
+      <category term="机器学习" scheme="http://xiepeng21.cn/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
+    
+    
+      <category term="深度学习" scheme="http://xiepeng21.cn/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/"/>
+    
+      <category term="CNN" scheme="http://xiepeng21.cn/tags/CNN/"/>
+    
+  </entry>
   
   <entry>
     <title>L1、L2正则化</title>

@@ -1,6 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[如何计算经过CNN（卷积神经网络）卷积后的图片大小]]></title>
+    <url>%2FCNN_Image_Size.html</url>
+    <content type="text"><![CDATA[对于给定的一张图片，如下图，32×32大小的输入图片经过一次卷积之后，如何得到28×28的feature maps? 设卷积前的图像大小为n×n, 过滤器大小为f×f, padding(填充)为p, stride(步长)为 s, 则卷积后的图像 m×m 大小为：m = (n+2p-f)/s + 1.（如果商不为整数，向下取整） (32+0-5)/1 + 1 = 28. 所以上图中的输入图片经过一次卷积之后，得到了28×28的feature maps.]]></content>
+      <categories>
+        <category>机器学习</category>
+      </categories>
+      <tags>
+        <tag>深度学习</tag>
+        <tag>CNN</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[L1、L2正则化]]></title>
     <url>%2FL1%E3%80%81L2%E6%AD%A3%E5%88%99%E5%8C%96.html</url>
     <content type="text"><![CDATA[简介在之前的博客里介绍了常见的防止过拟合的方法,这次主要就其中的L1、L2正则化方法进行介绍并比较它们的不同。 我们使用L1、L2正则化方法的目的，在于减缓机器学习中的过拟合现象。 为什么它们能减缓过拟合现象呢，由于正则项的加入，使得权重矩阵的值减小，因为它假定一个拥有更小权重矩阵的神经网络将产生更简单的模型，进而在一定程度上能减缓过拟合。 在L1和L2中，所采用的正则化项是不同的。 在L2中，其中λ是正则化参数，这个超参数可以通过优化得到更好的结果。同时L2正则化也被称为权重衰减（weight decay），因为它使权重衰减至0（但不等于0）。 在L1中，我们惩罚权重的绝对值，这里权重可能会减至0。因此，当我们尝试压缩我们的模型时，使用L1十分有用。在其他方面，我们更倾向于使用L2。 参考资料 http://xiepeng21.cn/%E3%80%90%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E3%80%91%E9%98%B2%E6%AD%A2%E8%BF%87%E6%8B%9F%E5%90%88%E7%9A%84%E6%96%B9%E6%B3%95.html 【机器学习】防止过拟合的方法 https://www.analyticsvidhya.com/blog/2018/04/fundamentals-deep-learning-regularization-techniques/ An Overview of Regularization Techniques in Deep Learning (with Python code)]]></content>
