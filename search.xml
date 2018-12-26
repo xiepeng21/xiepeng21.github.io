@@ -1,6 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[Deep Learning]]></title>
+    <url>%2FDeep%20Learning.html</url>
+    <content type="text"><![CDATA[这篇文章是关于深度学习的一篇综述文章。是由深度学习界的三位大牛（YannLeCun, Yoshua Bengio, Geoffrey Hinton）所写。在本文中，介绍了反向传播算法、卷积神经网络与循环神经网络的经典应用，给出了细致的图解和深入的分析，是深度学习中的高质量的重要文献。文中还提到了深度学习未来的发展，比如将卷积神经网络、循环神经网络与强化学习结合起来；将表示学习与复杂推理结合起来。 多层神经网络及反向传播 给图片加描述文字 Show and Tell: A Neural Image Caption Generator; Show, attend and tell: Neural image caption generation with visual attention 循环神经网络单元 论文链接LeCun Y, Bengio Y, Hinton G. Deep learning[J]. nature, 2015, 521(7553): 436.]]></content>
+      <categories>
+        <category>机器学习</category>
+      </categories>
+      <tags>
+        <tag>深度学习</tag>
+        <tag>论文笔记</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Attentive Crowd Flow Machines]]></title>
+    <url>%2FAttentive%20Crowd%20Flow%20Machines.html</url>
+    <content type="text"><![CDATA[文章提出了一种称为注意力人流量机器（Attentive Crowd Flow Machines）的神经网络模型，该模型能够通过带注意力机制的时变数据动态表示来推断城市人流量的演变。它由两层ConvLSTM单元以及用于空间权重预测的卷积层组成。文章的创新点在于：1.引入了注意力机制 2.权重时变的融合方法。 论文链接Liu L, Zhang R, Peng J, et al. Attentive Crowd Flow Machines[C]//2018 ACM Multimedia Conference on Multimedia Conference. ACM, 2018: 1553-1561.]]></content>
+      <categories>
+        <category>机器学习</category>
+      </categories>
+      <tags>
+        <tag>CNN</tag>
+        <tag>论文笔记</tag>
+        <tag>LSTM</tag>
+        <tag>Crowd Flow Prediction</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[如何计算经过CNN（卷积神经网络）卷积后的图片大小]]></title>
     <url>%2FCNN_Image_Size.html</url>
     <content type="text"><![CDATA[对于给定的一张图片，如下图，32×32大小的输入图片经过一次卷积之后，如何得到28×28的feature maps? 设卷积前的图像大小为n×n, 过滤器大小为f×f, padding(填充)为p, stride(步长)为 s, 则卷积后的图像 m×m 大小为：m = (n+2p-f)/s + 1.（如果商不为整数，向下取整） (32+0-5)/1 + 1 = 28. 所以上图中的输入图片经过一次卷积之后，得到了28×28的feature maps.]]></content>
