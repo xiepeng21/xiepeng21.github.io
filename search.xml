@@ -1,6 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[2019年书单]]></title>
+    <url>%2F2019%E5%B9%B4%E4%B9%A6%E5%8D%95.html</url>
+    <content type="text"><![CDATA[新的一年，保持阅读和写作的习惯，每一个月读完一本书写一篇读书笔记(简称三一计划)。 今年准备阅读的12本书如下: 易经 理想国 自然哲学的数学原理 红楼梦 瓦尔登湖 科学与方法 科学史 小王子 西方哲学史 中国哲学简史 从一到无穷大 美的历程]]></content>
+      <categories>
+        <category>随笔感悟</category>
+      </categories>
+      <tags>
+        <tag>书籍</tag>
+        <tag>阅读</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[Deep Learning]]></title>
     <url>%2FDeep%20Learning.html</url>
     <content type="text"><![CDATA[这篇文章是关于深度学习的一篇综述文章。是由深度学习界的三位大牛（YannLeCun, Yoshua Bengio, Geoffrey Hinton）所写。在本文中，介绍了反向传播算法、卷积神经网络与循环神经网络的经典应用，给出了细致的图解和深入的分析，是深度学习中的高质量的重要文献。文中还提到了深度学习未来的发展，比如将卷积神经网络、循环神经网络与强化学习结合起来；将表示学习与复杂推理结合起来。 多层神经网络及反向传播 给图片加描述文字 Show and Tell: A Neural Image Caption Generator; Show, attend and tell: Neural image caption generation with visual attention 循环神经网络单元 论文链接LeCun Y, Bengio Y, Hinton G. Deep learning[J]. nature, 2015, 521(7553): 436.]]></content>
@@ -8,8 +20,8 @@
         <category>机器学习</category>
       </categories>
       <tags>
-        <tag>深度学习</tag>
         <tag>论文笔记</tag>
+        <tag>深度学习</tag>
       </tags>
   </entry>
   <entry>
@@ -21,9 +33,9 @@
       </categories>
       <tags>
         <tag>CNN</tag>
-        <tag>论文笔记</tag>
         <tag>LSTM</tag>
         <tag>Crowd Flow Prediction</tag>
+        <tag>论文笔记</tag>
       </tags>
   </entry>
   <entry>
@@ -34,8 +46,8 @@
         <category>机器学习</category>
       </categories>
       <tags>
-        <tag>深度学习</tag>
         <tag>CNN</tag>
+        <tag>深度学习</tag>
       </tags>
   </entry>
   <entry>

@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://xiepeng21.cn/"/>
-  <updated>2018-12-26T15:32:00.348Z</updated>
+  <updated>2019-01-02T14:45:33.947Z</updated>
   <id>http://xiepeng21.cn/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>2019年书单</title>
+    <link href="http://xiepeng21.cn/2019%E5%B9%B4%E4%B9%A6%E5%8D%95.html"/>
+    <id>http://xiepeng21.cn/2019年书单.html</id>
+    <published>2019-01-02T14:41:00.000Z</published>
+    <updated>2019-01-02T14:45:33.947Z</updated>
+    
+    <content type="html"><![CDATA[<p>新的一年，保持阅读和写作的习惯，每一个月读完一本书写一篇读书笔记(简称三一计划)。<br><a id="more"></a><br><img src="https://i.loli.net/2019/01/02/5c2cce1e92717.jpg" alt="booklist.jpg"></p><p>今年准备阅读的12本书如下:</p><ol><li>易经</li><li>理想国</li><li>自然哲学的数学原理</li><li>红楼梦</li><li>瓦尔登湖</li><li>科学与方法</li><li>科学史</li><li>小王子</li><li>西方哲学史</li><li>中国哲学简史</li><li>从一到无穷大</li><li>美的历程</li></ol>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;新的一年，保持阅读和写作的习惯，每一个月读完一本书写一篇读书笔记(简称三一计划)。&lt;br&gt;
+    
+    </summary>
+    
+      <category term="随笔感悟" scheme="http://xiepeng21.cn/categories/%E9%9A%8F%E7%AC%94%E6%84%9F%E6%82%9F/"/>
+    
+    
+      <category term="书籍" scheme="http://xiepeng21.cn/tags/%E4%B9%A6%E7%B1%8D/"/>
+    
+      <category term="阅读" scheme="http://xiepeng21.cn/tags/%E9%98%85%E8%AF%BB/"/>
+    
+  </entry>
   
   <entry>
     <title>Deep Learning</title>
@@ -34,9 +58,9 @@
       <category term="机器学习" scheme="http://xiepeng21.cn/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
     
     
-      <category term="深度学习" scheme="http://xiepeng21.cn/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/"/>
-    
       <category term="论文笔记" scheme="http://xiepeng21.cn/tags/%E8%AE%BA%E6%96%87%E7%AC%94%E8%AE%B0/"/>
+    
+      <category term="深度学习" scheme="http://xiepeng21.cn/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/"/>
     
   </entry>
   
@@ -60,11 +84,11 @@
     
       <category term="CNN" scheme="http://xiepeng21.cn/tags/CNN/"/>
     
-      <category term="论文笔记" scheme="http://xiepeng21.cn/tags/%E8%AE%BA%E6%96%87%E7%AC%94%E8%AE%B0/"/>
-    
       <category term="LSTM" scheme="http://xiepeng21.cn/tags/LSTM/"/>
     
       <category term="Crowd Flow Prediction" scheme="http://xiepeng21.cn/tags/Crowd-Flow-Prediction/"/>
+    
+      <category term="论文笔记" scheme="http://xiepeng21.cn/tags/%E8%AE%BA%E6%96%87%E7%AC%94%E8%AE%B0/"/>
     
   </entry>
   
@@ -86,9 +110,9 @@
       <category term="机器学习" scheme="http://xiepeng21.cn/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
     
     
-      <category term="深度学习" scheme="http://xiepeng21.cn/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/"/>
-    
       <category term="CNN" scheme="http://xiepeng21.cn/tags/CNN/"/>
+    
+      <category term="深度学习" scheme="http://xiepeng21.cn/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/"/>
     
   </entry>
   
@@ -471,30 +495,6 @@
     
     
       <category term="读后感" scheme="http://xiepeng21.cn/tags/%E8%AF%BB%E5%90%8E%E6%84%9F/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>常用Markdown语法文章写作格式</title>
-    <link href="http://xiepeng21.cn/%E5%B8%B8%E7%94%A8Markdown%E8%AF%AD%E6%B3%95%E6%96%87%E7%AB%A0%E5%86%99%E4%BD%9C%E6%A0%BC%E5%BC%8F.html"/>
-    <id>http://xiepeng21.cn/常用Markdown语法文章写作格式.html</id>
-    <published>2018-02-23T10:42:57.000Z</published>
-    <updated>2018-04-23T11:53:48.715Z</updated>
-    
-    <content type="html"><![CDATA[<p>什么是Markdown？Markdown是一种轻量级的「标记语言」，通常为程序员群体所用，目前它已是全球最大的技术分享网站 GitHub 和技术问答网站 StackOverFlow 的御用书写格式。另外有越来越多的作家和写作爱好者也用Markdown语法进行写作，因为它能让人优雅地沉浸式记录，专注内容而不是纠结排版。下面将介绍7种常用的Markdown语法文章写作格式。<br><a id="more"></a></p><h2 id="标题"><a href="#标题" class="headerlink" title="标题"></a>标题</h2><p>在markdown语法中，标题共分为六级，用#后面跟一个空格加上标题文字的形式即可。#的个数就是标题的级数。</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"># 一级标题</span><br><span class="line">## 二级标题</span><br><span class="line">### 三级标题</span><br></pre></td></tr></table></figure><p><img src="http://res.cloudinary.com/pengpeng/image/upload/v1520220021/%E5%B8%B8%E7%94%A8markdown%E8%AF%AD%E6%B3%95%E6%96%87%E7%AB%A0/1.png" alt="image"></p><h2 id="列表"><a href="#列表" class="headerlink" title="列表"></a>列表</h2><h3 id="无序列表"><a href="#无序列表" class="headerlink" title="无序列表"></a>无序列表</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">- 列表1</span><br><span class="line">- 列表2</span><br><span class="line">    - 列表2.1</span><br><span class="line">- 列表3</span><br></pre></td></tr></table></figure><p><img src="http://res.cloudinary.com/pengpeng/image/upload/v1520220021/%E5%B8%B8%E7%94%A8markdown%E8%AF%AD%E6%B3%95%E6%96%87%E7%AB%A0/2.png" alt="image"></p><h3 id="有序列表"><a href="#有序列表" class="headerlink" title="有序列表"></a>有序列表</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">1. 列表1</span><br><span class="line">2. 列表2</span><br><span class="line">    1. 列表2.1</span><br><span class="line">    2. 列表2.2</span><br><span class="line">3. 列表3</span><br></pre></td></tr></table></figure><p><img src="http://res.cloudinary.com/pengpeng/image/upload/v1520220021/%E5%B8%B8%E7%94%A8markdown%E8%AF%AD%E6%B3%95%E6%96%87%E7%AB%A0/3.png" alt="image"></p><h2 id="引用"><a href="#引用" class="headerlink" title="引用"></a>引用</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&gt; 知识就是力量！ --培根</span><br></pre></td></tr></table></figure><p><img src="http://res.cloudinary.com/pengpeng/image/upload/v1520220021/%E5%B8%B8%E7%94%A8markdown%E8%AF%AD%E6%B3%95%E6%96%87%E7%AB%A0/4.png" alt="image"></p><h2 id="粗体和斜体"><a href="#粗体和斜体" class="headerlink" title="粗体和斜体"></a>粗体和斜体</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">*这是斜体*</span><br><span class="line"></span><br><span class="line">**这是粗体**</span><br></pre></td></tr></table></figure><p><img src="http://res.cloudinary.com/pengpeng/image/upload/v1520220021/%E5%B8%B8%E7%94%A8markdown%E8%AF%AD%E6%B3%95%E6%96%87%E7%AB%A0/5.png" alt="image"></p><h2 id="链接与图片"><a href="#链接与图片" class="headerlink" title="链接与图片"></a>链接与图片</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">#### 插入链接</span><br><span class="line">[百度](http://www.baidu.com &quot;百度&quot;)</span><br><span class="line"></span><br><span class="line">#### 插入图片</span><br><span class="line">![百度](http://offlintab.firefoxchina.cn/static/img/search/baidu_web.png &quot;百度图标&quot;)</span><br></pre></td></tr></table></figure><p><img src="http://res.cloudinary.com/pengpeng/image/upload/v1520220021/%E5%B8%B8%E7%94%A8markdown%E8%AF%AD%E6%B3%95%E6%96%87%E7%AB%A0/6.png" alt="image"></p><h2 id="分割线"><a href="#分割线" class="headerlink" title="分割线"></a>分割线</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">这是第一部分内容，下面是华丽丽的分割线</span><br><span class="line">***</span><br><span class="line">这是第二部分内容</span><br></pre></td></tr></table></figure><p><img src="http://res.cloudinary.com/pengpeng/image/upload/v1520220021/%E5%B8%B8%E7%94%A8markdown%E8%AF%AD%E6%B3%95%E6%96%87%E7%AB%A0/7.png" alt="image"></p><h2 id="表格"><a href="#表格" class="headerlink" title="表格"></a>表格</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">身高 | 体重 | 年龄</span><br><span class="line">---|---|---</span><br><span class="line">175cm | 80kg | 30</span><br><span class="line">170cm | 70kg | 45</span><br></pre></td></tr></table></figure><p><img src="http://res.cloudinary.com/pengpeng/image/upload/v1520220021/%E5%B8%B8%E7%94%A8markdown%E8%AF%AD%E6%B3%95%E6%96%87%E7%AB%A0/8.png" alt="image"></p><p><em>注：推荐使用markdown语法的编辑器编辑文章，例如有道云笔记或是MarkdownPad,如果忘记了Markdown语法，还可以用辅助工具栏上面的按钮，可视化输入代码，但熟悉了之后，最好直接键入代码，达到心中无尘，码字入神的境界。</em></p><h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><ol><li><a href="http://note.youdao.com/iyoudao/?p=2411" target="_blank" rel="noopener">【简明版】有道云笔记Markdown指南</a></li><li><a href="http://markdownpad.com/" target="_blank" rel="noopener">MarkdownPad编辑器</a></li></ol>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;什么是Markdown？Markdown是一种轻量级的「标记语言」，通常为程序员群体所用，目前它已是全球最大的技术分享网站 GitHub 和技术问答网站 StackOverFlow 的御用书写格式。另外有越来越多的作家和写作爱好者也用Markdown语法进行写作，因为它能让人优雅地沉浸式记录，专注内容而不是纠结排版。下面将介绍7种常用的Markdown语法文章写作格式。&lt;br&gt;
-    
-    </summary>
-    
-      <category term="经验技巧" scheme="http://xiepeng21.cn/categories/%E7%BB%8F%E9%AA%8C%E6%8A%80%E5%B7%A7/"/>
-    
-    
-      <category term="Markdown" scheme="http://xiepeng21.cn/tags/Markdown/"/>
-    
-      <category term="写作" scheme="http://xiepeng21.cn/tags/%E5%86%99%E4%BD%9C/"/>
     
   </entry>
   
