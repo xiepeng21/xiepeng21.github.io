@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://xiepeng21.cn/"/>
-  <updated>2019-01-02T14:45:33.947Z</updated>
+  <updated>2019-01-03T15:50:27.976Z</updated>
   <id>http://xiepeng21.cn/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>红楼梦书评</title>
+    <link href="http://xiepeng21.cn/%E7%BA%A2%E6%A5%BC%E6%A2%A6%E4%B9%A6%E8%AF%84.html"/>
+    <id>http://xiepeng21.cn/红楼梦书评.html</id>
+    <published>2019-01-03T15:38:00.000Z</published>
+    <updated>2019-01-03T15:50:27.976Z</updated>
+    
+    <content type="html"><![CDATA[<p>昨天看完了《红楼梦》一书，还记得是从去年暑假开始看，差不多花了半年时间。因为之前身边有同学看，加之暑假打算看一看书，之前也没有看过，只零星看过红楼梦的电视剧，所以就选择了《红楼梦》。<br><a id="more"></a><br><img src="https://i.loli.net/2019/01/03/5c2e2d1619a35.jpg" alt="s1070959.jpg"></p><p>在这本书里，见证了大量的诗词、中医养生的内容以及人物言谈对话，感受到了荣、宁二府由兴到衰再到“兴”的过程，还有贾宝玉、林黛玉、薛宝钗、老太太以及王熙凤等人生命历程。<br><br>其中，给我印象最深的是薛宝钗，她不仅担负起薛家的家庭重担，也要承受着贾宝玉无心功名、沉迷闺阁的反传统压力。而她自己却是旧传统下的知书达理、贤良之妻。这个世界给了她不公，但她却从容应对，不刻薄他人，维持着家庭的和睦，不失高贵和优雅。<br><br>总的来说，这本书，包含的内容及其丰富，从日常生活到社会万象，囊括万千，值得一读，甚至多读。<br><br><strong>注:</strong> 这本书，我看的是Kindle电子书版本（《红楼梦》（古典名著普及文库）），在当当上搜索了一下，红楼梦有不同版本，推荐人民文学出版社的《红楼梦》。</p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;昨天看完了《红楼梦》一书，还记得是从去年暑假开始看，差不多花了半年时间。因为之前身边有同学看，加之暑假打算看一看书，之前也没有看过，只零星看过红楼梦的电视剧，所以就选择了《红楼梦》。&lt;br&gt;
+    
+    </summary>
+    
+      <category term="随笔感悟" scheme="http://xiepeng21.cn/categories/%E9%9A%8F%E7%AC%94%E6%84%9F%E6%82%9F/"/>
+    
+    
+      <category term="书籍" scheme="http://xiepeng21.cn/tags/%E4%B9%A6%E7%B1%8D/"/>
+    
+      <category term="阅读" scheme="http://xiepeng21.cn/tags/%E9%98%85%E8%AF%BB/"/>
+    
+  </entry>
   
   <entry>
     <title>2019年书单</title>
@@ -58,9 +82,9 @@
       <category term="机器学习" scheme="http://xiepeng21.cn/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
     
     
-      <category term="论文笔记" scheme="http://xiepeng21.cn/tags/%E8%AE%BA%E6%96%87%E7%AC%94%E8%AE%B0/"/>
-    
       <category term="深度学习" scheme="http://xiepeng21.cn/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/"/>
+    
+      <category term="论文笔记" scheme="http://xiepeng21.cn/tags/%E8%AE%BA%E6%96%87%E7%AC%94%E8%AE%B0/"/>
     
   </entry>
   
@@ -82,13 +106,13 @@
       <category term="机器学习" scheme="http://xiepeng21.cn/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
     
     
+      <category term="论文笔记" scheme="http://xiepeng21.cn/tags/%E8%AE%BA%E6%96%87%E7%AC%94%E8%AE%B0/"/>
+    
       <category term="CNN" scheme="http://xiepeng21.cn/tags/CNN/"/>
     
       <category term="LSTM" scheme="http://xiepeng21.cn/tags/LSTM/"/>
     
       <category term="Crowd Flow Prediction" scheme="http://xiepeng21.cn/tags/Crowd-Flow-Prediction/"/>
-    
-      <category term="论文笔记" scheme="http://xiepeng21.cn/tags/%E8%AE%BA%E6%96%87%E7%AC%94%E8%AE%B0/"/>
     
   </entry>
   
@@ -110,9 +134,9 @@
       <category term="机器学习" scheme="http://xiepeng21.cn/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
     
     
-      <category term="CNN" scheme="http://xiepeng21.cn/tags/CNN/"/>
-    
       <category term="深度学习" scheme="http://xiepeng21.cn/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/"/>
+    
+      <category term="CNN" scheme="http://xiepeng21.cn/tags/CNN/"/>
     
   </entry>
   
@@ -470,31 +494,6 @@
       <category term="机器学习" scheme="http://xiepeng21.cn/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
     
       <category term="过拟合" scheme="http://xiepeng21.cn/tags/%E8%BF%87%E6%8B%9F%E5%90%88/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>数学之美第二版读后感</title>
-    <link href="http://xiepeng21.cn/%E6%95%B0%E5%AD%A6%E4%B9%8B%E7%BE%8E%E7%AC%AC%E4%BA%8C%E7%89%88%E8%AF%BB%E5%90%8E%E6%84%9F.html"/>
-    <id>http://xiepeng21.cn/数学之美第二版读后感.html</id>
-    <published>2018-03-05T02:33:12.000Z</published>
-    <updated>2018-04-23T11:57:41.793Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="感悟："><a href="#感悟：" class="headerlink" title="感悟："></a>感悟：</h2><ul><li>一个正确的数学模型形式上通常是简单的。从这本书中，领会到了，google背后算法的力量，数学的力量，大数据的力量。</li><li>正确的数学模型可以将一个计算量看似很大的问题的计算复杂度大大降低，这便是数学的妙用。</li><li>数学是描述世间万般表象背后规律的最好工具，它是简单的，它是美的。<a id="more"></a></li><li>计算机本身没有智能，只有极强的计算能力，只有找到解决这些问题的数学模型，才能让计算机在数据的驱动下，变得看起来智能。</li><li>数据的重要性，大量准确的数据对研发很重要，让我们迫切需要学会收集数据，处理数据，善于运用数据，才能不被数据的海洋淹没。</li><li>在计算机科学领域，一个好的算法应该像AK-47冲锋枪那样：简单、有效、可靠性好而且容易读懂（或者说易操作），而不应该是故弄玄虚。</li><li>信息指纹：是指将一段信息（文字、图片、音频、视频等）随机地映射到一个多维二进制空间中的一个点（一个二进制数字）。只要这个随机函数做得好，那么不同信息对应的这些点就不会重合，因此，这些二进制的数字就成了原来的信息所具有的独一无二的指纹。</li></ul><h2 id="推荐阅读："><a href="#推荐阅读：" class="headerlink" title="推荐阅读："></a>推荐阅读：</h2><ol><li><a href="https://book.douban.com/subject/10750155/" title="数学之美第一版" target="_blank" rel="noopener">数学之美第一版</a></li><li><a href="https://book.douban.com/subject/26163454/" title="数学之美第二版" target="_blank" rel="noopener">数学之美第二版</a></li><li>文本分类的经典论文，<a href="http://www.aclweb.org/anthology/P99-1022" target="_blank" rel="noopener">http://www.aclweb.org/anthology/P99-1022</a></li></ol>]]></content>
-    
-    <summary type="html">
-    
-      &lt;h2 id=&quot;感悟：&quot;&gt;&lt;a href=&quot;#感悟：&quot; class=&quot;headerlink&quot; title=&quot;感悟：&quot;&gt;&lt;/a&gt;感悟：&lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;一个正确的数学模型形式上通常是简单的。从这本书中，领会到了，google背后算法的力量，数学的力量，大数据的力量。&lt;/li&gt;
-&lt;li&gt;正确的数学模型可以将一个计算量看似很大的问题的计算复杂度大大降低，这便是数学的妙用。&lt;/li&gt;
-&lt;li&gt;数学是描述世间万般表象背后规律的最好工具，它是简单的，它是美的。
-    
-    </summary>
-    
-      <category term="随笔感悟" scheme="http://xiepeng21.cn/categories/%E9%9A%8F%E7%AC%94%E6%84%9F%E6%82%9F/"/>
-    
-    
-      <category term="读后感" scheme="http://xiepeng21.cn/tags/%E8%AF%BB%E5%90%8E%E6%84%9F/"/>
     
   </entry>
   

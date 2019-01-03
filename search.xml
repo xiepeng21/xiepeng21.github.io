@@ -1,6 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[红楼梦书评]]></title>
+    <url>%2F%E7%BA%A2%E6%A5%BC%E6%A2%A6%E4%B9%A6%E8%AF%84.html</url>
+    <content type="text"><![CDATA[昨天看完了《红楼梦》一书，还记得是从去年暑假开始看，差不多花了半年时间。因为之前身边有同学看，加之暑假打算看一看书，之前也没有看过，只零星看过红楼梦的电视剧，所以就选择了《红楼梦》。 在这本书里，见证了大量的诗词、中医养生的内容以及人物言谈对话，感受到了荣、宁二府由兴到衰再到“兴”的过程，还有贾宝玉、林黛玉、薛宝钗、老太太以及王熙凤等人生命历程。其中，给我印象最深的是薛宝钗，她不仅担负起薛家的家庭重担，也要承受着贾宝玉无心功名、沉迷闺阁的反传统压力。而她自己却是旧传统下的知书达理、贤良之妻。这个世界给了她不公，但她却从容应对，不刻薄他人，维持着家庭的和睦，不失高贵和优雅。总的来说，这本书，包含的内容及其丰富，从日常生活到社会万象，囊括万千，值得一读，甚至多读。注: 这本书，我看的是Kindle电子书版本（《红楼梦》（古典名著普及文库）），在当当上搜索了一下，红楼梦有不同版本，推荐人民文学出版社的《红楼梦》。]]></content>
+      <categories>
+        <category>随笔感悟</category>
+      </categories>
+      <tags>
+        <tag>书籍</tag>
+        <tag>阅读</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[2019年书单]]></title>
     <url>%2F2019%E5%B9%B4%E4%B9%A6%E5%8D%95.html</url>
     <content type="text"><![CDATA[新的一年，保持阅读和写作的习惯，每一个月读完一本书写一篇读书笔记(简称三一计划)。 今年准备阅读的12本书如下: 易经 理想国 自然哲学的数学原理 红楼梦 瓦尔登湖 科学与方法 科学史 小王子 西方哲学史 中国哲学简史 从一到无穷大 美的历程]]></content>
@@ -20,8 +32,8 @@
         <category>机器学习</category>
       </categories>
       <tags>
-        <tag>论文笔记</tag>
         <tag>深度学习</tag>
+        <tag>论文笔记</tag>
       </tags>
   </entry>
   <entry>
@@ -32,10 +44,10 @@
         <category>机器学习</category>
       </categories>
       <tags>
+        <tag>论文笔记</tag>
         <tag>CNN</tag>
         <tag>LSTM</tag>
         <tag>Crowd Flow Prediction</tag>
-        <tag>论文笔记</tag>
       </tags>
   </entry>
   <entry>
@@ -46,8 +58,8 @@
         <category>机器学习</category>
       </categories>
       <tags>
-        <tag>CNN</tag>
         <tag>深度学习</tag>
+        <tag>CNN</tag>
       </tags>
   </entry>
   <entry>
