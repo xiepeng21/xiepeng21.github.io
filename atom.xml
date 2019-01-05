@@ -82,9 +82,9 @@
       <category term="机器学习" scheme="http://xiepeng21.cn/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
     
     
-      <category term="深度学习" scheme="http://xiepeng21.cn/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/"/>
-    
       <category term="论文笔记" scheme="http://xiepeng21.cn/tags/%E8%AE%BA%E6%96%87%E7%AC%94%E8%AE%B0/"/>
+    
+      <category term="深度学习" scheme="http://xiepeng21.cn/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/"/>
     
   </entry>
   
@@ -106,13 +106,13 @@
       <category term="机器学习" scheme="http://xiepeng21.cn/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
     
     
-      <category term="论文笔记" scheme="http://xiepeng21.cn/tags/%E8%AE%BA%E6%96%87%E7%AC%94%E8%AE%B0/"/>
-    
       <category term="CNN" scheme="http://xiepeng21.cn/tags/CNN/"/>
     
       <category term="LSTM" scheme="http://xiepeng21.cn/tags/LSTM/"/>
     
       <category term="Crowd Flow Prediction" scheme="http://xiepeng21.cn/tags/Crowd-Flow-Prediction/"/>
+    
+      <category term="论文笔记" scheme="http://xiepeng21.cn/tags/%E8%AE%BA%E6%96%87%E7%AC%94%E8%AE%B0/"/>
     
   </entry>
   
@@ -134,9 +134,9 @@
       <category term="机器学习" scheme="http://xiepeng21.cn/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
     
     
-      <category term="深度学习" scheme="http://xiepeng21.cn/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/"/>
-    
       <category term="CNN" scheme="http://xiepeng21.cn/tags/CNN/"/>
+    
+      <category term="深度学习" scheme="http://xiepeng21.cn/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/"/>
     
   </entry>
   
