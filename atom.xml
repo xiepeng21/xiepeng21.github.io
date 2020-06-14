@@ -1,0 +1,504 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>天道酬勤</title>
+  
+  
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="http://xiepeng21.cn/"/>
+  <updated>2020-06-14T15:28:30.958Z</updated>
+  <id>http://xiepeng21.cn/</id>
+  
+  <author>
+    <name>Peng Xie</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>【论文笔记-1】用于交通预测的多范围注意力双组分图卷积网络</title>
+    <link href="http://xiepeng21.cn/%E3%80%90%E8%AE%BA%E6%96%87%E7%AC%94%E8%AE%B0-1%E3%80%91%E7%94%A8%E4%BA%8E%E4%BA%A4%E9%80%9A%E9%A2%84%E6%B5%8B%E7%9A%84%E5%A4%9A%E8%8C%83%E5%9B%B4%E6%B3%A8%E6%84%8F%E5%8A%9B%E5%8F%8C%E7%BB%84%E5%88%86%E5%9B%BE%E5%8D%B7%E7%A7%AF%E7%BD%91%E7%BB%9C.html"/>
+    <id>http://xiepeng21.cn/【论文笔记-1】用于交通预测的多范围注意力双组分图卷积网络.html</id>
+    <published>2019-12-20T10:00:29.000Z</published>
+    <updated>2020-06-14T15:28:30.958Z</updated>
+    
+    <content type="html"><![CDATA[<p>Chen, Weiqi, Ling Chen, Yu Xie, Wei Cao, Yusong Gao, and Xiaojie Feng. “<a href="https://arxiv.org/pdf/1911.12093" target="_blank" rel="noopener">Multi-Range Attentive Bicomponent Graph Convolutional Network for Traffic Forecasting</a>.” arXiv preprint arXiv:1911.12093 (2019). Accepted by AAAI2020.<br><a id="more"></a><br>提出了一种交通预测深度学习模型——多范围注意力双组分图卷积网络(MRA-BGCN)。该模型首先根据路网距离构建节点向图，根据不同的边相互模式构建边向图。然后利用双组分图卷积实现了节点和边的相互作用建模。此外引入多范围注意力机制，对不同邻域范围内的信息进行聚合，自动学习不同范围的重要性。在两个交通数据集（METR-LA和PEMS-BAY）上的实验结果表明取得了很好的效果。</p><h4 id="问题定义"><a href="#问题定义" class="headerlink" title="问题定义"></a>问题定义</h4><p><img src="https://i.loli.net/2020/06/14/QH5ysCw64l38ExS.png" alt="2338_1.png"></p><p>交通预测问题的任务是：学习一个函数$f$, 能够给出$T^{\prime}$历史的图信号和图$G$，预测$T$未来的图信号。</p><h4 id="数据集"><a href="#数据集" class="headerlink" title="数据集"></a>数据集</h4><p><img src="https://i.loli.net/2020/06/14/j6E2md7kYRh8v3A.png" alt="2339_1.png"></p><p>METR-LA and PEMS-BAY是两个公开的交通网络数据集。METR-LA记录了从2012年3月1日到2012年6月30日四个月的交通速度统计数据，包括洛杉矶公路上的207个传感器。PEMS-BAY记录了从2017年1月1日到2017年5月31日的5个月的交通速度统计数据，其中包括旧金山湾区的325个传感器。</p><h4 id="方法"><a href="#方法" class="headerlink" title="方法"></a>方法</h4><p><img src="https://i.loli.net/2020/06/14/A3yE9oUKbCZGsRp.png" alt="2337_1.png"></p><p>论文中的模型如上图所示，包括2部分，（1）双组分图卷积模块 （2）多范围注意力层。</p><h5 id="双组分图卷积"><a href="#双组分图卷积" class="headerlink" title="双组分图卷积"></a>双组分图卷积</h5><p><img src="https://i.loli.net/2020/06/14/S9vIA3t8C7ngRXk.png" alt="2340_1.png"></p><p>图卷积是对给定图结构的节点间相互作用进行建模的一种有效操作。双组分图卷积可以显式地对节点和边的相互作用进行建模。</p><h6 id="流连接"><a href="#流连接" class="headerlink" title="流连接"></a>流连接</h6><p>在交通网络中，一个路段可能受到其上下游路段的影响。</p><h6 id="竞争关系"><a href="#竞争关系" class="headerlink" title="竞争关系"></a>竞争关系</h6><p>共享同一源节点的道路链路可能会争夺交通资源，产生竞争关系。</p><h5 id="多范围注意力"><a href="#多范围注意力" class="headerlink" title="多范围注意力"></a>多范围注意力</h5><p>提出了双组分图卷积的多范围注意力机制，能自动学习不同邻域范围的重要性，从而实现对不同邻域范围内信息的聚集，而不仅仅是给定的邻域范围。</p><h5 id="双组分图卷积RNN"><a href="#双组分图卷积RNN" class="headerlink" title="双组分图卷积RNN"></a>双组分图卷积RNN</h5><p><img src="https://i.loli.net/2020/06/14/NR6qQJAofOwHpPK.png" alt="2343_1.png"></p><p>将多个BGCGRU层堆叠起来，并使用Sequence to Sequence体系结构进行多步前向交通预测。</p><h4 id="评估"><a href="#评估" class="headerlink" title="评估"></a>评估</h4><ul><li>性能比较<br><img src="https://i.loli.net/2020/06/14/yZXAJwsHdM7niQ8.png" alt="2342_1.png"></li><li>边向图的影响<br><img src="https://i.loli.net/2020/06/14/NGrHvd23eYkqgpM.png" alt="2341_1.png"></li><li>多范围注意力机制的影响<br><img src="https://i.loli.net/2020/06/14/9QkNBjcV8fMJsyv.png" alt="2344_1.png"></li></ul><h4 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h4><p>提出了一种用于交通预测的多范围注意力双组分图卷积网络。具体来说，采用双组分图卷积来明确地建模节点和边的相关性，利用一种边向图构造方法来编码边的上下游连通性和竞争关系，使用多范围注意力机制，有效地聚合多个邻域范围信息，生成综合的表示。可以进一步研究的地方是，可以考虑更多的影响因素，比如交通事故以及周围的兴趣点；目前论文中考虑的是单模态输入图，还可以研究多模态输入图。</p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;Chen, Weiqi, Ling Chen, Yu Xie, Wei Cao, Yusong Gao, and Xiaojie Feng. “&lt;a href=&quot;https://arxiv.org/pdf/1911.12093&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Multi-Range Attentive Bicomponent Graph Convolutional Network for Traffic Forecasting&lt;/a&gt;.” arXiv preprint arXiv:1911.12093 (2019). Accepted by AAAI2020.&lt;br&gt;
+    
+    </summary>
+    
+      <category term="论文阅读" scheme="http://xiepeng21.cn/categories/%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB/"/>
+    
+    
+      <category term="交通预测" scheme="http://xiepeng21.cn/tags/%E4%BA%A4%E9%80%9A%E9%A2%84%E6%B5%8B/"/>
+    
+      <category term="图神经网络" scheme="http://xiepeng21.cn/tags/%E5%9B%BE%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>常用linux命令</title>
+    <link href="http://xiepeng21.cn/%E5%B8%B8%E7%94%A8linux%E5%91%BD%E4%BB%A4.html"/>
+    <id>http://xiepeng21.cn/常用linux命令.html</id>
+    <published>2019-01-06T09:06:00.000Z</published>
+    <updated>2019-01-06T09:14:38.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>下列命令在Ubuntu16.04 LTS 系统下测试通过。<br><a id="more"></a></p><h5 id="查看内存"><a href="#查看内存" class="headerlink" title="查看内存"></a>查看内存</h5><p>free<br>参数：<br>-help: 查看free命令的帮助内容<br>-h 以人类可读的直观方式<br>-b －k －m：分别以Byte、KB、MB为单位显示内存使用情况<br>-t：显示内存总和列</p><h5 id="查看CPU"><a href="#查看CPU" class="headerlink" title="查看CPU"></a>查看CPU</h5><p>lscpu<br>查看当前操作系统内核信息  uname -a<br>查看当前操作系统发行版信息  cat /etc/issue<br>查看物理cpu颗数  cat /proc/cpuinfo | grep physical | uniq -c<br>查看完整CPU信息  cat /proc/cpuinfo</p><h5 id="查看GPU"><a href="#查看GPU" class="headerlink" title="查看GPU"></a>查看GPU</h5><p>nvidia-smi<br>查看显卡信息 lspci | grep -i nvidia<br>周期性的输出显卡的使用情况 watch -n 10 nvidia-smi</p><h5 id="查看硬盘大小"><a href="#查看硬盘大小" class="headerlink" title="查看硬盘大小"></a>查看硬盘大小</h5><p>df -h</p><h5 id="创建用户"><a href="#创建用户" class="headerlink" title="创建用户"></a>创建用户</h5><p>sudo useradd -d /usr/sam -m sam 创建一个名为sam的用户</p><h5 id="删除用户"><a href="#删除用户" class="headerlink" title="删除用户"></a>删除用户</h5><p>sudo userdel -r sam  其中，-r的作用是把该用户的主目录一起删除</p><h5 id="将用户加入组"><a href="#将用户加入组" class="headerlink" title="将用户加入组"></a>将用户加入组</h5><p>sudo usermod -G xiep sam 将用户sam加入xiep组</p><h5 id="查看当前登录用户名"><a href="#查看当前登录用户名" class="headerlink" title="查看当前登录用户名"></a>查看当前登录用户名</h5><p>whoami</p><h5 id="查看当前用户所在组"><a href="#查看当前用户所在组" class="headerlink" title="查看当前用户所在组"></a>查看当前用户所在组</h5><p>groups sam</p><h5 id="查看系统用户"><a href="#查看系统用户" class="headerlink" title="查看系统用户"></a>查看系统用户</h5><p>cat /etc/passwd</p><h5 id="查看系统用户分组"><a href="#查看系统用户分组" class="headerlink" title="查看系统用户分组"></a>查看系统用户分组</h5><p>cat /etc/group</p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;下列命令在Ubuntu16.04 LTS 系统下测试通过。&lt;br&gt;
+    
+    </summary>
+    
+      <category term="经验技巧" scheme="http://xiepeng21.cn/categories/%E7%BB%8F%E9%AA%8C%E6%8A%80%E5%B7%A7/"/>
+    
+    
+      <category term="Linux" scheme="http://xiepeng21.cn/tags/Linux/"/>
+    
+      <category term="Ubuntu" scheme="http://xiepeng21.cn/tags/Ubuntu/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>hexo博客搭建及多电脑同步</title>
+    <link href="http://xiepeng21.cn/hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E5%8F%8A%E5%A4%9A%E7%94%B5%E8%84%91%E5%90%8C%E6%AD%A5.html"/>
+    <id>http://xiepeng21.cn/hexo博客搭建及多电脑同步.html</id>
+    <published>2019-01-06T03:55:00.000Z</published>
+    <updated>2019-01-06T09:14:38.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>之前写了一篇用hexo+github搭建博客的教程，大致流程为：本地博客搭建，将博客部署到github，配置域名访问。详细可参考我的博客（<a href="https://www.jianshu.com/p/058d4054bc3f" target="_blank" rel="noopener">Hexo搭建个人博客教程</a>）。最近因为遇到在实验室写好博客，但是想在寝室发布博客，所以涉及到多电脑同步的问题，现将解决方案记录如下。<br><a id="more"></a></p><h5 id="方案一"><a href="#方案一" class="headerlink" title="方案一"></a>方案一</h5><p>用百度云或onedrive一类的云盘备份hexo文件夹。这种方法方便快捷，但是仅仅可以用作博客备份，不方便用于同步更新博客，每次更改博客后都要等待云盘同步，才能继续完成接下来的发布步骤。</p><h5 id="方案二"><a href="#方案二" class="headerlink" title="方案二"></a>方案二</h5><p>利用coding.net存放hexo博客源文件，github存放hexo博客的网页静态文件。这种方案可以实现多电脑同步。</p><h6 id="实验室电脑"><a href="#实验室电脑" class="headerlink" title="实验室电脑"></a>实验室电脑</h6><ol><li>注册coding账号（<a href="https://coding.net/login" target="_blank" rel="noopener">注册</a>），新建项目hexo_blog（设置成不公开），存放博客源文件。</li><li>关联远程库并推送到hexo_blog。<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">git remote add origin https://git.coding.net/xiepeng21/hexo_blog.git</span><br><span class="line">git add .</span><br><span class="line">git commit -m &quot;backup_v1&quot;</span><br><span class="line">git push -u origin master</span><br></pre></td></tr></table></figure></li></ol><h6 id="寝室电脑"><a href="#寝室电脑" class="headerlink" title="寝室电脑"></a>寝室电脑</h6><ol><li><p>安装好nodejs,git,hexo，具体操作，不再赘述，可参考文首的博客(<a href="https://www.jianshu.com/p/058d4054bc3f" target="_blank" rel="noopener">Hexo搭建个人博客教程</a>)。</p></li><li><p>将存放在远程的hexo_blog克隆到本地</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git clone https://git.coding.net/xiepeng21/hexo_blog.git</span><br></pre></td></tr></table></figure></li><li><p>安装博客依赖的包(读取的是package.json的配置)</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install</span><br></pre></td></tr></table></figure></li><li><p>接下来就可以在这台电脑上发布博客了。</p></li></ol><p>注：如果遇到其他问题，可以按照搭建博客的流程分析问题解决办法（<a href="https://www.jianshu.com/p/058d4054bc3f" target="_blank" rel="noopener">Hexo搭建个人博客教程</a>）。</p><h5 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h5><ol><li><a href="http://chenfengkg.cn/personal-blog-build/" target="_blank" rel="noopener">http://chenfengkg.cn/personal-blog-build/</a> 博客一之博客搭建</li><li><a href="https://godweiyang.com/2018/04/13/hexo-blog/" target="_blank" rel="noopener">https://godweiyang.com/2018/04/13/hexo-blog/</a> 超详细Hexo+Github博客搭建小白教程</li><li><a href="https://www.zybuluo.com/mdeditor" target="_blank" rel="noopener">https://www.zybuluo.com/mdeditor</a> 作业部落（在线markdown编辑）</li></ol>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;之前写了一篇用hexo+github搭建博客的教程，大致流程为：本地博客搭建，将博客部署到github，配置域名访问。详细可参考我的博客（&lt;a href=&quot;https://www.jianshu.com/p/058d4054bc3f&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Hexo搭建个人博客教程&lt;/a&gt;）。最近因为遇到在实验室写好博客，但是想在寝室发布博客，所以涉及到多电脑同步的问题，现将解决方案记录如下。&lt;br&gt;
+    
+    </summary>
+    
+      <category term="经验技巧" scheme="http://xiepeng21.cn/categories/%E7%BB%8F%E9%AA%8C%E6%8A%80%E5%B7%A7/"/>
+    
+    
+      <category term="博客" scheme="http://xiepeng21.cn/tags/%E5%8D%9A%E5%AE%A2/"/>
+    
+      <category term="Hexo" scheme="http://xiepeng21.cn/tags/Hexo/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>红楼梦书评</title>
+    <link href="http://xiepeng21.cn/%E7%BA%A2%E6%A5%BC%E6%A2%A6%E4%B9%A6%E8%AF%84.html"/>
+    <id>http://xiepeng21.cn/红楼梦书评.html</id>
+    <published>2019-01-03T15:38:00.000Z</published>
+    <updated>2019-01-06T09:14:38.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>昨天看完了《红楼梦》一书，还记得是从去年暑假开始看，差不多花了半年时间。因为之前身边有同学看，加之暑假打算看一看书，之前也没有看过，只零星看过红楼梦的电视剧，所以就选择了《红楼梦》。<br><a id="more"></a><br><img src="https://i.loli.net/2019/01/03/5c2e2d1619a35.jpg" alt="s1070959.jpg"></p><p>在这本书里，见证了大量的诗词、中医养生的内容以及人物言谈对话，感受到了荣、宁二府由兴到衰再到“兴”的过程，还有贾宝玉、林黛玉、薛宝钗、老太太以及王熙凤等人生命历程。<br><br>其中，给我印象最深的是薛宝钗，她不仅担负起薛家的家庭重担，也要承受着贾宝玉无心功名、沉迷闺阁的反传统压力。而她自己却是旧传统下的知书达理、贤良之妻。这个世界给了她不公，但她却从容应对，不刻薄他人，维持着家庭的和睦，不失高贵和优雅。<br><br>总的来说，这本书，包含的内容及其丰富，从日常生活到社会万象，囊括万千，值得一读，甚至多读。<br><br><strong>注:</strong> 这本书，我看的是Kindle电子书版本（《红楼梦》（古典名著普及文库）），在当当上搜索了一下，红楼梦有不同版本，推荐人民文学出版社的《红楼梦》。</p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;昨天看完了《红楼梦》一书，还记得是从去年暑假开始看，差不多花了半年时间。因为之前身边有同学看，加之暑假打算看一看书，之前也没有看过，只零星看过红楼梦的电视剧，所以就选择了《红楼梦》。&lt;br&gt;
+    
+    </summary>
+    
+      <category term="随笔感悟" scheme="http://xiepeng21.cn/categories/%E9%9A%8F%E7%AC%94%E6%84%9F%E6%82%9F/"/>
+    
+    
+      <category term="书籍" scheme="http://xiepeng21.cn/tags/%E4%B9%A6%E7%B1%8D/"/>
+    
+      <category term="阅读" scheme="http://xiepeng21.cn/tags/%E9%98%85%E8%AF%BB/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>2019年书单</title>
+    <link href="http://xiepeng21.cn/2019%E5%B9%B4%E4%B9%A6%E5%8D%95.html"/>
+    <id>http://xiepeng21.cn/2019年书单.html</id>
+    <published>2019-01-02T14:41:00.000Z</published>
+    <updated>2019-01-06T09:14:38.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>新的一年，保持阅读和写作的习惯，每一个月读完一本书写一篇读书笔记(简称三一计划)。<br><a id="more"></a><br><img src="https://i.loli.net/2019/01/02/5c2cce1e92717.jpg" alt="booklist.jpg"></p><p>今年准备阅读的12本书如下:</p><ol><li>易经</li><li>理想国</li><li>自然哲学的数学原理</li><li>红楼梦</li><li>瓦尔登湖</li><li>科学与方法</li><li>科学史</li><li>小王子</li><li>西方哲学史</li><li>中国哲学简史</li><li>从一到无穷大</li><li>美的历程</li></ol>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;新的一年，保持阅读和写作的习惯，每一个月读完一本书写一篇读书笔记(简称三一计划)。&lt;br&gt;
+    
+    </summary>
+    
+      <category term="随笔感悟" scheme="http://xiepeng21.cn/categories/%E9%9A%8F%E7%AC%94%E6%84%9F%E6%82%9F/"/>
+    
+    
+      <category term="书籍" scheme="http://xiepeng21.cn/tags/%E4%B9%A6%E7%B1%8D/"/>
+    
+      <category term="阅读" scheme="http://xiepeng21.cn/tags/%E9%98%85%E8%AF%BB/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Deep Learning</title>
+    <link href="http://xiepeng21.cn/Deep%20Learning.html"/>
+    <id>http://xiepeng21.cn/Deep Learning.html</id>
+    <published>2018-12-26T15:22:00.000Z</published>
+    <updated>2019-01-06T09:14:38.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>这篇文章是关于深度学习的一篇综述文章。是由深度学习界的三位大牛（YannLeCun, Yoshua Bengio, Geoffrey Hinton）所写。在本文中，介绍了反向传播算法、卷积神经网络与循环神经网络的经典应用，给出了细致的图解和深入的分析，是深度学习中的高质量的重要文献。文中还提到了深度学习未来的发展，比如将卷积神经网络、循环神经网络与强化学习结合起来；将表示学习与复杂推理结合起来。<br><a id="more"></a></p><h5 id="多层神经网络及反向传播"><a href="#多层神经网络及反向传播" class="headerlink" title="多层神经网络及反向传播"></a>多层神经网络及反向传播</h5><p><img src="https://i.loli.net/2018/12/26/5c239d8290693.jpg" alt="19-24-17.jpg"></p><h5 id="给图片加描述文字"><a href="#给图片加描述文字" class="headerlink" title="给图片加描述文字"></a>给图片加描述文字</h5><ul><li><a href="https://www.cv-foundation.org/openaccess/content_cvpr_2015/papers/Vinyals_Show_and_Tell_2015_CVPR_paper.pdf" target="_blank" rel="noopener">Show and Tell: A Neural Image Caption Generator</a>;</li><li><a href="http://proceedings.mlr.press/v37/xuc15.pdf" target="_blank" rel="noopener">Show, attend and tell: Neural image caption generation with visual attention</a></li></ul><p><img src="https://i.loli.net/2018/12/26/5c239e4ca2174.jpg" alt="19-26-01.jpg"></p><h5 id="循环神经网络单元"><a href="#循环神经网络单元" class="headerlink" title="循环神经网络单元"></a>循环神经网络单元</h5><p><img src="https://i.loli.net/2018/12/26/5c239ea287cfa.jpg" alt="19-27-35.jpg"></p><h5 id="论文链接"><a href="#论文链接" class="headerlink" title="论文链接"></a>论文链接</h5><p><a href="https://creativecoding.soe.ucsc.edu/courses/cs523/slides/week3/DeepLearning_LeCun.pdf" target="_blank" rel="noopener">LeCun Y, Bengio Y, Hinton G. Deep learning[J]. nature, 2015, 521(7553): 436.</a></p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;这篇文章是关于深度学习的一篇综述文章。是由深度学习界的三位大牛（YannLeCun, Yoshua Bengio, Geoffrey Hinton）所写。在本文中，介绍了反向传播算法、卷积神经网络与循环神经网络的经典应用，给出了细致的图解和深入的分析，是深度学习中的高质量的重要文献。文中还提到了深度学习未来的发展，比如将卷积神经网络、循环神经网络与强化学习结合起来；将表示学习与复杂推理结合起来。&lt;br&gt;
+    
+    </summary>
+    
+      <category term="机器学习" scheme="http://xiepeng21.cn/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
+    
+    
+      <category term="论文笔记" scheme="http://xiepeng21.cn/tags/%E8%AE%BA%E6%96%87%E7%AC%94%E8%AE%B0/"/>
+    
+      <category term="深度学习" scheme="http://xiepeng21.cn/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Attentive Crowd Flow Machines</title>
+    <link href="http://xiepeng21.cn/Attentive%20Crowd%20Flow%20Machines.html"/>
+    <id>http://xiepeng21.cn/Attentive Crowd Flow Machines.html</id>
+    <published>2018-12-24T11:15:00.000Z</published>
+    <updated>2019-01-06T09:14:38.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>文章提出了一种称为注意力人流量机器（Attentive Crowd Flow Machines）的神经网络模型，该模型能够通过带注意力机制的时变数据动态表示来推断城市人流量的演变。它由两层ConvLSTM单元以及用于空间权重预测的卷积层组成。文章的创新点在于：1.引入了注意力机制 2.权重时变的融合方法。<br><a id="more"></a></p><p><img src="https://i.loli.net/2018/12/26/5c23a1622ae38.png" alt="Image.png"></p><h5 id="论文链接"><a href="#论文链接" class="headerlink" title="论文链接"></a>论文链接</h5><p><a href="http://www.linliang.net/wp-content/uploads/2018/10/ACMMM2018_FlowMachines.pdf" target="_blank" rel="noopener">Liu L, Zhang R, Peng J, et al. Attentive Crowd Flow Machines[C]//2018 ACM Multimedia Conference on Multimedia Conference. ACM, 2018: 1553-1561.</a></p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;文章提出了一种称为注意力人流量机器（Attentive Crowd Flow Machines）的神经网络模型，该模型能够通过带注意力机制的时变数据动态表示来推断城市人流量的演变。它由两层ConvLSTM单元以及用于空间权重预测的卷积层组成。文章的创新点在于：1.引入了注意力机制 2.权重时变的融合方法。&lt;br&gt;
+    
+    </summary>
+    
+      <category term="机器学习" scheme="http://xiepeng21.cn/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
+    
+    
+      <category term="CNN" scheme="http://xiepeng21.cn/tags/CNN/"/>
+    
+      <category term="LSTM" scheme="http://xiepeng21.cn/tags/LSTM/"/>
+    
+      <category term="Crowd Flow Prediction" scheme="http://xiepeng21.cn/tags/Crowd-Flow-Prediction/"/>
+    
+      <category term="论文笔记" scheme="http://xiepeng21.cn/tags/%E8%AE%BA%E6%96%87%E7%AC%94%E8%AE%B0/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>如何计算经过CNN（卷积神经网络）卷积后的图片大小</title>
+    <link href="http://xiepeng21.cn/CNN_Image_Size.html"/>
+    <id>http://xiepeng21.cn/CNN_Image_Size.html</id>
+    <published>2018-12-23T15:36:00.000Z</published>
+    <updated>2019-01-06T09:14:38.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>对于给定的一张图片，如下图，32×32大小的输入图片经过一次卷积之后，如何得到28×28的feature maps?<br><a id="more"></a><br><img src="https://i.loli.net/2018/12/23/5c1fac8bbfa94.png" alt="Screenshot_2018-09-29-15-31-03-61.png"></p><p>设卷积前的图像大小为n×n, 过滤器大小为f×f, padding(填充)为p, stride(步长)为 s, 则卷积后的图像 m×m 大小为：<br>m = (n+2p-f)/s + 1.（如果商不为整数，向下取整）</p><p>(32+0-5)/1 + 1 = 28. 所以上图中的输入图片经过一次卷积之后，得到了28×28的feature maps.</p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;对于给定的一张图片，如下图，32×32大小的输入图片经过一次卷积之后，如何得到28×28的feature maps?&lt;br&gt;
+    
+    </summary>
+    
+      <category term="机器学习" scheme="http://xiepeng21.cn/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
+    
+    
+      <category term="CNN" scheme="http://xiepeng21.cn/tags/CNN/"/>
+    
+      <category term="深度学习" scheme="http://xiepeng21.cn/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>L1、L2正则化</title>
+    <link href="http://xiepeng21.cn/L1%E3%80%81L2%E6%AD%A3%E5%88%99%E5%8C%96.html"/>
+    <id>http://xiepeng21.cn/L1、L2正则化.html</id>
+    <published>2018-11-07T14:19:00.000Z</published>
+    <updated>2019-01-06T09:14:38.000Z</updated>
+    
+    <content type="html"><![CDATA[<h5 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h5><p>在之前的博客里介绍了<a href="http://xiepeng21.cn/%E3%80%90%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E3%80%91%E9%98%B2%E6%AD%A2%E8%BF%87%E6%8B%9F%E5%90%88%E7%9A%84%E6%96%B9%E6%B3%95.html">常见的防止过拟合的方法</a>,这次主要就其中的L1、L2正则化方法进行介绍并比较它们的不同。<br><a id="more"></a></p><p>我们使用L1、L2正则化方法的目的，在于减缓机器学习中的过拟合现象。</p><p>为什么它们能减缓过拟合现象呢，由于正则项的加入，使得权重矩阵的值减小，因为它假定一个拥有更小权重矩阵的神经网络将产生更简单的模型，进而在一定程度上能减缓过拟合。</p><p>在L1和L2中，所采用的正则化项是不同的。</p><p>在L2中，其中λ是正则化参数，这个超参数可以通过优化得到更好的结果。同时L2正则化也被称为权重衰减（weight decay），因为它使权重衰减至0（但不等于0）。</p><p><img src="https://i.loli.net/2018/11/07/5be2dc708e5c7.png" alt="1.png"></p><p>在L1中，我们惩罚权重的绝对值，这里权重可能会减至0。因此，当我们尝试压缩我们的模型时，使用L1十分有用。在其他方面，我们更倾向于使用L2。</p><p><img src="https://i.loli.net/2018/11/07/5be2ddd4db9af.png" alt="2.png"></p><h5 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h5><ol><li><a href="http://xiepeng21.cn/%E3%80%90%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E3%80%91%E9%98%B2%E6%AD%A2%E8%BF%87%E6%8B%9F%E5%90%88%E7%9A%84%E6%96%B9%E6%B3%95.html">http://xiepeng21.cn/%E3%80%90%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E3%80%91%E9%98%B2%E6%AD%A2%E8%BF%87%E6%8B%9F%E5%90%88%E7%9A%84%E6%96%B9%E6%B3%95.html</a> 【机器学习】防止过拟合的方法</li><li><a href="https://www.analyticsvidhya.com/blog/2018/04/fundamentals-deep-learning-regularization-techniques/" target="_blank" rel="noopener">https://www.analyticsvidhya.com/blog/2018/04/fundamentals-deep-learning-regularization-techniques/</a> An Overview of Regularization Techniques in Deep Learning (with Python code)</li></ol>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h5 id=&quot;简介&quot;&gt;&lt;a href=&quot;#简介&quot; class=&quot;headerlink&quot; title=&quot;简介&quot;&gt;&lt;/a&gt;简介&lt;/h5&gt;&lt;p&gt;在之前的博客里介绍了&lt;a href=&quot;http://xiepeng21.cn/%E3%80%90%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E3%80%91%E9%98%B2%E6%AD%A2%E8%BF%87%E6%8B%9F%E5%90%88%E7%9A%84%E6%96%B9%E6%B3%95.html&quot;&gt;常见的防止过拟合的方法&lt;/a&gt;,这次主要就其中的L1、L2正则化方法进行介绍并比较它们的不同。&lt;br&gt;
+    
+    </summary>
+    
+      <category term="机器学习" scheme="http://xiepeng21.cn/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
+    
+    
+      <category term="机器学习" scheme="http://xiepeng21.cn/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
+    
+      <category term="正则化" scheme="http://xiepeng21.cn/tags/%E6%AD%A3%E5%88%99%E5%8C%96/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Longest Substring Without Repeating Characters</title>
+    <link href="http://xiepeng21.cn/Longest-Substring-Without-Repeating-Characters.html"/>
+    <id>http://xiepeng21.cn/Longest-Substring-Without-Repeating-Characters.html</id>
+    <published>2018-10-07T03:52:00.000Z</published>
+    <updated>2019-01-06T09:14:38.000Z</updated>
+    
+    <content type="html"><![CDATA[<h5 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h5><p>Given a string, find the length of the longest substring without repeating characters.<br><a id="more"></a></p><h5 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h5><ul><li>Example 1:</li></ul><p>Input: “abcabcbb”<br>Output: 3<br>Explanation: The answer is “abc”, with the length of 3. </p><ul><li>Example 2:</li></ul><p>Input: “bbbbb”<br>Output: 1<br>Explanation: The answer is “b”, with the length of 1.</p><ul><li>Example 3:</li></ul><p>Input: “pwwkew”<br>Output: 3<br>Explanation: The answer is “wke”, with the length of 3.<br>             Note that the answer must be a substring, “pwke” is a subsequence and not a substring. </p><h5 id="算法思路"><a href="#算法思路" class="headerlink" title="算法思路"></a>算法思路</h5><p>该问题可以简化成查找一个字符串中最长的不重复字符子串，返回子串的长度。第一种方法用到了枚举和字典，感觉有点绕，我没有理解清楚；第二种方法采用了字符串的split方法，很巧妙，不过比较难想到。两种方法相比，第二种方法运行时间更短（84ms &lt; 88ms）,推荐使用第二种方法，感兴趣的朋友可以研究下第一种方法。</p><p>方法一：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">class Solution(object):</span><br><span class="line">    def lengthOfLongestSubstring(self, s):</span><br><span class="line">        dic, res, start, = &#123;&#125;, 0, 0</span><br><span class="line">        for i, ch in enumerate(s):</span><br><span class="line">            # when char already in dictionary</span><br><span class="line">            if ch in dic:</span><br><span class="line">                # check length from start of string to index</span><br><span class="line">                res = max(res, i-start)</span><br><span class="line">                # update start of string index to the next index</span><br><span class="line">                start = max(start, dic[ch]+1)</span><br><span class="line">            # add/update char to/of dictionary </span><br><span class="line">            dic[ch] = i</span><br><span class="line">        # answer is either in the begining/middle OR some mid to the end of string</span><br><span class="line">        return max(res, len(s)-start)</span><br></pre></td></tr></table></figure></p><p>方法二：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">class Solution:</span><br><span class="line">    def lengthOfLongestSubstring(self, s):</span><br><span class="line">        &quot;&quot;&quot;</span><br><span class="line">        :type s: str</span><br><span class="line">        :rtype: int</span><br><span class="line">        &quot;&quot;&quot;</span><br><span class="line">        maxnum,num,ss =0,0,&apos;&apos;</span><br><span class="line">        for each in s:</span><br><span class="line">            if each in ss:</span><br><span class="line">                ss = ss.split(each)[-1]+each # ‘’+each</span><br><span class="line">                num =len(ss)</span><br><span class="line">            else:</span><br><span class="line">                num += 1</span><br><span class="line">                ss += each</span><br><span class="line">                if num&gt;=maxnum:</span><br><span class="line">                    maxnum = num</span><br><span class="line">        return maxnum</span><br></pre></td></tr></table></figure></p><h5 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h5><ol><li><a href="https://www.w3schools.com/python/ref_string_split.asp" target="_blank" rel="noopener">https://www.w3schools.com/python/ref_string_split.asp</a> Python String split() Method</li><li><a href="https://leetcode.com/problems/longest-substring-without-repeating-characters/" target="_blank" rel="noopener">https://leetcode.com/problems/longest-substring-without-repeating-characters/</a> longest-substring-without-repeating-characters</li></ol>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h5 id=&quot;问题描述&quot;&gt;&lt;a href=&quot;#问题描述&quot; class=&quot;headerlink&quot; title=&quot;问题描述&quot;&gt;&lt;/a&gt;问题描述&lt;/h5&gt;&lt;p&gt;Given a string, find the length of the longest substring without repeating characters.&lt;br&gt;
+    
+    </summary>
+    
+      <category term="算法" scheme="http://xiepeng21.cn/categories/%E7%AE%97%E6%B3%95/"/>
+    
+    
+      <category term="算法" scheme="http://xiepeng21.cn/tags/%E7%AE%97%E6%B3%95/"/>
+    
+      <category term="python" scheme="http://xiepeng21.cn/tags/python/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Add Two Numbers</title>
+    <link href="http://xiepeng21.cn/Add-Two-Numbers.html"/>
+    <id>http://xiepeng21.cn/Add-Two-Numbers.html</id>
+    <published>2018-10-06T02:03:00.000Z</published>
+    <updated>2019-01-06T09:14:38.000Z</updated>
+    
+    <content type="html"><![CDATA[<h5 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h5><p>You are given two non-empty linked lists representing two non-negative integers. The digits are stored in reverse order and each of their nodes contain a single digit. Add the two numbers and return it as a linked list.</p><p>You may assume the two numbers do not contain any leading zero, except the number 0 itself.<br><a id="more"></a></p><h5 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h5><p>Input: (2 -&gt; 4 -&gt; 3) + (5 -&gt; 6 -&gt; 4)<br>Output: 7 -&gt; 0 -&gt; 8<br>Explanation: 342 + 465 = 807.</p><h5 id="算法思路"><a href="#算法思路" class="headerlink" title="算法思路"></a>算法思路</h5><p>在这个问题中，有两种解决思路，第一种是先将输入的链表计算结果转换成字符串，再转成链表输出；第二种是直接采用链表操作。总的来说，第一种方法更易于理解，执行效率更高（runtime is 116ms），第二种方法更加复杂，耗时更长(runtime is 288ms),所以推荐使用方法一。</p><h5 id="代码实现（Python3）"><a href="#代码实现（Python3）" class="headerlink" title="代码实现（Python3）"></a>代码实现（Python3）</h5><p>方法一：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">class Solution:</span><br><span class="line">    def addTwoNumbers(self, l1, l2):</span><br><span class="line">        twoSum = str(int(self.getNumber(l1)) + int(self.getNumber(l2)))</span><br><span class="line">        return self.constructList(twoSum)</span><br><span class="line">    </span><br><span class="line">    def getNumber(self, head):</span><br><span class="line">        current, res = head, []</span><br><span class="line">        while current:</span><br><span class="line">            res.append(str(current.val))</span><br><span class="line">            current = current.next</span><br><span class="line">        return &apos;&apos;.join(res[::-1]) # reverse res</span><br><span class="line"></span><br><span class="line">    def constructList(self, num):</span><br><span class="line">        head = ListNode(int(num[-1])) # get the last element</span><br><span class="line">        current = head</span><br><span class="line">        for i in range(len(num) - 2, -1, -1): # range(start, stop, step)</span><br><span class="line">            node = ListNode(int(num[i]))</span><br><span class="line">            current.next = node</span><br><span class="line">            current = current.next</span><br><span class="line">        return head</span><br></pre></td></tr></table></figure></p><p>方法二：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br></pre></td><td class="code"><pre><span class="line"># Definition for singly-linked list.</span><br><span class="line"># class ListNode(object):</span><br><span class="line">#     def __init__(self, x):</span><br><span class="line">#         self.val = x</span><br><span class="line">#         self.next = None</span><br><span class="line"></span><br><span class="line">class Solution(object):</span><br><span class="line">    def addTwoNumbers(self, l1, l2):</span><br><span class="line">        &quot;&quot;&quot;</span><br><span class="line">        :type l1: ListNode</span><br><span class="line">        :type l2: ListNode</span><br><span class="line">        :rtype: ListNode</span><br><span class="line">        &quot;&quot;&quot;</span><br><span class="line">        </span><br><span class="line">        # Carry over place holder.</span><br><span class="line">        carry = 0</span><br><span class="line">        </span><br><span class="line">        # Create a dummy head, tail node to keep track of the start and end of the list</span><br><span class="line">        dummy_head = tail = ListNode(0)</span><br><span class="line">        </span><br><span class="line">        # While there are elements in either list we add them</span><br><span class="line">        while l1 or l2:</span><br><span class="line">            </span><br><span class="line">            # Get the two element values, if there is not a node use 0</span><br><span class="line">            num_one = l1.val if l1 else 0</span><br><span class="line">            num_two = l2.val if l2 else 0</span><br><span class="line">            </span><br><span class="line">            # Get the new total with two numbers plus the carry over</span><br><span class="line">            new_sum = num_one + num_two + carry</span><br><span class="line">            </span><br><span class="line">            # Check to see if the number will create a carry</span><br><span class="line">            if new_sum &gt; 9:</span><br><span class="line">                # Set the tail node equal to the new node.</span><br><span class="line">                tail.next = ListNode(new_sum - 10)</span><br><span class="line">                # Set a carry because the number was larger than 10</span><br><span class="line">                carry = 1</span><br><span class="line">            else:</span><br><span class="line">                tail.next = ListNode(new_sum)</span><br><span class="line">                carry = 0</span><br><span class="line">                </span><br><span class="line">            # Set the tail node to the new tail.</span><br><span class="line">            tail = tail.next </span><br><span class="line">            </span><br><span class="line">            # Set the current nodes to the next number</span><br><span class="line">            if l1:</span><br><span class="line">                l1 = l1.next</span><br><span class="line">            if l2:</span><br><span class="line">                l2 = l2.next</span><br><span class="line">        </span><br><span class="line">        # Once the adding has been completed if there is still a carry append a new node</span><br><span class="line">        if carry:</span><br><span class="line">            tail.next = ListNode(carry)</span><br><span class="line">            </span><br><span class="line">        # Return the first number set, dummy head was just a place holder. The tail would point to the last node and not the first number in the linked list.</span><br><span class="line">        return dummy_head.next</span><br></pre></td></tr></table></figure></p><h5 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h5><ol><li><a href="https://stackoverflow.com/questions/31633635/what-is-the-meaning-of-inta-1-in-python" target="_blank" rel="noopener">https://stackoverflow.com/questions/31633635/what-is-the-meaning-of-inta-1-in-python</a> What is the meaning of “int(a[::-1])” in Python?</li><li><a href="https://stackoverflow.com/questions/930397/getting-the-last-element-of-a-list-in-python" target="_blank" rel="noopener">https://stackoverflow.com/questions/930397/getting-the-last-element-of-a-list-in-python</a> Getting the last element of a list in Python</li><li><a href="https://www.pythoncentral.io/pythons-range-function-explained/" target="_blank" rel="noopener">https://www.pythoncentral.io/pythons-range-function-explained/</a> Python’s range() Function Explained</li><li><a href="https://leetcode.com/problems/add-two-numbers/" target="_blank" rel="noopener">https://leetcode.com/problems/add-two-numbers/</a> Add Two Numbers</li></ol>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h5 id=&quot;问题描述&quot;&gt;&lt;a href=&quot;#问题描述&quot; class=&quot;headerlink&quot; title=&quot;问题描述&quot;&gt;&lt;/a&gt;问题描述&lt;/h5&gt;&lt;p&gt;You are given two non-empty linked lists representing two non-negative integers. The digits are stored in reverse order and each of their nodes contain a single digit. Add the two numbers and return it as a linked list.&lt;/p&gt;
+&lt;p&gt;You may assume the two numbers do not contain any leading zero, except the number 0 itself.&lt;br&gt;
+    
+    </summary>
+    
+      <category term="算法" scheme="http://xiepeng21.cn/categories/%E7%AE%97%E6%B3%95/"/>
+    
+    
+      <category term="算法" scheme="http://xiepeng21.cn/tags/%E7%AE%97%E6%B3%95/"/>
+    
+      <category term="python" scheme="http://xiepeng21.cn/tags/python/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Two Sum</title>
+    <link href="http://xiepeng21.cn/Two-Sum.html"/>
+    <id>http://xiepeng21.cn/Two-Sum.html</id>
+    <published>2018-10-05T03:54:00.000Z</published>
+    <updated>2019-01-06T09:14:38.000Z</updated>
+    
+    <content type="html"><![CDATA[<h5 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h5><p>Given an array of integers, return indices of the two numbers such that they add up to a specific target.<br>You may assume that each input would have exactly one solution, and you may not use the same element twice.<br><a id="more"></a></p><h5 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h5><p>Given nums = [2, 7, 11, 15], target = 9,<br>Because nums[0] + nums[1] = 2 + 7 = 9,<br>return [0, 1].</p><h5 id="算法思路"><a href="#算法思路" class="headerlink" title="算法思路"></a>算法思路</h5><p>比较容易想到的是，用两个循环，两两元素之和与目标数比较，但是算法复杂度为O（n^2）,会超时。另一种办法是用字典和枚举，用字典存储查询过的值和索引，用枚举来遍历整个列表，算法复杂度为O（n）,所以推荐用第二种方法。</p><h5 id="代码实现（python3）"><a href="#代码实现（python3）" class="headerlink" title="代码实现（python3）"></a>代码实现（python3）</h5><p>方法一：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">class Solution:</span><br><span class="line">    def twoSum(self, nums, target):</span><br><span class="line">        &quot;&quot;&quot;</span><br><span class="line">        :type nums: List[int]</span><br><span class="line">        :type target: int</span><br><span class="line">        :rtype: List[int]</span><br><span class="line">        &quot;&quot;&quot;</span><br><span class="line">        r = []</span><br><span class="line">        l = len(nums)</span><br><span class="line">        for i in range(l):</span><br><span class="line">            for j in range(l):</span><br><span class="line">                if nums[i] + nums[j] == target and i != j:</span><br><span class="line">                    return i,j</span><br><span class="line">        r = r.append(i,j)</span><br><span class="line">        return r</span><br></pre></td></tr></table></figure></p><p>方法二：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">class Solution:</span><br><span class="line">    def twoSum(self, nums, target):</span><br><span class="line">        &quot;&quot;&quot;</span><br><span class="line">        :type nums: List[int]</span><br><span class="line">        :type target: int</span><br><span class="line">        :rtype: List[int]</span><br><span class="line">        &quot;&quot;&quot;</span><br><span class="line">        collected = &#123;&#125;</span><br><span class="line">        for i,x in enumerate(nums):</span><br><span class="line">            diff = target-x</span><br><span class="line">            if diff in collected:</span><br><span class="line">                return [collected[diff], i]</span><br><span class="line">            collected[x] = i</span><br></pre></td></tr></table></figure></p><h5 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h5><ol><li><a href="https://www.tutorialspoint.com/python/python_dictionary.htm" target="_blank" rel="noopener">https://www.tutorialspoint.com/python/python_dictionary.htm</a> Python - Dictionary</li><li><a href="https://www.geeksforgeeks.org/enumerate-in-python/" target="_blank" rel="noopener">https://www.geeksforgeeks.org/enumerate-in-python/</a> Enumerate() in Python</li><li><a href="https://leetcode.com/problems/two-sum/" target="_blank" rel="noopener">https://leetcode.com/problems/two-sum/</a> two-sum</li></ol>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h5 id=&quot;问题描述&quot;&gt;&lt;a href=&quot;#问题描述&quot; class=&quot;headerlink&quot; title=&quot;问题描述&quot;&gt;&lt;/a&gt;问题描述&lt;/h5&gt;&lt;p&gt;Given an array of integers, return indices of the two numbers such that they add up to a specific target.&lt;br&gt;You may assume that each input would have exactly one solution, and you may not use the same element twice.&lt;br&gt;
+    
+    </summary>
+    
+      <category term="算法" scheme="http://xiepeng21.cn/categories/%E7%AE%97%E6%B3%95/"/>
+    
+    
+      <category term="算法" scheme="http://xiepeng21.cn/tags/%E7%AE%97%E6%B3%95/"/>
+    
+      <category term="python" scheme="http://xiepeng21.cn/tags/python/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>使用pyecharts绘制关系图</title>
+    <link href="http://xiepeng21.cn/%E4%BD%BF%E7%94%A8pyecharts%E7%BB%98%E5%88%B6%E5%85%B3%E7%B3%BB%E5%9B%BE.html"/>
+    <id>http://xiepeng21.cn/使用pyecharts绘制关系图.html</id>
+    <published>2018-10-04T14:07:00.000Z</published>
+    <updated>2019-01-06T09:14:38.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>首先介绍下什么是pyecharts, 它是使用Echarts来生成图表的一个python库，我们知道Echarts是百度的一个开源数据可视化javascript库，提供了大量的图表样例，功能十分强大，用起来很方便。今天我们就用pyecharts来绘制一个关系图。<br><a id="more"></a></p><h5 id="最终效果"><a href="#最终效果" class="headerlink" title="最终效果"></a>最终效果</h5><p><a href="https://i.loli.net/2018/10/04/5bb624e008b33.png" target="_blank" rel="noopener"><img src="https://i.loli.net/2018/10/04/5bb624e008b33.png" alt="1.png"></a></p><h5 id="接下来，讲一讲实现步骤"><a href="#接下来，讲一讲实现步骤" class="headerlink" title="接下来，讲一讲实现步骤"></a>接下来，讲一讲实现步骤</h5><ol><li><p>安装pyecharts（以Ubuntu系统为例）: </p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ pip install pyecharts</span><br></pre></td></tr></table></figure></li><li><p>代码实现</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">from pyecharts import Graph</span><br><span class="line"></span><br><span class="line">nodes = [&#123;&quot;name&quot;: &quot;node1&quot;, &quot;symbolSize&quot;: 10&#125;,</span><br><span class="line">         &#123;&quot;name&quot;: &quot;node2&quot;, &quot;symbolSize&quot;: 20&#125;,</span><br><span class="line">         &#123;&quot;name&quot;: &quot;node3&quot;, &quot;symbolSize&quot;: 30&#125;,</span><br><span class="line">         &#123;&quot;name&quot;: &quot;node4&quot;, &quot;symbolSize&quot;: 40&#125;,</span><br><span class="line">         &#123;&quot;name&quot;: &quot;node5&quot;, &quot;symbolSize&quot;: 50&#125;,</span><br><span class="line">         &#123;&quot;name&quot;: &quot;node6&quot;, &quot;symbolSize&quot;: 40&#125;,</span><br><span class="line">         &#123;&quot;name&quot;: &quot;node7&quot;, &quot;symbolSize&quot;: 30&#125;,</span><br><span class="line">         &#123;&quot;name&quot;: &quot;node8&quot;, &quot;symbolSize&quot;: 20&#125;]</span><br><span class="line">links = []</span><br><span class="line">for i in nodes:</span><br><span class="line">    for j in nodes:</span><br><span class="line">        links.append(&#123;&quot;source&quot;: i.get(&apos;name&apos;), &quot;target&quot;: j.get(&apos;name&apos;)&#125;)</span><br><span class="line">graph = Graph(&quot;关系图-环形布局示例&quot;)</span><br><span class="line">graph.add(&quot;&quot;, nodes, links, is_label_show=True,</span><br><span class="line">          graph_repulsion=8000, graph_layout=&apos;circular&apos;,</span><br><span class="line">          label_text_color=None)</span><br><span class="line">graph.render(&quot;graph.html&quot;)</span><br></pre></td></tr></table></figure></li></ol><p>最后，还要提到的一点是，以上只是简单的示例，仅供学习，实际使用过程中，需要适当调整代码，达到更好的效果，或选用其他可视化方式。</p><h5 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h5><ol><li><a href="https://github.com/pyecharts/pyecharts" target="_blank" rel="noopener">https://github.com/pyecharts/pyecharts</a>  pyecharts</li><li><a href="http://echarts.baidu.com/" target="_blank" rel="noopener">http://echarts.baidu.com/</a> echarts</li><li><a href="https://mp.weixin.qq.com/s?__biz=MzI5NDY1MjQzNA==&amp;mid=2247487437&amp;idx=1&amp;sn=0a79cfc2870cdfe87ce32d73bd64483f&amp;chksm=ec5ed0b0db2959a609b22be2ebdc792132f40870ce56c10856085acbd24cca5c2971e03c63e9&amp;scene=21#wechat_redirect" target="_blank" rel="noopener">https://mp.weixin.qq.com/s?__biz=MzI5NDY1MjQzNA==&amp;mid=2247487437&amp;idx=1&amp;sn=0a79cfc2870cdfe87ce32d73bd64483f&amp;chksm=ec5ed0b0db2959a609b22be2ebdc792132f40870ce56c10856085acbd24cca5c2971e03c63e9&amp;scene=21#wechat_redirect</a> 人生苦短，我要用pyecharts画图</li></ol>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;首先介绍下什么是pyecharts, 它是使用Echarts来生成图表的一个python库，我们知道Echarts是百度的一个开源数据可视化javascript库，提供了大量的图表样例，功能十分强大，用起来很方便。今天我们就用pyecharts来绘制一个关系图。&lt;br&gt;
+    
+    </summary>
+    
+      <category term="经验技巧" scheme="http://xiepeng21.cn/categories/%E7%BB%8F%E9%AA%8C%E6%8A%80%E5%B7%A7/"/>
+    
+    
+      <category term="python" scheme="http://xiepeng21.cn/tags/python/"/>
+    
+      <category term="可视化" scheme="http://xiepeng21.cn/tags/%E5%8F%AF%E8%A7%86%E5%8C%96/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>加一</title>
+    <link href="http://xiepeng21.cn/%E5%8A%A0%E4%B8%80.html"/>
+    <id>http://xiepeng21.cn/加一.html</id>
+    <published>2018-07-19T12:38:00.000Z</published>
+    <updated>2019-01-06T09:14:38.000Z</updated>
+    
+    <content type="html"><![CDATA[<h5 id="要求："><a href="#要求：" class="headerlink" title="要求："></a>要求：</h5><p>给定一个非负整数组成的非空数组，在该数的基础上加一，返回一个新的数组。<br><br>最高位数字存放在数组的首位， 数组中每个元素只存储一个数字。<br><br>你可以假设除了整数 0 之外，这个整数不会以零开头。<br><a id="more"></a></p><h5 id="示例："><a href="#示例：" class="headerlink" title="示例："></a>示例：</h5><p>（1）<br><br>输入: [1,2,3]<br><br>输出: [1,2,4]<br><br>解释: 输入数组表示数字 123。<br><br>（2）<br><br>输入: [4,3,2,1]<br><br>输出: [4,3,2,2]<br><br>解释: 输入数组表示数字 4321。</p><h5 id="分析："><a href="#分析：" class="headerlink" title="分析："></a>分析：</h5><p>从后向前判断每个元素，如有进位，将进位符flag置为1，将元素所在位变为0；若无进位，将元素所在位+1，并将进位符置0，最后判断进位符标志，如果为1，则在数组第0位增加一个元素1。</p><h5 id="代码："><a href="#代码：" class="headerlink" title="代码："></a>代码：</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">class Solution:</span><br><span class="line">    def plusOne(self, digits):</span><br><span class="line">        &quot;&quot;&quot;</span><br><span class="line">        :type digits: List[int]</span><br><span class="line">        :rtype: List[int]</span><br><span class="line">        &quot;&quot;&quot;</span><br><span class="line">        </span><br><span class="line">        flag = 1</span><br><span class="line">        for i in range(len(digits)-1,-1,-1):</span><br><span class="line">            if flag + digits[i] == 10:</span><br><span class="line">                digits[i] = 0</span><br><span class="line">                flag = 1</span><br><span class="line">            else:</span><br><span class="line">                digits[i] = digits[i] + flag</span><br><span class="line">                flag = 0</span><br><span class="line">        if flag == 1:</span><br><span class="line">            digits.insert(0,1)</span><br><span class="line">        return digits</span><br></pre></td></tr></table></figure><h5 id="参考资料："><a href="#参考资料：" class="headerlink" title="参考资料："></a>参考资料：</h5><p>1、leetcode 66.Plus One python <a href="https://blog.csdn.net/mario_mmh/article/details/79845181" target="_blank" rel="noopener">https://blog.csdn.net/mario_mmh/article/details/79845181</a></p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h5 id=&quot;要求：&quot;&gt;&lt;a href=&quot;#要求：&quot; class=&quot;headerlink&quot; title=&quot;要求：&quot;&gt;&lt;/a&gt;要求：&lt;/h5&gt;&lt;p&gt;给定一个非负整数组成的非空数组，在该数的基础上加一，返回一个新的数组。&lt;br&gt;&lt;br&gt;最高位数字存放在数组的首位， 数组中每个元素只存储一个数字。&lt;br&gt;&lt;br&gt;你可以假设除了整数 0 之外，这个整数不会以零开头。&lt;br&gt;
+    
+    </summary>
+    
+      <category term="算法" scheme="http://xiepeng21.cn/categories/%E7%AE%97%E6%B3%95/"/>
+    
+    
+      <category term="python" scheme="http://xiepeng21.cn/tags/python/"/>
+    
+      <category term="数组" scheme="http://xiepeng21.cn/tags/%E6%95%B0%E7%BB%84/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>两个数组的交集Ⅱ</title>
+    <link href="http://xiepeng21.cn/%E4%B8%A4%E4%B8%AA%E6%95%B0%E7%BB%84%E7%9A%84%E4%BA%A4%E9%9B%86%E2%85%A1.html"/>
+    <id>http://xiepeng21.cn/两个数组的交集Ⅱ.html</id>
+    <published>2018-07-18T12:45:00.000Z</published>
+    <updated>2019-01-06T09:14:38.000Z</updated>
+    
+    <content type="html"><![CDATA[<h5 id="要求："><a href="#要求：" class="headerlink" title="要求："></a>要求：</h5><p>给定两个数组，写一个方法来计算它们的交集。<br><a id="more"></a></p><h5 id="示例："><a href="#示例：" class="headerlink" title="示例："></a>示例：</h5><p>给定 nums1 = [1, 2, 2, 1], nums2 = [2, 2], 返回 [2, 2].</p><h5 id="分析："><a href="#分析：" class="headerlink" title="分析："></a>分析：</h5><p>先对两个数组由小到大排序，用两个指针index1和index2遍历两个数组，比较对应元素的大小，如果相等，则添加进result数组，如果不相等，元素小的数组指针加一，最终其中一个数组遍历结束，就停止程序。</p><h5 id="代码："><a href="#代码：" class="headerlink" title="代码："></a>代码：</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">class Solution:</span><br><span class="line">    def intersect(self, nums1, nums2):</span><br><span class="line">        &quot;&quot;&quot;</span><br><span class="line">        :type nums1: List[int]</span><br><span class="line">        :type nums2: List[int]</span><br><span class="line">        :rtype: List[int]</span><br><span class="line">        &quot;&quot;&quot;</span><br><span class="line">        result = []</span><br><span class="line">        nums1.sort()</span><br><span class="line">        nums2.sort()</span><br><span class="line">        index1, index2 = 0, 0</span><br><span class="line">        n1, n2 = len(nums1), len(nums2)</span><br><span class="line">        </span><br><span class="line">        while index1 &lt; n1 and index2 &lt; n2:</span><br><span class="line">            if nums1[index1] == nums2[index2]:</span><br><span class="line">                result.append(nums1[index1])</span><br><span class="line">                index1 += 1</span><br><span class="line">                index2 += 1</span><br><span class="line">            elif nums1[index1] &gt; nums2[index2]:</span><br><span class="line">                index2 += 1</span><br><span class="line">            else:</span><br><span class="line">                index1 += 1</span><br><span class="line">        return result</span><br></pre></td></tr></table></figure><h5 id="参考资料："><a href="#参考资料：" class="headerlink" title="参考资料："></a>参考资料：</h5><p>1、两数组的交 II <a href="https://blog.csdn.net/guoziqing506/article/details/51569488" target="_blank" rel="noopener">https://blog.csdn.net/guoziqing506/article/details/51569488</a></p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h5 id=&quot;要求：&quot;&gt;&lt;a href=&quot;#要求：&quot; class=&quot;headerlink&quot; title=&quot;要求：&quot;&gt;&lt;/a&gt;要求：&lt;/h5&gt;&lt;p&gt;给定两个数组，写一个方法来计算它们的交集。&lt;br&gt;
+    
+    </summary>
+    
+      <category term="算法" scheme="http://xiepeng21.cn/categories/%E7%AE%97%E6%B3%95/"/>
+    
+    
+      <category term="python" scheme="http://xiepeng21.cn/tags/python/"/>
+    
+      <category term="数组" scheme="http://xiepeng21.cn/tags/%E6%95%B0%E7%BB%84/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>只出现一次的数字</title>
+    <link href="http://xiepeng21.cn/%E5%8F%AA%E5%87%BA%E7%8E%B0%E4%B8%80%E6%AC%A1%E7%9A%84%E6%95%B0%E5%AD%97.html"/>
+    <id>http://xiepeng21.cn/只出现一次的数字.html</id>
+    <published>2018-07-17T12:35:00.000Z</published>
+    <updated>2019-01-06T09:14:38.000Z</updated>
+    
+    <content type="html"><![CDATA[<h5 id="要求："><a href="#要求：" class="headerlink" title="要求："></a>要求：</h5><p>给定一个非空整数数组，除了某个元素只出现一次以外，其余每个元素均出现两次。找出那个只出现了一次的元素。（算法应该具有线性时间复杂度）<br><a id="more"></a></p><h5 id="示例："><a href="#示例：" class="headerlink" title="示例："></a>示例：</h5><p>（1）<br>输入: [2,2,1]<br><br>输出: 1<br><br>（2）<br>输入: [4,1,2,1,2]<br><br>输出: 4</p><h5 id="分析："><a href="#分析：" class="headerlink" title="分析："></a>分析：</h5><p>为了找出只出现一次的元素，可以先将所有元素出现的次数变为一次，然后对所有元素求和，乘以2倍，减去原来数组元素的和，即为只出现一次的元素的值。</p><h5 id="代码："><a href="#代码：" class="headerlink" title="代码："></a>代码：</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">class Solution:</span><br><span class="line">    def singleNumber(self, nums):</span><br><span class="line">        &quot;&quot;&quot;</span><br><span class="line">        :type nums: List[int]</span><br><span class="line">        :rtype: int</span><br><span class="line">        &quot;&quot;&quot;</span><br><span class="line">        return sum(set(nums))*2 - sum(nums)</span><br></pre></td></tr></table></figure><h5 id="参考资料："><a href="#参考资料：" class="headerlink" title="参考资料："></a>参考资料：</h5><p>1、LeetCode 136. 只出现一次的数字 Python <a href="https://blog.csdn.net/ma412410029/article/details/80511684" target="_blank" rel="noopener">https://blog.csdn.net/ma412410029/article/details/80511684</a></p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h5 id=&quot;要求：&quot;&gt;&lt;a href=&quot;#要求：&quot; class=&quot;headerlink&quot; title=&quot;要求：&quot;&gt;&lt;/a&gt;要求：&lt;/h5&gt;&lt;p&gt;给定一个非空整数数组，除了某个元素只出现一次以外，其余每个元素均出现两次。找出那个只出现了一次的元素。（算法应该具有线性时间复杂度）&lt;br&gt;
+    
+    </summary>
+    
+      <category term="算法" scheme="http://xiepeng21.cn/categories/%E7%AE%97%E6%B3%95/"/>
+    
+    
+      <category term="python" scheme="http://xiepeng21.cn/tags/python/"/>
+    
+      <category term="数组" scheme="http://xiepeng21.cn/tags/%E6%95%B0%E7%BB%84/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>存在重复</title>
+    <link href="http://xiepeng21.cn/%E5%AD%98%E5%9C%A8%E9%87%8D%E5%A4%8D.html"/>
+    <id>http://xiepeng21.cn/存在重复.html</id>
+    <published>2018-07-17T12:31:00.000Z</published>
+    <updated>2019-01-06T09:14:38.000Z</updated>
+    
+    <content type="html"><![CDATA[<h5 id="要求："><a href="#要求：" class="headerlink" title="要求："></a>要求：</h5><p>给定一个整数数组，判断是否存在重复元素。<br>如果任何值在数组中出现至少两次，函数返回 true。如果数组中每个元素都不相同，则返回 false。<br><a id="more"></a></p><h5 id="示例："><a href="#示例：" class="headerlink" title="示例："></a>示例：</h5><p>(1)<br>输入: [1,2,3,1]<br><br>输出: true <br><br>(2)<br>输入: [1,2,3,4]<br><br>输出: false <br><br>(3)<br>输入: [1,1,1,3,3,4,3,2,4,2]<br><br>输出: true</p><h5 id="分析："><a href="#分析：" class="headerlink" title="分析："></a>分析：</h5><p>直接元素之间比较，会很容易想到用两个for循环来进行元素间判断，但是这种方法会超时，所以不使用这种方法；可以通过将数组转换成集合，然后判断转换前的数组和集合的长度是否相等，如果相等，则没有重复元素，如果不相等，则存在重复元素。（这种方法，很巧妙，也应用了集合的特性）。</p><h5 id="代码："><a href="#代码：" class="headerlink" title="代码："></a>代码：</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">class Solution:</span><br><span class="line">    def containsDuplicate(self, nums):</span><br><span class="line">        &quot;&quot;&quot;</span><br><span class="line">        :type nums: List[int]</span><br><span class="line">        :rtype: bool</span><br><span class="line">        &quot;&quot;&quot;</span><br><span class="line">        if (len(nums) != len(set(nums))):</span><br><span class="line">            return True</span><br><span class="line">        else:</span><br><span class="line">            return False</span><br></pre></td></tr></table></figure><h5 id="参考资料："><a href="#参考资料：" class="headerlink" title="参考资料："></a>参考资料：</h5><p>1、LeetCode-containsDuplicate-存在重复 <a href="https://segmentfault.com/a/1190000014325206" target="_blank" rel="noopener">https://segmentfault.com/a/1190000014325206</a></p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h5 id=&quot;要求：&quot;&gt;&lt;a href=&quot;#要求：&quot; class=&quot;headerlink&quot; title=&quot;要求：&quot;&gt;&lt;/a&gt;要求：&lt;/h5&gt;&lt;p&gt;给定一个整数数组，判断是否存在重复元素。&lt;br&gt;如果任何值在数组中出现至少两次，函数返回 true。如果数组中每个元素都不相同，则返回 false。&lt;br&gt;
+    
+    </summary>
+    
+      <category term="算法" scheme="http://xiepeng21.cn/categories/%E7%AE%97%E6%B3%95/"/>
+    
+    
+      <category term="python" scheme="http://xiepeng21.cn/tags/python/"/>
+    
+      <category term="数组" scheme="http://xiepeng21.cn/tags/%E6%95%B0%E7%BB%84/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>旋转数组</title>
+    <link href="http://xiepeng21.cn/%E6%97%8B%E8%BD%AC%E6%95%B0%E7%BB%84.html"/>
+    <id>http://xiepeng21.cn/旋转数组.html</id>
+    <published>2018-07-17T12:27:00.000Z</published>
+    <updated>2019-01-06T09:14:38.000Z</updated>
+    
+    <content type="html"><![CDATA[<h5 id="要求："><a href="#要求：" class="headerlink" title="要求："></a>要求：</h5><p>给定一个数组，将数组中的元素向右移动 k 个位置，其中 k 是非负数。<br><a id="more"></a></p><h5 id="示例："><a href="#示例：" class="headerlink" title="示例："></a>示例：</h5><p>（1）<br>输入: [1,2,3,4,5,6,7] 和 k = 3<br>输出: [5,6,7,1,2,3,4]解释:<br>向右旋转 1 步: [7,1,2,3,4,5,6]<br>向右旋转 2 步: [6,7,1,2,3,4,5]<br>向右旋转 3 步: [5,6,7,1,2,3,4] <br><br>（2）<br>输入: [-1,-100,3,99] 和 k = 2<br>输出: [3,99,-1,-100]<br>解释:<br>向右旋转 1 步: [99,-1,-100,3]<br>向右旋转 2 步: [3,99,-1,-100]</p><h5 id="分析："><a href="#分析：" class="headerlink" title="分析："></a>分析：</h5><p>将前k个元素移动到数组的后半部分，将后(n-k)个元素移动到数组的前半部分。</p><h5 id="代码："><a href="#代码：" class="headerlink" title="代码："></a>代码：</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">class Solution:</span><br><span class="line">    def rotate(self, nums, k):</span><br><span class="line">        &quot;&quot;&quot;</span><br><span class="line">        :type nums: List[int]</span><br><span class="line">        :type k: int</span><br><span class="line">        :rtype: void Do not return anything, modify nums in-place instead.</span><br><span class="line">        &quot;&quot;&quot;</span><br><span class="line">        n = len(nums) - k  </span><br><span class="line">        nums[:] = nums[n:] + nums[:n]</span><br></pre></td></tr></table></figure><h5 id="拓展："><a href="#拓展：" class="headerlink" title="拓展："></a>拓展：</h5><p>1、这是一个直观的算法操作，以切片（分块）的方式操作数组，比较符合人的思维，但是要注重观察示例特征，否则容易陷入单个元素移动的怪圈。<br><br>2、nums[:] = 和 nums = 的区别：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; a = list(range(10))</span><br><span class="line">&gt;&gt;&gt; b = a</span><br><span class="line">&gt;&gt;&gt; a[:] = [0, 0, 0] # changes what a and b both refer to</span><br><span class="line">&gt;&gt;&gt; b</span><br><span class="line">[0, 0, 0]</span><br><span class="line"></span><br><span class="line">&gt;&gt;&gt; a = list(range(10))</span><br><span class="line">&gt;&gt;&gt; b = a</span><br><span class="line">&gt;&gt;&gt; a = [0, 0, 0] # a now refers to a different list than b</span><br><span class="line">&gt;&gt;&gt; b</span><br><span class="line">[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]</span><br></pre></td></tr></table></figure></p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h5 id=&quot;要求：&quot;&gt;&lt;a href=&quot;#要求：&quot; class=&quot;headerlink&quot; title=&quot;要求：&quot;&gt;&lt;/a&gt;要求：&lt;/h5&gt;&lt;p&gt;给定一个数组，将数组中的元素向右移动 k 个位置，其中 k 是非负数。&lt;br&gt;
+    
+    </summary>
+    
+      <category term="算法" scheme="http://xiepeng21.cn/categories/%E7%AE%97%E6%B3%95/"/>
+    
+    
+      <category term="python" scheme="http://xiepeng21.cn/tags/python/"/>
+    
+      <category term="数组" scheme="http://xiepeng21.cn/tags/%E6%95%B0%E7%BB%84/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>买卖股票的最佳时机Ⅱ</title>
+    <link href="http://xiepeng21.cn/%E4%B9%B0%E5%8D%96%E8%82%A1%E7%A5%A8%E7%9A%84%E6%9C%80%E4%BD%B3%E6%97%B6%E6%9C%BA%E2%85%A1.html"/>
+    <id>http://xiepeng21.cn/买卖股票的最佳时机Ⅱ.html</id>
+    <published>2018-07-17T12:23:00.000Z</published>
+    <updated>2019-01-06T09:14:38.000Z</updated>
+    
+    <content type="html"><![CDATA[<h5 id="要求："><a href="#要求：" class="headerlink" title="要求："></a>要求：</h5><p>给定一个数组，它的第 i 个元素是一支给定股票第 i 天的价格。<br>设计一个算法来计算你所能获取的最大利润。你可以尽可能地完成更多的交易（多次买卖一支股票）。<br>注意：你不能同时参与多笔交易（你必须在再次购买前出售掉之前的股票）。<br><a id="more"></a></p><h5 id="示例："><a href="#示例：" class="headerlink" title="示例："></a>示例：</h5><p>（1）输入: [7,1,5,3,6,4]<br>输出: 7<br>解释: 在第 2 天（股票价格 = 1）的时候买入，在第 3 天（股票价格 = 5）的时候卖出, 这笔交易所能获得利润 = 5-1 = 4 。<br>     随后，在第 4 天（股票价格 = 3）的时候买入，在第 5 天（股票价格 = 6）的时候卖出, 这笔交易所能获得利润 = 6-3 = 3 。<br><br>（2）输入: [1,2,3,4,5]<br>输出: 4<br>解释: 在第 1 天（股票价格 = 1）的时候买入，在第 5 天 （股票价格 = 5）的时候卖出, 这笔交易所能获得利润 = 5-1 = 4 。<br>     注意你不能在第 1 天和第 2 天接连购买股票，之后再将它们卖出。<br>     因为这样属于同时参与了多笔交易，你必须在再次购买前出售掉之前的股票。<br><br>（3）输入: [7,6,4,3,1]<br>输出: 0<br>解释: 在这种情况下, 没有交易完成, 所以最大利润为 0。</p><h5 id="分析："><a href="#分析：" class="headerlink" title="分析："></a>分析：</h5><p>通过比较相邻两个值的大小，低价买入，高价卖出，然后计算收益，另外考虑不买入和不卖出的特殊情况。</p><h5 id="代码："><a href="#代码：" class="headerlink" title="代码："></a>代码：</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line">class Solution:</span><br><span class="line">    def maxProfit(self, prices):</span><br><span class="line">        &quot;&quot;&quot;</span><br><span class="line">        :type prices: List[int]</span><br><span class="line">        :rtype: int</span><br><span class="line">        &quot;&quot;&quot;</span><br><span class="line">        status = 0</span><br><span class="line">        length = len(prices)</span><br><span class="line">        result = 0</span><br><span class="line">        buy = 0</span><br><span class="line">        sell = 0</span><br><span class="line">        #当列表为空或者只有一位时，返回0</span><br><span class="line">        if length &lt;= 1:</span><br><span class="line">            return 0</span><br><span class="line">        else:</span><br><span class="line">            #遍历列表</span><br><span class="line">            for x in range(length-1):</span><br><span class="line">                #当状态为未买入，并且后一位的值大于前一位值时，买入，并且把状态改为买入</span><br><span class="line">                if status == 0 and prices[x] &lt; prices[x+1]:</span><br><span class="line">                    buy = prices[x]</span><br><span class="line">                    status = 1</span><br><span class="line">                #当状态为买入，并且后一位的值小于等于前一位值时，卖出，并且把状态改为未买入，累计result</span><br><span class="line">                elif status == 1 and prices[x] &gt;= prices[x+1]:</span><br><span class="line">                    sell = prices[x]</span><br><span class="line">                    result = result + sell - buy</span><br><span class="line">                    status = 0 # 正常情况最后状态一定是未买入，即status=0</span><br><span class="line">                    </span><br><span class="line">            #用来排除[5,4,3,2,1]这种一直没有买入的情况</span><br><span class="line">            if status == 0 and sell == 0:</span><br><span class="line">                result = 0</span><br><span class="line">            #用来解决[1,2,3,4,5]这种一直没有卖出的情况</span><br><span class="line">            elif status == 1:</span><br><span class="line">                result = result + prices[length-1] - buy</span><br><span class="line">            return result</span><br></pre></td></tr></table></figure><h5 id="参考资料："><a href="#参考资料：" class="headerlink" title="参考资料："></a>参考资料：</h5><p>1、买卖股票的最佳时机 II-Python-LeetCode <a href="https://blog.csdn.net/linfeng886/article/details/80070804" target="_blank" rel="noopener">https://blog.csdn.net/linfeng886/article/details/80070804</a></p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h5 id=&quot;要求：&quot;&gt;&lt;a href=&quot;#要求：&quot; class=&quot;headerlink&quot; title=&quot;要求：&quot;&gt;&lt;/a&gt;要求：&lt;/h5&gt;&lt;p&gt;给定一个数组，它的第 i 个元素是一支给定股票第 i 天的价格。&lt;br&gt;设计一个算法来计算你所能获取的最大利润。你可以尽可能地完成更多的交易（多次买卖一支股票）。&lt;br&gt;注意：你不能同时参与多笔交易（你必须在再次购买前出售掉之前的股票）。&lt;br&gt;
+    
+    </summary>
+    
+      <category term="算法" scheme="http://xiepeng21.cn/categories/%E7%AE%97%E6%B3%95/"/>
+    
+    
+      <category term="python" scheme="http://xiepeng21.cn/tags/python/"/>
+    
+      <category term="数组" scheme="http://xiepeng21.cn/tags/%E6%95%B0%E7%BB%84/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>从排序数组中删除重复项</title>
+    <link href="http://xiepeng21.cn/%E4%BB%8E%E6%8E%92%E5%BA%8F%E6%95%B0%E7%BB%84%E4%B8%AD%E5%88%A0%E9%99%A4%E9%87%8D%E5%A4%8D%E9%A1%B9.html"/>
+    <id>http://xiepeng21.cn/从排序数组中删除重复项.html</id>
+    <published>2018-07-16T14:29:00.000Z</published>
+    <updated>2019-01-06T09:14:38.000Z</updated>
+    
+    <content type="html"><![CDATA[<h5 id="要求："><a href="#要求：" class="headerlink" title="要求："></a>要求：</h5><p>给定一个排序数组，你需要在原地删除重复出现的元素，使得每个元素只出现一次，返回移除后数组的新长度。（不要使用额外的数组空间，你必须在原地修改输入数组并在使用O（1）额外空间的条件下完成）。<br><a id="more"></a></p><h5 id="示例："><a href="#示例：" class="headerlink" title="示例："></a>示例：</h5><p>给定数组 nums = [1,1,2],<br>函数应该返回新的长度 2, 并且原数组 nums 的前两个元素被修改为 1, 2。你不需要考虑数组中超出新长度后面的元素。</p><h5 id="分析："><a href="#分析：" class="headerlink" title="分析："></a>分析：</h5><p>遍历一遍数组，将不重复的数字保留，重复的数字覆盖，并删除末尾剩余的数字。</p><h5 id="代码（python3）"><a href="#代码（python3）" class="headerlink" title="代码（python3）:"></a>代码（python3）:</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">class Solution:</span><br><span class="line">    def removeDuplicates(self, nums):</span><br><span class="line">        &quot;&quot;&quot;</span><br><span class="line">        :type nums: List[int]</span><br><span class="line">        :rtype: int</span><br><span class="line">        &quot;&quot;&quot;</span><br><span class="line">        k = 0</span><br><span class="line">        for i in range(1,len(nums)):</span><br><span class="line">            if nums[i] != nums[k]:</span><br><span class="line">                k = k+1</span><br><span class="line">                nums[k] = nums[i]</span><br><span class="line">        del nums[k+1:len(nums)]</span><br><span class="line">        return len(nums)</span><br></pre></td></tr></table></figure><h5 id="参考资料："><a href="#参考资料：" class="headerlink" title="参考资料："></a>参考资料：</h5><p>1、LintCode（100）删除排序数组中的重复数字 <a href="https://blog.csdn.net/fly_yr/article/details/51548657" target="_blank" rel="noopener">https://blog.csdn.net/fly_yr/article/details/51548657</a></p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h5 id=&quot;要求：&quot;&gt;&lt;a href=&quot;#要求：&quot; class=&quot;headerlink&quot; title=&quot;要求：&quot;&gt;&lt;/a&gt;要求：&lt;/h5&gt;&lt;p&gt;给定一个排序数组，你需要在原地删除重复出现的元素，使得每个元素只出现一次，返回移除后数组的新长度。（不要使用额外的数组空间，你必须在原地修改输入数组并在使用O（1）额外空间的条件下完成）。&lt;br&gt;
+    
+    </summary>
+    
+      <category term="算法" scheme="http://xiepeng21.cn/categories/%E7%AE%97%E6%B3%95/"/>
+    
+    
+      <category term="python" scheme="http://xiepeng21.cn/tags/python/"/>
+    
+      <category term="数组" scheme="http://xiepeng21.cn/tags/%E6%95%B0%E7%BB%84/"/>
+    
+  </entry>
+  
+</feed>
