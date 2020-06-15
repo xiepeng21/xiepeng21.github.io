@@ -118,30 +118,23 @@
 
 
   
-  <meta name="keywords" content="交通预测,图神经网络,">
+  <meta name="keywords" content="CNN,LSTM,Crowd Flow Prediction,">
 
 
-<meta name="description" content="Chen, Weiqi, Ling Chen, Yu Xie, Wei Cao, Yusong Gao, and Xiaojie Feng. “Multi-Range Attentive Bicomponent Graph Convolutional Network for Traffic Forecasting.” arXiv preprint arXiv:1911.12093 (2019).">
-<meta name="keywords" content="交通预测,图神经网络">
+<meta name="description" content="文章提出了一种称为注意力人流量机器（Attentive Crowd Flow Machines）的神经网络模型，该模型能够通过带注意力机制的时变数据动态表示来推断城市人流量的演变。它由两层ConvLSTM单元以及用于空间权重预测的卷积层组成。文章的创新点在于：1.引入了注意力机制 2.权重时变的融合方法。">
+<meta name="keywords" content="CNN,LSTM,Crowd Flow Prediction">
 <meta property="og:type" content="article">
-<meta property="og:title" content="【论文笔记-1】用于交通预测的多范围注意力双组分图卷积网络">
-<meta property="og:url" content="http://xiepeng21.cn/【论文笔记-1】用于交通预测的多范围注意力双组分图卷积网络.html">
+<meta property="og:title" content="【论文笔记-1】注意力人流量机器">
+<meta property="og:url" content="http://xiepeng21.cn/【论文笔记-1】注意力人流量机器.html">
 <meta property="og:site_name" content="天道酬勤">
-<meta property="og:description" content="Chen, Weiqi, Ling Chen, Yu Xie, Wei Cao, Yusong Gao, and Xiaojie Feng. “Multi-Range Attentive Bicomponent Graph Convolutional Network for Traffic Forecasting.” arXiv preprint arXiv:1911.12093 (2019).">
+<meta property="og:description" content="文章提出了一种称为注意力人流量机器（Attentive Crowd Flow Machines）的神经网络模型，该模型能够通过带注意力机制的时变数据动态表示来推断城市人流量的演变。它由两层ConvLSTM单元以及用于空间权重预测的卷积层组成。文章的创新点在于：1.引入了注意力机制 2.权重时变的融合方法。">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="https://i.loli.net/2020/06/14/QH5ysCw64l38ExS.png">
-<meta property="og:image" content="https://i.loli.net/2020/06/14/j6E2md7kYRh8v3A.png">
-<meta property="og:image" content="https://i.loli.net/2020/06/14/A3yE9oUKbCZGsRp.png">
-<meta property="og:image" content="https://i.loli.net/2020/06/14/S9vIA3t8C7ngRXk.png">
-<meta property="og:image" content="https://i.loli.net/2020/06/14/NR6qQJAofOwHpPK.png">
-<meta property="og:image" content="https://i.loli.net/2020/06/14/yZXAJwsHdM7niQ8.png">
-<meta property="og:image" content="https://i.loli.net/2020/06/14/NGrHvd23eYkqgpM.png">
-<meta property="og:image" content="https://i.loli.net/2020/06/14/9QkNBjcV8fMJsyv.png">
-<meta property="og:updated_time" content="2020-06-14T23:42:57.483Z">
+<meta property="og:image" content="https://i.loli.net/2018/12/26/5c23a1622ae38.png">
+<meta property="og:updated_time" content="2020-06-15T00:14:48.848Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="【论文笔记-1】用于交通预测的多范围注意力双组分图卷积网络">
-<meta name="twitter:description" content="Chen, Weiqi, Ling Chen, Yu Xie, Wei Cao, Yusong Gao, and Xiaojie Feng. “Multi-Range Attentive Bicomponent Graph Convolutional Network for Traffic Forecasting.” arXiv preprint arXiv:1911.12093 (2019).">
-<meta name="twitter:image" content="https://i.loli.net/2020/06/14/QH5ysCw64l38ExS.png">
+<meta name="twitter:title" content="【论文笔记-1】注意力人流量机器">
+<meta name="twitter:description" content="文章提出了一种称为注意力人流量机器（Attentive Crowd Flow Machines）的神经网络模型，该模型能够通过带注意力机制的时变数据动态表示来推断城市人流量的演变。它由两层ConvLSTM单元以及用于空间权重预测的卷积层组成。文章的创新点在于：1.引入了注意力机制 2.权重时变的融合方法。">
+<meta name="twitter:image" content="https://i.loli.net/2018/12/26/5c23a1622ae38.png">
 
 
 
@@ -150,7 +143,7 @@
 
 
 
-  <link rel="canonical" href="http://xiepeng21.cn/【论文笔记-1】用于交通预测的多范围注意力双组分图卷积网络.html">
+  <link rel="canonical" href="http://xiepeng21.cn/【论文笔记-1】注意力人流量机器.html">
 
 
 
@@ -159,7 +152,7 @@
     sidebar: "",
   };
 </script>
-  <title>【论文笔记-1】用于交通预测的多范围注意力双组分图卷积网络 | 天道酬勤</title>
+  <title>【论文笔记-1】注意力人流量机器 | 天道酬勤</title>
   
 
 
@@ -336,7 +329,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://xiepeng21.cn/【论文笔记-1】用于交通预测的多范围注意力双组分图卷积网络.html">
+    <link itemprop="mainEntityOfPage" href="http://xiepeng21.cn/【论文笔记-1】注意力人流量机器.html">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Peng Xie">
@@ -353,7 +346,7 @@
 
         
         
-          <h2 class="post-title" itemprop="name headline">【论文笔记-1】用于交通预测的多范围注意力双组分图卷积网络</h2>
+          <h2 class="post-title" itemprop="name headline">【论文笔记-1】注意力人流量机器</h2>
         
 
         <div class="post-meta">
@@ -365,7 +358,7 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-12-20T18:00:29+08:00">2019-12-20</time>
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-12-24T19:15:00+08:00">2018-12-24</time>
             
 
             
@@ -389,7 +382,7 @@
 			  
 			
 			
-              <time title="更新于" itemprop="dateModified" datetime="2020-06-15T07:42:57+08:00">2020-06-15</time>
+              <time title="更新于" itemprop="dateModified" datetime="2020-06-15T08:14:48+08:00">2020-06-15</time>
             
           </span>
 
@@ -440,7 +433,7 @@
                 
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
-                <span title="字数统计">1.2k</span>
+                <span title="字数统计">303</span>
               
 
               
@@ -474,26 +467,9 @@
       
 
       
-        <p>Chen, Weiqi, Ling Chen, Yu Xie, Wei Cao, Yusong Gao, and Xiaojie Feng. “<a href="https://arxiv.org/pdf/1911.12093" target="_blank" rel="noopener">Multi-Range Attentive Bicomponent Graph Convolutional Network for Traffic Forecasting</a>.” arXiv preprint arXiv:1911.12093 (2019). Accepted by AAAI2020.<br><a id="more"></a><br>提出了一种交通预测深度学习模型——多范围注意力双组分图卷积网络(MRA-BGCN)。该模型首先根据路网距离构建节点向图，根据不同的边相互模式构建边向图。然后利用双组分图卷积实现了节点和边的相互作用建模。此外引入多范围注意力机制，对不同邻域范围内的信息进行聚合，自动学习不同范围的重要性。在两个交通数据集（METR-LA和PEMS-BAY）上的实验结果表明取得了很好的效果。</p>
-<h4 id="问题定义"><a href="#问题定义" class="headerlink" title="问题定义"></a>问题定义</h4><p><img src="https://i.loli.net/2020/06/14/QH5ysCw64l38ExS.png" alt="2338_1.png"></p>
-<p>交通预测问题的任务是：学习一个函数$f$, 能够给出$T^{\prime}$历史的图信号和图$G$，预测$T$未来的图信号。</p>
-<h4 id="数据集"><a href="#数据集" class="headerlink" title="数据集"></a>数据集</h4><p><img src="https://i.loli.net/2020/06/14/j6E2md7kYRh8v3A.png" alt="2339_1.png"></p>
-<p>METR-LA and PEMS-BAY是两个公开的交通网络数据集。METR-LA记录了从2012年3月1日到2012年6月30日四个月的交通速度统计数据，包括洛杉矶公路上的207个传感器。PEMS-BAY记录了从2017年1月1日到2017年5月31日的5个月的交通速度统计数据，其中包括旧金山湾区的325个传感器。</p>
-<h4 id="方法"><a href="#方法" class="headerlink" title="方法"></a>方法</h4><p><img src="https://i.loli.net/2020/06/14/A3yE9oUKbCZGsRp.png" alt="2337_1.png"></p>
-<p>论文中的模型如上图所示，包括2部分，（1）双组分图卷积模块 （2）多范围注意力层。</p>
-<h5 id="双组分图卷积"><a href="#双组分图卷积" class="headerlink" title="双组分图卷积"></a>双组分图卷积</h5><p><img src="https://i.loli.net/2020/06/14/S9vIA3t8C7ngRXk.png" alt="2340_1.png"></p>
-<p>图卷积是对给定图结构的节点间相互作用进行建模的一种有效操作。双组分图卷积可以显式地对节点和边的相互作用进行建模。</p>
-<h6 id="流连接"><a href="#流连接" class="headerlink" title="流连接"></a>流连接</h6><p>在交通网络中，一个路段可能受到其上下游路段的影响。</p>
-<h6 id="竞争关系"><a href="#竞争关系" class="headerlink" title="竞争关系"></a>竞争关系</h6><p>共享同一源节点的道路链路可能会争夺交通资源，产生竞争关系。</p>
-<h5 id="多范围注意力"><a href="#多范围注意力" class="headerlink" title="多范围注意力"></a>多范围注意力</h5><p>提出了双组分图卷积的多范围注意力机制，能自动学习不同邻域范围的重要性，从而实现对不同邻域范围内信息的聚集，而不仅仅是给定的邻域范围。</p>
-<h5 id="双组分图卷积RNN"><a href="#双组分图卷积RNN" class="headerlink" title="双组分图卷积RNN"></a>双组分图卷积RNN</h5><p><img src="https://i.loli.net/2020/06/14/NR6qQJAofOwHpPK.png" alt="2343_1.png"></p>
-<p>将多个BGCGRU层堆叠起来，并使用Sequence to Sequence体系结构进行多步前向交通预测。</p>
-<h4 id="评估"><a href="#评估" class="headerlink" title="评估"></a>评估</h4><ul>
-<li>性能比较<br><img src="https://i.loli.net/2020/06/14/yZXAJwsHdM7niQ8.png" alt="2342_1.png"></li>
-<li>边向图的影响<br><img src="https://i.loli.net/2020/06/14/NGrHvd23eYkqgpM.png" alt="2341_1.png"></li>
-<li>多范围注意力机制的影响<br><img src="https://i.loli.net/2020/06/14/9QkNBjcV8fMJsyv.png" alt="2344_1.png"></li>
-</ul>
-<h4 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h4><p>提出了一种用于交通预测的多范围注意力双组分图卷积网络。具体来说，采用双组分图卷积来明确地建模节点和边的相关性，利用一种边向图构造方法来编码边的上下游连通性和竞争关系，使用多范围注意力机制，有效地聚合多个邻域范围信息，生成综合的表示。可以进一步研究的地方是，可以考虑更多的影响因素，比如交通事故以及周围的兴趣点；目前论文中考虑的是单模态输入图，还可以研究多模态输入图。</p>
+        <p>文章提出了一种称为注意力人流量机器（Attentive Crowd Flow Machines）的神经网络模型，该模型能够通过带注意力机制的时变数据动态表示来推断城市人流量的演变。它由两层ConvLSTM单元以及用于空间权重预测的卷积层组成。文章的创新点在于：1.引入了注意力机制 2.权重时变的融合方法。<br><a id="more"></a></p>
+<p><img src="https://i.loli.net/2018/12/26/5c23a1622ae38.png" alt="Image.png"></p>
+<h5 id="论文链接"><a href="#论文链接" class="headerlink" title="论文链接"></a>论文链接</h5><p><a href="http://www.linliang.net/wp-content/uploads/2018/10/ACMMM2018_FlowMachines.pdf" target="_blank" rel="noopener">Liu L, Zhang R, Peng J, et al. Attentive Crowd Flow Machines[C]//2018 ACM Multimedia Conference on Multimedia Conference. ACM, 2018: 1553-1561.</a></p>
 
       
     </div>
@@ -529,9 +505,11 @@
       
         <div class="post-tags">
           
-            <a href="/tags/交通预测/" rel="tag"># 交通预测</a>
+            <a href="/tags/CNN/" rel="tag"># CNN</a>
           
-            <a href="/tags/图神经网络/" rel="tag"># 图神经网络</a>
+            <a href="/tags/LSTM/" rel="tag"># LSTM</a>
+          
+            <a href="/tags/Crowd-Flow-Prediction/" rel="tag"># Crowd Flow Prediction</a>
           
         </div>
       
@@ -556,8 +534,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/常用linux命令.html" rel="next" title="常用linux命令">
-                <i class="fa fa-chevron-left"></i> 常用linux命令
+              <a href="/CNN_Image_Size.html" rel="next" title="如何计算经过CNN（卷积神经网络）卷积后的图片大小">
+                <i class="fa fa-chevron-left"></i> 如何计算经过CNN（卷积神经网络）卷积后的图片大小
               </a>
             
           </div>
@@ -565,6 +543,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/【论文笔记-2】深度学习.html" rel="prev" title="【论文笔记-2】深度学习">
+                【论文笔记-2】深度学习 <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -729,9 +711,7 @@
                     
                       
                     
-                      
-                    
-                    <span class="site-state-item-count">25</span>
+                    <span class="site-state-item-count">24</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>
@@ -779,7 +759,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#问题定义"><span class="nav-number">1.</span> <span class="nav-text">问题定义</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#数据集"><span class="nav-number">2.</span> <span class="nav-text">数据集</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#方法"><span class="nav-number">3.</span> <span class="nav-text">方法</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#双组分图卷积"><span class="nav-number">3.1.</span> <span class="nav-text">双组分图卷积</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#流连接"><span class="nav-number">3.1.1.</span> <span class="nav-text">流连接</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#竞争关系"><span class="nav-number">3.1.2.</span> <span class="nav-text">竞争关系</span></a></li></ol></li><li class="nav-item nav-level-5"><a class="nav-link" href="#多范围注意力"><span class="nav-number">3.2.</span> <span class="nav-text">多范围注意力</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#双组分图卷积RNN"><span class="nav-number">3.3.</span> <span class="nav-text">双组分图卷积RNN</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#评估"><span class="nav-number">4.</span> <span class="nav-text">评估</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#总结"><span class="nav-number">5.</span> <span class="nav-text">总结</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-5"><a class="nav-link" href="#论文链接"><span class="nav-number">1.</span> <span class="nav-text">论文链接</span></a></li></ol></div>
             
 
           </div>
@@ -1358,29 +1338,6 @@
   
   
 
-  
-    
-      <script type="text/x-mathjax-config">
-    MathJax.Hub.Config({
-      tex2jax: {
-        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
-        processEscapes: true,
-        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
-      }
-    });
-</script>
-
-<script type="text/x-mathjax-config">
-    MathJax.Hub.Queue(function() {
-      var all = MathJax.Hub.getAllJax(), i;
-        for (i=0; i < all.length; i += 1) {
-          all[i].SourceElement().parentNode.className += ' has-jax';
-        }
-    });
-</script>
-<script type="text/javascript" src="//cdn.jsdelivr.net/npm/mathjax@2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-
-    
   
 
 
