@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222"><meta name="generator" content="Hexo 6.3.0">
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/function%20()%20%7B%0A%20%20%20%20%20%20for%20(var%20_len2%20=%20arguments.length,%20args%20=%20new%20Array(_len2),%20_key2%20=%200;%20_key2%20%3C%20_len2;%20_key2++)%20%7B%0A%20%20%20%20%20%20%20%20args%5B_key2%5D%20=%20arguments%5B_key2%5D;%0A%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20return%20obj%5Bval%5D.apply(obj,%20args);%0A%20%20%20%20%7D">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha256-HtsXJanqjKTc8vVQjO4YMhiqFoXkfBsjBWcX91T1jr8=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pace/1.2.4/themes/blue/pace-theme-minimal.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pace/1.2.4/pace.min.js" integrity="sha256-gqd7YTjg/BtfqWSwsJOvndl0Bxc8gFImLEkXQT8+qj0=" crossorigin="anonymous"></script>
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"xiepeng21.cn","root":"/","images":"/images","scheme":"Muse","darkmode":false,"version":"8.18.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"fold":{"enable":false,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
+
+    <meta name="description" content="炎热的夏季已经过去，秋爽来学。开学了，要开始新一阶段的学习、生活了。空调吹久了，推开窗，看一看，说不定有新发现呢？^_^">
+<meta property="og:type" content="article">
+<meta property="og:title" content="【时空数据挖掘】推开窗，看一看">
+<meta property="og:url" content="https://xiepeng21.cn/posts/24230420/index.html">
+<meta property="og:site_name" content="半亩方塘">
+<meta property="og:description" content="炎热的夏季已经过去，秋爽来学。开学了，要开始新一阶段的学习、生活了。空调吹久了，推开窗，看一看，说不定有新发现呢？^_^">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://xiepeng21.cn/images/%E6%97%B6%E7%A9%BA%E6%95%B0%E6%8D%AE%E6%8C%96%E6%8E%98-%E4%BB%BB%E5%8A%A1.png">
+<meta property="og:image" content="https://xiepeng21.cn/images/%E6%97%B6%E7%A9%BA%E6%95%B0%E6%8D%AE.png">
+<meta property="og:image" content="https://xiepeng21.cn/images/ST%20dataset.png">
+<meta property="og:image" content="https://xiepeng21.cn/images/%E7%82%B9%E7%BA%BF%E9%9D%A2.png">
+<meta property="og:image" content="https://xiepeng21.cn/images/%E6%97%B6%E7%A9%BA%E6%95%B0%E6%8D%AE%E6%8C%96%E6%8E%98-%E5%B1%82%E6%AC%A1%E4%BD%93%E7%B3%BB.png">
+<meta property="og:image" content="https://xiepeng21.cn/images/%E6%97%B6%E7%A9%BA%E6%95%B0%E6%8D%AE%E6%8C%96%E6%8E%98-%E6%96%B9%E6%B3%95.png">
+<meta property="article:published_time" content="2022-08-26T18:53:59.000Z">
+<meta property="article:modified_time" content="2023-10-07T12:11:58.153Z">
+<meta property="article:author" content="Peter">
+<meta property="article:tag" content="时空数据挖掘">
+<meta property="article:tag" content="城市计算">
+<meta property="article:tag" content="开学季">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://xiepeng21.cn/images/%E6%97%B6%E7%A9%BA%E6%95%B0%E6%8D%AE%E6%8C%96%E6%8E%98-%E4%BB%BB%E5%8A%A1.png">
+
+
+<link rel="canonical" href="https://xiepeng21.cn/posts/24230420/">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://xiepeng21.cn/posts/24230420/","path":"posts/24230420/","title":"【时空数据挖掘】推开窗，看一看"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>【时空数据挖掘】推开窗，看一看 | 半亩方塘</title>
+  
+
+
+
+
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">半亩方塘</p>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">问渠那得清如许，为有源头活水来</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="搜索" role="button">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="home fa-fw"></i>首页</a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="th fa-fw"></i>分类</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="tags fa-fw"></i>标签</a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="archive fa-fw"></i>归档</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="user fa-fw"></i>关于</a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup"><div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close" role="button">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div class="search-result-container no-result">
+  <div class="search-result-icon">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AE%9A%E4%B9%89"><span class="nav-number">1.</span> <span class="nav-text">定义</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BB%BB%E5%8A%A1"><span class="nav-number">2.</span> <span class="nav-text">任务</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%95%B0%E6%8D%AE"><span class="nav-number">3.</span> <span class="nav-text">数据</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%96%B9%E6%B3%95"><span class="nav-number">4.</span> <span class="nav-text">方法</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%B1%82%E6%AC%A1%E4%BD%93%E7%B3%BB%E6%9E%84%E5%BB%BA"><span class="nav-number">4.1.</span> <span class="nav-text">层次体系构建</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%96%B9%E6%B3%95%E8%AE%BA"><span class="nav-number">4.2.</span> <span class="nav-text">方法论</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%AE%BA%E6%96%87"><span class="nav-number">5.</span> <span class="nav-text">论文</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%8C%89%E4%BC%9A%E8%AE%AE"><span class="nav-number">5.1.</span> <span class="nav-text">按会议</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%8C%89%E6%9C%9F%E5%88%8A"><span class="nav-number">5.2.</span> <span class="nav-text">按期刊</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%86%99%E5%9C%A8%E6%9C%80%E5%90%8E"><span class="nav-number">6.</span> <span class="nav-text">写在最后</span></a></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">Peter</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">44</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">6</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">59</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+
+        </div>
+      </div>
+    </div>
+
+    
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://xiepeng21.cn/posts/24230420/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Peter">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="半亩方塘">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="【时空数据挖掘】推开窗，看一看 | 半亩方塘">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          【时空数据挖掘】推开窗，看一看
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2022-08-27 02:53:59" itemprop="dateCreated datePublished" datetime="2022-08-27T02:53:59+08:00">2022-08-27</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2023-10-07 20:11:58" itemprop="dateModified" datetime="2023-10-07T20:11:58+08:00">2023-10-07</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E9%9A%8F%E7%AC%94%E6%84%9F%E6%82%9F/" itemprop="url" rel="index"><span itemprop="name">随笔感悟</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody"><p>炎热的夏季已经过去，秋爽来学。开学了，要开始新一阶段的学习、生活了。空调吹久了，推开窗，看一看，说不定有新发现呢？^_^</p>
+<span id="more"></span>
+
+<p>最近到了开学季，新的一学年开始了。回顾自己最开始接触时空数据挖掘、城市计算、机器学习领域，还是2018年。4年过去了，从最开始的陌生、好奇，到学习、探索、交流过程中的困惑、失落、激动、喜悦，直到现在，还在不断学习、思考、总结的过程中。前段时间，在知乎写了一系列关于时空数据挖掘的文章，也回答了一些关于如何阅读论文，如何入门时空数据挖掘领域的问题。在2020年暑假参加了京东城市组织的城市计算首届夏令营活动，参与到时空数据融合、城市大数据分析、城市交通预测等科研项目中。因此，积累了一些经验、有一些心得体会，写下来，作为自己的成长记录，也希望对新入门这个领域的同学、研究者有一些帮助，能对该领域的发展做出自己的一份贡献。</p>
+<p>那么，首先，我们会问，什么是时空数据挖掘，从这6个字来看，可以分为两部分，时空+数据挖掘，提到时空，第一印象可能就是想到《错位时空》这首歌，“我吹过你吹过的晚风，那我们算不算相拥”，还有疫情期间出现的“时空伴随者”这个词，时空伴随者是指一个人与确诊患者手机号码在同一时空网格（范围为800m*800m）共同停留超过10分钟，且最近14天任一方号码累计停留时间超过30小时以上，查出的号码为时空伴随者号码。想必，大家对时空这一个词有一个直观的印象了。时空，就是时间和空间两个维度，风和人都是时空维度下的对象，我们研究空气质量、天气预报、交通预测、密接人员发现等，都会对对象所处的时间段、空间范围进行分析，分析其时空特征，进行数据分析、建模，得出有意思的分析结果。然后，数据挖掘，与日常听到的数据分析、大数据、机器学习、人工智能等词语，都有一定联系，其主要是指对数据进行清洗、处理、分析、可视化的过程，研究频繁模式挖掘、分类、聚类、异常检测等任务。推荐阅读韩家炜老师的《数据挖掘：概念与技术》这本书，当时我也是开始看这本书进入数据挖掘领域。最后，介绍一下，时空数据挖掘的定义、任务、数据、方法、论文以及如何入门。</p>
+<h3 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h3><p>采用人工智能和大数据技术对城市时空数据进行分析与挖掘，旨在挖掘时空数据，理解城市本质，解决城市问题。</p>
+<h3 id="任务"><a href="#任务" class="headerlink" title="任务"></a>任务</h3><p>从任务的特点、属性、层级进行分类，可分为底层的数据处理层级的任务，中层的时空模式发现任务，以及顶层的应用任务。如图1所示。</p>
+<p><img src="/../images/%E6%97%B6%E7%A9%BA%E6%95%B0%E6%8D%AE%E6%8C%96%E6%8E%98-%E4%BB%BB%E5%8A%A1.png" alt="时空数据挖掘-任务.png"></p>
+<center>图1：时空数据挖掘-任务</center>
+
+<p>其中，底层任务包括时空数据预处理，时空数据融合和时空数据管理等。中层任务包括时空数据模式挖掘。顶层任务包括时空预测，时空推荐，异常检测，调度和优化等。</p>
+<h3 id="数据"><a href="#数据" class="headerlink" title="数据"></a>数据</h3><p>针对时空数据挖掘，数据是必不可少的原料，而且这类数据具有明显的时空特性，包括时间特性（时间的邻近性、周期性、趋势性等）、空间特性（距离远近，空间层次等）。有必要将<strong>时空数据</strong>进行分类，对时空数据进行了如图2分类：</p>
+<p><img src="/../images/%E6%97%B6%E7%A9%BA%E6%95%B0%E6%8D%AE.png" alt="时空数据.png"></p>
+<center>图2：时空数据挖掘-时空数据分类</center>
+
+<p>按时空动态，可以分成空间静态点数据、空间点时序数据、时空动态点数据、空间静态网数据、空间静态时间动态网数据、时空动态网数据。这种分类方式是由京东城市的Yu Zheng老师团队提出，具有时空特色。如图3所示：</p>
+<p><img src="/../images/ST%20dataset.png" alt="ST dataset.png"></p>
+<center>图3：时空数据-时空动态分类</center>
+
+<p>按个体交互，可以分为个体数据和环境数据。侧重于个体、群体、环境之间的交互和协同。</p>
+<p>按数据构造，可以分为基本单元数据、组合数据、关系数据。这种分类方式，适合于对数据进行形式化组织和描述，具有层次递进关系。</p>
+<p>按点线面，可以分为基于点、基于线、基于面的数据。这种分类，和几何上的点线面结构，可以直观地对应上，是比较自然的一种分类方式。如图4所示：</p>
+<p><img src="/../images/%E7%82%B9%E7%BA%BF%E9%9D%A2.png" alt="点线面.png"></p>
+<center>图4：时空数据-点线面分类</center>
+
+<p>后面的三种分类方式，是笔者在参加2020年京东城市计算夏令营的时候，与北航Jingyuan Wang老师和Dayan Pan, Geyuan Wang同学等的交流、讨论中形成的，感谢他们。</p>
+<p>以上的四种时空数据分类方法，可以给读者以不同的视角来看待时空数据，在进行时空数据挖掘时，能对时空数据有全面、充分的理解。如果有其他的分类方式或者一些建议、疑问，欢迎在留言区提问，交流。</p>
+<p>此外，针对数据质量不高的问题，采用数据补全、数据增强、数据融合等方式进行预处理、分析。</p>
+<p>关于时空数据、多模态数据与多源异构数据的联系与区别的思考：</p>
+<p>时空数据：主要是指带有时间和空间特性的一类数据，比如GPS轨迹，其有时间戳，位置信息；地铁刷卡数据，其有乘客进站时间站点、出站时间站点信息等。</p>
+<p>多模态数据：主要是指文本、音频、图像、视频等不同模态类型的数据。</p>
+<p>多源异构数据：主要是包括多源和异构两种特性，前者是指数据的来源多样，比如来源于交通领域的交通路网、网约车出行订单数据、公共交通刷卡数据与来自环境气象的空气质量、降雨量数据，后者是指数据的类型和格式不一样，比如交通路网是网状结构数据，空间位置相对固定，时间变化频率慢，订单、刷卡、空气质量数据是时空序列，随着时间和空间发生变化。</p>
+<p>时空数据多见于时空数据挖掘、城市计算、智能交通系统等领域；多模态数据覆盖范围更广，计算机视觉、自然语言处理、数据挖掘领域都有研究；多源异构数据主要侧重于从数据的多来源，结构差异的角度对数据进行描述，可以看做是时空数据和多模态数据的特性之一，另外还有缺失性、不平衡性、动态突变性等，根据具体的数据集质量情况而定。</p>
+<p>三者关系可以大致如下：多模态数据&gt;时空数据，多源异构数据用于描述这两类数据的部分特性，从多源和异构角度。</p>
+<h3 id="方法"><a href="#方法" class="headerlink" title="方法"></a>方法</h3><h4 id="层次体系构建"><a href="#层次体系构建" class="headerlink" title="层次体系构建"></a>层次体系构建</h4><p>为了更好地进行时空数据挖掘，我们提出了一种时空数据挖掘的层次体系，包括数据层、任务层、方法层。如图5所示。</p>
+<p><img src="/../images/%E6%97%B6%E7%A9%BA%E6%95%B0%E6%8D%AE%E6%8C%96%E6%8E%98-%E5%B1%82%E6%AC%A1%E4%BD%93%E7%B3%BB.png" alt="时空数据挖掘-层次体系.png"></p>
+<center>图5：时空数据挖掘-层次体系</center>
+
+<p>该层次体系，首先从数据出发，将时空数据分为静态数据、时间动态数据和时空动态数据，更加详细的时空数据分类方式，可以参考前文数据部分；然后针对时空任务，分成了底层任务、中层任务和顶层任务，更具体的任务分类，可以参考前文任务部分；最后针对特定的数据和任务，选择相应的时空数据挖掘方法，更多的时空数据挖掘方法，可以参考下文方法部分。</p>
+<p>在进行具体时空数据挖掘研究中，也可以参照上述的层次体系，思考要研究的时空数据、时空任务、时空方法，从整体的角度进行分析，希望其能对于您的研究有所助益。</p>
+<p>注：时空数据挖掘的层次体系构建，感谢北航的Jingyuan Wang和Geyuan Wang等的讨论、交流。</p>
+<h4 id="方法论"><a href="#方法论" class="headerlink" title="方法论"></a>方法论</h4><p>笔者对时空数据挖掘中常用方法进行分类，主要是站在方法论的角度，进行大致分类。因为方法往往是跟任务、数据和需求等是紧密联系，还需根据实际情况，实际分析。方法的分类，如图6所示。</p>
+<p><img src="/../images/%E6%97%B6%E7%A9%BA%E6%95%B0%E6%8D%AE%E6%8C%96%E6%8E%98-%E6%96%B9%E6%B3%95.png" alt="时空数据挖掘-方法.png"></p>
+<center>图6：时空数据挖掘方法</center>
+
+<p>时空数据挖掘的方法主要分为时空数据预处理方法、传统的机器学习方法、先进的机器学习方法和常用技术框架。</p>
+<p>由于人工智能、机器学习、数据挖掘领域的快速发展，一些新的学习方法和技术框架也在不断涌现。时空数据挖掘领域针对时空数据挖掘领域的任务、数据也在提出一些具有时空特色和多场景应用背景下的新方法。</p>
+<p>注：上述的时空数据挖掘方法分类是在和北航Jingyuan Wang、Geyuan Wang等老师、同学的讨论下形成，感谢他们。</p>
+<h3 id="论文"><a href="#论文" class="headerlink" title="论文"></a>论文</h3><p>为了及时跟踪学术前沿论文，准确把握时空数据挖掘领域发展方向，提升对时空数据挖掘的理解，帮助我们更好地学习、研究，对2016-2022年的时空数据挖掘领域的顶级会议、期刊论文进行了梳理。由于工作量较大，加之笔者时间有限，整理的论文还有很多需要完善修改的地方，后续将继续更新。感兴趣的朋友，也可以在<a target="_blank" rel="noopener" href="https://github.com/xiepeng21/research_spatio-temporal-data-mining">我的论文库</a>里发起<a target="_blank" rel="noopener" href="https://www.zhihu.com/question/21682976">pull request</a>或提出修改建议。</p>
+<h4 id="按会议"><a href="#按会议" class="headerlink" title="按会议"></a>按会议</h4><ul>
+<li><p>AAAI（2019-2022）：</p>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/478357750">AAAI 2022时空数据挖掘录用论文列表</a></li>
+<li><a href="https://xiepeng21.cn/2021-01-06/%E6%97%B6%E7%A9%BA%E6%95%B0%E6%8D%AE%E6%8C%96%E6%8E%98%E8%AE%BA%E6%96%87-AAAI2021.html">AAAI 2021时空数据挖掘论文</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/xiepeng21/research_spatio-temporal-data-mining#aaai-2019-2020">AAAI 2019-2020时空数据挖掘论文</a></li>
+</ul>
+</li>
+<li><p>IJCAI （2016-2022）：</p>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://github.com/xiepeng21/research_spatio-temporal-data-mining/blob/master/IJCAI/IJCAI.md">IJCAI 2022 时空数据挖掘论文</a></li>
+<li><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/423323595">IJCAI 2021 时空数据挖掘论文</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/xiepeng21/research_spatio-temporal-data-mining#ijcai-2016-2020">IJCAI 2016-2020 时空数据挖掘论文</a></li>
+</ul>
+</li>
+<li><p>KDD （2016-2022）：</p>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/547262551">【KDD 2022】时空数据挖掘论文</a></li>
+<li><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/423342733">KDD 2021 时空数据挖掘论文</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/xiepeng21/research_spatio-temporal-data-mining#kdd-2016-2020">KDD 2016-2020时空数据挖掘论文</a></li>
+</ul>
+</li>
+<li><p>ICDM (2016-2019)</p>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://github.com/xiepeng21/research_spatio-temporal-data-mining#icdm-2016-2019">ICDM 2016-2019时空数据挖掘论文</a></li>
+</ul>
+</li>
+<li><p>CIKM (2017-2020)</p>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://github.com/xiepeng21/research_spatio-temporal-data-mining#cikm-2017-2020">CIKM 2017-2020时空数据挖掘论文</a></li>
+</ul>
+</li>
+<li><p>WWW (2016-2022)</p>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://github.com/xiepeng21/research_spatio-temporal-data-mining/blob/master/WWW/WWW.md">WWW 2022 时空数据挖掘论文</a></li>
+<li><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/440291388">WWW 2021 时空数据挖掘论文</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/xiepeng21/research_spatio-temporal-data-mining#www-2016-2020">WWW 2016-2020时空数据挖掘论文</a></li>
+</ul>
+</li>
+<li><p>SDM (2016-2020)</p>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://github.com/xiepeng21/research_spatio-temporal-data-mining#sdm-2016-2020">SDM 2016-2020时空数据挖掘论文</a></li>
+</ul>
+</li>
+<li><p>SIGSPATIAL (2016-2019, 2021)</p>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/442419220">ACM SIGSPATIAL 2021 时空数据挖掘论文</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/xiepeng21/research_spatio-temporal-data-mining#sigspatial-2016-2019">SIGSPATIAL 2016-2019时空数据挖掘论文</a></li>
+</ul>
+</li>
+<li><p>WSDM (2022)</p>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/478363400">WSDM 2022 时空数据挖掘论文</a></li>
+</ul>
+</li>
+<li><p>NuerIPS</p>
+<ul>
+<li>待更新</li>
+</ul>
+</li>
+<li><p>ICLR（2022）</p>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/478362107">ICLR 2022时空数据挖掘录用论文列表</a></li>
+</ul>
+</li>
+<li><p>ICML（2022）</p>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/548907678">【ICML 2022】时空数据挖掘论文</a></li>
+</ul>
+</li>
+</ul>
+<h4 id="按期刊"><a href="#按期刊" class="headerlink" title="按期刊"></a>按期刊</h4><ul>
+<li><p>TKDE（2016-2020）</p>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://github.com/xiepeng21/research_spatio-temporal-data-mining#ieee-tkde-2016-2020">TKDE 2016-2020 时空数据挖掘论文</a></li>
+</ul>
+</li>
+<li><p>TIST（2016-2020）</p>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://github.com/xiepeng21/research_spatio-temporal-data-mining#acm-tist-2016-2020">TIST 2016-2020 时空数据挖掘论文</a></li>
+</ul>
+</li>
+<li><p>TITS</p>
+<ul>
+<li>待更新</li>
+</ul>
+</li>
+<li><p>TPAMI</p>
+<ul>
+<li>待更新</li>
+</ul>
+</li>
+<li><p>TNNLS</p>
+<ul>
+<li>待更新</li>
+</ul>
+</li>
+</ul>
+<h3 id="写在最后"><a href="#写在最后" class="headerlink" title="写在最后"></a>写在最后</h3><p><strong>关于如何入门机器学习、数据挖掘：</strong></p>
+<ul>
+<li>推荐书籍：1. 数据挖掘：概念与技术（第三版）中文版-Jiawei Han；2.《统计学习方法（第2版）》-李航。这两本书，看下目录，感兴趣的部分，详细读下，电子版和纸质版都可。如果喜欢看视频，再看看吴恩达或者李宏毅的机器学习课程，B站上有。后面如果对某个研究方向感兴趣，再看一些综述论文，比如城市计算、时空数据挖掘领域的论文：1. Urban Computing: Concepts, Methodologies, and Applications-Yu Zheng-TIST 2014. 2. Deep Learning for Spatio-Temporal Data Mining: A Survey-Senzhang Wang-TKDE2020。</li>
+</ul>
+<p><strong>关于时空数据挖掘的学习路线：</strong></p>
+<ul>
+<li>建议首先通过看<a target="_blank" rel="noopener" href="https://github.com/xiepeng21/research_spatio-temporal-data-mining#survey">综述文章</a>、知乎、博客等，了解下什么是时空数据挖掘，<a target="_blank" rel="noopener" href="https://www.microsoft.com/en-us/research/project/%E5%9F%8E%E5%B8%82%E8%AE%A1%E7%AE%97/">城市计算</a>，然后从顶会（KDD, IJCAI, AAAI等）、顶刊（TKDE, TITS, TIST等）上找与自己研究课题相近的论文阅读，此外，养成做论文笔记的习惯，可以从论文的动机（motivation）、任务（task）、方法（method），实验（experiment）等进行总结。最重要的一点，就是要复现论文、跑实验。遇到问题，多思考，多查资料，多交流。</li>
+</ul>
+<p><strong>关于看论文遇到不懂的地方，怎么办：</strong></p>
+<ul>
+<li>自己多看几遍，网上查阅资料，补充预备知识；</li>
+<li>和老师、同学讨论；</li>
+<li>发邮件联系作者，讨论，论文中有作者的邮箱。</li>
+</ul>
+<p>欢迎各位提出建议、问题，我们一起交流、学习、成长。</p>
+<p>“问渠那得清如许？为有源头活水来” ヾ(◍°∇°◍)ﾉﾞ</p>
+<p>– 我在半亩方塘等你 ^_^</p>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/%E6%97%B6%E7%A9%BA%E6%95%B0%E6%8D%AE%E6%8C%96%E6%8E%98/" rel="tag"># 时空数据挖掘</a>
+              <a href="/tags/%E5%9F%8E%E5%B8%82%E8%AE%A1%E7%AE%97/" rel="tag"># 城市计算</a>
+              <a href="/tags/%E5%BC%80%E5%AD%A6%E5%AD%A3/" rel="tag"># 开学季</a>
+          </div>
+
+        
+  <div class="social-like a2a_kit a2a_kit_size_32 a2a_default_style">
+    <a class="a2a_dd" target="_blank" rel="noopener" href="https://www.addtoany.com/share"></a>
+      <a class="a2a_button_facebook"></a>
+      <a class="a2a_button_twitter"></a>
+      <a class="a2a_button_wechat"></a>
+      <a class="a2a_button_douban"></a>
+  </div>
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/posts/e5ed55f3/" rel="prev" title="【WSDM 2022】时空数据挖掘论文">
+                  <i class="fa fa-angle-left"></i> 【WSDM 2022】时空数据挖掘论文
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/posts/f3b8224e/" rel="next" title="概率密度估计">
+                  概率密度估计 <i class="fa fa-angle-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+  <div class="copyright">
+    &copy; 
+    <span itemprop="copyrightYear">2023</span>
+    <span class="with-love">
+      <i class="fa fa-heart"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">Peter</span>
+  </div>
+<!--
+  <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/muse/" rel="noopener" target="_blank">NexT.Muse</a> 强力驱动
+  </div>
+-->
+
+    </div>
+  </footer>
+
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+  <div class="sidebar-dimmer"></div>
+  <div class="back-to-top" role="button" aria-label="返回顶部">
+    <i class="fa fa-arrow-up fa-lg"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/schemes/muse.js"></script><script src="/js/next-boot.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-generator-searchdb/1.4.1/search.js" integrity="sha256-1kfA5uHPf65M5cphT2dvymhkuyHPQp5A53EGZOnOLmc=" crossorigin="anonymous"></script>
+<script src="/js/third-party/search/local-search.js"></script>
+
+
+
+
+
+  <script src="/js/third-party/pace.js"></script>
+
+  <script src="/js/third-party/addtoany.js"></script>
+
+  
+
+
+
+
+
+</body>
+</html>
