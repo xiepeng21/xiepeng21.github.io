@@ -1,277 +1,933 @@
+
+
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="zh-CN" data-default-color-scheme=auto>
+
+
+
 <head>
   <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width">
-<meta name="theme-color" content="#222"><meta name="generator" content="Hexo 6.3.0">
-
-  <link rel="icon" type="image/png" sizes="16x16" href="/function%20()%20%7B%0A%20%20%20%20%20%20for%20(var%20_len2%20=%20arguments.length,%20args%20=%20new%20Array(_len2),%20_key2%20=%200;%20_key2%20%3C%20_len2;%20_key2++)%20%7B%0A%20%20%20%20%20%20%20%20args%5B_key2%5D%20=%20arguments%5B_key2%5D;%0A%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20return%20obj%5Bval%5D.apply(obj,%20args);%0A%20%20%20%20%7D">
-
-<link rel="stylesheet" href="/css/main.css">
-
-
-
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha256-HtsXJanqjKTc8vVQjO4YMhiqFoXkfBsjBWcX91T1jr8=" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pace/1.2.4/themes/blue/pace-theme-minimal.css">
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/pace/1.2.4/pace.min.js" integrity="sha256-gqd7YTjg/BtfqWSwsJOvndl0Bxc8gFImLEkXQT8+qj0=" crossorigin="anonymous"></script>
-
-<script class="next-config" data-name="main" type="application/json">{"hostname":"xiepeng21.cn","root":"/","images":"/images","scheme":"Muse","darkmode":false,"version":"8.18.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"fold":{"enable":false,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
-
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/fluid.png">
+  <link rel="icon" href="/img/fluid.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="Peter">
+  <meta name="keywords" content="">
+  
     <meta property="og:type" content="website">
 <meta property="og:title" content="分类">
 <meta property="og:url" content="https://xiepeng21.cn/categories/index.html">
 <meta property="og:site_name" content="半亩方塘">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2018-02-13T03:02:15.000Z">
-<meta property="article:modified_time" content="2019-01-06T09:14:38.000Z">
 <meta property="article:author" content="Peter">
-<meta name="twitter:card" content="summary">
+<meta name="twitter:card" content="summary_large_image">
+  
+  
+  
+  <title>分类 - 半亩方塘</title>
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
 
-<link rel="canonical" href="https://xiepeng21.cn/categories/">
 
 
 
-<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":false,"lang":"zh-CN","comments":true,"permalink":"https://xiepeng21.cn/categories/index.html","path":"categories/index.html","title":"分类"}</script>
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
 
-<script class="next-config" data-name="calendar" type="application/json">""</script>
-<title>分类 | 半亩方塘
-</title>
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_hj8rtnfg7um.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_lbnruvf0jn.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
+  
+    <link id="highlight-css-dark" rel="stylesheet" href="/css/highlight-dark.css" />
   
 
 
 
 
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"xiepeng21.cn","root":"/","version":"1.9.5-a","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml","include_content_in_search":true};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+  
 
 
+  
+<meta name="generator" content="Hexo 6.3.0"></head>
 
 
-  <noscript>
-    <link rel="stylesheet" href="/css/noscript.css">
-  </noscript>
-</head>
+<body>
+  
 
-<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
-  <div class="headband"></div>
+  <header>
+    
 
-  <main class="main">
-    <div class="column">
-      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
-  <div class="site-nav-toggle">
-    <div class="toggle" aria-label="切换导航栏" role="button">
-        <span class="toggle-line"></span>
-        <span class="toggle-line"></span>
-        <span class="toggle-line"></span>
-    </div>
-  </div>
-
-  <div class="site-meta">
-
-    <a href="/" class="brand" rel="start">
-      <i class="logo-line"></i>
-      <p class="site-title">半亩方塘</p>
-      <i class="logo-line"></i>
+<div class="header-inner" style="height: 60vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>Fluid</strong>
     </a>
-      <p class="site-subtitle" itemprop="description">问渠那得清如许，为有源头活水来</p>
-  </div>
 
-  <div class="site-nav-right">
-    <div class="toggle popup-trigger" aria-label="搜索" role="button">
-        <i class="fa fa-search fa-fw fa-lg"></i>
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                <span>首页</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                <span>归档</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                <span>分类</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                <span>标签</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                <span>关于</span>
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              <i class="iconfont icon-search"></i>
+            </a>
+          </li>
+          
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">
+              <i class="iconfont icon-dark" id="color-toggle-icon"></i>
+            </a>
+          </li>
+        
+      </ul>
     </div>
   </div>
-</div>
-
-
-
-<nav class="site-nav">
-  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="home fa-fw"></i>首页</a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="th fa-fw"></i>分类</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="tags fa-fw"></i>标签</a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="archive fa-fw"></i>归档</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="user fa-fw"></i>关于</a></li>
-      <li class="menu-item menu-item-search">
-        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
-        </a>
-      </li>
-  </ul>
 </nav>
 
-
-
-  <div class="search-pop-overlay">
-    <div class="popup search-popup"><div class="search-header">
-  <span class="search-icon">
-    <i class="fa fa-search"></i>
-  </span>
-  <div class="search-input-container">
-    <input autocomplete="off" autocapitalize="off" maxlength="80"
-           placeholder="搜索..." spellcheck="false"
-           type="search" class="search-input">
-  </div>
-  <span class="popup-btn-close" role="button">
-    <i class="fa fa-times-circle"></i>
-  </span>
-</div>
-<div class="search-result-container no-result">
-  <div class="search-result-icon">
-    <i class="fa fa-spinner fa-pulse fa-5x"></i>
-  </div>
-</div>
-
-    </div>
-  </div>
-
-</header>
-        
   
-  <aside class="sidebar">
 
-    <div class="sidebar-inner sidebar-overview-active">
-      <ul class="sidebar-nav">
-        <li class="sidebar-nav-toc">
-          文章目录
-        </li>
-        <li class="sidebar-nav-overview">
-          站点概览
-        </li>
-      </ul>
-
-      <div class="sidebar-panel-container">
-        <!--noindex-->
-        <div class="post-toc-wrap sidebar-panel">
+<div id="banner" class="banner" parallax=true
+     style="background: url('/img/default.png') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle" data-typed-text="分类"></span>
+          
         </div>
-        <!--/noindex-->
 
-        <div class="site-overview-wrap sidebar-panel">
-          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
-  <p class="site-author-name" itemprop="name">Peter</p>
-  <div class="site-description" itemprop="description"></div>
+        
+      </div>
+
+      
+    </div>
+  </div>
 </div>
-<div class="site-state-wrap animated">
-  <nav class="site-state">
-      <div class="site-state-item site-state-posts">
-        <a href="/archives/">
-          <span class="site-state-item-count">44</span>
-          <span class="site-state-item-name">日志</span>
+
+</div>
+
+  </header>
+
+  <main>
+    
+      <div class="container nopadding-x-md">
+        <div id="board"
+          >
+          
+          <div class="container">
+            <div class="row">
+              <div class="col-12 col-md-10 m-auto">
+                
+
+
+
+
+
+<div class="category-list">
+  
+  
+    
+    
+    
+    <div class="category row nomargin-x">
+      <a class="category-item collapsed
+          list-group-item category-item-action col-10 col-md-11 col-xm-11" title="论文阅读"
+        id="heading-7545c85b0df88485ddabffad9bb45965" role="tab" data-toggle="collapse" href="#collapse-7545c85b0df88485ddabffad9bb45965"
+        aria-expanded="false"
+      >
+        论文阅读
+        <span class="list-group-count"></span>
+        <i class="iconfont icon-arrowright"></i>
+      </a>
+      
+        <a href="/categories/%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB/" class="category-count col-2 col-md-1 col-xm-1">
+          <i class="iconfont icon-articles"></i>
+          <span>11</span>
         </a>
+      
+      <div class="category-collapse collapse " id="collapse-7545c85b0df88485ddabffad9bb45965"
+           role="tabpanel" aria-labelledby="heading-7545c85b0df88485ddabffad9bb45965">
+        
+        
+          
+  <div class="category-post-list">
+    
+    
+      
+      
+        <a href="/posts/e5ed55f3/" title="【WSDM 2022】时空数据挖掘论文"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">【WSDM 2022】时空数据挖掘论文</span>
+        </a>
+      
+    
+      
+      
+        <a href="/posts/38a6ca75/" title="【ICLR 2022】时空数据挖掘论文"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">【ICLR 2022】时空数据挖掘论文</span>
+        </a>
+      
+    
+      
+      
+        <a href="/posts/ab9afbeb/" title="【AAAI 2022】时空数据挖掘论文"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">【AAAI 2022】时空数据挖掘论文</span>
+        </a>
+      
+    
+      
+      
+        <a href="/posts/7c9718ae/" title="【论文投稿-2022】2022年人工智能和数据挖掘顶级会议投稿日期"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">【论文投稿-2022】2022年人工智能和数据挖掘顶级会议投稿日期</span>
+        </a>
+      
+    
+      
+      
+        <a href="/posts/82aa9d8e/" title="【论文投稿-2021】2021年机器学习和数据挖掘相关会议投稿时间"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">【论文投稿-2021】2021年机器学习和数据挖掘相关会议投稿时间</span>
+        </a>
+      
+    
+      
+      
+        <a href="/posts/b0dd406c/" title="近三年用于时空数据挖掘的GNN论文汇总"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">近三年用于时空数据挖掘的GNN论文汇总</span>
+        </a>
+      
+    
+      
+      
+        <a href="/posts/a944fccc/" title="【AAAI 2021】时空数据挖掘论文"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">【AAAI 2021】时空数据挖掘论文</span>
+        </a>
+      
+    
+      
+      
+        <a href="/posts/d3e954aa/" title="【论文笔记-4】Attention Is All You Need"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">【论文笔记-4】Attention Is All You Need</span>
+        </a>
+      
+    
+      
+      
+        <a href="/posts/e8cb7573/" title="【论文笔记-3】用于交通预测的多范围注意力双组分图卷积网络"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">【论文笔记-3】用于交通预测的多范围注意力双组分图卷积网络</span>
+        </a>
+      
+    
+      
+      
+        <a href="/posts/c0d0024f/" title="【论文笔记-2】深度学习"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">【论文笔记-2】深度学习</span>
+        </a>
+      
+    
+      
+      
+        <a href="/categories/%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB/" class="list-group-item list-group-item-action">
+          <span class="category-post">More...</span>
+        </a>
+        
+  </div>
+
+        
       </div>
-      <div class="site-state-item site-state-categories">
-          <a href="/categories/">
-        <span class="site-state-item-count">6</span>
-        <span class="site-state-item-name">分类</span></a>
+    </div>
+  
+    
+    
+    
+    <div class="category row nomargin-x">
+      <a class="category-item collapsed
+          list-group-item category-item-action col-10 col-md-11 col-xm-11" title="算法"
+        id="heading-046a899ee7a6ec88d370211a518c9e80" role="tab" data-toggle="collapse" href="#collapse-046a899ee7a6ec88d370211a518c9e80"
+        aria-expanded="false"
+      >
+        算法
+        <span class="list-group-count"></span>
+        <i class="iconfont icon-arrowright"></i>
+      </a>
+      
+        <a href="/categories/%E7%AE%97%E6%B3%95/" class="category-count col-2 col-md-1 col-xm-1">
+          <i class="iconfont icon-articles"></i>
+          <span>10</span>
+        </a>
+      
+      <div class="category-collapse collapse " id="collapse-046a899ee7a6ec88d370211a518c9e80"
+           role="tabpanel" aria-labelledby="heading-046a899ee7a6ec88d370211a518c9e80">
+        
+        
+          
+  <div class="category-post-list">
+    
+    
+      
+      
+        <a href="/posts/8e8877f3/" title="Longest Substring Without Repeating Characters"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">Longest Substring Without Repeating Characters</span>
+        </a>
+      
+    
+      
+      
+        <a href="/posts/64c8f80f/" title="Add Two Numbers"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">Add Two Numbers</span>
+        </a>
+      
+    
+      
+      
+        <a href="/posts/e83060be/" title="Two Sum"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">Two Sum</span>
+        </a>
+      
+    
+      
+      
+        <a href="/posts/2e394548/" title="加一"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">加一</span>
+        </a>
+      
+    
+      
+      
+        <a href="/posts/8ed9ffc/" title="两个数组的交集Ⅱ"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">两个数组的交集Ⅱ</span>
+        </a>
+      
+    
+      
+      
+        <a href="/posts/2c835ddc/" title="只出现一次的数字"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">只出现一次的数字</span>
+        </a>
+      
+    
+      
+      
+        <a href="/posts/e449a9c3/" title="存在重复"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">存在重复</span>
+        </a>
+      
+    
+      
+      
+        <a href="/posts/fb62c7d3/" title="旋转数组"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">旋转数组</span>
+        </a>
+      
+    
+      
+      
+        <a href="/posts/43c05810/" title="买卖股票的最佳时机Ⅱ"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">买卖股票的最佳时机Ⅱ</span>
+        </a>
+      
+    
+      
+      
+        <a href="/posts/2b4bef4e/" title="从排序数组中删除重复项"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">从排序数组中删除重复项</span>
+        </a>
+      
+    
+  </div>
+
+        
       </div>
-      <div class="site-state-item site-state-tags">
-          <a href="/tags/">
-        <span class="site-state-item-count">59</span>
-        <span class="site-state-item-name">标签</span></a>
+    </div>
+  
+    
+    
+    
+    <div class="category row nomargin-x">
+      <a class="category-item collapsed
+          list-group-item category-item-action col-10 col-md-11 col-xm-11" title="随笔感悟"
+        id="heading-833e4b13cf03a2baa4491447a51e2584" role="tab" data-toggle="collapse" href="#collapse-833e4b13cf03a2baa4491447a51e2584"
+        aria-expanded="false"
+      >
+        随笔感悟
+        <span class="list-group-count"></span>
+        <i class="iconfont icon-arrowright"></i>
+      </a>
+      
+        <a href="/categories/%E9%9A%8F%E7%AC%94%E6%84%9F%E6%82%9F/" class="category-count col-2 col-md-1 col-xm-1">
+          <i class="iconfont icon-articles"></i>
+          <span>9</span>
+        </a>
+      
+      <div class="category-collapse collapse " id="collapse-833e4b13cf03a2baa4491447a51e2584"
+           role="tabpanel" aria-labelledby="heading-833e4b13cf03a2baa4491447a51e2584">
+        
+        
+          
+  <div class="category-post-list">
+    
+    
+      
+      
+        <a href="/posts/98df0397/" title="从ChatGPT谈起"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">从ChatGPT谈起</span>
+        </a>
+      
+    
+      
+      
+        <a href="/posts/68e0eb59/" title="节气养生-寒露"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">节气养生-寒露</span>
+        </a>
+      
+    
+      
+      
+        <a href="/posts/9fb794da/" title="2022年国庆小记"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">2022年国庆小记</span>
+        </a>
+      
+    
+      
+      
+        <a href="/posts/24230420/" title="【时空数据挖掘】推开窗，看一看"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">【时空数据挖掘】推开窗，看一看</span>
+        </a>
+      
+    
+      
+      
+        <a href="/posts/23dbe718/" title="数说2021 展望2022"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">数说2021 展望2022</span>
+        </a>
+      
+    
+      
+      
+        <a href="/posts/637f259f/" title="红楼梦书评"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">红楼梦书评</span>
+        </a>
+      
+    
+      
+      
+        <a href="/posts/353b91f9/" title="2019年书单"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">2019年书单</span>
+        </a>
+      
+    
+      
+      
+        <a href="/posts/fe6166bc/" title="关于科学范式的感悟"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">关于科学范式的感悟</span>
+        </a>
+      
+    
+      
+      
+        <a href="/posts/553248e1/" title="数学之美第二版读后感"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">数学之美第二版读后感</span>
+        </a>
+      
+    
+  </div>
+
+        
       </div>
-  </nav>
+    </div>
+  
+    
+    
+    
+    <div class="category row nomargin-x">
+      <a class="category-item collapsed
+          list-group-item category-item-action col-10 col-md-11 col-xm-11" title="经验技巧"
+        id="heading-b3bed56110a2ca75d26bdbb54154b603" role="tab" data-toggle="collapse" href="#collapse-b3bed56110a2ca75d26bdbb54154b603"
+        aria-expanded="false"
+      >
+        经验技巧
+        <span class="list-group-count"></span>
+        <i class="iconfont icon-arrowright"></i>
+      </a>
+      
+        <a href="/categories/%E7%BB%8F%E9%AA%8C%E6%8A%80%E5%B7%A7/" class="category-count col-2 col-md-1 col-xm-1">
+          <i class="iconfont icon-articles"></i>
+          <span>8</span>
+        </a>
+      
+      <div class="category-collapse collapse " id="collapse-b3bed56110a2ca75d26bdbb54154b603"
+           role="tabpanel" aria-labelledby="heading-b3bed56110a2ca75d26bdbb54154b603">
+        
+        
+          
+  <div class="category-post-list">
+    
+    
+      
+      
+        <a href="/posts/7340ecaf/" title="OneDrive 登录时一直转圈圈"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">OneDrive 登录时一直转圈圈</span>
+        </a>
+      
+    
+      
+      
+        <a href="/posts/59479fbc/" title="【Latex经验】用Latex编译中文文档"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">【Latex经验】用Latex编译中文文档</span>
+        </a>
+      
+    
+      
+      
+        <a href="/posts/8517e2d2/" title="Ubuntu 16.04将cuda 10.1降到cuda10.0"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">Ubuntu 16.04将cuda 10.1降到cuda10.0</span>
+        </a>
+      
+    
+      
+      
+        <a href="/posts/4206c037/" title="常用linux命令"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">常用linux命令</span>
+        </a>
+      
+    
+      
+      
+        <a href="/posts/53375297/" title="hexo博客搭建及多电脑同步"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">hexo博客搭建及多电脑同步</span>
+        </a>
+      
+    
+      
+      
+        <a href="/posts/84391376/" title="使用pyecharts绘制关系图"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">使用pyecharts绘制关系图</span>
+        </a>
+      
+    
+      
+      
+        <a href="/posts/24caea6b/" title="Hexo常用命令"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">Hexo常用命令</span>
+        </a>
+      
+    
+      
+      
+        <a href="/posts/a6a7c1a2/" title="常用Markdown语法文章写作格式"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">常用Markdown语法文章写作格式</span>
+        </a>
+      
+    
+  </div>
+
+        
+      </div>
+    </div>
+  
+    
+    
+    
+    <div class="category row nomargin-x">
+      <a class="category-item collapsed
+          list-group-item category-item-action col-10 col-md-11 col-xm-11" title="机器学习"
+        id="heading-61bb1751fd355596e307767d1927c855" role="tab" data-toggle="collapse" href="#collapse-61bb1751fd355596e307767d1927c855"
+        aria-expanded="false"
+      >
+        机器学习
+        <span class="list-group-count"></span>
+        <i class="iconfont icon-arrowright"></i>
+      </a>
+      
+        <a href="/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/" class="category-count col-2 col-md-1 col-xm-1">
+          <i class="iconfont icon-articles"></i>
+          <span>4</span>
+        </a>
+      
+      <div class="category-collapse collapse " id="collapse-61bb1751fd355596e307767d1927c855"
+           role="tabpanel" aria-labelledby="heading-61bb1751fd355596e307767d1927c855">
+        
+        
+          
+  <div class="category-post-list">
+    
+    
+      
+      
+        <a href="/posts/2a69915c/" title="【机器学习】AdaBoost算法"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">【机器学习】AdaBoost算法</span>
+        </a>
+      
+    
+      
+      
+        <a href="/posts/fb776320/" title="如何计算经过CNN（卷积神经网络）卷积后的图片大小"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">如何计算经过CNN（卷积神经网络）卷积后的图片大小</span>
+        </a>
+      
+    
+      
+      
+        <a href="/posts/a02b6105/" title="L1、L2正则化"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">L1、L2正则化</span>
+        </a>
+      
+    
+      
+      
+        <a href="/posts/3634e5b5/" title="【机器学习】防止过拟合的方法"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">【机器学习】防止过拟合的方法</span>
+        </a>
+      
+    
+  </div>
+
+        
+      </div>
+    </div>
+  
+    
+    
+    
+    <div class="category row nomargin-x">
+      <a class="category-item collapsed
+          list-group-item category-item-action col-10 col-md-11 col-xm-11" title="学习笔记"
+        id="heading-078425eaf316a180b0989442e53f920b" role="tab" data-toggle="collapse" href="#collapse-078425eaf316a180b0989442e53f920b"
+        aria-expanded="false"
+      >
+        学习笔记
+        <span class="list-group-count"></span>
+        <i class="iconfont icon-arrowright"></i>
+      </a>
+      
+        <a href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" class="category-count col-2 col-md-1 col-xm-1">
+          <i class="iconfont icon-articles"></i>
+          <span>2</span>
+        </a>
+      
+      <div class="category-collapse collapse " id="collapse-078425eaf316a180b0989442e53f920b"
+           role="tabpanel" aria-labelledby="heading-078425eaf316a180b0989442e53f920b">
+        
+        
+          
+  <div class="category-post-list">
+    
+    
+      
+      
+        <a href="/posts/f3b8224e/" title="概率密度估计"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">概率密度估计</span>
+        </a>
+      
+    
+      
+      
+        <a href="/posts/9ff4b4d5/" title="机器学习中的数学（一）"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">机器学习中的数学（一）</span>
+        </a>
+      
+    
+  </div>
+
+        
+      </div>
+    </div>
+  
 </div>
 
+
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-    </div>
+    
 
     
-  </aside>
-
-
-    </div>
-
-    <div class="main-inner page posts-expand">
-
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
 
     
-    
-    
-    <div class="post-block" lang="zh-CN"><header class="post-header">
-
-<h1 class="post-title" itemprop="name headline">分类
-</h1>
-
-<div class="post-meta-container">
-</div>
-
-</header>
-
-      
-      
-      <div class="post-body"><div class="category-all-page">
-  <div class="category-all-title">
-    目前共计 6 个分类
-  </div>
-  <div class="category-all">
-    <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">学习笔记</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/">机器学习</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%AE%97%E6%B3%95/">算法</a><span class="category-list-count">10</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%BB%8F%E9%AA%8C%E6%8A%80%E5%B7%A7/">经验技巧</a><span class="category-list-count">8</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB/">论文阅读</a><span class="category-list-count">11</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E9%9A%8F%E7%AC%94%E6%84%9F%E6%82%9F/">随笔感悟</a><span class="category-list-count">9</span></li></ul>
-  </div>
-</div>
-
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
       </div>
-      
-      
-      
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
     </div>
-
-    
-    
-
-
+  </div>
 </div>
+
+    
+
+    
   </main>
 
-  <footer class="footer">
+  <footer>
     <div class="footer-inner">
-
-  <div class="copyright">
-    &copy; 
-    <span itemprop="copyrightYear">2023</span>
-    <span class="with-love">
-      <i class="fa fa-heart"></i>
-    </span>
-    <span class="author" itemprop="copyrightHolder">Peter</span>
-  </div>
-<!--
-  <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/muse/" rel="noopener" target="_blank">NexT.Muse</a> 强力驱动
-  </div>
--->
-
+  
+    <div class="footer-content">
+       <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
     </div>
+  
+  
+  
+  
+</div>
+
   </footer>
 
+  <!-- Scripts -->
   
-  <div class="toggle sidebar-toggle" role="button">
-    <span class="toggle-line"></span>
-    <span class="toggle-line"></span>
-    <span class="toggle-line"></span>
-  </div>
-  <div class="sidebar-dimmer"></div>
-  <div class="back-to-top" role="button" aria-label="返回顶部">
-    <i class="fa fa-arrow-up fa-lg"></i>
-    <span>0%</span>
-  </div>
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
 
-<noscript>
-  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
-</noscript>
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://lib.baomitu.com/jquery/3.6.4/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+
+  <script  src="https://lib.baomitu.com/typed.js/2.0.12/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var subtitle = document.getElementById('subtitle');
+      if (!subtitle || !typing) {
+        return;
+      }
+      var text = subtitle.getAttribute('data-typed-text');
+      
+        typing(text);
+      
+    })(window, document);
+  </script>
+
+
 
 
   
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
-<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/schemes/muse.js"></script><script src="/js/next-boot.js"></script>
-
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-generator-searchdb/1.4.1/search.js" integrity="sha256-1kfA5uHPf65M5cphT2dvymhkuyHPQp5A53EGZOnOLmc=" crossorigin="anonymous"></script>
-<script src="/js/third-party/search/local-search.js"></script>
-
-
-
-
-
-  <script src="/js/third-party/pace.js"></script>
-
-  <script src="/js/third-party/addtoany.js"></script>
-
+    <script  src="/js/img-lazyload.js" ></script>
   
 
 
 
 
+  <script  src="/js/local-search.js" ></script>
 
+
+
+
+
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/js/boot.js" ></script>
+
+
+  
+
+  <noscript>
+    <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div>
+  </noscript>
 </body>
 </html>
