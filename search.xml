@@ -181,23 +181,6 @@
       </tags>
   </entry>
   <entry>
-    <title>如何计算经过CNN（卷积神经网络）卷积后的图片大小</title>
-    <url>/posts/fb776320/</url>
-    <content><![CDATA[<p>对于给定的一张图片，如下图，32×32大小的输入图片经过一次卷积之后，如何得到28×28的feature maps?</p>
-<span id="more"></span>
-<p><img src="https://i.loli.net/2018/12/23/5c1fac8bbfa94.png" alt="Screenshot_2018-09-29-15-31-03-61.png"></p>
-<p>设卷积前的图像大小为n×n, 过滤器大小为f×f, padding(填充)为p, stride(步长)为 s, 则卷积后的图像 m×m 大小为：<br>m &#x3D; (n+2p-f)&#x2F;s + 1.（如果商不为整数，向下取整）</p>
-<p>(32+0-5)&#x2F;1 + 1 &#x3D; 28. 所以上图中的输入图片经过一次卷积之后，得到了28×28的feature maps.</p>
-]]></content>
-      <categories>
-        <category>机器学习</category>
-      </categories>
-      <tags>
-        <tag>深度学习</tag>
-        <tag>CNN</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>2022年国庆小记</title>
     <url>/posts/9fb794da/</url>
     <content><![CDATA[<p>趁年轻，去运动，去思考，去见识，成长自己。</p>
@@ -254,6 +237,23 @@
       <tags>
         <tag>算法</tag>
         <tag>python</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>如何计算经过CNN（卷积神经网络）卷积后的图片大小</title>
+    <url>/posts/fb776320/</url>
+    <content><![CDATA[<p>对于给定的一张图片，如下图，32×32大小的输入图片经过一次卷积之后，如何得到28×28的feature maps?</p>
+<span id="more"></span>
+<p><img src="https://i.loli.net/2018/12/23/5c1fac8bbfa94.png" alt="Screenshot_2018-09-29-15-31-03-61.png"></p>
+<p>设卷积前的图像大小为n×n, 过滤器大小为f×f, padding(填充)为p, stride(步长)为 s, 则卷积后的图像 m×m 大小为：<br>m &#x3D; (n+2p-f)&#x2F;s + 1.（如果商不为整数，向下取整）</p>
+<p>(32+0-5)&#x2F;1 + 1 &#x3D; 28. 所以上图中的输入图片经过一次卷积之后，得到了28×28的feature maps.</p>
+]]></content>
+      <categories>
+        <category>机器学习</category>
+      </categories>
+      <tags>
+        <tag>深度学习</tag>
+        <tag>CNN</tag>
       </tags>
   </entry>
   <entry>
@@ -375,77 +375,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Ubuntu 16.04将cuda 10.1降到cuda10.0</title>
-    <url>/posts/8517e2d2/</url>
-    <content><![CDATA[<p>最近因为跑程序，需要用到cuda的版本为10.0，但是机器的cuda版本为10.1，所以就将其版本进行了降低。</p>
-<span id="more"></span>
-
-<h5 id="卸载cuda-10-1"><a href="#卸载cuda-10-1" class="headerlink" title="卸载cuda 10.1"></a>卸载cuda 10.1</h5><figure class="highlight awk"><table><tr><td class="code"><pre><code class="hljs awk">sudo <span class="hljs-regexp">/usr/</span>local<span class="hljs-regexp">/cuda-10.1/</span>bin/uninstall_cuda_10.<span class="hljs-number">1</span>.pl<br>sudo apt --purge remove nvidia*<br></code></pre></td></tr></table></figure>
-
-<h5 id="下载cuda和cudnn"><a href="#下载cuda和cudnn" class="headerlink" title="下载cuda和cudnn"></a>下载cuda和cudnn</h5><p>在官网下载cuda10.0和cudnn7.3.1，两者的版本一定要匹配。<br>cuda和cudnn匹配列表：<br><a href="https://developer.nvidia.com/rdp/cudnn-archive#a-collapse731-10">https://developer.nvidia.com/rdp/cudnn-archive#a-collapse731-10</a></p>
-<p>cuda10.0下载地址（选择runfile的文件下载，安装比较方便）：<br><a href="https://developer.nvidia.com/cuda-10.0-download-archive?target_os=Linux&target_arch=x86_64&target_distro=Ubuntu&target_version=1604&target_type=runfilelocal">https://developer.nvidia.com/cuda-10.0-download-archive?target_os&#x3D;Linux&amp;target_arch&#x3D;x86_64&amp;target_distro&#x3D;Ubuntu&amp;target_version&#x3D;1604&amp;target_type&#x3D;runfilelocal</a></p>
-<p>cudnn7.3.1下载地址：<br><a href="https://developer.nvidia.com/compute/machine-learning/cudnn/secure/v7.3.1/prod/10.0_2018927/cudnn-10.0-linux-x64-v7.3.1.20">https://developer.nvidia.com/compute/machine-learning/cudnn/secure/v7.3.1/prod/10.0_2018927&#x2F;cudnn-10.0-linux-x64-v7.3.1.20</a></p>
-<h5 id="安装cuda"><a href="#安装cuda" class="headerlink" title="安装cuda"></a>安装cuda</h5><p><strong>1. 禁用nouveau driver</strong></p>
-<figure class="highlight 1c"><table><tr><td class="code"><pre><code class="hljs 1c">lsmod <span class="hljs-string">| grep nouveau</span><br></code></pre></td></tr></table></figure>
-<p>如果没有结果输出，则代表禁用掉了。如果有内容输出，则代表没有禁用掉。需要执行如下操作，</p>
-<p>1）在&#x2F;etc&#x2F;modprobe.d中创建文件blacklist-nouveau.conf,</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">cd</span> /etc/modprobe.d<br>sudo <span class="hljs-built_in">touch</span> blacklist-nouveau.conf<br></code></pre></td></tr></table></figure>
-<p>2）在文件blacklist-nouveau.conf中输入如下内容，</p>
-<figure class="highlight apache"><table><tr><td class="code"><pre><code class="hljs apache"><span class="hljs-attribute">blacklist</span> nouveau<br><span class="hljs-attribute">options</span> nouveau modeset=<span class="hljs-number">0</span><br></code></pre></td></tr></table></figure>
-<p>保存并退出后，执行如下命令，</p>
-<figure class="highlight ebnf"><table><tr><td class="code"><pre><code class="hljs ebnf"><span class="hljs-attribute">sudo update-initramfs -u</span><br></code></pre></td></tr></table></figure>
-<p>3）执行命令<code>lsmod | grep nouveau</code> 检查是否禁用成功。</p>
-<p><strong>2. 进入文本模式</strong><br>按Ctrl+Alt+F1，进入文本模式，执行如下命令，关闭图形界面，</p>
-<figure class="highlight arduino"><table><tr><td class="code"><pre><code class="hljs arduino">sudo service lightdm stop<br></code></pre></td></tr></table></figure>
-<p>然后进入cuda的安装包所在文件夹，执行如下命令：</p>
-<figure class="highlight apache"><table><tr><td class="code"><pre><code class="hljs apache"><span class="hljs-attribute">sudo</span> sh cuda_10.<span class="hljs-number">0</span>.<span class="hljs-number">130</span>_410.<span class="hljs-number">48</span>_linux.run<br></code></pre></td></tr></table></figure>
-<p>输入上述命令后，会显示用户许可证信息，按空格键直到显示为100%，然后输入accept。</p>
-<p>在这个过程中，会遇到如下选项，NVIDIA Accelerated Graphics Driver: 选择n;<br>openGL（有时不会出现）: 选择n;<br>其他：都选择y；<br>安装路径可以选择默认：直接回车。</p>
-<p>接着，输入命令<code>sudo service lightdm start</code>, 启动图形化界面，按住Alt+Ctrl+F7,返回图形化登录界面，输入账号密码后登录。 或者输入命令<code>sudo reboot</code>，重启回到图形界面。</p>
-<p><strong>3. 环境配置</strong><br>输入如下命令，打开&#x2F;etc&#x2F;profile文件，</p>
-<figure class="highlight awk"><table><tr><td class="code"><pre><code class="hljs awk">vim <span class="hljs-regexp">/etc/</span>profile<br></code></pre></td></tr></table></figure>
-<p>在文件中输入如下内容，</p>
-<figure class="highlight awk"><table><tr><td class="code"><pre><code class="hljs awk">export PATH=<span class="hljs-regexp">/usr/</span>local<span class="hljs-regexp">/cuda-10.0/</span>bin<br>export LD_LIBRARY_PATH=<span class="hljs-regexp">/usr/</span>local<span class="hljs-regexp">/cuda-10.0/</span>lib64<br></code></pre></td></tr></table></figure>
-<p>然后，保存并退出文件。接着，执行如下命令，使配置生效，</p>
-<figure class="highlight gradle"><table><tr><td class="code"><pre><code class="hljs gradle"><span class="hljs-keyword">source</span> <span class="hljs-regexp">/etc/</span>profile<br></code></pre></td></tr></table></figure>
-
-<p><strong>4. 检查cuda是否安装成功</strong><br>输入如下命令，查看nvidia驱动的版本：</p>
-<figure class="highlight awk"><table><tr><td class="code"><pre><code class="hljs awk">cat <span class="hljs-regexp">/proc/</span>driver<span class="hljs-regexp">/nvidia/</span>version<br></code></pre></td></tr></table></figure>
-<p>我的版本为410.48。<br>输入如下命令，查看CUDA Toolkit的版本：</p>
-<figure class="highlight ebnf"><table><tr><td class="code"><pre><code class="hljs ebnf"><span class="hljs-attribute">nvcc -V</span><br></code></pre></td></tr></table></figure>
-<p>我的版本是V10.0.130。<br>至此，cuda安装成功，接下来安装cudnn。</p>
-<h5 id="安装cudnn"><a href="#安装cudnn" class="headerlink" title="安装cudnn"></a>安装cudnn</h5><p><strong>1. 解压cudnn安装包</strong></p>
-<figure class="highlight apache"><table><tr><td class="code"><pre><code class="hljs apache"><span class="hljs-attribute">tar</span> -xvf cudnn-<span class="hljs-number">10</span>.<span class="hljs-number">0</span>-linux-x64-v<span class="hljs-number">7.3.1.20</span>.tgz<br></code></pre></td></tr></table></figure>
-<p><strong>2. 配置cudnn</strong><br>在当前目录输入依次执行如下命令，</p>
-<figure class="highlight awk"><table><tr><td class="code"><pre><code class="hljs awk">sudo cp cuda<span class="hljs-regexp">/include/</span>cudnn.h <span class="hljs-regexp">/usr/</span>local<span class="hljs-regexp">/cuda/i</span>nclude/<br>sudo cp cuda<span class="hljs-regexp">/lib64/</span>libcudnn* <span class="hljs-regexp">/usr/</span>local<span class="hljs-regexp">/cuda/</span>lib64/<br>sudo chmod a+r <span class="hljs-regexp">/usr/</span>local<span class="hljs-regexp">/cuda/i</span>nclude/cudnn.h<br>sudo chmod a+r <span class="hljs-regexp">/usr/</span>local<span class="hljs-regexp">/cuda/</span>lib64/libcudnn*<br></code></pre></td></tr></table></figure>
-<p><strong>3. 查看cudnn版本</strong><br>输入如下命令，查看版本，</p>
-<figure class="highlight gradle"><table><tr><td class="code"><pre><code class="hljs gradle">cat <span class="hljs-regexp">/usr/</span>local<span class="hljs-regexp">/cuda/i</span>nclude/cudnn.h | <span class="hljs-keyword">grep</span> CUDNN_MAJOR -A <span class="hljs-number">2</span><br></code></pre></td></tr></table></figure>
-<p>如果有对应的CUDNN_MAJOR输出，则代表安装成功。</p>
-<h5 id="检查cuda和cudnn是否都安装成功"><a href="#检查cuda和cudnn是否都安装成功" class="headerlink" title="检查cuda和cudnn是否都安装成功"></a>检查cuda和cudnn是否都安装成功</h5><p>输入如下命令，</p>
-<figure class="highlight ebnf"><table><tr><td class="code"><pre><code class="hljs ebnf"><span class="hljs-attribute">modprobe nvidia</span><br><span class="hljs-attribute">nvidia-smi</span><br></code></pre></td></tr></table></figure>
-<p>如果出现GPU的信息列表，则说明安装成功。</p>
-<h5 id="常见错误"><a href="#常见错误" class="headerlink" title="常见错误"></a>常见错误</h5><ol>
-<li>如果出现无法进入Ubuntu系统，输入如下命令，清除安装的驱动，<figure class="highlight routeros"><table><tr><td class="code"><pre><code class="hljs routeros">sudo apt-<span class="hljs-built_in">get</span> purge nvidia*<br></code></pre></td></tr></table></figure>
-然后再输入命令<code>sudo reboot</code>重启，如果问题依然没有解决，按照上述步骤，重新安装cuda。</li>
-</ol>
-<h5 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h5><ol>
-<li><a href="https://www.pythonf.cn/read/110763">https://www.pythonf.cn/read/110763</a></li>
-<li><a href="https://www.jianshu.com/p/89f1ab962d75">https://www.jianshu.com/p/89f1ab962d75</a></li>
-<li><a href="https://blog.csdn.net/weixin_42279044/article/details/83181686">https://blog.csdn.net/weixin_42279044/article/details/83181686</a></li>
-<li><a href="https://blog.csdn.net/lihe4151021/article/details/90237681">https://blog.csdn.net/lihe4151021/article/details/90237681</a></li>
-<li><a href="https://blog.csdn.net/qq_45049586/article/details/104582468">https://blog.csdn.net/qq_45049586/article/details/104582468</a></li>
-<li><a href="https://blog.csdn.net/qq_41915226/article/details/103051602">https://blog.csdn.net/qq_41915226/article/details/103051602</a></li>
-</ol>
-]]></content>
-      <categories>
-        <category>经验技巧</category>
-      </categories>
-      <tags>
-        <tag>CUDA</tag>
-        <tag>GPU</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Two Sum</title>
     <url>/posts/e83060be/</url>
     <content><![CDATA[<h5 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h5><p>Given an array of integers, return indices of the two numbers such that they add up to a specific target.<br>You may assume that each input would have exactly one solution, and you may not use the same element twice.</p>
@@ -469,45 +398,6 @@
       <tags>
         <tag>算法</tag>
         <tag>python</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>hexo博客搭建及多电脑同步</title>
-    <url>/posts/53375297/</url>
-    <content><![CDATA[<p>之前写了一篇用hexo+github搭建博客的教程，大致流程为：本地博客搭建，将博客部署到github，配置域名访问。详细可参考我的博客（<a href="https://www.jianshu.com/p/058d4054bc3f">Hexo搭建个人博客教程</a>）。最近因为遇到在实验室写好博客，但是想在寝室发布博客，所以涉及到多电脑同步的问题，现将解决方案记录如下。</p>
-<span id="more"></span>
-
-<h5 id="方案一"><a href="#方案一" class="headerlink" title="方案一"></a>方案一</h5><p>用百度云或onedrive一类的云盘备份hexo文件夹。这种方法方便快捷，但是仅仅可以用作博客备份，不方便用于同步更新博客，每次更改博客后都要等待云盘同步，才能继续完成接下来的发布步骤。</p>
-<h5 id="方案二"><a href="#方案二" class="headerlink" title="方案二"></a>方案二</h5><p>利用coding.net存放hexo博客源文件，github存放hexo博客的网页静态文件。这种方案可以实现多电脑同步。</p>
-<h6 id="实验室电脑"><a href="#实验室电脑" class="headerlink" title="实验室电脑"></a>实验室电脑</h6><ol>
-<li>注册coding账号（<a href="https://coding.net/login">注册</a>），新建项目hexo_blog（设置成不公开），存放博客源文件。</li>
-<li>关联远程库并推送到hexo_blog。<figure class="highlight armasm"><table><tr><td class="code"><pre><code class="hljs armasm"><span class="hljs-symbol">git</span> remote <span class="hljs-keyword">add</span> origin https:<span class="hljs-comment">//git.coding.net/xiepeng21/hexo_blog.git</span><br><span class="hljs-symbol">git</span> <span class="hljs-keyword">add</span> .<br><span class="hljs-symbol">git</span> commit -m <span class="hljs-string">&quot;backup_v1&quot;</span><br><span class="hljs-symbol">git</span> <span class="hljs-keyword">push</span> -u origin master<br></code></pre></td></tr></table></figure></li>
-</ol>
-<h6 id="寝室电脑"><a href="#寝室电脑" class="headerlink" title="寝室电脑"></a>寝室电脑</h6><ol>
-<li><p>安装好nodejs,git,hexo，具体操作，不再赘述，可参考文首的博客(<a href="https://www.jianshu.com/p/058d4054bc3f">Hexo搭建个人博客教程</a>)。</p>
-</li>
-<li><p>将存放在远程的hexo_blog克隆到本地</p>
-<figure class="highlight awk"><table><tr><td class="code"><pre><code class="hljs awk">git clone https:<span class="hljs-regexp">//gi</span>t.coding.net<span class="hljs-regexp">/xiepeng21/</span>hexo_blog.git<br></code></pre></td></tr></table></figure>
-</li>
-<li><p>安装博客依赖的包(读取的是package.json的配置)</p>
-<figure class="highlight cmake"><table><tr><td class="code"><pre><code class="hljs cmake">npm <span class="hljs-keyword">install</span><br></code></pre></td></tr></table></figure>
-</li>
-<li><p>接下来就可以在这台电脑上发布博客了。</p>
-</li>
-</ol>
-<p>注：如果遇到其他问题，可以按照搭建博客的流程分析问题解决办法（<a href="https://www.jianshu.com/p/058d4054bc3f">Hexo搭建个人博客教程</a>）。</p>
-<h5 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h5><ol>
-<li><a href="http://chenfengkg.cn/personal-blog-build/">http://chenfengkg.cn/personal-blog-build/</a> 博客一之博客搭建</li>
-<li><a href="https://godweiyang.com/2018/04/13/hexo-blog/">https://godweiyang.com/2018/04/13/hexo-blog/</a> 超详细Hexo+Github博客搭建小白教程</li>
-<li><a href="https://www.zybuluo.com/mdeditor">https://www.zybuluo.com/mdeditor</a> 作业部落（在线markdown编辑）</li>
-</ol>
-]]></content>
-      <categories>
-        <category>经验技巧</category>
-      </categories>
-      <tags>
-        <tag>博客</tag>
-        <tag>Hexo</tag>
       </tags>
   </entry>
   <entry>
@@ -587,6 +477,137 @@
       </tags>
   </entry>
   <entry>
+    <title>Ubuntu 16.04将cuda 10.1降到cuda10.0</title>
+    <url>/posts/8517e2d2/</url>
+    <content><![CDATA[<p>最近因为跑程序，需要用到cuda的版本为10.0，但是机器的cuda版本为10.1，所以就将其版本进行了降低。</p>
+<span id="more"></span>
+
+<h5 id="卸载cuda-10-1"><a href="#卸载cuda-10-1" class="headerlink" title="卸载cuda 10.1"></a>卸载cuda 10.1</h5><figure class="highlight awk"><table><tr><td class="code"><pre><code class="hljs awk">sudo <span class="hljs-regexp">/usr/</span>local<span class="hljs-regexp">/cuda-10.1/</span>bin/uninstall_cuda_10.<span class="hljs-number">1</span>.pl<br>sudo apt --purge remove nvidia*<br></code></pre></td></tr></table></figure>
+
+<h5 id="下载cuda和cudnn"><a href="#下载cuda和cudnn" class="headerlink" title="下载cuda和cudnn"></a>下载cuda和cudnn</h5><p>在官网下载cuda10.0和cudnn7.3.1，两者的版本一定要匹配。<br>cuda和cudnn匹配列表：<br><a href="https://developer.nvidia.com/rdp/cudnn-archive#a-collapse731-10">https://developer.nvidia.com/rdp/cudnn-archive#a-collapse731-10</a></p>
+<p>cuda10.0下载地址（选择runfile的文件下载，安装比较方便）：<br><a href="https://developer.nvidia.com/cuda-10.0-download-archive?target_os=Linux&target_arch=x86_64&target_distro=Ubuntu&target_version=1604&target_type=runfilelocal">https://developer.nvidia.com/cuda-10.0-download-archive?target_os&#x3D;Linux&amp;target_arch&#x3D;x86_64&amp;target_distro&#x3D;Ubuntu&amp;target_version&#x3D;1604&amp;target_type&#x3D;runfilelocal</a></p>
+<p>cudnn7.3.1下载地址：<br><a href="https://developer.nvidia.com/compute/machine-learning/cudnn/secure/v7.3.1/prod/10.0_2018927/cudnn-10.0-linux-x64-v7.3.1.20">https://developer.nvidia.com/compute/machine-learning/cudnn/secure/v7.3.1/prod/10.0_2018927&#x2F;cudnn-10.0-linux-x64-v7.3.1.20</a></p>
+<h5 id="安装cuda"><a href="#安装cuda" class="headerlink" title="安装cuda"></a>安装cuda</h5><p><strong>1. 禁用nouveau driver</strong></p>
+<figure class="highlight 1c"><table><tr><td class="code"><pre><code class="hljs 1c">lsmod <span class="hljs-string">| grep nouveau</span><br></code></pre></td></tr></table></figure>
+<p>如果没有结果输出，则代表禁用掉了。如果有内容输出，则代表没有禁用掉。需要执行如下操作，</p>
+<p>1）在&#x2F;etc&#x2F;modprobe.d中创建文件blacklist-nouveau.conf,</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">cd</span> /etc/modprobe.d<br>sudo <span class="hljs-built_in">touch</span> blacklist-nouveau.conf<br></code></pre></td></tr></table></figure>
+<p>2）在文件blacklist-nouveau.conf中输入如下内容，</p>
+<figure class="highlight apache"><table><tr><td class="code"><pre><code class="hljs apache"><span class="hljs-attribute">blacklist</span> nouveau<br><span class="hljs-attribute">options</span> nouveau modeset=<span class="hljs-number">0</span><br></code></pre></td></tr></table></figure>
+<p>保存并退出后，执行如下命令，</p>
+<figure class="highlight ebnf"><table><tr><td class="code"><pre><code class="hljs ebnf"><span class="hljs-attribute">sudo update-initramfs -u</span><br></code></pre></td></tr></table></figure>
+<p>3）执行命令<code>lsmod | grep nouveau</code> 检查是否禁用成功。</p>
+<p><strong>2. 进入文本模式</strong><br>按Ctrl+Alt+F1，进入文本模式，执行如下命令，关闭图形界面，</p>
+<figure class="highlight arduino"><table><tr><td class="code"><pre><code class="hljs arduino">sudo service lightdm stop<br></code></pre></td></tr></table></figure>
+<p>然后进入cuda的安装包所在文件夹，执行如下命令：</p>
+<figure class="highlight apache"><table><tr><td class="code"><pre><code class="hljs apache"><span class="hljs-attribute">sudo</span> sh cuda_10.<span class="hljs-number">0</span>.<span class="hljs-number">130</span>_410.<span class="hljs-number">48</span>_linux.run<br></code></pre></td></tr></table></figure>
+<p>输入上述命令后，会显示用户许可证信息，按空格键直到显示为100%，然后输入accept。</p>
+<p>在这个过程中，会遇到如下选项，NVIDIA Accelerated Graphics Driver: 选择n;<br>openGL（有时不会出现）: 选择n;<br>其他：都选择y；<br>安装路径可以选择默认：直接回车。</p>
+<p>接着，输入命令<code>sudo service lightdm start</code>, 启动图形化界面，按住Alt+Ctrl+F7,返回图形化登录界面，输入账号密码后登录。 或者输入命令<code>sudo reboot</code>，重启回到图形界面。</p>
+<p><strong>3. 环境配置</strong><br>输入如下命令，打开&#x2F;etc&#x2F;profile文件，</p>
+<figure class="highlight awk"><table><tr><td class="code"><pre><code class="hljs awk">vim <span class="hljs-regexp">/etc/</span>profile<br></code></pre></td></tr></table></figure>
+<p>在文件中输入如下内容，</p>
+<figure class="highlight awk"><table><tr><td class="code"><pre><code class="hljs awk">export PATH=<span class="hljs-regexp">/usr/</span>local<span class="hljs-regexp">/cuda-10.0/</span>bin<br>export LD_LIBRARY_PATH=<span class="hljs-regexp">/usr/</span>local<span class="hljs-regexp">/cuda-10.0/</span>lib64<br></code></pre></td></tr></table></figure>
+<p>然后，保存并退出文件。接着，执行如下命令，使配置生效，</p>
+<figure class="highlight gradle"><table><tr><td class="code"><pre><code class="hljs gradle"><span class="hljs-keyword">source</span> <span class="hljs-regexp">/etc/</span>profile<br></code></pre></td></tr></table></figure>
+
+<p><strong>4. 检查cuda是否安装成功</strong><br>输入如下命令，查看nvidia驱动的版本：</p>
+<figure class="highlight awk"><table><tr><td class="code"><pre><code class="hljs awk">cat <span class="hljs-regexp">/proc/</span>driver<span class="hljs-regexp">/nvidia/</span>version<br></code></pre></td></tr></table></figure>
+<p>我的版本为410.48。<br>输入如下命令，查看CUDA Toolkit的版本：</p>
+<figure class="highlight ebnf"><table><tr><td class="code"><pre><code class="hljs ebnf"><span class="hljs-attribute">nvcc -V</span><br></code></pre></td></tr></table></figure>
+<p>我的版本是V10.0.130。<br>至此，cuda安装成功，接下来安装cudnn。</p>
+<h5 id="安装cudnn"><a href="#安装cudnn" class="headerlink" title="安装cudnn"></a>安装cudnn</h5><p><strong>1. 解压cudnn安装包</strong></p>
+<figure class="highlight apache"><table><tr><td class="code"><pre><code class="hljs apache"><span class="hljs-attribute">tar</span> -xvf cudnn-<span class="hljs-number">10</span>.<span class="hljs-number">0</span>-linux-x64-v<span class="hljs-number">7.3.1.20</span>.tgz<br></code></pre></td></tr></table></figure>
+<p><strong>2. 配置cudnn</strong><br>在当前目录输入依次执行如下命令，</p>
+<figure class="highlight awk"><table><tr><td class="code"><pre><code class="hljs awk">sudo cp cuda<span class="hljs-regexp">/include/</span>cudnn.h <span class="hljs-regexp">/usr/</span>local<span class="hljs-regexp">/cuda/i</span>nclude/<br>sudo cp cuda<span class="hljs-regexp">/lib64/</span>libcudnn* <span class="hljs-regexp">/usr/</span>local<span class="hljs-regexp">/cuda/</span>lib64/<br>sudo chmod a+r <span class="hljs-regexp">/usr/</span>local<span class="hljs-regexp">/cuda/i</span>nclude/cudnn.h<br>sudo chmod a+r <span class="hljs-regexp">/usr/</span>local<span class="hljs-regexp">/cuda/</span>lib64/libcudnn*<br></code></pre></td></tr></table></figure>
+<p><strong>3. 查看cudnn版本</strong><br>输入如下命令，查看版本，</p>
+<figure class="highlight gradle"><table><tr><td class="code"><pre><code class="hljs gradle">cat <span class="hljs-regexp">/usr/</span>local<span class="hljs-regexp">/cuda/i</span>nclude/cudnn.h | <span class="hljs-keyword">grep</span> CUDNN_MAJOR -A <span class="hljs-number">2</span><br></code></pre></td></tr></table></figure>
+<p>如果有对应的CUDNN_MAJOR输出，则代表安装成功。</p>
+<h5 id="检查cuda和cudnn是否都安装成功"><a href="#检查cuda和cudnn是否都安装成功" class="headerlink" title="检查cuda和cudnn是否都安装成功"></a>检查cuda和cudnn是否都安装成功</h5><p>输入如下命令，</p>
+<figure class="highlight ebnf"><table><tr><td class="code"><pre><code class="hljs ebnf"><span class="hljs-attribute">modprobe nvidia</span><br><span class="hljs-attribute">nvidia-smi</span><br></code></pre></td></tr></table></figure>
+<p>如果出现GPU的信息列表，则说明安装成功。</p>
+<h5 id="常见错误"><a href="#常见错误" class="headerlink" title="常见错误"></a>常见错误</h5><ol>
+<li>如果出现无法进入Ubuntu系统，输入如下命令，清除安装的驱动，<figure class="highlight routeros"><table><tr><td class="code"><pre><code class="hljs routeros">sudo apt-<span class="hljs-built_in">get</span> purge nvidia*<br></code></pre></td></tr></table></figure>
+然后再输入命令<code>sudo reboot</code>重启，如果问题依然没有解决，按照上述步骤，重新安装cuda。</li>
+</ol>
+<h5 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h5><ol>
+<li><a href="https://www.pythonf.cn/read/110763">https://www.pythonf.cn/read/110763</a></li>
+<li><a href="https://www.jianshu.com/p/89f1ab962d75">https://www.jianshu.com/p/89f1ab962d75</a></li>
+<li><a href="https://blog.csdn.net/weixin_42279044/article/details/83181686">https://blog.csdn.net/weixin_42279044/article/details/83181686</a></li>
+<li><a href="https://blog.csdn.net/lihe4151021/article/details/90237681">https://blog.csdn.net/lihe4151021/article/details/90237681</a></li>
+<li><a href="https://blog.csdn.net/qq_45049586/article/details/104582468">https://blog.csdn.net/qq_45049586/article/details/104582468</a></li>
+<li><a href="https://blog.csdn.net/qq_41915226/article/details/103051602">https://blog.csdn.net/qq_41915226/article/details/103051602</a></li>
+</ol>
+]]></content>
+      <categories>
+        <category>经验技巧</category>
+      </categories>
+      <tags>
+        <tag>CUDA</tag>
+        <tag>GPU</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>hexo博客搭建及多电脑同步</title>
+    <url>/posts/53375297/</url>
+    <content><![CDATA[<p>之前写了一篇用hexo+github搭建博客的教程，大致流程为：本地博客搭建，将博客部署到github，配置域名访问。详细可参考我的博客（<a href="https://www.jianshu.com/p/058d4054bc3f">Hexo搭建个人博客教程</a>）。最近因为遇到在实验室写好博客，但是想在寝室发布博客，所以涉及到多电脑同步的问题，现将解决方案记录如下。</p>
+<span id="more"></span>
+
+<h5 id="方案一"><a href="#方案一" class="headerlink" title="方案一"></a>方案一</h5><p>用百度云或onedrive一类的云盘备份hexo文件夹。这种方法方便快捷，但是仅仅可以用作博客备份，不方便用于同步更新博客，每次更改博客后都要等待云盘同步，才能继续完成接下来的发布步骤。</p>
+<h5 id="方案二"><a href="#方案二" class="headerlink" title="方案二"></a>方案二</h5><p>利用coding.net存放hexo博客源文件，github存放hexo博客的网页静态文件。这种方案可以实现多电脑同步。</p>
+<h6 id="实验室电脑"><a href="#实验室电脑" class="headerlink" title="实验室电脑"></a>实验室电脑</h6><ol>
+<li>注册coding账号（<a href="https://coding.net/login">注册</a>），新建项目hexo_blog（设置成不公开），存放博客源文件。</li>
+<li>关联远程库并推送到hexo_blog。<figure class="highlight armasm"><table><tr><td class="code"><pre><code class="hljs armasm"><span class="hljs-symbol">git</span> remote <span class="hljs-keyword">add</span> origin https:<span class="hljs-comment">//git.coding.net/xiepeng21/hexo_blog.git</span><br><span class="hljs-symbol">git</span> <span class="hljs-keyword">add</span> .<br><span class="hljs-symbol">git</span> commit -m <span class="hljs-string">&quot;backup_v1&quot;</span><br><span class="hljs-symbol">git</span> <span class="hljs-keyword">push</span> -u origin master<br></code></pre></td></tr></table></figure></li>
+</ol>
+<h6 id="寝室电脑"><a href="#寝室电脑" class="headerlink" title="寝室电脑"></a>寝室电脑</h6><ol>
+<li><p>安装好nodejs,git,hexo，具体操作，不再赘述，可参考文首的博客(<a href="https://www.jianshu.com/p/058d4054bc3f">Hexo搭建个人博客教程</a>)。</p>
+</li>
+<li><p>将存放在远程的hexo_blog克隆到本地</p>
+<figure class="highlight awk"><table><tr><td class="code"><pre><code class="hljs awk">git clone https:<span class="hljs-regexp">//gi</span>t.coding.net<span class="hljs-regexp">/xiepeng21/</span>hexo_blog.git<br></code></pre></td></tr></table></figure>
+</li>
+<li><p>安装博客依赖的包(读取的是package.json的配置)</p>
+<figure class="highlight cmake"><table><tr><td class="code"><pre><code class="hljs cmake">npm <span class="hljs-keyword">install</span><br></code></pre></td></tr></table></figure>
+</li>
+<li><p>接下来就可以在这台电脑上发布博客了。</p>
+</li>
+</ol>
+<p>注：如果遇到其他问题，可以按照搭建博客的流程分析问题解决办法（<a href="https://www.jianshu.com/p/058d4054bc3f">Hexo搭建个人博客教程</a>）。</p>
+<h5 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h5><ol>
+<li><a href="http://chenfengkg.cn/personal-blog-build/">http://chenfengkg.cn/personal-blog-build/</a> 博客一之博客搭建</li>
+<li><a href="https://godweiyang.com/2018/04/13/hexo-blog/">https://godweiyang.com/2018/04/13/hexo-blog/</a> 超详细Hexo+Github博客搭建小白教程</li>
+<li><a href="https://www.zybuluo.com/mdeditor">https://www.zybuluo.com/mdeditor</a> 作业部落（在线markdown编辑）</li>
+</ol>
+]]></content>
+      <categories>
+        <category>经验技巧</category>
+      </categories>
+      <tags>
+        <tag>博客</tag>
+        <tag>Hexo</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>【WSDM 2022】时空数据挖掘论文</title>
+    <url>/posts/e5ed55f3/</url>
+    <content><![CDATA[<p>对WSDM 2022的录用论文进行了整理，筛选出其中与时空数据挖掘相关论文，并进行任务分类。</p>
+<span id="more"></span>
+
+<p>WSDM 2022 完整录用论文列表：<a href="https://www.wsdm-conference.org/2022/accepted-papers/">https://www.wsdm-conference.org/2022/accepted-papers/</a></p>
+<h3 id="Human-mobility-prediction"><a href="#Human-mobility-prediction" class="headerlink" title="Human mobility prediction"></a>Human mobility prediction</h3><p><a href="https://dl.acm.org/doi/10.1145/3488560.3498438">RLMob: Deep Reinforcement Learning for Successive Mobility Prediction</a>. Ziyan Luo, Congcong Miao</p>
+<h3 id="Precipitation-forecasting"><a href="#Precipitation-forecasting" class="headerlink" title="Precipitation forecasting"></a>Precipitation forecasting</h3><p><a href="https://dl.acm.org/doi/10.1145/3488560.3498448">A New Class of Polynomial Activation Functions of Deep Learning for Precipitation Forecasting</a>. Jiachuan Wang, Lei Chen, Charles Wang Wai Ng</p>
+<h3 id="Route-recommendation"><a href="#Route-recommendation" class="headerlink" title="Route recommendation"></a>Route recommendation</h3><p><a href="https://dl.acm.org/doi/10.1145/3488560.3498512">Personalized Long-distance Fuel-efficient Route Recommendation Through Historical Trajectories Mining</a>. Zhan Wang, Zhaohui Peng, Senzhang Wang, Qiao Song</p>
+<h3 id="Passenger-demand-prediction"><a href="#Passenger-demand-prediction" class="headerlink" title="Passenger demand prediction"></a>Passenger demand prediction</h3><p><a href="https://dl.acm.org/doi/10.1145/3488560.3498394">CMT-Net: A Mutual Transition Aware Framework for Taxicab Pick-ups and Drop-offs Co-Prediction</a>. Yudong Zhang, Binwu Wang, Ziyang Shan, Zhengyang Zhou, Yang Wang</p>
+<h3 id="Urban-flow-prediction"><a href="#Urban-flow-prediction" class="headerlink" title="Urban flow prediction"></a>Urban flow prediction</h3><p><a href="https://dl.acm.org/doi/10.1145/3488560.3498444">ST-GSP: Spatial-Temporal Global Semantic Representation Learning for Urban Flow Prediction</a>. Liang Zhao, Min Gao, Zongwei Wang</p>
+]]></content>
+      <categories>
+        <category>论文阅读</category>
+      </categories>
+      <tags>
+        <tag>时空数据挖掘</tag>
+        <tag>WSDM 2022</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>【ICLR 2022】时空数据挖掘论文</title>
     <url>/posts/38a6ca75/</url>
     <content><![CDATA[<p>对ICLR 2022的录用论文进行了整理，筛选出其中与时空数据挖掘相关论文，并进行任务分类。</p>
@@ -634,27 +655,6 @@
       <tags>
         <tag>时空数据挖掘</tag>
         <tag>ICLR 2022</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>【WSDM 2022】时空数据挖掘论文</title>
-    <url>/posts/e5ed55f3/</url>
-    <content><![CDATA[<p>对WSDM 2022的录用论文进行了整理，筛选出其中与时空数据挖掘相关论文，并进行任务分类。</p>
-<span id="more"></span>
-
-<p>WSDM 2022 完整录用论文列表：<a href="https://www.wsdm-conference.org/2022/accepted-papers/">https://www.wsdm-conference.org/2022/accepted-papers/</a></p>
-<h3 id="Human-mobility-prediction"><a href="#Human-mobility-prediction" class="headerlink" title="Human mobility prediction"></a>Human mobility prediction</h3><p><a href="https://dl.acm.org/doi/10.1145/3488560.3498438">RLMob: Deep Reinforcement Learning for Successive Mobility Prediction</a>. Ziyan Luo, Congcong Miao</p>
-<h3 id="Precipitation-forecasting"><a href="#Precipitation-forecasting" class="headerlink" title="Precipitation forecasting"></a>Precipitation forecasting</h3><p><a href="https://dl.acm.org/doi/10.1145/3488560.3498448">A New Class of Polynomial Activation Functions of Deep Learning for Precipitation Forecasting</a>. Jiachuan Wang, Lei Chen, Charles Wang Wai Ng</p>
-<h3 id="Route-recommendation"><a href="#Route-recommendation" class="headerlink" title="Route recommendation"></a>Route recommendation</h3><p><a href="https://dl.acm.org/doi/10.1145/3488560.3498512">Personalized Long-distance Fuel-efficient Route Recommendation Through Historical Trajectories Mining</a>. Zhan Wang, Zhaohui Peng, Senzhang Wang, Qiao Song</p>
-<h3 id="Passenger-demand-prediction"><a href="#Passenger-demand-prediction" class="headerlink" title="Passenger demand prediction"></a>Passenger demand prediction</h3><p><a href="https://dl.acm.org/doi/10.1145/3488560.3498394">CMT-Net: A Mutual Transition Aware Framework for Taxicab Pick-ups and Drop-offs Co-Prediction</a>. Yudong Zhang, Binwu Wang, Ziyang Shan, Zhengyang Zhou, Yang Wang</p>
-<h3 id="Urban-flow-prediction"><a href="#Urban-flow-prediction" class="headerlink" title="Urban flow prediction"></a>Urban flow prediction</h3><p><a href="https://dl.acm.org/doi/10.1145/3488560.3498444">ST-GSP: Spatial-Temporal Global Semantic Representation Learning for Urban Flow Prediction</a>. Liang Zhao, Min Gao, Zongwei Wang</p>
-]]></content>
-      <categories>
-        <category>论文阅读</category>
-      </categories>
-      <tags>
-        <tag>时空数据挖掘</tag>
-        <tag>WSDM 2022</tag>
       </tags>
   </entry>
   <entry>
@@ -726,44 +726,6 @@
         <tag>书山有路</tag>
         <tag>读书笔记</tag>
         <tag>学会提问</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>【书山有路-2】非暴力沟通</title>
-    <url>/posts/76eb60db/</url>
-    <content><![CDATA[<p>我们一起来读《非暴力沟通》这本书吧。作者是美国的马歇尔·卢森堡，由华夏出版社出版。</p>
-<span id="more"></span>
-
-<p><img src="/../images/%E9%9D%9E%E6%9A%B4%E5%8A%9B%E6%B2%9F%E9%80%9A.png" alt="非暴力沟通"></p>
-<p>非暴力沟通的四个关键要素：观察、感受、需要和请求。</p>
-<p>具体操作层面，可以从以下五个方面入手。</p>
-<p>一、认真倾听。沟通时，认真倾听对方讲话，本身就是对对方的关注和尊重。</p>
-<p>二、了解对方需求。从对话中，了解对方的需求，明确对方需要的是什么。可以通过复述的方式，用自己的语言讲给对方听，确认是否捕捉到对方的需求，看有没有存在什么偏差。</p>
-<p>三、表达自己的需求。用清楚、明白的语言表达自己的需求，我想要什么。</p>
-<p>四、真诚沟通。用一颗平等的心，面对对方，保持真诚、坦率的沟通，有助于沟通的良好进行。</p>
-<p>五、达成共识。承认彼此存在的差异点，寻求共同的利益诉求点，建立起共识，进行接下来的行动。</p>
-<p>注：遇到吵架的时候，心情难以保持平静，容易发怒。这个时候，在一方已经退让的时候，另一方也要停下来，事后，等情绪平静下来，再来分析原因。</p>
-]]></content>
-      <categories>
-        <category>随笔感悟</category>
-      </categories>
-      <tags>
-        <tag>书山有路</tag>
-        <tag>读书笔记</tag>
-        <tag>非暴力沟通</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>【机器学习】AdaBoost算法</title>
-    <url>/posts/2a69915c/</url>
-    <content><![CDATA[<p><img src="/../images/AdaBoost.png"></p>
-]]></content>
-      <categories>
-        <category>机器学习</category>
-      </categories>
-      <tags>
-        <tag>机器学习</tag>
-        <tag>AdaBoost算法</tag>
       </tags>
   </entry>
   <entry>
@@ -944,6 +906,31 @@
       </tags>
   </entry>
   <entry>
+    <title>【书山有路-2】非暴力沟通</title>
+    <url>/posts/76eb60db/</url>
+    <content><![CDATA[<p>我们一起来读《非暴力沟通》这本书吧。作者是美国的马歇尔·卢森堡，由华夏出版社出版。</p>
+<span id="more"></span>
+
+<p><img src="/../images/fblgt.png" alt="非暴力沟通"></p>
+<p>非暴力沟通的四个关键要素：观察、感受、需要和请求。</p>
+<p>具体操作层面，可以从以下五个方面入手。</p>
+<p>一、认真倾听。沟通时，认真倾听对方讲话，本身就是对对方的关注和尊重。</p>
+<p>二、了解对方需求。从对话中，了解对方的需求，明确对方需要的是什么。可以通过复述的方式，用自己的语言讲给对方听，确认是否捕捉到对方的需求，看有没有存在什么偏差。</p>
+<p>三、表达自己的需求。用清楚、明白的语言表达自己的需求，我想要什么。</p>
+<p>四、真诚沟通。用一颗平等的心，面对对方，保持真诚、坦率的沟通，有助于沟通的良好进行。</p>
+<p>五、达成共识。承认彼此存在的差异点，寻求共同的利益诉求点，建立起共识，进行接下来的行动。</p>
+<p>注：遇到吵架的时候，心情难以保持平静，容易发怒。这个时候，在一方已经退让的时候，另一方也要停下来，事后，等情绪平静下来，再来分析原因。</p>
+]]></content>
+      <categories>
+        <category>随笔感悟</category>
+      </categories>
+      <tags>
+        <tag>书山有路</tag>
+        <tag>读书笔记</tag>
+        <tag>非暴力沟通</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>【机器学习】防止过拟合的方法</title>
     <url>/posts/3634e5b5/</url>
     <content><![CDATA[<h1 id="什么是过拟合"><a href="#什么是过拟合" class="headerlink" title="什么是过拟合"></a>什么是过拟合</h1><p>从训练样本中尽可能学出适用于所有潜在样本的“普遍规律”，这样才能在遇到新样本时做出正确的判别。然而，当学习器把训练样本学得“太好”了的时候，很可能已经把训练样本自身的一些特点当作了所有潜在样本都会具有的一般性质，这样就会导致泛化性能下降。这种现象在机器学习中称为“过拟合”（overfitting）。<br>与过拟合相对的是“欠拟合”（underfitting），这是指对训练样本的一般性质尚未学好。</p>
@@ -971,6 +958,19 @@
       <tags>
         <tag>机器学习</tag>
         <tag>过拟合</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>【机器学习】AdaBoost算法</title>
+    <url>/posts/2a69915c/</url>
+    <content><![CDATA[<p><img src="/../images/AdaBoost.png"></p>
+]]></content>
+      <categories>
+        <category>机器学习</category>
+      </categories>
+      <tags>
+        <tag>机器学习</tag>
+        <tag>AdaBoost算法</tag>
       </tags>
   </entry>
   <entry>
@@ -1047,24 +1047,6 @@
       </tags>
   </entry>
   <entry>
-    <title>两个数组的交集Ⅱ</title>
-    <url>/posts/8ed9ffc/</url>
-    <content><![CDATA[<h5 id="要求："><a href="#要求：" class="headerlink" title="要求："></a>要求：</h5><p>给定两个数组，写一个方法来计算它们的交集。</p>
-<span id="more"></span>
-<h5 id="示例："><a href="#示例：" class="headerlink" title="示例："></a>示例：</h5><p>给定 nums1 &#x3D; [1, 2, 2, 1], nums2 &#x3D; [2, 2], 返回 [2, 2].</p>
-<h5 id="分析："><a href="#分析：" class="headerlink" title="分析："></a>分析：</h5><p>先对两个数组由小到大排序，用两个指针index1和index2遍历两个数组，比较对应元素的大小，如果相等，则添加进result数组，如果不相等，元素小的数组指针加一，最终其中一个数组遍历结束，就停止程序。</p>
-<h5 id="代码："><a href="#代码：" class="headerlink" title="代码："></a>代码：</h5><figure class="highlight python"><table><tr><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">class</span> <span class="hljs-title class_">Solution</span>:<br>    <span class="hljs-keyword">def</span> <span class="hljs-title function_">intersect</span>(<span class="hljs-params">self, nums1, nums2</span>):<br>        <span class="hljs-string">&quot;&quot;&quot;</span><br><span class="hljs-string">        :type nums1: List[int]</span><br><span class="hljs-string">        :type nums2: List[int]</span><br><span class="hljs-string">        :rtype: List[int]</span><br><span class="hljs-string">        &quot;&quot;&quot;</span><br>        result = []<br>        nums1.sort()<br>        nums2.sort()<br>        index1, index2 = <span class="hljs-number">0</span>, <span class="hljs-number">0</span><br>        n1, n2 = <span class="hljs-built_in">len</span>(nums1), <span class="hljs-built_in">len</span>(nums2)<br>        <br>        <span class="hljs-keyword">while</span> index1 &lt; n1 <span class="hljs-keyword">and</span> index2 &lt; n2:<br>            <span class="hljs-keyword">if</span> nums1[index1] == nums2[index2]:<br>                result.append(nums1[index1])<br>                index1 += <span class="hljs-number">1</span><br>                index2 += <span class="hljs-number">1</span><br>            <span class="hljs-keyword">elif</span> nums1[index1] &gt; nums2[index2]:<br>                index2 += <span class="hljs-number">1</span><br>            <span class="hljs-keyword">else</span>:<br>                index1 += <span class="hljs-number">1</span><br>        <span class="hljs-keyword">return</span> result<br></code></pre></td></tr></table></figure>
-<h5 id="参考资料："><a href="#参考资料：" class="headerlink" title="参考资料："></a>参考资料：</h5><p>1、两数组的交 II <a href="https://blog.csdn.net/guoziqing506/article/details/51569488">https://blog.csdn.net/guoziqing506/article/details/51569488</a></p>
-]]></content>
-      <categories>
-        <category>算法</category>
-      </categories>
-      <tags>
-        <tag>python</tag>
-        <tag>数组</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>【论文笔记-4】Attention Is All You Need</title>
     <url>/posts/d3e954aa/</url>
     <content><![CDATA[<p>Vaswani, Ashish, Noam Shazeer, Niki Parmar, Jakob Uszkoreit, Llion Jones, Aidan N. Gomez, Łukasz Kaiser, and Illia Polosukhin. “<a href="https://papers.nips.cc/paper/7181-attention-is-all-you-need.pdf">Attention is all you need</a>.” In Advances in neural information processing systems, pp. 5998-6008. 2017.</p>
@@ -1099,6 +1081,71 @@
       <tags>
         <tag>注意力</tag>
         <tag>Transformer</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>买卖股票的最佳时机Ⅱ</title>
+    <url>/posts/43c05810/</url>
+    <content><![CDATA[<h5 id="要求："><a href="#要求：" class="headerlink" title="要求："></a>要求：</h5><p>给定一个数组，它的第 i 个元素是一支给定股票第 i 天的价格。<br>设计一个算法来计算你所能获取的最大利润。你可以尽可能地完成更多的交易（多次买卖一支股票）。<br>注意：你不能同时参与多笔交易（你必须在再次购买前出售掉之前的股票）。</p>
+<span id="more"></span>
+<h5 id="示例："><a href="#示例：" class="headerlink" title="示例："></a>示例：</h5><p>（1）输入: [7,1,5,3,6,4]<br>输出: 7<br>解释: 在第 2 天（股票价格 &#x3D; 1）的时候买入，在第 3 天（股票价格 &#x3D; 5）的时候卖出, 这笔交易所能获得利润 &#x3D; 5-1 &#x3D; 4 。<br>     随后，在第 4 天（股票价格 &#x3D; 3）的时候买入，在第 5 天（股票价格 &#x3D; 6）的时候卖出, 这笔交易所能获得利润 &#x3D; 6-3 &#x3D; 3 。<br><br>（2）输入: [1,2,3,4,5]<br>输出: 4<br>解释: 在第 1 天（股票价格 &#x3D; 1）的时候买入，在第 5 天 （股票价格 &#x3D; 5）的时候卖出, 这笔交易所能获得利润 &#x3D; 5-1 &#x3D; 4 。<br>     注意你不能在第 1 天和第 2 天接连购买股票，之后再将它们卖出。<br>     因为这样属于同时参与了多笔交易，你必须在再次购买前出售掉之前的股票。<br><br>（3）输入: [7,6,4,3,1]<br>输出: 0<br>解释: 在这种情况下, 没有交易完成, 所以最大利润为 0。</p>
+<h5 id="分析："><a href="#分析：" class="headerlink" title="分析："></a>分析：</h5><p>通过比较相邻两个值的大小，低价买入，高价卖出，然后计算收益，另外考虑不买入和不卖出的特殊情况。</p>
+<h5 id="代码："><a href="#代码：" class="headerlink" title="代码："></a>代码：</h5><figure class="highlight python"><table><tr><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">class</span> <span class="hljs-title class_">Solution</span>:<br>    <span class="hljs-keyword">def</span> <span class="hljs-title function_">maxProfit</span>(<span class="hljs-params">self, prices</span>):<br>        <span class="hljs-string">&quot;&quot;&quot;</span><br><span class="hljs-string">        :type prices: List[int]</span><br><span class="hljs-string">        :rtype: int</span><br><span class="hljs-string">        &quot;&quot;&quot;</span><br>        status = <span class="hljs-number">0</span><br>        length = <span class="hljs-built_in">len</span>(prices)<br>        result = <span class="hljs-number">0</span><br>        buy = <span class="hljs-number">0</span><br>        sell = <span class="hljs-number">0</span><br>        <span class="hljs-comment">#当列表为空或者只有一位时，返回0</span><br>        <span class="hljs-keyword">if</span> length &lt;= <span class="hljs-number">1</span>:<br>            <span class="hljs-keyword">return</span> <span class="hljs-number">0</span><br>        <span class="hljs-keyword">else</span>:<br>            <span class="hljs-comment">#遍历列表</span><br>            <span class="hljs-keyword">for</span> x <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(length-<span class="hljs-number">1</span>):<br>                <span class="hljs-comment">#当状态为未买入，并且后一位的值大于前一位值时，买入，并且把状态改为买入</span><br>                <span class="hljs-keyword">if</span> status == <span class="hljs-number">0</span> <span class="hljs-keyword">and</span> prices[x] &lt; prices[x+<span class="hljs-number">1</span>]:<br>                    buy = prices[x]<br>                    status = <span class="hljs-number">1</span><br>                <span class="hljs-comment">#当状态为买入，并且后一位的值小于等于前一位值时，卖出，并且把状态改为未买入，累计result</span><br>                <span class="hljs-keyword">elif</span> status == <span class="hljs-number">1</span> <span class="hljs-keyword">and</span> prices[x] &gt;= prices[x+<span class="hljs-number">1</span>]:<br>                    sell = prices[x]<br>                    result = result + sell - buy<br>                    status = <span class="hljs-number">0</span> <span class="hljs-comment"># 正常情况最后状态一定是未买入，即status=0</span><br>                    <br>            <span class="hljs-comment">#用来排除[5,4,3,2,1]这种一直没有买入的情况</span><br>            <span class="hljs-keyword">if</span> status == <span class="hljs-number">0</span> <span class="hljs-keyword">and</span> sell == <span class="hljs-number">0</span>:<br>                result = <span class="hljs-number">0</span><br>            <span class="hljs-comment">#用来解决[1,2,3,4,5]这种一直没有卖出的情况</span><br>            <span class="hljs-keyword">elif</span> status == <span class="hljs-number">1</span>:<br>                result = result + prices[length-<span class="hljs-number">1</span>] - buy<br>            <span class="hljs-keyword">return</span> result<br></code></pre></td></tr></table></figure>
+<h5 id="参考资料："><a href="#参考资料：" class="headerlink" title="参考资料："></a>参考资料：</h5><p>1、买卖股票的最佳时机 II-Python-LeetCode <a href="https://blog.csdn.net/linfeng886/article/details/80070804">https://blog.csdn.net/linfeng886/article/details/80070804</a></p>
+]]></content>
+      <categories>
+        <category>算法</category>
+      </categories>
+      <tags>
+        <tag>python</tag>
+        <tag>数组</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>两个数组的交集Ⅱ</title>
+    <url>/posts/8ed9ffc/</url>
+    <content><![CDATA[<h5 id="要求："><a href="#要求：" class="headerlink" title="要求："></a>要求：</h5><p>给定两个数组，写一个方法来计算它们的交集。</p>
+<span id="more"></span>
+<h5 id="示例："><a href="#示例：" class="headerlink" title="示例："></a>示例：</h5><p>给定 nums1 &#x3D; [1, 2, 2, 1], nums2 &#x3D; [2, 2], 返回 [2, 2].</p>
+<h5 id="分析："><a href="#分析：" class="headerlink" title="分析："></a>分析：</h5><p>先对两个数组由小到大排序，用两个指针index1和index2遍历两个数组，比较对应元素的大小，如果相等，则添加进result数组，如果不相等，元素小的数组指针加一，最终其中一个数组遍历结束，就停止程序。</p>
+<h5 id="代码："><a href="#代码：" class="headerlink" title="代码："></a>代码：</h5><figure class="highlight python"><table><tr><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">class</span> <span class="hljs-title class_">Solution</span>:<br>    <span class="hljs-keyword">def</span> <span class="hljs-title function_">intersect</span>(<span class="hljs-params">self, nums1, nums2</span>):<br>        <span class="hljs-string">&quot;&quot;&quot;</span><br><span class="hljs-string">        :type nums1: List[int]</span><br><span class="hljs-string">        :type nums2: List[int]</span><br><span class="hljs-string">        :rtype: List[int]</span><br><span class="hljs-string">        &quot;&quot;&quot;</span><br>        result = []<br>        nums1.sort()<br>        nums2.sort()<br>        index1, index2 = <span class="hljs-number">0</span>, <span class="hljs-number">0</span><br>        n1, n2 = <span class="hljs-built_in">len</span>(nums1), <span class="hljs-built_in">len</span>(nums2)<br>        <br>        <span class="hljs-keyword">while</span> index1 &lt; n1 <span class="hljs-keyword">and</span> index2 &lt; n2:<br>            <span class="hljs-keyword">if</span> nums1[index1] == nums2[index2]:<br>                result.append(nums1[index1])<br>                index1 += <span class="hljs-number">1</span><br>                index2 += <span class="hljs-number">1</span><br>            <span class="hljs-keyword">elif</span> nums1[index1] &gt; nums2[index2]:<br>                index2 += <span class="hljs-number">1</span><br>            <span class="hljs-keyword">else</span>:<br>                index1 += <span class="hljs-number">1</span><br>        <span class="hljs-keyword">return</span> result<br></code></pre></td></tr></table></figure>
+<h5 id="参考资料："><a href="#参考资料：" class="headerlink" title="参考资料："></a>参考资料：</h5><p>1、两数组的交 II <a href="https://blog.csdn.net/guoziqing506/article/details/51569488">https://blog.csdn.net/guoziqing506/article/details/51569488</a></p>
+]]></content>
+      <categories>
+        <category>算法</category>
+      </categories>
+      <tags>
+        <tag>python</tag>
+        <tag>数组</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>使用pyecharts绘制关系图</title>
+    <url>/posts/84391376/</url>
+    <content><![CDATA[<p>首先介绍下什么是pyecharts, 它是使用Echarts来生成图表的一个python库，我们知道Echarts是百度的一个开源数据可视化javascript库，提供了大量的图表样例，功能十分强大，用起来很方便。今天我们就用pyecharts来绘制一个关系图。</p>
+<span id="more"></span>
+<h5 id="最终效果"><a href="#最终效果" class="headerlink" title="最终效果"></a>最终效果</h5><p><a href="https://i.loli.net/2018/10/04/5bb624e008b33.png"><img src="https://i.loli.net/2018/10/04/5bb624e008b33.png" alt="1.png"></a></p>
+<h5 id="接下来，讲一讲实现步骤"><a href="#接下来，讲一讲实现步骤" class="headerlink" title="接下来，讲一讲实现步骤"></a>接下来，讲一讲实现步骤</h5><ol>
+<li><p>安装pyecharts（以Ubuntu系统为例）: </p>
+<figure class="highlight cmake"><table><tr><td class="code"><pre><code class="hljs cmake">$ pip <span class="hljs-keyword">install</span> pyecharts<br></code></pre></td></tr></table></figure>
+</li>
+<li><p>代码实现</p>
+<figure class="highlight routeros"><table><tr><td class="code"><pre><code class="hljs routeros"><span class="hljs-keyword">from</span> pyecharts import Graph<br><br>nodes = [&#123;<span class="hljs-string">&quot;name&quot;</span>: <span class="hljs-string">&quot;node1&quot;</span>, <span class="hljs-string">&quot;symbolSize&quot;</span>: 10&#125;,<br>         &#123;<span class="hljs-string">&quot;name&quot;</span>: <span class="hljs-string">&quot;node2&quot;</span>, <span class="hljs-string">&quot;symbolSize&quot;</span>: 20&#125;,<br>         &#123;<span class="hljs-string">&quot;name&quot;</span>: <span class="hljs-string">&quot;node3&quot;</span>, <span class="hljs-string">&quot;symbolSize&quot;</span>: 30&#125;,<br>         &#123;<span class="hljs-string">&quot;name&quot;</span>: <span class="hljs-string">&quot;node4&quot;</span>, <span class="hljs-string">&quot;symbolSize&quot;</span>: 40&#125;,<br>         &#123;<span class="hljs-string">&quot;name&quot;</span>: <span class="hljs-string">&quot;node5&quot;</span>, <span class="hljs-string">&quot;symbolSize&quot;</span>: 50&#125;,<br>         &#123;<span class="hljs-string">&quot;name&quot;</span>: <span class="hljs-string">&quot;node6&quot;</span>, <span class="hljs-string">&quot;symbolSize&quot;</span>: 40&#125;,<br>         &#123;<span class="hljs-string">&quot;name&quot;</span>: <span class="hljs-string">&quot;node7&quot;</span>, <span class="hljs-string">&quot;symbolSize&quot;</span>: 30&#125;,<br>         &#123;<span class="hljs-string">&quot;name&quot;</span>: <span class="hljs-string">&quot;node8&quot;</span>, <span class="hljs-string">&quot;symbolSize&quot;</span>: 20&#125;]<br>links = []<br><span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> nodes:<br>    <span class="hljs-keyword">for</span> j <span class="hljs-keyword">in</span> nodes:<br>        links.append(&#123;<span class="hljs-string">&quot;source&quot;</span>: i.<span class="hljs-built_in">get</span>(<span class="hljs-string">&#x27;name&#x27;</span>), <span class="hljs-string">&quot;target&quot;</span>: j.<span class="hljs-built_in">get</span>(<span class="hljs-string">&#x27;name&#x27;</span>)&#125;)<br>graph = Graph(<span class="hljs-string">&quot;关系图-环形布局示例&quot;</span>)<br>graph.<span class="hljs-built_in">add</span>(<span class="hljs-string">&quot;&quot;</span>, nodes, links, <span class="hljs-attribute">is_label_show</span>=<span class="hljs-literal">True</span>,<br>          <span class="hljs-attribute">graph_repulsion</span>=8000, <span class="hljs-attribute">graph_layout</span>=<span class="hljs-string">&#x27;circular&#x27;</span>,<br>          <span class="hljs-attribute">label_text_color</span>=None)<br>graph.render(<span class="hljs-string">&quot;graph.html&quot;</span>)<br></code></pre></td></tr></table></figure>
+<p>最后，还要提到的一点是，以上只是简单的示例，仅供学习，实际使用过程中，需要适当调整代码，达到更好的效果，或选用其他可视化方式。</p>
+</li>
+</ol>
+<h5 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h5><ol>
+<li><a href="https://github.com/pyecharts/pyecharts">https://github.com/pyecharts/pyecharts</a>  pyecharts</li>
+<li><a href="http://echarts.baidu.com/">http://echarts.baidu.com/</a> echarts</li>
+<li><a href="https://mp.weixin.qq.com/s?__biz=MzI5NDY1MjQzNA==&mid=2247487437&idx=1&sn=0a79cfc2870cdfe87ce32d73bd64483f&chksm=ec5ed0b0db2959a609b22be2ebdc792132f40870ce56c10856085acbd24cca5c2971e03c63e9&scene=21#wechat_redirect">https://mp.weixin.qq.com/s?__biz=MzI5NDY1MjQzNA==&amp;mid=2247487437&amp;idx=1&amp;sn=0a79cfc2870cdfe87ce32d73bd64483f&amp;chksm=ec5ed0b0db2959a609b22be2ebdc792132f40870ce56c10856085acbd24cca5c2971e03c63e9&amp;scene=21#wechat_redirect</a> 人生苦短，我要用pyecharts画图</li>
+</ol>
+]]></content>
+      <categories>
+        <category>经验技巧</category>
+      </categories>
+      <tags>
+        <tag>python</tag>
+        <tag>可视化</tag>
       </tags>
   </entry>
   <entry>
@@ -1186,24 +1233,6 @@
       </tags>
   </entry>
   <entry>
-    <title>买卖股票的最佳时机Ⅱ</title>
-    <url>/posts/43c05810/</url>
-    <content><![CDATA[<h5 id="要求："><a href="#要求：" class="headerlink" title="要求："></a>要求：</h5><p>给定一个数组，它的第 i 个元素是一支给定股票第 i 天的价格。<br>设计一个算法来计算你所能获取的最大利润。你可以尽可能地完成更多的交易（多次买卖一支股票）。<br>注意：你不能同时参与多笔交易（你必须在再次购买前出售掉之前的股票）。</p>
-<span id="more"></span>
-<h5 id="示例："><a href="#示例：" class="headerlink" title="示例："></a>示例：</h5><p>（1）输入: [7,1,5,3,6,4]<br>输出: 7<br>解释: 在第 2 天（股票价格 &#x3D; 1）的时候买入，在第 3 天（股票价格 &#x3D; 5）的时候卖出, 这笔交易所能获得利润 &#x3D; 5-1 &#x3D; 4 。<br>     随后，在第 4 天（股票价格 &#x3D; 3）的时候买入，在第 5 天（股票价格 &#x3D; 6）的时候卖出, 这笔交易所能获得利润 &#x3D; 6-3 &#x3D; 3 。<br><br>（2）输入: [1,2,3,4,5]<br>输出: 4<br>解释: 在第 1 天（股票价格 &#x3D; 1）的时候买入，在第 5 天 （股票价格 &#x3D; 5）的时候卖出, 这笔交易所能获得利润 &#x3D; 5-1 &#x3D; 4 。<br>     注意你不能在第 1 天和第 2 天接连购买股票，之后再将它们卖出。<br>     因为这样属于同时参与了多笔交易，你必须在再次购买前出售掉之前的股票。<br><br>（3）输入: [7,6,4,3,1]<br>输出: 0<br>解释: 在这种情况下, 没有交易完成, 所以最大利润为 0。</p>
-<h5 id="分析："><a href="#分析：" class="headerlink" title="分析："></a>分析：</h5><p>通过比较相邻两个值的大小，低价买入，高价卖出，然后计算收益，另外考虑不买入和不卖出的特殊情况。</p>
-<h5 id="代码："><a href="#代码：" class="headerlink" title="代码："></a>代码：</h5><figure class="highlight python"><table><tr><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">class</span> <span class="hljs-title class_">Solution</span>:<br>    <span class="hljs-keyword">def</span> <span class="hljs-title function_">maxProfit</span>(<span class="hljs-params">self, prices</span>):<br>        <span class="hljs-string">&quot;&quot;&quot;</span><br><span class="hljs-string">        :type prices: List[int]</span><br><span class="hljs-string">        :rtype: int</span><br><span class="hljs-string">        &quot;&quot;&quot;</span><br>        status = <span class="hljs-number">0</span><br>        length = <span class="hljs-built_in">len</span>(prices)<br>        result = <span class="hljs-number">0</span><br>        buy = <span class="hljs-number">0</span><br>        sell = <span class="hljs-number">0</span><br>        <span class="hljs-comment">#当列表为空或者只有一位时，返回0</span><br>        <span class="hljs-keyword">if</span> length &lt;= <span class="hljs-number">1</span>:<br>            <span class="hljs-keyword">return</span> <span class="hljs-number">0</span><br>        <span class="hljs-keyword">else</span>:<br>            <span class="hljs-comment">#遍历列表</span><br>            <span class="hljs-keyword">for</span> x <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(length-<span class="hljs-number">1</span>):<br>                <span class="hljs-comment">#当状态为未买入，并且后一位的值大于前一位值时，买入，并且把状态改为买入</span><br>                <span class="hljs-keyword">if</span> status == <span class="hljs-number">0</span> <span class="hljs-keyword">and</span> prices[x] &lt; prices[x+<span class="hljs-number">1</span>]:<br>                    buy = prices[x]<br>                    status = <span class="hljs-number">1</span><br>                <span class="hljs-comment">#当状态为买入，并且后一位的值小于等于前一位值时，卖出，并且把状态改为未买入，累计result</span><br>                <span class="hljs-keyword">elif</span> status == <span class="hljs-number">1</span> <span class="hljs-keyword">and</span> prices[x] &gt;= prices[x+<span class="hljs-number">1</span>]:<br>                    sell = prices[x]<br>                    result = result + sell - buy<br>                    status = <span class="hljs-number">0</span> <span class="hljs-comment"># 正常情况最后状态一定是未买入，即status=0</span><br>                    <br>            <span class="hljs-comment">#用来排除[5,4,3,2,1]这种一直没有买入的情况</span><br>            <span class="hljs-keyword">if</span> status == <span class="hljs-number">0</span> <span class="hljs-keyword">and</span> sell == <span class="hljs-number">0</span>:<br>                result = <span class="hljs-number">0</span><br>            <span class="hljs-comment">#用来解决[1,2,3,4,5]这种一直没有卖出的情况</span><br>            <span class="hljs-keyword">elif</span> status == <span class="hljs-number">1</span>:<br>                result = result + prices[length-<span class="hljs-number">1</span>] - buy<br>            <span class="hljs-keyword">return</span> result<br></code></pre></td></tr></table></figure>
-<h5 id="参考资料："><a href="#参考资料：" class="headerlink" title="参考资料："></a>参考资料：</h5><p>1、买卖股票的最佳时机 II-Python-LeetCode <a href="https://blog.csdn.net/linfeng886/article/details/80070804">https://blog.csdn.net/linfeng886/article/details/80070804</a></p>
-]]></content>
-      <categories>
-        <category>算法</category>
-      </categories>
-      <tags>
-        <tag>python</tag>
-        <tag>数组</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>从排序数组中删除重复项</title>
     <url>/posts/2b4bef4e/</url>
     <content><![CDATA[<h5 id="要求："><a href="#要求：" class="headerlink" title="要求："></a>要求：</h5><p>给定一个排序数组，你需要在原地删除重复出现的元素，使得每个元素只出现一次，返回移除后数组的新长度。（不要使用额外的数组空间，你必须在原地修改输入数组并在使用O（1）额外空间的条件下完成）。</p>
@@ -1222,32 +1251,21 @@
       </tags>
   </entry>
   <entry>
-    <title>使用pyecharts绘制关系图</title>
-    <url>/posts/84391376/</url>
-    <content><![CDATA[<p>首先介绍下什么是pyecharts, 它是使用Echarts来生成图表的一个python库，我们知道Echarts是百度的一个开源数据可视化javascript库，提供了大量的图表样例，功能十分强大，用起来很方便。今天我们就用pyecharts来绘制一个关系图。</p>
+    <title>加一</title>
+    <url>/posts/2e394548/</url>
+    <content><![CDATA[<h5 id="要求："><a href="#要求：" class="headerlink" title="要求："></a>要求：</h5><p>给定一个非负整数组成的非空数组，在该数的基础上加一，返回一个新的数组。<br><br>最高位数字存放在数组的首位， 数组中每个元素只存储一个数字。<br><br>你可以假设除了整数 0 之外，这个整数不会以零开头。</p>
 <span id="more"></span>
-<h5 id="最终效果"><a href="#最终效果" class="headerlink" title="最终效果"></a>最终效果</h5><p><a href="https://i.loli.net/2018/10/04/5bb624e008b33.png"><img src="https://i.loli.net/2018/10/04/5bb624e008b33.png" alt="1.png"></a></p>
-<h5 id="接下来，讲一讲实现步骤"><a href="#接下来，讲一讲实现步骤" class="headerlink" title="接下来，讲一讲实现步骤"></a>接下来，讲一讲实现步骤</h5><ol>
-<li><p>安装pyecharts（以Ubuntu系统为例）: </p>
-<figure class="highlight cmake"><table><tr><td class="code"><pre><code class="hljs cmake">$ pip <span class="hljs-keyword">install</span> pyecharts<br></code></pre></td></tr></table></figure>
-</li>
-<li><p>代码实现</p>
-<figure class="highlight routeros"><table><tr><td class="code"><pre><code class="hljs routeros"><span class="hljs-keyword">from</span> pyecharts import Graph<br><br>nodes = [&#123;<span class="hljs-string">&quot;name&quot;</span>: <span class="hljs-string">&quot;node1&quot;</span>, <span class="hljs-string">&quot;symbolSize&quot;</span>: 10&#125;,<br>         &#123;<span class="hljs-string">&quot;name&quot;</span>: <span class="hljs-string">&quot;node2&quot;</span>, <span class="hljs-string">&quot;symbolSize&quot;</span>: 20&#125;,<br>         &#123;<span class="hljs-string">&quot;name&quot;</span>: <span class="hljs-string">&quot;node3&quot;</span>, <span class="hljs-string">&quot;symbolSize&quot;</span>: 30&#125;,<br>         &#123;<span class="hljs-string">&quot;name&quot;</span>: <span class="hljs-string">&quot;node4&quot;</span>, <span class="hljs-string">&quot;symbolSize&quot;</span>: 40&#125;,<br>         &#123;<span class="hljs-string">&quot;name&quot;</span>: <span class="hljs-string">&quot;node5&quot;</span>, <span class="hljs-string">&quot;symbolSize&quot;</span>: 50&#125;,<br>         &#123;<span class="hljs-string">&quot;name&quot;</span>: <span class="hljs-string">&quot;node6&quot;</span>, <span class="hljs-string">&quot;symbolSize&quot;</span>: 40&#125;,<br>         &#123;<span class="hljs-string">&quot;name&quot;</span>: <span class="hljs-string">&quot;node7&quot;</span>, <span class="hljs-string">&quot;symbolSize&quot;</span>: 30&#125;,<br>         &#123;<span class="hljs-string">&quot;name&quot;</span>: <span class="hljs-string">&quot;node8&quot;</span>, <span class="hljs-string">&quot;symbolSize&quot;</span>: 20&#125;]<br>links = []<br><span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> nodes:<br>    <span class="hljs-keyword">for</span> j <span class="hljs-keyword">in</span> nodes:<br>        links.append(&#123;<span class="hljs-string">&quot;source&quot;</span>: i.<span class="hljs-built_in">get</span>(<span class="hljs-string">&#x27;name&#x27;</span>), <span class="hljs-string">&quot;target&quot;</span>: j.<span class="hljs-built_in">get</span>(<span class="hljs-string">&#x27;name&#x27;</span>)&#125;)<br>graph = Graph(<span class="hljs-string">&quot;关系图-环形布局示例&quot;</span>)<br>graph.<span class="hljs-built_in">add</span>(<span class="hljs-string">&quot;&quot;</span>, nodes, links, <span class="hljs-attribute">is_label_show</span>=<span class="hljs-literal">True</span>,<br>          <span class="hljs-attribute">graph_repulsion</span>=8000, <span class="hljs-attribute">graph_layout</span>=<span class="hljs-string">&#x27;circular&#x27;</span>,<br>          <span class="hljs-attribute">label_text_color</span>=None)<br>graph.render(<span class="hljs-string">&quot;graph.html&quot;</span>)<br></code></pre></td></tr></table></figure>
-<p>最后，还要提到的一点是，以上只是简单的示例，仅供学习，实际使用过程中，需要适当调整代码，达到更好的效果，或选用其他可视化方式。</p>
-</li>
-</ol>
-<h5 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h5><ol>
-<li><a href="https://github.com/pyecharts/pyecharts">https://github.com/pyecharts/pyecharts</a>  pyecharts</li>
-<li><a href="http://echarts.baidu.com/">http://echarts.baidu.com/</a> echarts</li>
-<li><a href="https://mp.weixin.qq.com/s?__biz=MzI5NDY1MjQzNA==&mid=2247487437&idx=1&sn=0a79cfc2870cdfe87ce32d73bd64483f&chksm=ec5ed0b0db2959a609b22be2ebdc792132f40870ce56c10856085acbd24cca5c2971e03c63e9&scene=21#wechat_redirect">https://mp.weixin.qq.com/s?__biz=MzI5NDY1MjQzNA==&amp;mid=2247487437&amp;idx=1&amp;sn=0a79cfc2870cdfe87ce32d73bd64483f&amp;chksm=ec5ed0b0db2959a609b22be2ebdc792132f40870ce56c10856085acbd24cca5c2971e03c63e9&amp;scene=21#wechat_redirect</a> 人生苦短，我要用pyecharts画图</li>
-</ol>
+<h5 id="示例："><a href="#示例：" class="headerlink" title="示例："></a>示例：</h5><p>（1）<br><br>输入: [1,2,3]<br><br>输出: [1,2,4]<br><br>解释: 输入数组表示数字 123。<br><br>（2）<br><br>输入: [4,3,2,1]<br><br>输出: [4,3,2,2]<br><br>解释: 输入数组表示数字 4321。</p>
+<h5 id="分析："><a href="#分析：" class="headerlink" title="分析："></a>分析：</h5><p>从后向前判断每个元素，如有进位，将进位符flag置为1，将元素所在位变为0；若无进位，将元素所在位+1，并将进位符置0，最后判断进位符标志，如果为1，则在数组第0位增加一个元素1。</p>
+<h5 id="代码："><a href="#代码：" class="headerlink" title="代码："></a>代码：</h5><figure class="highlight python"><table><tr><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">class</span> <span class="hljs-title class_">Solution</span>:<br>    <span class="hljs-keyword">def</span> <span class="hljs-title function_">plusOne</span>(<span class="hljs-params">self, digits</span>):<br>        <span class="hljs-string">&quot;&quot;&quot;</span><br><span class="hljs-string">        :type digits: List[int]</span><br><span class="hljs-string">        :rtype: List[int]</span><br><span class="hljs-string">        &quot;&quot;&quot;</span><br>        <br>        flag = <span class="hljs-number">1</span><br>        <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(<span class="hljs-built_in">len</span>(digits)-<span class="hljs-number">1</span>,-<span class="hljs-number">1</span>,-<span class="hljs-number">1</span>):<br>            <span class="hljs-keyword">if</span> flag + digits[i] == <span class="hljs-number">10</span>:<br>                digits[i] = <span class="hljs-number">0</span><br>                flag = <span class="hljs-number">1</span><br>            <span class="hljs-keyword">else</span>:<br>                digits[i] = digits[i] + flag<br>                flag = <span class="hljs-number">0</span><br>        <span class="hljs-keyword">if</span> flag == <span class="hljs-number">1</span>:<br>            digits.insert(<span class="hljs-number">0</span>,<span class="hljs-number">1</span>)<br>        <span class="hljs-keyword">return</span> digits<br></code></pre></td></tr></table></figure>
+<h5 id="参考资料："><a href="#参考资料：" class="headerlink" title="参考资料："></a>参考资料：</h5><p>1、leetcode 66.Plus One python <a href="https://blog.csdn.net/mario_mmh/article/details/79845181">https://blog.csdn.net/mario_mmh/article/details/79845181</a></p>
 ]]></content>
       <categories>
-        <category>经验技巧</category>
+        <category>算法</category>
       </categories>
       <tags>
         <tag>python</tag>
-        <tag>可视化</tag>
+        <tag>数组</tag>
       </tags>
   </entry>
   <entry>
@@ -1274,14 +1292,14 @@
       </tags>
   </entry>
   <entry>
-    <title>加一</title>
-    <url>/posts/2e394548/</url>
-    <content><![CDATA[<h5 id="要求："><a href="#要求：" class="headerlink" title="要求："></a>要求：</h5><p>给定一个非负整数组成的非空数组，在该数的基础上加一，返回一个新的数组。<br><br>最高位数字存放在数组的首位， 数组中每个元素只存储一个数字。<br><br>你可以假设除了整数 0 之外，这个整数不会以零开头。</p>
+    <title>只出现一次的数字</title>
+    <url>/posts/2c835ddc/</url>
+    <content><![CDATA[<h5 id="要求："><a href="#要求：" class="headerlink" title="要求："></a>要求：</h5><p>给定一个非空整数数组，除了某个元素只出现一次以外，其余每个元素均出现两次。找出那个只出现了一次的元素。（算法应该具有线性时间复杂度）</p>
 <span id="more"></span>
-<h5 id="示例："><a href="#示例：" class="headerlink" title="示例："></a>示例：</h5><p>（1）<br><br>输入: [1,2,3]<br><br>输出: [1,2,4]<br><br>解释: 输入数组表示数字 123。<br><br>（2）<br><br>输入: [4,3,2,1]<br><br>输出: [4,3,2,2]<br><br>解释: 输入数组表示数字 4321。</p>
-<h5 id="分析："><a href="#分析：" class="headerlink" title="分析："></a>分析：</h5><p>从后向前判断每个元素，如有进位，将进位符flag置为1，将元素所在位变为0；若无进位，将元素所在位+1，并将进位符置0，最后判断进位符标志，如果为1，则在数组第0位增加一个元素1。</p>
-<h5 id="代码："><a href="#代码：" class="headerlink" title="代码："></a>代码：</h5><figure class="highlight python"><table><tr><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">class</span> <span class="hljs-title class_">Solution</span>:<br>    <span class="hljs-keyword">def</span> <span class="hljs-title function_">plusOne</span>(<span class="hljs-params">self, digits</span>):<br>        <span class="hljs-string">&quot;&quot;&quot;</span><br><span class="hljs-string">        :type digits: List[int]</span><br><span class="hljs-string">        :rtype: List[int]</span><br><span class="hljs-string">        &quot;&quot;&quot;</span><br>        <br>        flag = <span class="hljs-number">1</span><br>        <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(<span class="hljs-built_in">len</span>(digits)-<span class="hljs-number">1</span>,-<span class="hljs-number">1</span>,-<span class="hljs-number">1</span>):<br>            <span class="hljs-keyword">if</span> flag + digits[i] == <span class="hljs-number">10</span>:<br>                digits[i] = <span class="hljs-number">0</span><br>                flag = <span class="hljs-number">1</span><br>            <span class="hljs-keyword">else</span>:<br>                digits[i] = digits[i] + flag<br>                flag = <span class="hljs-number">0</span><br>        <span class="hljs-keyword">if</span> flag == <span class="hljs-number">1</span>:<br>            digits.insert(<span class="hljs-number">0</span>,<span class="hljs-number">1</span>)<br>        <span class="hljs-keyword">return</span> digits<br></code></pre></td></tr></table></figure>
-<h5 id="参考资料："><a href="#参考资料：" class="headerlink" title="参考资料："></a>参考资料：</h5><p>1、leetcode 66.Plus One python <a href="https://blog.csdn.net/mario_mmh/article/details/79845181">https://blog.csdn.net/mario_mmh/article/details/79845181</a></p>
+<h5 id="示例："><a href="#示例：" class="headerlink" title="示例："></a>示例：</h5><p>（1）<br>输入: [2,2,1]<br><br>输出: 1<br><br>（2）<br>输入: [4,1,2,1,2]<br><br>输出: 4</p>
+<h5 id="分析："><a href="#分析：" class="headerlink" title="分析："></a>分析：</h5><p>为了找出只出现一次的元素，可以先将所有元素出现的次数变为一次，然后对所有元素求和，乘以2倍，减去原来数组元素的和，即为只出现一次的元素的值。</p>
+<h5 id="代码："><a href="#代码：" class="headerlink" title="代码："></a>代码：</h5><figure class="highlight python"><table><tr><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">class</span> <span class="hljs-title class_">Solution</span>:<br>    <span class="hljs-keyword">def</span> <span class="hljs-title function_">singleNumber</span>(<span class="hljs-params">self, nums</span>):<br>        <span class="hljs-string">&quot;&quot;&quot;</span><br><span class="hljs-string">        :type nums: List[int]</span><br><span class="hljs-string">        :rtype: int</span><br><span class="hljs-string">        &quot;&quot;&quot;</span><br>        <span class="hljs-keyword">return</span> <span class="hljs-built_in">sum</span>(<span class="hljs-built_in">set</span>(nums))*<span class="hljs-number">2</span> - <span class="hljs-built_in">sum</span>(nums)<br></code></pre></td></tr></table></figure>
+<h5 id="参考资料："><a href="#参考资料：" class="headerlink" title="参考资料："></a>参考资料：</h5><p>1、LeetCode 136. 只出现一次的数字 Python <a href="https://blog.csdn.net/ma412410029/article/details/80511684">https://blog.csdn.net/ma412410029/article/details/80511684</a></p>
 ]]></content>
       <categories>
         <category>算法</category>
@@ -1300,24 +1318,6 @@
 <h5 id="分析："><a href="#分析：" class="headerlink" title="分析："></a>分析：</h5><p>直接元素之间比较，会很容易想到用两个for循环来进行元素间判断，但是这种方法会超时，所以不使用这种方法；可以通过将数组转换成集合，然后判断转换前的数组和集合的长度是否相等，如果相等，则没有重复元素，如果不相等，则存在重复元素。（这种方法，很巧妙，也应用了集合的特性）。</p>
 <h5 id="代码："><a href="#代码：" class="headerlink" title="代码："></a>代码：</h5><figure class="highlight angelscript"><table><tr><td class="code"><pre><code class="hljs angelscript"><span class="hljs-keyword">class</span> <span class="hljs-symbol">Solution:</span><br><span class="hljs-symbol">    <span class="hljs-symbol">def</span></span> <span class="hljs-symbol">containsDuplicate</span>(<span class="hljs-symbol">self, <span class="hljs-symbol">nums</span></span>):<br>        &quot;&quot;&quot;<br>        :<span class="hljs-symbol">type</span> <span class="hljs-symbol">nums: <span class="hljs-symbol">List</span></span>[<span class="hljs-symbol">int</span>]<br>        :<span class="hljs-symbol">rtype: <span class="hljs-symbol">bool</span></span><br>        &quot;&quot;&quot;<br>        <span class="hljs-symbol">if</span> (<span class="hljs-symbol">len</span>(<span class="hljs-symbol">nums</span>) != <span class="hljs-symbol">len</span>(<span class="hljs-symbol">set</span>(<span class="hljs-symbol">nums</span>))):<br>            <span class="hljs-symbol">return</span> <span class="hljs-symbol">True</span><br>        <span class="hljs-symbol">else:</span><br><span class="hljs-symbol">            <span class="hljs-symbol">return</span></span> <span class="hljs-symbol">False</span><br></code></pre></td></tr></table></figure>
 <h5 id="参考资料："><a href="#参考资料：" class="headerlink" title="参考资料："></a>参考资料：</h5><p>1、LeetCode-containsDuplicate-存在重复 <a href="https://segmentfault.com/a/1190000014325206">https://segmentfault.com/a/1190000014325206</a></p>
-]]></content>
-      <categories>
-        <category>算法</category>
-      </categories>
-      <tags>
-        <tag>python</tag>
-        <tag>数组</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>只出现一次的数字</title>
-    <url>/posts/2c835ddc/</url>
-    <content><![CDATA[<h5 id="要求："><a href="#要求：" class="headerlink" title="要求："></a>要求：</h5><p>给定一个非空整数数组，除了某个元素只出现一次以外，其余每个元素均出现两次。找出那个只出现了一次的元素。（算法应该具有线性时间复杂度）</p>
-<span id="more"></span>
-<h5 id="示例："><a href="#示例：" class="headerlink" title="示例："></a>示例：</h5><p>（1）<br>输入: [2,2,1]<br><br>输出: 1<br><br>（2）<br>输入: [4,1,2,1,2]<br><br>输出: 4</p>
-<h5 id="分析："><a href="#分析：" class="headerlink" title="分析："></a>分析：</h5><p>为了找出只出现一次的元素，可以先将所有元素出现的次数变为一次，然后对所有元素求和，乘以2倍，减去原来数组元素的和，即为只出现一次的元素的值。</p>
-<h5 id="代码："><a href="#代码：" class="headerlink" title="代码："></a>代码：</h5><figure class="highlight python"><table><tr><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">class</span> <span class="hljs-title class_">Solution</span>:<br>    <span class="hljs-keyword">def</span> <span class="hljs-title function_">singleNumber</span>(<span class="hljs-params">self, nums</span>):<br>        <span class="hljs-string">&quot;&quot;&quot;</span><br><span class="hljs-string">        :type nums: List[int]</span><br><span class="hljs-string">        :rtype: int</span><br><span class="hljs-string">        &quot;&quot;&quot;</span><br>        <span class="hljs-keyword">return</span> <span class="hljs-built_in">sum</span>(<span class="hljs-built_in">set</span>(nums))*<span class="hljs-number">2</span> - <span class="hljs-built_in">sum</span>(nums)<br></code></pre></td></tr></table></figure>
-<h5 id="参考资料："><a href="#参考资料：" class="headerlink" title="参考资料："></a>参考资料：</h5><p>1、LeetCode 136. 只出现一次的数字 Python <a href="https://blog.csdn.net/ma412410029/article/details/80511684">https://blog.csdn.net/ma412410029/article/details/80511684</a></p>
 ]]></content>
       <categories>
         <category>算法</category>
@@ -1372,31 +1372,6 @@
       </tags>
   </entry>
   <entry>
-    <title>常用linux命令</title>
-    <url>/posts/4206c037/</url>
-    <content><![CDATA[<p>下列命令在Ubuntu16.04 LTS 系统下测试通过。</p>
-<span id="more"></span>
-<h5 id="查看内存"><a href="#查看内存" class="headerlink" title="查看内存"></a>查看内存</h5><p>free<br>参数：<br>-help: 查看free命令的帮助内容<br>-h 以人类可读的直观方式<br>-b －k －m：分别以Byte、KB、MB为单位显示内存使用情况<br>-t：显示内存总和列</p>
-<h5 id="查看CPU"><a href="#查看CPU" class="headerlink" title="查看CPU"></a>查看CPU</h5><p>lscpu<br>查看当前操作系统内核信息  uname -a<br>查看当前操作系统发行版信息  cat &#x2F;etc&#x2F;issue<br>查看物理cpu颗数  cat &#x2F;proc&#x2F;cpuinfo | grep physical | uniq -c<br>查看完整CPU信息  cat &#x2F;proc&#x2F;cpuinfo</p>
-<h5 id="查看GPU"><a href="#查看GPU" class="headerlink" title="查看GPU"></a>查看GPU</h5><p>nvidia-smi<br>查看显卡信息 lspci | grep -i nvidia<br>周期性的输出显卡的使用情况 watch -n 10 nvidia-smi</p>
-<h5 id="查看硬盘大小"><a href="#查看硬盘大小" class="headerlink" title="查看硬盘大小"></a>查看硬盘大小</h5><p>df -h</p>
-<h5 id="创建用户"><a href="#创建用户" class="headerlink" title="创建用户"></a>创建用户</h5><p>sudo useradd -d &#x2F;usr&#x2F;sam -m sam 创建一个名为sam的用户</p>
-<h5 id="删除用户"><a href="#删除用户" class="headerlink" title="删除用户"></a>删除用户</h5><p>sudo userdel -r sam  其中，-r的作用是把该用户的主目录一起删除</p>
-<h5 id="将用户加入组"><a href="#将用户加入组" class="headerlink" title="将用户加入组"></a>将用户加入组</h5><p>sudo usermod -G xiep sam 将用户sam加入xiep组</p>
-<h5 id="查看当前登录用户名"><a href="#查看当前登录用户名" class="headerlink" title="查看当前登录用户名"></a>查看当前登录用户名</h5><p>whoami</p>
-<h5 id="查看当前用户所在组"><a href="#查看当前用户所在组" class="headerlink" title="查看当前用户所在组"></a>查看当前用户所在组</h5><p>groups sam</p>
-<h5 id="查看系统用户"><a href="#查看系统用户" class="headerlink" title="查看系统用户"></a>查看系统用户</h5><p>cat &#x2F;etc&#x2F;passwd</p>
-<h5 id="查看系统用户分组"><a href="#查看系统用户分组" class="headerlink" title="查看系统用户分组"></a>查看系统用户分组</h5><p>cat &#x2F;etc&#x2F;group</p>
-]]></content>
-      <categories>
-        <category>经验技巧</category>
-      </categories>
-      <tags>
-        <tag>Linux</tag>
-        <tag>Ubuntu</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>数学之美第二版读后感</title>
     <url>/posts/553248e1/</url>
     <content><![CDATA[<h2 id="感悟："><a href="#感悟：" class="headerlink" title="感悟："></a>感悟：</h2><ul>
@@ -1419,6 +1394,31 @@
       </categories>
       <tags>
         <tag>读后感</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>常用linux命令</title>
+    <url>/posts/4206c037/</url>
+    <content><![CDATA[<p>下列命令在Ubuntu16.04 LTS 系统下测试通过。</p>
+<span id="more"></span>
+<h5 id="查看内存"><a href="#查看内存" class="headerlink" title="查看内存"></a>查看内存</h5><p>free<br>参数：<br>-help: 查看free命令的帮助内容<br>-h 以人类可读的直观方式<br>-b －k －m：分别以Byte、KB、MB为单位显示内存使用情况<br>-t：显示内存总和列</p>
+<h5 id="查看CPU"><a href="#查看CPU" class="headerlink" title="查看CPU"></a>查看CPU</h5><p>lscpu<br>查看当前操作系统内核信息  uname -a<br>查看当前操作系统发行版信息  cat &#x2F;etc&#x2F;issue<br>查看物理cpu颗数  cat &#x2F;proc&#x2F;cpuinfo | grep physical | uniq -c<br>查看完整CPU信息  cat &#x2F;proc&#x2F;cpuinfo</p>
+<h5 id="查看GPU"><a href="#查看GPU" class="headerlink" title="查看GPU"></a>查看GPU</h5><p>nvidia-smi<br>查看显卡信息 lspci | grep -i nvidia<br>周期性的输出显卡的使用情况 watch -n 10 nvidia-smi</p>
+<h5 id="查看硬盘大小"><a href="#查看硬盘大小" class="headerlink" title="查看硬盘大小"></a>查看硬盘大小</h5><p>df -h</p>
+<h5 id="创建用户"><a href="#创建用户" class="headerlink" title="创建用户"></a>创建用户</h5><p>sudo useradd -d &#x2F;usr&#x2F;sam -m sam 创建一个名为sam的用户</p>
+<h5 id="删除用户"><a href="#删除用户" class="headerlink" title="删除用户"></a>删除用户</h5><p>sudo userdel -r sam  其中，-r的作用是把该用户的主目录一起删除</p>
+<h5 id="将用户加入组"><a href="#将用户加入组" class="headerlink" title="将用户加入组"></a>将用户加入组</h5><p>sudo usermod -G xiep sam 将用户sam加入xiep组</p>
+<h5 id="查看当前登录用户名"><a href="#查看当前登录用户名" class="headerlink" title="查看当前登录用户名"></a>查看当前登录用户名</h5><p>whoami</p>
+<h5 id="查看当前用户所在组"><a href="#查看当前用户所在组" class="headerlink" title="查看当前用户所在组"></a>查看当前用户所在组</h5><p>groups sam</p>
+<h5 id="查看系统用户"><a href="#查看系统用户" class="headerlink" title="查看系统用户"></a>查看系统用户</h5><p>cat &#x2F;etc&#x2F;passwd</p>
+<h5 id="查看系统用户分组"><a href="#查看系统用户分组" class="headerlink" title="查看系统用户分组"></a>查看系统用户分组</h5><p>cat &#x2F;etc&#x2F;group</p>
+]]></content>
+      <categories>
+        <category>经验技巧</category>
+      </categories>
+      <tags>
+        <tag>Linux</tag>
+        <tag>Ubuntu</tag>
       </tags>
   </entry>
   <entry>
@@ -1481,54 +1481,6 @@
       <tags>
         <tag>年度总结</tag>
         <tag>趁年轻 去运动</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>机器学习中的数学（一）</title>
-    <url>/posts/9ff4b4d5/</url>
-    <content><![CDATA[<p>理清机器学习中的数学概念和相关基础知识，对于理解机器学习算法的原理以及改进算法至关重要。因此本系列笔记打算针对《Mathematics for machine learning》一书，进行学习笔记整理，希望提升自己的同时，能帮助他人一起成长。</p>
-<span id="more"></span>
-
-<h3 id="目录"><a href="#目录" class="headerlink" title="目录"></a>目录</h3><ul>
-<li><a href="">Part I Mathematical Foundations</a><ul>
-<li><a href="">1. Introduction and Motivation</a></li>
-<li><a href="">2. Linear Algebra</a></li>
-<li><a href="">3. Analytic Geometry</a></li>
-<li><a href="">4. Matrix Decompositions</a></li>
-<li><a href="">5. Vector Calculus</a></li>
-<li><a href="">6. Probability and Distributions</a></li>
-<li><a href="">7. Continuous Optimization</a></li>
-</ul>
-</li>
-<li><a href="">Part II When Models Meet Data</a><ul>
-<li><a href="">8. When Models Meet Data</a></li>
-<li><a href="">9. Linear Regression</a></li>
-<li><a href="">10. Dimensionality Reduction with Principal Component Analysis</a></li>
-<li><a href="">11. Density Estimation with Gaussian Mixture Models</a></li>
-<li><a href="">12. Classification with Support Vector Machines</a></li>
-</ul>
-</li>
-</ul>
-<h3 id="第一部分-数学基础"><a href="#第一部分-数学基础" class="headerlink" title="第一部分 数学基础"></a>第一部分 数学基础</h3><h4 id="1-简介和动机"><a href="#1-简介和动机" class="headerlink" title="1. 简介和动机"></a>1. 简介和动机</h4><h5 id="1-1-基本概念"><a href="#1-1-基本概念" class="headerlink" title="1.1 基本概念"></a>1.1 基本概念</h5><p>机器学习是通过设计算法来自动地从数据中提取有价值的信息。由于机器学习是一类数据驱动的方法，所以数据是机器学习的核心。机器学习涉及到三个重要的组成核心：数据、模型和学习。</p>
-<p>那么对于数据、模型和学习这三个重要的概念，本书有三个重要的观点：</p>
-<ul>
-<li>将数据看作向量；</li>
-<li>要么使用概率的，要么使用优化的视角来选择合适模型；</li>
-<li>使用数值优化方法从可获得的数据中学习，使得模型能够在没有见过的数据集上表现良好。</li>
-</ul>
-<h5 id="1-2-阅读本书的两种方式"><a href="#1-2-阅读本书的两种方式" class="headerlink" title="1.2 阅读本书的两种方式"></a>1.2 阅读本书的两种方式</h5><ul>
-<li>自底向上：由浅入深，从基本的概念开始，学习到更先进的；</li>
-<li>自顶向下：从实际需求出发，去学习一些基本的概念，这是一种任务驱动的方式。</li>
-</ul>
-<p>这种书分为了两个部分，第一部分是数学基础部分，第二部分是机器学习任务及方法。可以根据自己的实际需求，选择阅读方法，我推荐自底向上的方式，当然也可以两种方式结合。</p>
-<p>接下来介绍数学基础部分和机器学习四大支柱（常见任务）的关系，如图所示：<br><img src="https://i.loli.net/2020/09/27/qKN3VwrYuUGFRLx.png" alt="mml.jpg"></p>
-<h5 id="1-3-练习与反馈"><a href="#1-3-练习与反馈" class="headerlink" title="1.3 练习与反馈"></a>1.3 练习与反馈</h5><p>这本书可以从<a href="https://mml-book.com这个网站下载.第一部分主要适用笔和纸完成练习,第二部分提供有编程的代码用于加深机器学习算法的理解./">https://mml-book.com这个网站下载。第一部分主要适用笔和纸完成练习，第二部分提供有编程的代码用于加深机器学习算法的理解。</a></p>
-]]></content>
-      <categories>
-        <category>学习笔记</category>
-      </categories>
-      <tags>
-        <tag>机器学习</tag>
       </tags>
   </entry>
   <entry>
@@ -1714,6 +1666,54 @@
       </tags>
   </entry>
   <entry>
+    <title>机器学习中的数学（一）</title>
+    <url>/posts/9ff4b4d5/</url>
+    <content><![CDATA[<p>理清机器学习中的数学概念和相关基础知识，对于理解机器学习算法的原理以及改进算法至关重要。因此本系列笔记打算针对《Mathematics for machine learning》一书，进行学习笔记整理，希望提升自己的同时，能帮助他人一起成长。</p>
+<span id="more"></span>
+
+<h3 id="目录"><a href="#目录" class="headerlink" title="目录"></a>目录</h3><ul>
+<li><a href="">Part I Mathematical Foundations</a><ul>
+<li><a href="">1. Introduction and Motivation</a></li>
+<li><a href="">2. Linear Algebra</a></li>
+<li><a href="">3. Analytic Geometry</a></li>
+<li><a href="">4. Matrix Decompositions</a></li>
+<li><a href="">5. Vector Calculus</a></li>
+<li><a href="">6. Probability and Distributions</a></li>
+<li><a href="">7. Continuous Optimization</a></li>
+</ul>
+</li>
+<li><a href="">Part II When Models Meet Data</a><ul>
+<li><a href="">8. When Models Meet Data</a></li>
+<li><a href="">9. Linear Regression</a></li>
+<li><a href="">10. Dimensionality Reduction with Principal Component Analysis</a></li>
+<li><a href="">11. Density Estimation with Gaussian Mixture Models</a></li>
+<li><a href="">12. Classification with Support Vector Machines</a></li>
+</ul>
+</li>
+</ul>
+<h3 id="第一部分-数学基础"><a href="#第一部分-数学基础" class="headerlink" title="第一部分 数学基础"></a>第一部分 数学基础</h3><h4 id="1-简介和动机"><a href="#1-简介和动机" class="headerlink" title="1. 简介和动机"></a>1. 简介和动机</h4><h5 id="1-1-基本概念"><a href="#1-1-基本概念" class="headerlink" title="1.1 基本概念"></a>1.1 基本概念</h5><p>机器学习是通过设计算法来自动地从数据中提取有价值的信息。由于机器学习是一类数据驱动的方法，所以数据是机器学习的核心。机器学习涉及到三个重要的组成核心：数据、模型和学习。</p>
+<p>那么对于数据、模型和学习这三个重要的概念，本书有三个重要的观点：</p>
+<ul>
+<li>将数据看作向量；</li>
+<li>要么使用概率的，要么使用优化的视角来选择合适模型；</li>
+<li>使用数值优化方法从可获得的数据中学习，使得模型能够在没有见过的数据集上表现良好。</li>
+</ul>
+<h5 id="1-2-阅读本书的两种方式"><a href="#1-2-阅读本书的两种方式" class="headerlink" title="1.2 阅读本书的两种方式"></a>1.2 阅读本书的两种方式</h5><ul>
+<li>自底向上：由浅入深，从基本的概念开始，学习到更先进的；</li>
+<li>自顶向下：从实际需求出发，去学习一些基本的概念，这是一种任务驱动的方式。</li>
+</ul>
+<p>这种书分为了两个部分，第一部分是数学基础部分，第二部分是机器学习任务及方法。可以根据自己的实际需求，选择阅读方法，我推荐自底向上的方式，当然也可以两种方式结合。</p>
+<p>接下来介绍数学基础部分和机器学习四大支柱（常见任务）的关系，如图所示：<br><img src="https://i.loli.net/2020/09/27/qKN3VwrYuUGFRLx.png" alt="mml.jpg"></p>
+<h5 id="1-3-练习与反馈"><a href="#1-3-练习与反馈" class="headerlink" title="1.3 练习与反馈"></a>1.3 练习与反馈</h5><p>这本书可以从<a href="https://mml-book.com这个网站下载.第一部分主要适用笔和纸完成练习,第二部分提供有编程的代码用于加深机器学习算法的理解./">https://mml-book.com这个网站下载。第一部分主要适用笔和纸完成练习，第二部分提供有编程的代码用于加深机器学习算法的理解。</a></p>
+]]></content>
+      <categories>
+        <category>学习笔记</category>
+      </categories>
+      <tags>
+        <tag>机器学习</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>【Latex经验】用Latex编译中文文档</title>
     <url>/posts/59479fbc/</url>
     <content><![CDATA[<p>我们知道用Latex编辑和编译英文文章十分高效和便捷，但是编译中文文档，经常会出现问题。那么常见的解决办法，如下：</p>
@@ -1731,6 +1731,22 @@
       </categories>
       <tags>
         <tag>Latex</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>红楼梦书评</title>
+    <url>/posts/637f259f/</url>
+    <content><![CDATA[<p>昨天看完了《红楼梦》一书，还记得是从去年暑假开始看，差不多花了半年时间。因为之前身边有同学看，加之暑假打算看一看书，之前也没有看过，只零星看过红楼梦的电视剧，所以就选择了《红楼梦》。</p>
+<span id="more"></span>
+<p><img src="https://i.loli.net/2019/01/03/5c2e2d1619a35.jpg" alt="s1070959.jpg"></p>
+<p>在这本书里，见证了大量的诗词、中医养生的内容以及人物言谈对话，感受到了荣、宁二府由兴到衰再到“兴”的过程，还有贾宝玉、林黛玉、薛宝钗、老太太以及王熙凤等人生命历程。<br /><br>其中，给我印象最深的是薛宝钗，她不仅担负起薛家的家庭重担，也要承受着贾宝玉无心功名、沉迷闺阁的反传统压力。而她自己却是旧传统下的知书达理、贤良之妻。这个世界给了她不公，但她却从容应对，不刻薄他人，维持着家庭的和睦，不失高贵和优雅。<br /><br>总的来说，这本书，包含的内容及其丰富，从日常生活到社会万象，囊括万千，值得一读，甚至多读。<br /><br><strong>注:</strong> 这本书，我看的是Kindle电子书版本（《红楼梦》（古典名著普及文库）），在当当上搜索了一下，红楼梦有不同版本，推荐人民文学出版社的《红楼梦》。</p>
+]]></content>
+      <categories>
+        <category>随笔感悟</category>
+      </categories>
+      <tags>
+        <tag>书籍</tag>
+        <tag>阅读</tag>
       </tags>
   </entry>
   <entry>
@@ -1758,22 +1774,6 @@
         <tag>养生</tag>
         <tag>节气</tag>
         <tag>寒露</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>红楼梦书评</title>
-    <url>/posts/637f259f/</url>
-    <content><![CDATA[<p>昨天看完了《红楼梦》一书，还记得是从去年暑假开始看，差不多花了半年时间。因为之前身边有同学看，加之暑假打算看一看书，之前也没有看过，只零星看过红楼梦的电视剧，所以就选择了《红楼梦》。</p>
-<span id="more"></span>
-<p><img src="https://i.loli.net/2019/01/03/5c2e2d1619a35.jpg" alt="s1070959.jpg"></p>
-<p>在这本书里，见证了大量的诗词、中医养生的内容以及人物言谈对话，感受到了荣、宁二府由兴到衰再到“兴”的过程，还有贾宝玉、林黛玉、薛宝钗、老太太以及王熙凤等人生命历程。<br /><br>其中，给我印象最深的是薛宝钗，她不仅担负起薛家的家庭重担，也要承受着贾宝玉无心功名、沉迷闺阁的反传统压力。而她自己却是旧传统下的知书达理、贤良之妻。这个世界给了她不公，但她却从容应对，不刻薄他人，维持着家庭的和睦，不失高贵和优雅。<br /><br>总的来说，这本书，包含的内容及其丰富，从日常生活到社会万象，囊括万千，值得一读，甚至多读。<br /><br><strong>注:</strong> 这本书，我看的是Kindle电子书版本（《红楼梦》（古典名著普及文库）），在当当上搜索了一下，红楼梦有不同版本，推荐人民文学出版社的《红楼梦》。</p>
-]]></content>
-      <categories>
-        <category>随笔感悟</category>
-      </categories>
-      <tags>
-        <tag>书籍</tag>
-        <tag>阅读</tag>
       </tags>
   </entry>
   <entry>
