@@ -4,6 +4,33 @@
   
   
   <entry>
+    <title>【NeurIPS 2023】时空数据挖掘论文</title>
+    <link href="/posts/3727adf0/"/>
+    <url>/posts/3727adf0/</url>
+    
+    <content type="html"><![CDATA[<p>对NeurIPS 2023的录用论文进行了整理，筛选出其中与时空数据挖掘相关论文，如下。</p><span id="more"></span><p>NeurIPS 2023论文录用列表： <a href="https://openreview.net/group?id=NeurIPS.cc/2023/Conference">https://openreview.net/group?id=NeurIPS.cc/2023/Conference</a></p><ul><li>Automatic Integration for Spatiotemporal Neural Point Processes. Zihao Zhou, Rose Yu. <a href="https://neurips.cc/virtual/2023/poster/72359">paper</a></li><li>Adaptive Normalization for Non-stationary Time Series Forecasting: A Temporal Slice Perspective. Zhiding Liu, Mingyue Cheng, Zhi Li, Zhenya Huang, Qi Liu, Yanhu Xie, Enhong Chen. <a href="https://neurips.cc/virtual/2023/poster/72816">paper</a></li><li>BasisFormer: Attention-based Time Series Forecasting with Learnable and Interpretable Basis. Zelin Ni, Hang Yu, Shizhan Liu, Jianguo Li , Weiyao Lin. <a href="https://neurips.cc/virtual/2023/poster/69976">paper</a></li><li>BioMassters: A Benchmark Dataset for Forest Biomass Estimation using Multi-modal Satellite Time-series. Andrea Nascetti, Ritu Yadav, Kirill Brodt, Qixun Qu, Hongwei Fan, Yuri Shendryk, Isha Shah, Christine Chung. <a href="https://neurips.cc/virtual/2023/poster/73499">paper</a></li><li>Creating High-Fidelity Synthetic GPS Trajectory Dataset for Urban Mobility Analysis. Yuanshao Zhu, Yongchao Ye, Ying Wu, Xiangyu Zhao, James Yu. <a href="https://neurips.cc/virtual/2023/poster/73469">paper</a></li><li>Contrast Everything: Multi-Granularity Representation Learning for Medical Time-Series. Yihe Wang, Yu Han, Haishuai Wang, Xiang Zhang. <a href="https://neurips.cc/virtual/2023/poster/70272">paper</a></li><li>ContiFormer: Continuous-Time Transformer for Irregular Time Series Modeling. Yuqi Chen, Kan Ren, Yansen Wang, Yuchen Fang, Weiwei Sun, Dongsheng Li. <a href="https://neurips.cc/virtual/2023/poster/71304">paper</a></li><li>Causal Discovery from Subsampled Time Series with Proxy Variables. Mingzhou Liu, Xinwei Sun, Lingjing Hu, Yizhou Wang. <a href="https://neurips.cc/virtual/2023/poster/70936">paper</a></li><li>Causal Discovery in Semi-Stationary Time Series. Shanyun Gao, Raghavendra Addanki, Tong Yu, Ryan Rossi, Murat Kocaoglu. <a href="https://neurips.cc/virtual/2023/poster/71016">paper</a></li><li>CrossGNN: Confronting Noisy Multivariate Time Series Via Cross Interaction Refinement. Qihe Huang, Lei Shen, Ruixin Zhang, Shouhong Ding, Binwu Wang, Zhengyang Zhou, Yang Wang. <a href="https://neurips.cc/virtual/2023/poster/70010">paper</a></li><li>Conformal Prediction for Time Series with Modern Hopfield Networks. Andreas Auer, Martin Gauch, Daniel Klotz, Sepp Hochreiter. <a href="https://neurips.cc/virtual/2023/poster/72007">paper</a></li><li>Conformal Scorecasting: Anticipatory Uncertainty Quantification for Distribution Shift in Time Series. Anastasios Angelopoulos, Ryan Tibshirani, Emmanuel Candes. <a href="https://neurips.cc/virtual/2023/poster/69896">paper</a></li><li>DiffTraj: Generating GPS Trajectory with Diffusion Probabilistic Model. Yuanshao Zhu, Yongchao Ye, Shiyao Zhang, Xiangyu Zhao, James Yu. <a href="https://neurips.cc/virtual/2023/poster/69935">paper</a></li><li>DYffusion: A Dynamics-informed Diffusion Model for Spatiotemporal Forecasting. Salva Rühling Cachay, Bo Zhao, Hailey James, Rose Yu. <a href="https://neurips.cc/virtual/2023/poster/71410">paper</a></li><li>Drift doesn’t Matter: Dynamic Decomposition with Diffusion Reconstruction for Unstable Multivariate Time Series Anomaly Detection. Chengsen Wang, Qi Qi, Jingyu Wang, Haifeng Sun, Xingyu Wang, Zirui Zhuang, Jianxin Liao. <a href="https://neurips.cc/virtual/2023/poster/71195">paper</a><a href="https://github.com/ForestsKing/D3R">code</a></li><li>Deciphering Spatio-Temporal Graph Forecasting: A Causal Lens and Treatment. Yutong Xia, Yuxuan Liang, Haomin Wen, Xu Liu, Kun Wang, Zhengyang Zhou, Roger Zimmermann. <a href="https://neurips.cc/virtual/2023/poster/73036">paper</a></li><li>Equivariant Spatio-Temporal Attentive Graph Networks to Simulate Physical Dynamics. Liming Wu, Zhichao Hou, Jirui Yuan, Yu Rong, Wenbing Huang. <a href="https://neurips.cc/virtual/2023/poster/72921">paper</a></li><li>Encoding Time-Series Explanations through Self-Supervised Model Behavior Consistency. Owen Queen, Thomas Hartvigsen, Teddy Koker, Huan He, Theodoros Tsiligkaridis, Marinka Zitnik. <a href="https://neurips.cc/virtual/2023/poster/69958">paper</a></li><li>Equivariant Neural Simulators for Stochastic Spatiotemporal Dynamics. Koen Minartz, Yoeri Poels, Simon Koop, Vlado Menkovski. <a href="https://neurips.cc/virtual/2023/poster/72442">paper</a></li><li>Fine-Grained Spatio-Temporal Particulate Matter Dataset From Delhi For ML based Modeling. Sachin Chauhan, Zeel Bharatkumar Patel, Sayan Ranu, Rijurekha Sen, Nipun Batra. <a href="https://neurips.cc/virtual/2023/poster/73476">paper</a></li><li>Frequency-domain MLPs are More Effective Learners in Time Series Forecasting. Kun Yi, Qi Zhang, Wei Fan, Hui He, Pengyang Wang, Shoujin Wang, Ning An, Defu Lian, Longbing Cao, Zhendong Niu. <a href="https://neurips.cc/virtual/2023/poster/70726">paper</a></li><li>FOCAL: Contrastive Learning for Multimodal Time-Series Sensing Signals in Factorized Orthogonal Latent Space. Shengzhong Liu, Tomoyoshi Kimura, Dongxin Liu, Ruijie Wang, Jinyang Li, Suhas Diggavi, Mani Srivastava, Tarek Abdelzaher. <a href="https://neurips.cc/virtual/2023/poster/70617">paper</a></li><li>FourierGNN: Rethinking Multivariate Time Series Forecasting from a Pure Graph Perspective. Kun Yi, Qi Zhang, Wei Fan, Hui He, Liang Hu, Pengyang Wang, Ning An, Longbing Cao, Zhendong Niu. <a href="https://neurips.cc/virtual/2023/poster/71159">paper</a></li><li>Finding Order in Chaos: A Novel Data Augmentation Method for Time Series in Contrastive Learning. Berken Utku Demirel, Christian Holz. <a href="https://neurips.cc/virtual/2023/poster/71014">paper</a><a href="https://github.com/eth-siplab/Finding_Order_in_Chaos">code</a></li><li>Generative Pre-Training of Spatio-Temporal Graph Neural Networks. Zhonghang Li, Lianghao Xia, Yong Xu, Chao Huang. <a href="https://neurips.cc/virtual/2023/poster/70508">paper</a></li><li>Integration-free Training for Spatio-temporal Multimodal Covariate Deep Kernel Point Processes. Yixuan Zhang, Quyu Kong, Feng Zhou. <a href="https://neurips.cc/virtual/2023/poster/71268">paper</a></li><li>Koopa: Learning Non-stationary Time Series Dynamics with Koopman Predictors. Yong Liu, Chenyu Li, Jianmin Wang, Mingsheng Long. <a href="https://neurips.cc/virtual/2023/poster/72562">paper</a><a href="https://github.com/thuml/Koopa">code</a></li><li>LargeST: A Benchmark Dataset for Large-Scale Traffic Forecasting. Xu Liu, Yutong Xia, Yuxuan Liang, Junfeng Hu, Yiwei Wang, Lei Bai, Chao Huang, Zhenguang Liu, Bryan Hooi, Roger Zimmermann. <a href="https://neurips.cc/virtual/2023/poster/73480">paper</a><a href="https://github.com/liuxu77/LargeST">code</a></li><li>Large Language Models Are Zero Shot Time Series Forecasters. Marc Finzi, Nate Gruver, Shikai Qiu, Andrew Wilson. <a href="https://neurips.cc/virtual/2023/poster/70543">paper</a></li><li>MEMTO: Memory-guided Transformer for Multivariate Time Series Anomaly Detection. Junho Song, Keonwoo Kim, Jeonglyul Oh, Sungzoon Cho. <a href="https://neurips.cc/virtual/2023/poster/71519">paper</a><a href="https://github.com/gunny97/MEMTO">code</a></li><li>Nominality Score Conditioned Time Series Anomaly Detection by Point&#x2F;Sequential Reconstruction. Chih-Yu Lai, Fan-Keng Sun, Zhengqi Gao, Jeffrey H Lang, Duane Boning. <a href="https://neurips.cc/virtual/2023/poster/70582">paper</a><a href="https://github.com/andrewlai61616/NPSR">code</a></li><li>OpenSTL: A Comprehensive Benchmark of Spatio-Temporal Predictive Learning. Cheng Tan, Siyuan Li, Zhangyang Gao, Wenfei Guan, Zedong Wang, Zicheng Liu, Lirong Wu, Stan Z. Li. <a href="https://neurips.cc/virtual/2023/poster/73674">paper</a><a href="https://github.com/chengtan9907/OpenSTL">code</a></li><li>OneNet: Enhancing Time Series Forecasting Models under Concept Drift by Online Ensembling. Yifan Zhang, Qingsong Wen, Xue Wang, Weiqi Chen, Liang Sun, Zhang Zhang, Liang Wang, Rong Jin, Tieniu Tan. <a href="https://neurips.cc/virtual/2023/poster/71725">paper</a><a href="https://github.com/yfzhang114/OneNet">code</a></li><li>One Fits All: Power General Time Series Analysis by Pretrained LM. Tian Zhou, Peisong Niu, xue wang, Liang Sun, Rong Jin. <a href="https://neurips.cc/virtual/2023/poster/70856">paper</a></li><li>On the Constrained Time-Series Generation Problem. Andrea Coletta, Sriram Gopalakrishnan, Daniel Borrajo, Svitlana Vyetrenko. <a href="https://neurips.cc/virtual/2023/poster/72006">paper</a></li><li>Predict, Refine, Synthesize: Self-Guiding Diffusion Models for Probabilistic Time Series Forecasting. Marcel Kollovieh, Abdul Fatir Ansari, Michael Bohlke-Schneider, Jasper Zschiegner, Hao Wang, Yuyang (Bernie) Wang. <a href="https://neurips.cc/virtual/2023/poster/70377">paper</a></li><li>SpatialRank: Urban Event Ranking with NDCG Optimization on Spatiotemporal Data. Bang An, Xun Zhou, Yongjian Zhong, Tianbao Yang. <a href="https://neurips.cc/virtual/2023/poster/70628">paper</a></li><li>Sparse Graph Learning from Spatiotemporal Time Series. Andrea Cini, Daniele Zambon, Cesare Alippi. <a href="https://neurips.cc/virtual/2023/poster/73924">paper</a></li><li>Sparse Deep Learning for Time Series Data: Theory and Applications. Mingxuan Zhang, Yan Sun, Faming Liang. <a href="https://neurips.cc/virtual/2023/poster/72629">paper</a></li><li>Scale-teaching: Robust Multi-scale Training for Time Series Classification with Noisy Labels. Zhen Liu, ma peitian, Dongliang Chen, Wenbin Pei, Qianli Ma. <a href="https://neurips.cc/virtual/2023/poster/72608">paper</a><a href="https://github.com/qianlima-lab/Scale-teaching">code</a></li><li>SimMTM: A Simple Pre-Training Framework for Masked Time-Series Modeling. Jiaxiang Dong, Haixu Wu, Haoran Zhang, Li Zhang, Jianmin Wang, Mingsheng Long. <a href="https://neurips.cc/virtual/2023/poster/70829">paper</a><a href="https://github.com/thuml/SimMTM">code</a></li><li>Taming Local Effects in Graph-based Spatiotemporal Forecasting. Andrea Cini, Ivan Marisca, Daniele Zambon, Cesare Alippi. <a href="https://neurips.cc/virtual/2023/poster/70034">paper</a></li><li>Time Series Kernels based on Nonlinear Vector AutoRegressive Delay Embeddings. Giovanni De Felice, John Goulermas, Vladimir Gusev. <a href="https://neurips.cc/virtual/2023/poster/71521">paper</a></li><li>Time Series as Images: Vision Transformer for Irregularly Sampled Time Series. Zekun Li, Shiyang Li, Xifeng Yan. <a href="https://neurips.cc/virtual/2023/poster/71219">paper</a></li><li>UUKG: Unified Urban Knowledge Graph Dataset for Urban Spatiotemporal Prediction. Yansong Ning, Hao Liu, Hao Wang, Zhenyu Zeng, Hui Xiong. <a href="https://neurips.cc/virtual/2023/poster/73440">paper</a><a href="https://github.com/usail-hkust/UUKG">code</a></li><li>What if We Enrich day-ahead Solar Irradiance Time Series Forecasting with Spatio-Temporal Context? Oussama Boussif, Ghait Boukachab, Dan Assouline, Stefano Massaroli, Tianle Yuan, Loubna Benabbou, Yoshua Bengio. <a href="https://neurips.cc/virtual/2023/poster/70031">paper</a><a href="https://github.com/gitbooo/CrossViVit">code</a></li><li>WITRAN: Water-wave Information Transmission and Recurrent Acceleration Network for Long-range Time Series Forecasting. Yuxin Jia, Youfang Lin, Xinyan Hao, Yan Lin, Shengnan Guo, Huaiyu Wan. <a href="https://neurips.cc/virtual/2023/poster/69972">paper</a><a href="https://github.com/Water2sea/WITRAN">code</a></li><li>WildfireSpreadTS: A dataset of multi-modal time series for wildfire spread prediction. Sebastian Gerard, Yu Zhao, Josephine Sullivan. <a href="https://neurips.cc/virtual/2023/poster/73593">paper</a></li></ul><h1 id="发现更多"><a href="#发现更多" class="headerlink" title="发现更多"></a>发现更多</h1><ol><li><a href="https://www.zhihu.com/column/c_1437144001987792896">时空数据挖掘</a> </li><li><a href="https://github.com/xiepeng21/research_spatio-temporal-data-mining">时空数据挖掘论文库</a></li><li><a href="https://zhuanlan.zhihu.com/p/573936494">半亩方塘：【时空数据挖掘】推开窗，看一看</a></li><li><a href="https://zhuanlan.zhihu.com/p/435895312">半亩方塘：【时空数据挖掘】 - 层次体系构建</a></li><li><a href="https://zhuanlan.zhihu.com/p/426898203">半亩方塘：【时空数据挖掘】- 任务</a></li><li><a href="https://zhuanlan.zhihu.com/p/435890647">半亩方塘：【时空数据挖掘】- 方法</a></li><li><a href="https://zhuanlan.zhihu.com/p/435882797">半亩方塘：【时空数据挖掘】- 数据</a></li><li><a href="https://zhuanlan.zhihu.com/p/649761763">【KDD 2023】时空数据挖掘论文</a></li><li><a href="https://zhuanlan.zhihu.com/p/629231015">【ICLR 2023】 时空数据挖掘论文</a></li><li><a href="https://zhuanlan.zhihu.com/p/478362107">半亩方塘：【ICLR 2022】时空数据挖掘论文</a></li><li><a href="https://zhuanlan.zhihu.com/p/548907678">半亩方塘：【ICML 2022】时空数据挖掘论文</a></li><li><a href="https://zhuanlan.zhihu.com/p/547781911">半亩方塘：【IJCAI 2022】时空数据挖掘论文</a></li><li><a href="https://zhuanlan.zhihu.com/p/547262551">半亩方塘：【KDD 2022】时空数据挖掘论文</a></li><li><a href="https://zhuanlan.zhihu.com/p/478363400">半亩方塘：【WSDM 2022】时空数据挖掘论文</a></li><li><a href="https://zhuanlan.zhihu.com/p/478357750">半亩方塘：【AAAI 2022】时空数据挖掘论文</a></li><li><a href="https://zhuanlan.zhihu.com/p/420738345">半亩方塘：【图神经网络】近3年用于时空数据挖掘的图神经网络论文（2018-2021）</a></li><li><a href="https://zhuanlan.zhihu.com/p/423342733">半亩方塘：【KDD 2021 】时空数据挖掘论文</a></li><li><a href="https://zhuanlan.zhihu.com/p/423323595">半亩方塘：【IJCAI 2021 】时空数据挖掘论文</a></li><li><a href="https://zhuanlan.zhihu.com/p/440291388">半亩方塘：【WWW 2021 】时空数据挖掘论文</a></li><li><a href="https://zhuanlan.zhihu.com/p/442419220">半亩方塘：【ACM SIGSPATIAL 2021】时空数据挖掘论文</a></li></ol><h1 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h1><ol><li>NeurIPS 2023 时间序列(Time Series)论文总结 <a href="https://zhuanlan.zhihu.com/p/659088918">https://zhuanlan.zhihu.com/p/659088918</a></li><li>NeurIPS 2023 时空数据论文总结 <a href="https://zhuanlan.zhihu.com/p/659050798">https://zhuanlan.zhihu.com/p/659050798</a></li><li>时空数据顶会论文总结 <a href="https://www.zhihu.com/column/c_1683852314232885248">https://www.zhihu.com/column/c_1683852314232885248</a></li></ol>]]></content>
+    
+    
+    <categories>
+      
+      <category>论文阅读</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>时空数据挖掘</tag>
+      
+      <tag>NeurIPS 2023</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>博客推荐</title>
     <link href="/posts/418a12ae/"/>
     <url>/posts/418a12ae/</url>
@@ -227,11 +254,11 @@
     
     <tags>
       
+      <tag>阅读</tag>
+      
       <tag>趁年轻，去运动</tag>
       
       <tag>国庆</tag>
-      
-      <tag>阅读</tag>
       
       <tag>电影</tag>
       
@@ -403,11 +430,11 @@
     
     <tags>
       
+      <tag>人工智能</tag>
+      
       <tag>数据挖掘</tag>
       
       <tag>论文投稿</tag>
-      
-      <tag>人工智能</tag>
       
     </tags>
     
@@ -509,11 +536,11 @@
     
     <tags>
       
-      <tag>机器学习</tag>
-      
       <tag>数据挖掘</tag>
       
       <tag>论文投稿</tag>
+      
+      <tag>机器学习</tag>
       
     </tags>
     
@@ -779,9 +806,9 @@
     
     <tags>
       
-      <tag>阅读</tag>
-      
       <tag>书籍</tag>
+      
+      <tag>阅读</tag>
       
     </tags>
     
@@ -806,9 +833,9 @@
     
     <tags>
       
-      <tag>阅读</tag>
-      
       <tag>书籍</tag>
+      
+      <tag>阅读</tag>
       
     </tags>
     
