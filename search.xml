@@ -1,33 +1,54 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>2019年书单</title>
-    <url>/posts/353b91f9/</url>
-    <content><![CDATA[<p>新的一年，保持阅读和写作的习惯，每一个月读完一本书写一篇读书笔记(简称三一计划)。</p>
+    <title>【论文投稿-2021】2021年机器学习和数据挖掘相关会议投稿时间</title>
+    <url>/posts/82aa9d8e/</url>
+    <content><![CDATA[<p>按月份对2021年机器学习和数据挖掘相关会议征稿进行统计。</p>
 <span id="more"></span>
-<p><img src="https://i.loli.net/2019/01/02/5c2cce1e92717.jpg" alt="booklist.jpg"></p>
-<p>今年准备阅读的12本书如下:</p>
-<ol>
-<li>易经</li>
-<li>理想国</li>
-<li>自然哲学的数学原理</li>
-<li>红楼梦</li>
-<li>瓦尔登湖</li>
-<li>科学与方法</li>
-<li>科学史</li>
-<li>小王子</li>
-<li>西方哲学史</li>
-<li>中国哲学简史</li>
-<li>从一到无穷大</li>
-<li>美的历程</li>
+
+<h3 id="2021年"><a href="#2021年" class="headerlink" title="2021年"></a>2021年</h3><h4 id="2021-01"><a href="#2021-01" class="headerlink" title="2021-01"></a>2021-01</h4><ol>
+<li>IJCNN 2021（The international joint conference on neural networks），Online，截稿日期：2021-01-15 （推迟为2021-02-10）<a href="https://www.ijcnn.org/">https://www.ijcnn.org/</a></li>
+<li>IJCAI 2021 (International Joint Conference on Artificial Intelligence), Montreal, Canada, 截稿日期：2021-01-20（摘要提交截止日期：2021-01-13）<a href="https://ijcai-21.org/">https://ijcai-21.org/</a></li>
+</ol>
+<h4 id="2021-02"><a href="#2021-02" class="headerlink" title="2021-02"></a>2021-02</h4><ol>
+<li>KDD 2021（ACM SIGKDD Conference on Knowledge Discovery and Data Mining），Singapore，截稿日期：2021-02-08 <a href="https://www.kdd.org/kdd2021/">https://www.kdd.org/kdd2021/</a></li>
+</ol>
+<h4 id="2021-04"><a href="#2021-04" class="headerlink" title="2021-04"></a>2021-04</h4><ol>
+<li>CICAI 2021 (CAAI International Conference on artificial intelligence 2021) (cicai.caai.cn), 中国杭州，截稿日期：2021-04-18 <a href="https://cicai.caai.cn/">https://cicai.caai.cn/</a></li>
+</ol>
+<h4 id="2021-05"><a href="#2021-05" class="headerlink" title="2021-05"></a>2021-05</h4><ol>
+<li>CCKS 2021（China Conference on Knowledge Graph and Semantic Computing），中国广州，截稿日期：2021-5-10 <a href="http://sigkg.cn/ccks2021/">http://sigkg.cn/ccks2021/</a></li>
+<li>CIKM 2021 （Conference on Information and Knowledge Management），Online，截稿日期：2021-05-26 （摘要提交截止日期：2021-05-19）<a href="https://www.cikm2021.org/">https://www.cikm2021.org/</a></li>
+</ol>
+<h4 id="2021-06"><a href="#2021-06" class="headerlink" title="2021-06"></a>2021-06</h4><ol>
+<li>ACM SIGSPATIAL 2021 (ACM SIGSPATIAL International Conference on Advances in Geographic Information Systems)，Beijing, China，截稿日期：2021-06-10 （摘要提交截止日期：2021-05-27）<a href="https://sigspatial2021.sigspatial.org/#:~:text=The%20ACM%20SIGSPATIAL%20International%20Conference%20on%20Advances%20in,the%20situation%20of%20COVID-19%20and%20international%20travel%20restrictions">https://sigspatial2021.sigspatial.org/#:~:text=The%20ACM%20SIGSPATIAL%20International%20Conference%20on%20Advances%20in,the%20situation%20of%20COVID-19%20and%20international%20travel%20restrictions</a>.</li>
+<li>ICDM2021 （International Conference on Data Mining），Auckland, New Zealand，截稿日期：2021-06-11 <a href="https://icdm2021.auckland.ac.nz/">https://icdm2021.auckland.ac.nz/</a></li>
+<li>ISKE2021 （International Conference on Intelligent Systems and Knowledge Engineering），中国成都，截稿日期：2021-06-30 (（推迟为2021-07-31）<a href="http://iske2021.org/#:~:text=Welcome%20to%20ISKE%202021%20It%20is%20our%20great,following%20the%20successful%20previous%20ISKE%20Conferences%20since%202006">http://iske2021.org/#:~:text=Welcome%20to%20ISKE%202021%20It%20is%20our%20great,following%20the%20successful%20previous%20ISKE%20Conferences%20since%202006</a>.</li>
+</ol>
+<h4 id="2021-08"><a href="#2021-08" class="headerlink" title="2021-08"></a>2021-08</h4><ol>
+<li>WSDM2022 （Web Search and Data Mining）, Arizona, USA, 截止日期：2021-08-09 <a href="http://www.wsdm-conference.org/2022/">http://www.wsdm-conference.org/2022/</a></li>
+</ol>
+<h4 id="2021-09"><a href="#2021-09" class="headerlink" title="2021-09"></a>2021-09</h4><ol>
+<li>AAAI2022（The Thirty-Sixth AAAI Conference on Artificial Intelligence），Vancouver, BC, Canada, 截稿日期：2021-09-08 （摘要提交截止日期：2021-08-30）<a href="https://aaai.org/Conferences/AAAI-22/">https://aaai.org/Conferences/AAAI-22/</a></li>
+</ol>
+<h4 id="2021-10"><a href="#2021-10" class="headerlink" title="2021-10"></a>2021-10</h4><ol>
+<li>WWW 2022（International World Wide Web Conferences），Lyon, France, 截稿日期：2021-10-21 (摘要提交截止日期：2021-10-14) <a href="https://www2022.thewebconf.org/">https://www2022.thewebconf.org/</a></li>
+<li>PAKDD 2022（The 26th Pacific-Asia Conference on Knowledge Discovery and Data Mining），Chengdu, China，截稿日期：2021-10-31 <a href="http://pakdd.net/">http://pakdd.net/</a></li>
+</ol>
+<h3 id="2022年"><a href="#2022年" class="headerlink" title="2022年"></a>2022年</h3><h4 id="2022-01"><a href="#2022-01" class="headerlink" title="2022-01"></a>2022-01</h4><ol>
+<li>ICDM2022（IEEE International Conference on Data Mining），New York, USA，截稿日期：2022-01-15 <a href="https://www.data-mining-forum.de/icdm2022.php">https://www.data-mining-forum.de/icdm2022.php</a></li>
+</ol>
+<h3 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h3><ol>
+<li><a href="http://www.wikicfp.com/cfp/series?t=c&i=A">http://www.wikicfp.com/cfp/series?t=c&amp;i=A</a></li>
 </ol>
 ]]></content>
       <categories>
-        <category>随笔感悟</category>
+        <category>论文阅读</category>
       </categories>
       <tags>
-        <tag>书籍</tag>
-        <tag>阅读</tag>
+        <tag>机器学习</tag>
+        <tag>数据挖掘</tag>
+        <tag>论文投稿</tag>
       </tags>
   </entry>
   <entry>
@@ -124,60 +145,39 @@
         <category>论文阅读</category>
       </categories>
       <tags>
-        <tag>人工智能</tag>
         <tag>数据挖掘</tag>
         <tag>论文投稿</tag>
+        <tag>人工智能</tag>
       </tags>
   </entry>
   <entry>
-    <title>【论文投稿-2021】2021年机器学习和数据挖掘相关会议投稿时间</title>
-    <url>/posts/82aa9d8e/</url>
-    <content><![CDATA[<p>按月份对2021年机器学习和数据挖掘相关会议征稿进行统计。</p>
+    <title>2019年书单</title>
+    <url>/posts/353b91f9/</url>
+    <content><![CDATA[<p>新的一年，保持阅读和写作的习惯，每一个月读完一本书写一篇读书笔记(简称三一计划)。</p>
 <span id="more"></span>
-
-<h3 id="2021年"><a href="#2021年" class="headerlink" title="2021年"></a>2021年</h3><h4 id="2021-01"><a href="#2021-01" class="headerlink" title="2021-01"></a>2021-01</h4><ol>
-<li>IJCNN 2021（The international joint conference on neural networks），Online，截稿日期：2021-01-15 （推迟为2021-02-10）<a href="https://www.ijcnn.org/">https://www.ijcnn.org/</a></li>
-<li>IJCAI 2021 (International Joint Conference on Artificial Intelligence), Montreal, Canada, 截稿日期：2021-01-20（摘要提交截止日期：2021-01-13）<a href="https://ijcai-21.org/">https://ijcai-21.org/</a></li>
-</ol>
-<h4 id="2021-02"><a href="#2021-02" class="headerlink" title="2021-02"></a>2021-02</h4><ol>
-<li>KDD 2021（ACM SIGKDD Conference on Knowledge Discovery and Data Mining），Singapore，截稿日期：2021-02-08 <a href="https://www.kdd.org/kdd2021/">https://www.kdd.org/kdd2021/</a></li>
-</ol>
-<h4 id="2021-04"><a href="#2021-04" class="headerlink" title="2021-04"></a>2021-04</h4><ol>
-<li>CICAI 2021 (CAAI International Conference on artificial intelligence 2021) (cicai.caai.cn), 中国杭州，截稿日期：2021-04-18 <a href="https://cicai.caai.cn/">https://cicai.caai.cn/</a></li>
-</ol>
-<h4 id="2021-05"><a href="#2021-05" class="headerlink" title="2021-05"></a>2021-05</h4><ol>
-<li>CCKS 2021（China Conference on Knowledge Graph and Semantic Computing），中国广州，截稿日期：2021-5-10 <a href="http://sigkg.cn/ccks2021/">http://sigkg.cn/ccks2021/</a></li>
-<li>CIKM 2021 （Conference on Information and Knowledge Management），Online，截稿日期：2021-05-26 （摘要提交截止日期：2021-05-19）<a href="https://www.cikm2021.org/">https://www.cikm2021.org/</a></li>
-</ol>
-<h4 id="2021-06"><a href="#2021-06" class="headerlink" title="2021-06"></a>2021-06</h4><ol>
-<li>ACM SIGSPATIAL 2021 (ACM SIGSPATIAL International Conference on Advances in Geographic Information Systems)，Beijing, China，截稿日期：2021-06-10 （摘要提交截止日期：2021-05-27）<a href="https://sigspatial2021.sigspatial.org/#:~:text=The%20ACM%20SIGSPATIAL%20International%20Conference%20on%20Advances%20in,the%20situation%20of%20COVID-19%20and%20international%20travel%20restrictions">https://sigspatial2021.sigspatial.org/#:~:text=The%20ACM%20SIGSPATIAL%20International%20Conference%20on%20Advances%20in,the%20situation%20of%20COVID-19%20and%20international%20travel%20restrictions</a>.</li>
-<li>ICDM2021 （International Conference on Data Mining），Auckland, New Zealand，截稿日期：2021-06-11 <a href="https://icdm2021.auckland.ac.nz/">https://icdm2021.auckland.ac.nz/</a></li>
-<li>ISKE2021 （International Conference on Intelligent Systems and Knowledge Engineering），中国成都，截稿日期：2021-06-30 (（推迟为2021-07-31）<a href="http://iske2021.org/#:~:text=Welcome%20to%20ISKE%202021%20It%20is%20our%20great,following%20the%20successful%20previous%20ISKE%20Conferences%20since%202006">http://iske2021.org/#:~:text=Welcome%20to%20ISKE%202021%20It%20is%20our%20great,following%20the%20successful%20previous%20ISKE%20Conferences%20since%202006</a>.</li>
-</ol>
-<h4 id="2021-08"><a href="#2021-08" class="headerlink" title="2021-08"></a>2021-08</h4><ol>
-<li>WSDM2022 （Web Search and Data Mining）, Arizona, USA, 截止日期：2021-08-09 <a href="http://www.wsdm-conference.org/2022/">http://www.wsdm-conference.org/2022/</a></li>
-</ol>
-<h4 id="2021-09"><a href="#2021-09" class="headerlink" title="2021-09"></a>2021-09</h4><ol>
-<li>AAAI2022（The Thirty-Sixth AAAI Conference on Artificial Intelligence），Vancouver, BC, Canada, 截稿日期：2021-09-08 （摘要提交截止日期：2021-08-30）<a href="https://aaai.org/Conferences/AAAI-22/">https://aaai.org/Conferences/AAAI-22/</a></li>
-</ol>
-<h4 id="2021-10"><a href="#2021-10" class="headerlink" title="2021-10"></a>2021-10</h4><ol>
-<li>WWW 2022（International World Wide Web Conferences），Lyon, France, 截稿日期：2021-10-21 (摘要提交截止日期：2021-10-14) <a href="https://www2022.thewebconf.org/">https://www2022.thewebconf.org/</a></li>
-<li>PAKDD 2022（The 26th Pacific-Asia Conference on Knowledge Discovery and Data Mining），Chengdu, China，截稿日期：2021-10-31 <a href="http://pakdd.net/">http://pakdd.net/</a></li>
-</ol>
-<h3 id="2022年"><a href="#2022年" class="headerlink" title="2022年"></a>2022年</h3><h4 id="2022-01"><a href="#2022-01" class="headerlink" title="2022-01"></a>2022-01</h4><ol>
-<li>ICDM2022（IEEE International Conference on Data Mining），New York, USA，截稿日期：2022-01-15 <a href="https://www.data-mining-forum.de/icdm2022.php">https://www.data-mining-forum.de/icdm2022.php</a></li>
-</ol>
-<h3 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h3><ol>
-<li><a href="http://www.wikicfp.com/cfp/series?t=c&i=A">http://www.wikicfp.com/cfp/series?t=c&amp;i=A</a></li>
+<p><img src="https://i.loli.net/2019/01/02/5c2cce1e92717.jpg" alt="booklist.jpg"></p>
+<p>今年准备阅读的12本书如下:</p>
+<ol>
+<li>易经</li>
+<li>理想国</li>
+<li>自然哲学的数学原理</li>
+<li>红楼梦</li>
+<li>瓦尔登湖</li>
+<li>科学与方法</li>
+<li>科学史</li>
+<li>小王子</li>
+<li>西方哲学史</li>
+<li>中国哲学简史</li>
+<li>从一到无穷大</li>
+<li>美的历程</li>
 </ol>
 ]]></content>
       <categories>
-        <category>论文阅读</category>
+        <category>随笔感悟</category>
       </categories>
       <tags>
-        <tag>数据挖掘</tag>
-        <tag>论文投稿</tag>
-        <tag>机器学习</tag>
+        <tag>书籍</tag>
+        <tag>阅读</tag>
       </tags>
   </entry>
   <entry>
@@ -210,6 +210,23 @@
       </tags>
   </entry>
   <entry>
+    <title>如何计算经过CNN（卷积神经网络）卷积后的图片大小</title>
+    <url>/posts/fb776320/</url>
+    <content><![CDATA[<p>对于给定的一张图片，如下图，32×32大小的输入图片经过一次卷积之后，如何得到28×28的feature maps?</p>
+<span id="more"></span>
+<p><img src="https://i.loli.net/2018/12/23/5c1fac8bbfa94.png" alt="Screenshot_2018-09-29-15-31-03-61.png"></p>
+<p>设卷积前的图像大小为n×n, 过滤器大小为f×f, padding(填充)为p, stride(步长)为 s, 则卷积后的图像 m×m 大小为：<br>m &#x3D; (n+2p-f)&#x2F;s + 1.（如果商不为整数，向下取整）</p>
+<p>(32+0-5)&#x2F;1 + 1 &#x3D; 28. 所以上图中的输入图片经过一次卷积之后，得到了28×28的feature maps.</p>
+]]></content>
+      <categories>
+        <category>机器学习</category>
+      </categories>
+      <tags>
+        <tag>深度学习</tag>
+        <tag>CNN</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Add Two Numbers</title>
     <url>/posts/64c8f80f/</url>
     <content><![CDATA[<h5 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h5><p>You are given two non-empty linked lists representing two non-negative integers. The digits are stored in reverse order and each of their nodes contain a single digit. Add the two numbers and return it as a linked list.</p>
@@ -237,57 +254,6 @@
       <tags>
         <tag>算法</tag>
         <tag>python</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>如何计算经过CNN（卷积神经网络）卷积后的图片大小</title>
-    <url>/posts/fb776320/</url>
-    <content><![CDATA[<p>对于给定的一张图片，如下图，32×32大小的输入图片经过一次卷积之后，如何得到28×28的feature maps?</p>
-<span id="more"></span>
-<p><img src="https://i.loli.net/2018/12/23/5c1fac8bbfa94.png" alt="Screenshot_2018-09-29-15-31-03-61.png"></p>
-<p>设卷积前的图像大小为n×n, 过滤器大小为f×f, padding(填充)为p, stride(步长)为 s, 则卷积后的图像 m×m 大小为：<br>m &#x3D; (n+2p-f)&#x2F;s + 1.（如果商不为整数，向下取整）</p>
-<p>(32+0-5)&#x2F;1 + 1 &#x3D; 28. 所以上图中的输入图片经过一次卷积之后，得到了28×28的feature maps.</p>
-]]></content>
-      <categories>
-        <category>机器学习</category>
-      </categories>
-      <tags>
-        <tag>深度学习</tag>
-        <tag>CNN</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Hexo常用命令</title>
-    <url>/posts/24caea6b/</url>
-    <content><![CDATA[<p>hexo的基本命令有13个，但平时发布文章，经常用的命令只有下列几个：</p>
-<span id="more"></span>
-
-<h2 id="常用命令（按发布文章时使用命令的顺序）"><a href="#常用命令（按发布文章时使用命令的顺序）" class="headerlink" title="常用命令（按发布文章时使用命令的顺序）"></a>常用命令（按发布文章时使用命令的顺序）</h2><figure class="highlight actionscript"><table><tr><td class="code"><pre><code class="hljs actionscript">hexo <span class="hljs-keyword">new</span> <span class="hljs-string">&quot;hello&quot;</span><br></code></pre></td></tr></table></figure>
-
-<p>新建一篇标题为“hello”的文章。文章在文件夹\Hexo\source_posts下查看，也可以缩写成 hexo n。</p>
-<figure class="highlight ebnf"><table><tr><td class="code"><pre><code class="hljs ebnf"><span class="hljs-attribute">hexo g</span><br></code></pre></td></tr></table></figure>
-
-<p>生成博客的静态文件到文件夹\Hexo\public。便于查看生成博客的静态文件。该命令是hexo generate的缩写。如果使用过gulp压缩过博客，可以使用组合命令“hexo g &amp;&amp; gulp”来达到压缩博客静态文件，提高博客访问速度的目的。</p>
-<figure class="highlight ebnf"><table><tr><td class="code"><pre><code class="hljs ebnf"><span class="hljs-attribute">hexo s</span><br></code></pre></td></tr></table></figure>
-<p>用于启动本地服务器，查看网站预览效果。默认本地访问地址为：<a href="http://localhost:4000/">http://localhost:4000/</a> 。该命令是hexo server的缩写。预览的同时可以修改文章内容或该主题的代码，保存后刷新当前页即可。如果要修改博客根目录的_config.yml文件，需要重新执行hexo s才能预览效果。</p>
-<figure class="highlight ebnf"><table><tr><td class="code"><pre><code class="hljs ebnf"><span class="hljs-attribute">hexo d</span><br></code></pre></td></tr></table></figure>
-
-<p>将本地博客文件部署到设定的github仓库中去。到该步骤，外网可以访问该博客。该命令是hexo deploy的缩写。</p>
-<figure class="highlight ebnf"><table><tr><td class="code"><pre><code class="hljs ebnf"><span class="hljs-attribute">hexo cl</span><br></code></pre></td></tr></table></figure>
-
-<p>清除缓存文件db.json 和已生成的静态文件 public。通常在博客访问异常时使用。该命令是hexo clean的缩写。</p>
-<figure class="highlight haxe"><table><tr><td class="code"><pre><code class="hljs haxe">hexo <span class="hljs-keyword">new</span> <span class="hljs-type">page</span> <span class="hljs-string">&quot;mypage&quot;</span><br></code></pre></td></tr></table></figure>
-<p>新建一个标题为mypage的页面，默认超链接地址为博客主页地址&#x2F;mypage&#x2F;。该页面不会出现在首页文章列表和归档中，也不支持设置分类和标签。</p>
-<h2 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h2><ol>
-<li><a href="http://moxfive.xyz/2015/12/21/common-hexo-commands/#comments">http://moxfive.xyz/2015/12/21/common-hexo-commands/#comments</a></li>
-<li><a href="https://leaferx.online/2017/06/16/use-gulp-to-minimize/">https://leaferx.online/2017/06/16/use-gulp-to-minimize/</a></li>
-</ol>
-]]></content>
-      <categories>
-        <category>经验技巧</category>
-      </categories>
-      <tags>
-        <tag>hexo命令</tag>
       </tags>
   </entry>
   <entry>
@@ -372,6 +338,40 @@
       <tags>
         <tag>算法</tag>
         <tag>python</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Hexo常用命令</title>
+    <url>/posts/24caea6b/</url>
+    <content><![CDATA[<p>hexo的基本命令有13个，但平时发布文章，经常用的命令只有下列几个：</p>
+<span id="more"></span>
+
+<h2 id="常用命令（按发布文章时使用命令的顺序）"><a href="#常用命令（按发布文章时使用命令的顺序）" class="headerlink" title="常用命令（按发布文章时使用命令的顺序）"></a>常用命令（按发布文章时使用命令的顺序）</h2><figure class="highlight actionscript"><table><tr><td class="code"><pre><code class="hljs actionscript">hexo <span class="hljs-keyword">new</span> <span class="hljs-string">&quot;hello&quot;</span><br></code></pre></td></tr></table></figure>
+
+<p>新建一篇标题为“hello”的文章。文章在文件夹\Hexo\source_posts下查看，也可以缩写成 hexo n。</p>
+<figure class="highlight ebnf"><table><tr><td class="code"><pre><code class="hljs ebnf"><span class="hljs-attribute">hexo g</span><br></code></pre></td></tr></table></figure>
+
+<p>生成博客的静态文件到文件夹\Hexo\public。便于查看生成博客的静态文件。该命令是hexo generate的缩写。如果使用过gulp压缩过博客，可以使用组合命令“hexo g &amp;&amp; gulp”来达到压缩博客静态文件，提高博客访问速度的目的。</p>
+<figure class="highlight ebnf"><table><tr><td class="code"><pre><code class="hljs ebnf"><span class="hljs-attribute">hexo s</span><br></code></pre></td></tr></table></figure>
+<p>用于启动本地服务器，查看网站预览效果。默认本地访问地址为：<a href="http://localhost:4000/">http://localhost:4000/</a> 。该命令是hexo server的缩写。预览的同时可以修改文章内容或该主题的代码，保存后刷新当前页即可。如果要修改博客根目录的_config.yml文件，需要重新执行hexo s才能预览效果。</p>
+<figure class="highlight ebnf"><table><tr><td class="code"><pre><code class="hljs ebnf"><span class="hljs-attribute">hexo d</span><br></code></pre></td></tr></table></figure>
+
+<p>将本地博客文件部署到设定的github仓库中去。到该步骤，外网可以访问该博客。该命令是hexo deploy的缩写。</p>
+<figure class="highlight ebnf"><table><tr><td class="code"><pre><code class="hljs ebnf"><span class="hljs-attribute">hexo cl</span><br></code></pre></td></tr></table></figure>
+
+<p>清除缓存文件db.json 和已生成的静态文件 public。通常在博客访问异常时使用。该命令是hexo clean的缩写。</p>
+<figure class="highlight haxe"><table><tr><td class="code"><pre><code class="hljs haxe">hexo <span class="hljs-keyword">new</span> <span class="hljs-type">page</span> <span class="hljs-string">&quot;mypage&quot;</span><br></code></pre></td></tr></table></figure>
+<p>新建一个标题为mypage的页面，默认超链接地址为博客主页地址&#x2F;mypage&#x2F;。该页面不会出现在首页文章列表和归档中，也不支持设置分类和标签。</p>
+<h2 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h2><ol>
+<li><a href="http://moxfive.xyz/2015/12/21/common-hexo-commands/#comments">http://moxfive.xyz/2015/12/21/common-hexo-commands/#comments</a></li>
+<li><a href="https://leaferx.online/2017/06/16/use-gulp-to-minimize/">https://leaferx.online/2017/06/16/use-gulp-to-minimize/</a></li>
+</ol>
+]]></content>
+      <categories>
+        <category>经验技巧</category>
+      </categories>
+      <tags>
+        <tag>hexo命令</tag>
       </tags>
   </entry>
   <entry>
@@ -472,6 +472,45 @@
       </tags>
   </entry>
   <entry>
+    <title>hexo博客搭建及多电脑同步</title>
+    <url>/posts/53375297/</url>
+    <content><![CDATA[<p>之前写了一篇用hexo+github搭建博客的教程，大致流程为：本地博客搭建，将博客部署到github，配置域名访问。详细可参考我的博客（<a href="https://www.jianshu.com/p/058d4054bc3f">Hexo搭建个人博客教程</a>）。最近因为遇到在实验室写好博客，但是想在寝室发布博客，所以涉及到多电脑同步的问题，现将解决方案记录如下。</p>
+<span id="more"></span>
+
+<h5 id="方案一"><a href="#方案一" class="headerlink" title="方案一"></a>方案一</h5><p>用百度云或onedrive一类的云盘备份hexo文件夹。这种方法方便快捷，但是仅仅可以用作博客备份，不方便用于同步更新博客，每次更改博客后都要等待云盘同步，才能继续完成接下来的发布步骤。</p>
+<h5 id="方案二"><a href="#方案二" class="headerlink" title="方案二"></a>方案二</h5><p>利用coding.net存放hexo博客源文件，github存放hexo博客的网页静态文件。这种方案可以实现多电脑同步。</p>
+<h6 id="实验室电脑"><a href="#实验室电脑" class="headerlink" title="实验室电脑"></a>实验室电脑</h6><ol>
+<li>注册coding账号（<a href="https://coding.net/login">注册</a>），新建项目hexo_blog（设置成不公开），存放博客源文件。</li>
+<li>关联远程库并推送到hexo_blog。<figure class="highlight armasm"><table><tr><td class="code"><pre><code class="hljs armasm"><span class="hljs-symbol">git</span> remote <span class="hljs-keyword">add</span> origin https:<span class="hljs-comment">//git.coding.net/xiepeng21/hexo_blog.git</span><br><span class="hljs-symbol">git</span> <span class="hljs-keyword">add</span> .<br><span class="hljs-symbol">git</span> commit -m <span class="hljs-string">&quot;backup_v1&quot;</span><br><span class="hljs-symbol">git</span> <span class="hljs-keyword">push</span> -u origin master<br></code></pre></td></tr></table></figure></li>
+</ol>
+<h6 id="寝室电脑"><a href="#寝室电脑" class="headerlink" title="寝室电脑"></a>寝室电脑</h6><ol>
+<li><p>安装好nodejs,git,hexo，具体操作，不再赘述，可参考文首的博客(<a href="https://www.jianshu.com/p/058d4054bc3f">Hexo搭建个人博客教程</a>)。</p>
+</li>
+<li><p>将存放在远程的hexo_blog克隆到本地</p>
+<figure class="highlight awk"><table><tr><td class="code"><pre><code class="hljs awk">git clone https:<span class="hljs-regexp">//gi</span>t.coding.net<span class="hljs-regexp">/xiepeng21/</span>hexo_blog.git<br></code></pre></td></tr></table></figure>
+</li>
+<li><p>安装博客依赖的包(读取的是package.json的配置)</p>
+<figure class="highlight cmake"><table><tr><td class="code"><pre><code class="hljs cmake">npm <span class="hljs-keyword">install</span><br></code></pre></td></tr></table></figure>
+</li>
+<li><p>接下来就可以在这台电脑上发布博客了。</p>
+</li>
+</ol>
+<p>注：如果遇到其他问题，可以按照搭建博客的流程分析问题解决办法（<a href="https://www.jianshu.com/p/058d4054bc3f">Hexo搭建个人博客教程</a>）。</p>
+<h5 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h5><ol>
+<li><a href="http://chenfengkg.cn/personal-blog-build/">http://chenfengkg.cn/personal-blog-build/</a> 博客一之博客搭建</li>
+<li><a href="https://godweiyang.com/2018/04/13/hexo-blog/">https://godweiyang.com/2018/04/13/hexo-blog/</a> 超详细Hexo+Github博客搭建小白教程</li>
+<li><a href="https://www.zybuluo.com/mdeditor">https://www.zybuluo.com/mdeditor</a> 作业部落（在线markdown编辑）</li>
+</ol>
+]]></content>
+      <categories>
+        <category>经验技巧</category>
+      </categories>
+      <tags>
+        <tag>博客</tag>
+        <tag>Hexo</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>【NeurIPS 2023】时空数据挖掘论文</title>
     <url>/posts/3727adf0/</url>
     <content><![CDATA[<p>对NeurIPS 2023的录用论文进行了整理，筛选出其中与时空数据挖掘相关论文，如下。</p>
@@ -562,45 +601,6 @@
       <tags>
         <tag>时空数据挖掘</tag>
         <tag>NeurIPS 2023</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>hexo博客搭建及多电脑同步</title>
-    <url>/posts/53375297/</url>
-    <content><![CDATA[<p>之前写了一篇用hexo+github搭建博客的教程，大致流程为：本地博客搭建，将博客部署到github，配置域名访问。详细可参考我的博客（<a href="https://www.jianshu.com/p/058d4054bc3f">Hexo搭建个人博客教程</a>）。最近因为遇到在实验室写好博客，但是想在寝室发布博客，所以涉及到多电脑同步的问题，现将解决方案记录如下。</p>
-<span id="more"></span>
-
-<h5 id="方案一"><a href="#方案一" class="headerlink" title="方案一"></a>方案一</h5><p>用百度云或onedrive一类的云盘备份hexo文件夹。这种方法方便快捷，但是仅仅可以用作博客备份，不方便用于同步更新博客，每次更改博客后都要等待云盘同步，才能继续完成接下来的发布步骤。</p>
-<h5 id="方案二"><a href="#方案二" class="headerlink" title="方案二"></a>方案二</h5><p>利用coding.net存放hexo博客源文件，github存放hexo博客的网页静态文件。这种方案可以实现多电脑同步。</p>
-<h6 id="实验室电脑"><a href="#实验室电脑" class="headerlink" title="实验室电脑"></a>实验室电脑</h6><ol>
-<li>注册coding账号（<a href="https://coding.net/login">注册</a>），新建项目hexo_blog（设置成不公开），存放博客源文件。</li>
-<li>关联远程库并推送到hexo_blog。<figure class="highlight armasm"><table><tr><td class="code"><pre><code class="hljs armasm"><span class="hljs-symbol">git</span> remote <span class="hljs-keyword">add</span> origin https:<span class="hljs-comment">//git.coding.net/xiepeng21/hexo_blog.git</span><br><span class="hljs-symbol">git</span> <span class="hljs-keyword">add</span> .<br><span class="hljs-symbol">git</span> commit -m <span class="hljs-string">&quot;backup_v1&quot;</span><br><span class="hljs-symbol">git</span> <span class="hljs-keyword">push</span> -u origin master<br></code></pre></td></tr></table></figure></li>
-</ol>
-<h6 id="寝室电脑"><a href="#寝室电脑" class="headerlink" title="寝室电脑"></a>寝室电脑</h6><ol>
-<li><p>安装好nodejs,git,hexo，具体操作，不再赘述，可参考文首的博客(<a href="https://www.jianshu.com/p/058d4054bc3f">Hexo搭建个人博客教程</a>)。</p>
-</li>
-<li><p>将存放在远程的hexo_blog克隆到本地</p>
-<figure class="highlight awk"><table><tr><td class="code"><pre><code class="hljs awk">git clone https:<span class="hljs-regexp">//gi</span>t.coding.net<span class="hljs-regexp">/xiepeng21/</span>hexo_blog.git<br></code></pre></td></tr></table></figure>
-</li>
-<li><p>安装博客依赖的包(读取的是package.json的配置)</p>
-<figure class="highlight cmake"><table><tr><td class="code"><pre><code class="hljs cmake">npm <span class="hljs-keyword">install</span><br></code></pre></td></tr></table></figure>
-</li>
-<li><p>接下来就可以在这台电脑上发布博客了。</p>
-</li>
-</ol>
-<p>注：如果遇到其他问题，可以按照搭建博客的流程分析问题解决办法（<a href="https://www.jianshu.com/p/058d4054bc3f">Hexo搭建个人博客教程</a>）。</p>
-<h5 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h5><ol>
-<li><a href="http://chenfengkg.cn/personal-blog-build/">http://chenfengkg.cn/personal-blog-build/</a> 博客一之博客搭建</li>
-<li><a href="https://godweiyang.com/2018/04/13/hexo-blog/">https://godweiyang.com/2018/04/13/hexo-blog/</a> 超详细Hexo+Github博客搭建小白教程</li>
-<li><a href="https://www.zybuluo.com/mdeditor">https://www.zybuluo.com/mdeditor</a> 作业部落（在线markdown编辑）</li>
-</ol>
-]]></content>
-      <categories>
-        <category>经验技巧</category>
-      </categories>
-      <tags>
-        <tag>博客</tag>
-        <tag>Hexo</tag>
       </tags>
   </entry>
   <entry>
@@ -751,31 +751,46 @@
       </tags>
   </entry>
   <entry>
-    <title>【书山有路-3】少有人走的路:心智成熟的旅程</title>
-    <url>/posts/70e570a9/</url>
-    <content><![CDATA[<p>我们一起来读《少有人走的路:心智成熟的旅程》这本书吧。作者是美国的M.斯科特·派克，由中华工商联合出版社出版。</p>
+    <title>【书山有路-4】少有人走的路2:勇敢地面对谎言</title>
+    <url>/posts/117e144d/</url>
+    <content><![CDATA[<p>我们一起来读《少有人走的路2:勇敢地面对谎言》这本书吧。这本书是《少有人走的路》系列的第2本，讲的主要内容是勇敢地面对谎言。</p>
 <span id="more"></span>
 
-<p><img src="/../images/syyzdl1.jpg" alt="少有人走的路:心智成熟的旅程"></p>
-<p>这本书与《少有人走的路2：勇敢地面对谎言》、《少有人走的路3：与心灵对话》、《少有人走的路4：在焦虑的年代获得精神的成长》、《少有人走的路5：不一样的鼓声》、《少有人走的路6：真诚是生命的药》、《少有人走的路7：靠窗的床》与《少有人走的路8：寻找石头》共同形成了《少有人走的路》系列。</p>
-<p>作者M.斯科特·派克（M.Scott Peck），毕业于哈佛大学，获得硕士和博士学位。他长期从事心理治疗实践，取得了卓著成绩，被誉为“我们这个时代杰出的心理医生”。由于其巨大的影响力，他获得美国政府特许，进入政府心理治疗特殊小组，为越战士兵提供治疗。他还曾接受派遣，在美军驻日本冲绳基地担任心理医生。这些特殊的职业经历，成就了他伟大的著作《少有人走的路》系列，该书在《纽约时报》畅销书排行榜连续上榜近20年，被西方媒体誉为“来自上帝之手”的时代杰作，创造了出版史上的一大奇迹！</p>
-<p>《少有人走的路:心智成熟的旅程》这本书，处处透露出沟通与理解的意味，它跨越时代限制，帮助我们探索爱的本质，引导我们过上崭新、宁静而丰富的生活；它帮助我们学习爱，也学习独立；它教诲我们成为更称职的、更有理解心的父母。归根到底，它告诉我们怎样找到真正的自我。</p>
-<p>正如本书开篇所言：人生苦难重重。M.斯科特·派克让我们更加清楚：人生是一场艰辛之旅，心智成熟的旅程相当漫长。但是，它没有让我们感到恐惧，相反，它带领我们去经历一系列艰难乃至痛苦的转变，最终达到自我认知的更高境界。</p>
-<h1 id="自律"><a href="#自律" class="headerlink" title="自律"></a>自律</h1><p>为解决问题而努力，我们的思想和心灵就会不断成长，心智就会不断成熟。</p>
-<p>回避问题和逃避痛苦的倾向，是人类心理疾病的根源。</p>
-<p>所谓自律，就是主动要求自己以积极的态度去承受痛苦，解决问题。</p>
-<h1 id="爱"><a href="#爱" class="headerlink" title="爱"></a>爱</h1><p>爱，是为了促进自己和他人心智成熟，而不断扩展自我界限，实现自我完善的一种意愿。</p>
-<p>爱是人们自律的原动力。</p>
-<p>爱是一个长期、渐进的过程。</p>
-<h1 id="成长与信仰"><a href="#成长与信仰" class="headerlink" title="成长与信仰"></a>成长与信仰</h1><p>人人都有自己的信仰，对人生的认识和了解就属于信仰的范畴。</p>
-<p>事实上，对于世界的规律和本质，每个人都有特定的看法与信念，只是未必说出来而已。</p>
-<p>患者的心理问题，常常与世界观有着密切关联，因此，对于他们的治疗，就涉及对其世界观的纠正和调整。</p>
-<h1 id="恩典"><a href="#恩典" class="headerlink" title="恩典"></a>恩典</h1><p>通过心理分析，我们可以了解患者的神经官能症产生于什么时间，什么地点，因什么原因而产生，通过什么方式而发展，怎样治疗才可使患者痊愈。</p>
-<p>众所周知，潜意识引导着身体的运动。</p>
-<p>我们迷失方向的时候，梦会成为前进的向导；我们犹豫不决时，梦会给我们正确的指引。</p>
-<h1 id="后记"><a href="#后记" class="headerlink" title="后记"></a>后记</h1><p>心理治疗是一项不小的投资，不仅需要花钱，还要投入时间和精力。</p>
-<p>口碑通常是寻找一流心理医生的有效途径。</p>
-<p>所谓预言家，并不是那种能够看清未来的人，而是能够阅读当代各种信号和特征的人。</p>
+<p><img src="/../images/ygdmdhy.jpg" alt="少有人走的路2:勇敢地面对谎言"></p>
+<p>这本书与《少有人走的路：心智成熟的旅程》、《少有人走的路3：与心灵对话》、《少有人走的路4：在焦虑的年代获得精神的成长》、《少有人走的路5：不一样的鼓声》、《少有人走的路6：真诚是生命的药》、《少有人走的路7：靠窗的床》与《少有人走的路8：寻找石头》共同形成了《少有人走的路》系列。</p>
+<p>谎言的本质是掩盖真相。那么为什么会掩盖真相呢？作者认为，是由于人不愿意承受面对问题和解决问题所带来的痛苦。在逃避问题和痛苦的过程中，人会变得颠倒是非，混淆黑白，变得疯狂和邪恶。就像生活（Live）颠倒过来就是邪恶（Evil）。作者希望，我们能勇敢地面对真相，不逃避自己的问题，承受应该承受的痛苦，承担应该承受的责任，促进心灵成长，使得心智成熟。</p>
+<h1 id="第一章-谎言是心理疾病的根源"><a href="#第一章-谎言是心理疾病的根源" class="headerlink" title="第一章 谎言是心理疾病的根源"></a>第一章 谎言是心理疾病的根源</h1><ul>
+<li>为了逃避痛苦，人选择了谎言；为了谎言，人扭曲了心灵。</li>
+<li>在《少有人走的路：心智成熟的旅程》中，作者认为，人的一生需要面对许许多多的问题，问题让我们痛苦，一个问题解决之后，新的问题马上出现，让我们继续陷入无尽的痛苦。人生其实就是一个不断面对问题，解决问题的过程。所以说：人生苦难重重。</li>
+<li>为什么大多数心理疾病都要追溯到童年呢？因为童年时，人还没有面对问题和承受痛苦的能力，如果这时没有获得足够的爱，甚至还遭到虐待，人就会用谎言来逃避痛苦。</li>
+</ul>
+<h1 id="第二章-有没有罪恶感，是善与恶的分水岭"><a href="#第二章-有没有罪恶感，是善与恶的分水岭" class="headerlink" title="第二章 有没有罪恶感，是善与恶的分水岭"></a>第二章 有没有罪恶感，是善与恶的分水岭</h1><ul>
+<li>恶，可以定义为：为了维护病态的自我，不择手段去毁灭别人的自我。</li>
+<li>魔鬼在人的心中，人可以把它释放出来，也可以让它销声匿迹。关键取决于我们敢不敢面对自己的问题，承受自己应该承受的痛苦。</li>
+<li>《指环王》的作者托尔金说：“掌握世界所有事情的兴衰，并不是你我分内的事情，但是从整理内心开始，连根拔起一切恶念，则是我们义不容辞的责任”。</li>
+</ul>
+<h1 id="第三章-压制别人，就是邪恶"><a href="#第三章-压制别人，就是邪恶" class="headerlink" title="第三章 压制别人，就是邪恶"></a>第三章 压制别人，就是邪恶</h1><ul>
+<li>人的一生，与伪善之人擦肩而过的机会很多，几乎每碰到一次人性的危机，都与伪善邪恶有关。</li>
+<li>来看心理医生的人大多数都是敢于面对自己内心的人，因为看心理医生的行动本身就证明他们觉得自己有问题，与正常的人不同，他们敢于质疑自己，敢于承认自己的不正常，最后才能变得正常。</li>
+<li>为了逃避罪恶感，人会用谎言来掩盖真相，欺骗自己和别人，进而压制别人的生命力，毁灭别人的人生。</li>
+</ul>
+<h1 id="第四章-恶，总是出现在需要爱的地方"><a href="#第四章-恶，总是出现在需要爱的地方" class="headerlink" title="第四章 恶，总是出现在需要爱的地方"></a>第四章 恶，总是出现在需要爱的地方</h1><ul>
+<li>夫妻之间真正的爱，不是树缠藤，也不是藤缠树，而是彼此独立、心心相印。</li>
+<li>爱是为了促进自己和他人的心智成熟，而不断拓展自我界限，实现自我完善的一种意愿。</li>
+<li>关于夫妻之爱，纪伯伦说:</li>
+</ul>
+<figure class="highlight ruby"><table><tr><td class="code"><pre><code class="hljs ruby"><span class="hljs-meta prompt_">&gt;&gt;</span> 你们的结合要保留空隙，<br><span class="hljs-meta prompt_">&gt;&gt;</span> 让来自天堂的风在你们的空隙之间舞动。<br><span class="hljs-meta prompt_">&gt;&gt;</span> 爱一个人不等于用爱把对方束缚起来，<br><span class="hljs-meta prompt_">&gt;&gt;</span> 爱的最高境界就像你们灵魂两岸之间一片流动的海洋。<br><span class="hljs-meta prompt_">&gt;&gt;</span> 倒满各自的酒杯，但不可共饮同一杯酒，<br><span class="hljs-meta prompt_">&gt;&gt;</span> 分享面包，但不可吃同一片面包。<br><span class="hljs-meta prompt_">&gt;&gt;</span> 一起欢快地歌唱、舞蹈，<br><span class="hljs-meta prompt_">&gt;&gt;</span> 但容许对方有独处的自由，<br><span class="hljs-meta prompt_">&gt;&gt;</span> 就像那琴弦，<br><span class="hljs-meta prompt_">&gt;&gt;</span> 虽然一起颤动，发出的却不是同一种音，<br><span class="hljs-meta prompt_">&gt;&gt;</span> 琴弦之间，你是你，我是我，彼此各不相扰。<br><span class="hljs-meta prompt_">&gt;&gt;</span> 一定要把心扉向对方敞开，但并不是交给对方来保管，<br><span class="hljs-meta prompt_">&gt;&gt;</span> 因为唯有上帝之手，才能容纳你的心。<br><span class="hljs-meta prompt_">&gt;&gt;</span> 站在一起，却不可太过接近，<br><span class="hljs-meta prompt_">&gt;&gt;</span> 君不见，教堂的梁柱，它们各自分开耸立，却能支撑教堂不倒。<br><span class="hljs-meta prompt_">&gt;&gt;</span> 君不见，橡树与松柏，也不在彼此的阴影中成长。<br></code></pre></td></tr></table></figure>
+
+<h1 id="第五章-从小缺乏爱，长大就容易变坏"><a href="#第五章-从小缺乏爱，长大就容易变坏" class="headerlink" title="第五章 从小缺乏爱，长大就容易变坏"></a>第五章 从小缺乏爱，长大就容易变坏</h1><ul>
+<li>缺乏爱的家庭是产生邪恶的温床。</li>
+<li>邪恶是怎么产生的呢？杰出的瑞士心理医生爱丽丝·米勒说：“要想彻底消灭邪恶，就必须从每一个婴儿一出生时开始，因为只有一开始就体验过爱和尊重的生命，才知道如何去尊重其他生命，也才不会用伤害别人的方法来满足自己”。</li>
+<li>从小缺乏爱，长大就容易变坏。</li>
+</ul>
+<h1 id="第六章-勇敢地面对谎言"><a href="#第六章-勇敢地面对谎言" class="headerlink" title="第六章 勇敢地面对谎言"></a>第六章 勇敢地面对谎言</h1><ul>
+<li>爱，而且只有爱，才能给我们最终战胜谎言的勇气。</li>
+<li>圣人喜欢改变，大恶之人害怕改变。</li>
+<li>圣人改变的是自己，走的是一条修行的路。他们通过完善自己，可以感召别人，唤醒别人的良知，给别人以指引。与之相反，由于大恶之人害怕改变自己，所以便会去改变别人。他们不择手段去控制别人、压制别人，甚至毁灭别人的生命。</li>
+</ul>
 ]]></content>
       <categories>
         <category>随笔感悟</category>
@@ -784,7 +799,7 @@
         <tag>书山有路</tag>
         <tag>读书笔记</tag>
         <tag>少有人走的路</tag>
-        <tag>心智成熟的旅程</tag>
+        <tag>勇敢地面对谎言</tag>
       </tags>
   </entry>
   <entry>
@@ -884,70 +899,96 @@
       </tags>
   </entry>
   <entry>
-    <title>【书山有路-4】少有人走的路2:勇敢地面对谎言</title>
-    <url>/posts/117e144d/</url>
-    <content><![CDATA[<p>我们一起来读《少有人走的路2:勇敢地面对谎言》这本书吧。这本书是《少有人走的路》系列的第2本，讲的主要内容是勇敢地面对谎言。</p>
-<span id="more"></span>
-
-<p><img src="/../images/ygdmdhy.jpg" alt="少有人走的路2:勇敢地面对谎言"></p>
-<p>这本书与《少有人走的路：心智成熟的旅程》、《少有人走的路3：与心灵对话》、《少有人走的路4：在焦虑的年代获得精神的成长》、《少有人走的路5：不一样的鼓声》、《少有人走的路6：真诚是生命的药》、《少有人走的路7：靠窗的床》与《少有人走的路8：寻找石头》共同形成了《少有人走的路》系列。</p>
-<p>谎言的本质是掩盖真相。那么为什么会掩盖真相呢？作者认为，是由于人不愿意承受面对问题和解决问题所带来的痛苦。在逃避问题和痛苦的过程中，人会变得颠倒是非，混淆黑白，变得疯狂和邪恶。就像生活（Live）颠倒过来就是邪恶（Evil）。作者希望，我们能勇敢地面对真相，不逃避自己的问题，承受应该承受的痛苦，承担应该承受的责任，促进心灵成长，使得心智成熟。</p>
-<h1 id="第一章-谎言是心理疾病的根源"><a href="#第一章-谎言是心理疾病的根源" class="headerlink" title="第一章 谎言是心理疾病的根源"></a>第一章 谎言是心理疾病的根源</h1><ul>
-<li>为了逃避痛苦，人选择了谎言；为了谎言，人扭曲了心灵。</li>
-<li>在《少有人走的路：心智成熟的旅程》中，作者认为，人的一生需要面对许许多多的问题，问题让我们痛苦，一个问题解决之后，新的问题马上出现，让我们继续陷入无尽的痛苦。人生其实就是一个不断面对问题，解决问题的过程。所以说：人生苦难重重。</li>
-<li>为什么大多数心理疾病都要追溯到童年呢？因为童年时，人还没有面对问题和承受痛苦的能力，如果这时没有获得足够的爱，甚至还遭到虐待，人就会用谎言来逃避痛苦。</li>
-</ul>
-<h1 id="第二章-有没有罪恶感，是善与恶的分水岭"><a href="#第二章-有没有罪恶感，是善与恶的分水岭" class="headerlink" title="第二章 有没有罪恶感，是善与恶的分水岭"></a>第二章 有没有罪恶感，是善与恶的分水岭</h1><ul>
-<li>恶，可以定义为：为了维护病态的自我，不择手段去毁灭别人的自我。</li>
-<li>魔鬼在人的心中，人可以把它释放出来，也可以让它销声匿迹。关键取决于我们敢不敢面对自己的问题，承受自己应该承受的痛苦。</li>
-<li>《指环王》的作者托尔金说：“掌握世界所有事情的兴衰，并不是你我分内的事情，但是从整理内心开始，连根拔起一切恶念，则是我们义不容辞的责任”。</li>
-</ul>
-<h1 id="第三章-压制别人，就是邪恶"><a href="#第三章-压制别人，就是邪恶" class="headerlink" title="第三章 压制别人，就是邪恶"></a>第三章 压制别人，就是邪恶</h1><ul>
-<li>人的一生，与伪善之人擦肩而过的机会很多，几乎每碰到一次人性的危机，都与伪善邪恶有关。</li>
-<li>来看心理医生的人大多数都是敢于面对自己内心的人，因为看心理医生的行动本身就证明他们觉得自己有问题，与正常的人不同，他们敢于质疑自己，敢于承认自己的不正常，最后才能变得正常。</li>
-<li>为了逃避罪恶感，人会用谎言来掩盖真相，欺骗自己和别人，进而压制别人的生命力，毁灭别人的人生。</li>
-</ul>
-<h1 id="第四章-恶，总是出现在需要爱的地方"><a href="#第四章-恶，总是出现在需要爱的地方" class="headerlink" title="第四章 恶，总是出现在需要爱的地方"></a>第四章 恶，总是出现在需要爱的地方</h1><ul>
-<li>夫妻之间真正的爱，不是树缠藤，也不是藤缠树，而是彼此独立、心心相印。</li>
-<li>爱是为了促进自己和他人的心智成熟，而不断拓展自我界限，实现自我完善的一种意愿。</li>
-<li>关于夫妻之爱，纪伯伦说:</li>
-</ul>
-<figure class="highlight ruby"><table><tr><td class="code"><pre><code class="hljs ruby"><span class="hljs-meta prompt_">&gt;&gt;</span> 你们的结合要保留空隙，<br><span class="hljs-meta prompt_">&gt;&gt;</span> 让来自天堂的风在你们的空隙之间舞动。<br><span class="hljs-meta prompt_">&gt;&gt;</span> 爱一个人不等于用爱把对方束缚起来，<br><span class="hljs-meta prompt_">&gt;&gt;</span> 爱的最高境界就像你们灵魂两岸之间一片流动的海洋。<br><span class="hljs-meta prompt_">&gt;&gt;</span> 倒满各自的酒杯，但不可共饮同一杯酒，<br><span class="hljs-meta prompt_">&gt;&gt;</span> 分享面包，但不可吃同一片面包。<br><span class="hljs-meta prompt_">&gt;&gt;</span> 一起欢快地歌唱、舞蹈，<br><span class="hljs-meta prompt_">&gt;&gt;</span> 但容许对方有独处的自由，<br><span class="hljs-meta prompt_">&gt;&gt;</span> 就像那琴弦，<br><span class="hljs-meta prompt_">&gt;&gt;</span> 虽然一起颤动，发出的却不是同一种音，<br><span class="hljs-meta prompt_">&gt;&gt;</span> 琴弦之间，你是你，我是我，彼此各不相扰。<br><span class="hljs-meta prompt_">&gt;&gt;</span> 一定要把心扉向对方敞开，但并不是交给对方来保管，<br><span class="hljs-meta prompt_">&gt;&gt;</span> 因为唯有上帝之手，才能容纳你的心。<br><span class="hljs-meta prompt_">&gt;&gt;</span> 站在一起，却不可太过接近，<br><span class="hljs-meta prompt_">&gt;&gt;</span> 君不见，教堂的梁柱，它们各自分开耸立，却能支撑教堂不倒。<br><span class="hljs-meta prompt_">&gt;&gt;</span> 君不见，橡树与松柏，也不在彼此的阴影中成长。<br></code></pre></td></tr></table></figure>
-
-<h1 id="第五章-从小缺乏爱，长大就容易变坏"><a href="#第五章-从小缺乏爱，长大就容易变坏" class="headerlink" title="第五章 从小缺乏爱，长大就容易变坏"></a>第五章 从小缺乏爱，长大就容易变坏</h1><ul>
-<li>缺乏爱的家庭是产生邪恶的温床。</li>
-<li>邪恶是怎么产生的呢？杰出的瑞士心理医生爱丽丝·米勒说：“要想彻底消灭邪恶，就必须从每一个婴儿一出生时开始，因为只有一开始就体验过爱和尊重的生命，才知道如何去尊重其他生命，也才不会用伤害别人的方法来满足自己”。</li>
-<li>从小缺乏爱，长大就容易变坏。</li>
-</ul>
-<h1 id="第六章-勇敢地面对谎言"><a href="#第六章-勇敢地面对谎言" class="headerlink" title="第六章 勇敢地面对谎言"></a>第六章 勇敢地面对谎言</h1><ul>
-<li>爱，而且只有爱，才能给我们最终战胜谎言的勇气。</li>
-<li>圣人喜欢改变，大恶之人害怕改变。</li>
-<li>圣人改变的是自己，走的是一条修行的路。他们通过完善自己，可以感召别人，唤醒别人的良知，给别人以指引。与之相反，由于大恶之人害怕改变自己，所以便会去改变别人。他们不择手段去控制别人、压制别人，甚至毁灭别人的生命。</li>
-</ul>
+    <title>【机器学习】AdaBoost算法</title>
+    <url>/posts/2a69915c/</url>
+    <content><![CDATA[<p><img src="/../images/AdaBoost.png"></p>
 ]]></content>
       <categories>
-        <category>随笔感悟</category>
+        <category>机器学习</category>
       </categories>
       <tags>
-        <tag>书山有路</tag>
-        <tag>读书笔记</tag>
-        <tag>少有人走的路</tag>
-        <tag>勇敢地面对谎言</tag>
+        <tag>机器学习</tag>
+        <tag>AdaBoost算法</tag>
       </tags>
   </entry>
   <entry>
-    <title>【节气养生】寒露</title>
-    <url>/posts/68e0eb59/</url>
-    <content><![CDATA[<p>节气养生，寒露脚不露。</p>
+    <title>【书山有路-5】少有人走的路3:与心灵对话</title>
+    <url>/posts/ca5ef243/</url>
+    <content><![CDATA[<p>我们一起来读《少有人走的路3:与心灵对话》这本书吧。这本书是《少有人走的路》系列的第3本，讲的主要内容是人生错综复杂，如何与心灵对话。</p>
 <span id="more"></span>
 
-<p>今日寒露，白露身不露，寒露脚不露。天气渐渐转凉，一层秋雨一层凉，走在路上，感受到秋雨绵绵，远处烟雨蒙蒙的气息。</p>
-<p>养生方面，应注重滋阴润肺，调养精神，保持乐观豁达的心情，天气变凉，注意增添衣物，预防感冒，调整起居，养成早睡早起的习惯，在大雾天气，减少外出运动，在室内运动为主。室内运动推荐做扎马步，俯卧撑，抬腿提膝等，运动前做好热身运动，运动后做好拉伸，不宜过度出汗。</p>
-<p>此外，还有一些养生小妙招，比如早晚泡脚，最好是晚上泡个脚，有助于睡眠，大概20-30分钟，在晚饭后1个小时之后。这个节气，也需要预防肩周炎，按压合谷穴或肩井穴。泡完脚后，可根据自身需要做足底按摩，按压太溪穴，太冲穴，太白穴等，调养肾，肝，脾。</p>
-<p>最后，寒露节气也有吃螃蟹的习俗，赏菊吃蟹，菊黄蟹肥，不过一些不适合吃螃蟹的朋友，要注意忌口。</p>
-<h3 id="参考资料："><a href="#参考资料：" class="headerlink" title="参考资料："></a>参考资料：</h3><ol>
-<li>《二十四节气养生经》-李志敏，天津科学技术出版社，2016.</li>
-</ol>
+<p><img src="/../images/yxldh.jpg" alt="少有人走的路3:与心灵对话"></p>
+<p>这本书与《少有人走的路：心智成熟的旅程》、《少有人走的路2:勇敢地面对谎言》、《少有人走的路4：在焦虑的年代获得精神的成长》、《少有人走的路5：不一样的鼓声》、《少有人走的路6：真诚是生命的药》、《少有人走的路7：靠窗的床》与《少有人走的路8：寻找石头》共同形成了《少有人走的路》系列。</p>
+<p>以下内容是书中打动我，给我留下深刻印象的一些摘录和感悟。也欢迎大家在留言区留下那些触动你的摘录以及心得感悟。</p>
+<p>很喜欢的一句话是，生活是什么？生活是在你已经规划好的事情之外所发生的一切。每个人都有自己的路要走，也必须走自己的路，路上的风景，路上的变化，都需要自己去亲身体验。</p>
+<h1 id="第一部分-人生是一场修行"><a href="#第一部分-人生是一场修行" class="headerlink" title="第一部分 人生是一场修行"></a>第一部分 人生是一场修行</h1><p>一个成熟的人一定经历过许许多多痛苦，没承受过太多痛苦的人一定不会成熟。</p>
+<h2 id="第一章-意识和痛苦"><a href="#第一章-意识和痛苦" class="headerlink" title="第一章 意识和痛苦"></a>第一章 意识和痛苦</h2><ul>
+<li>人生苦难重重。痛苦作为人生的一部分，人生离不开痛苦，它与生俱来。</li>
+<li>人都是害羞的，产生自我意识后，害羞就一直伴随着我们。</li>
+<li>承受痛苦是走向成熟的必由之路，任何人都不能回避。逃避痛苦是人类心理疾病的根源，因为人人都有逃避痛苦的倾向，所以，我们大多数人都或多或少存在着一定的心理疾病。</li>
+</ul>
+<h2 id="第二章-责备与宽恕"><a href="#第二章-责备与宽恕" class="headerlink" title="第二章 责备与宽恕"></a>第二章 责备与宽恕</h2><ul>
+<li>成长不仅要学会承受痛苦，还要学会宽恕。生活中，我们常常会因自己的问题而责备他人。</li>
+<li>如果一个人总是责备他人，十有八九是患有人格失调症。我们每个人都有逃避责任的心理趋向，所以，几乎人人都患有不同程度的人格失调症。不过，只要我们勇于面对自己的问题，多些宽容，我们就能获得健康的心理。</li>
+<li>宽容的第一受益者是宽容者自己，而不是宽容的对象。（子贡问曰：有一言而可以终身行之者乎？子曰：其恕乎。己所不欲，勿施于人。）</li>
+</ul>
+<h2 id="第三章-复杂的人生"><a href="#第三章-复杂的人生" class="headerlink" title="第三章 复杂的人生"></a>第三章 复杂的人生</h2><ul>
+<li>人生之路就是由一连串的难题铺成，一个难题解决了，新的难题和痛苦又会接踵而至，使我们疲于奔命，不断经受沮丧、悲哀、难过、寂寞、内疚、焦虑、痛苦和绝望的打击，从而不知幸福和舒适为何物，这就是真实的人生。</li>
+<li>回避问题和逃避痛苦的趋向，是人类心理疾病的根源。换句话说，人们在面对问题和痛苦时，必须做出选择：你若选择面对痛苦，迎难而上，你的心智就会得到成熟；你若选择逃避，你也就为自己选择了心理疾病。</li>
+<li>人生错综复杂，人生不仅苦海无边，而且还复杂多变，没有一成不变的人生。如果我们不能领悟这一点，不仅不能实现人生的超越，而且还会被心理疾病纠缠。</li>
+</ul>
+<h1 id="第二部分-心灵探索"><a href="#第二部分-心灵探索" class="headerlink" title="第二部分 心灵探索"></a>第二部分 心灵探索</h1><p>无论我们走得多高多远，我们都无法摆脱心灵发展早期阶段残留下来的遗迹。</p>
+<h2 id="第四章-自尊自爱"><a href="#第四章-自尊自爱" class="headerlink" title="第四章 自尊自爱"></a>第四章 自尊自爱</h2><ul>
+<li>自爱，与你经历的爱直接相关。它可以激发你的生命力，使你能够更好地去爱他人；它可以开启你的心扉，让你得到更多的爱。</li>
+<li>当你加倍爱自己的时候，就会激发出一系列新的个性特征：自信、自尊、乐观、活泼、开朗、大方，而这一切都将有助于你改善目前的处境，使你得到更多的爱。</li>
+<li>自爱意味着关怀、自尊、责任和对自我的了解。一个人如果不爱自己，就不可能爱别人。</li>
+</ul>
+<h2 id="第五章-感受神秘"><a href="#第五章-感受神秘" class="headerlink" title="第五章 感受神秘"></a>第五章 感受神秘</h2><ul>
+<li>如果触及了问题的核心，人们往往一无所知。</li>
+<li>我们生活在一个极度神秘的宇宙里。托马斯·爱迪生说：“我们对99%的事物的了解，远不到1%”。</li>
+<li>当我们对事物的认识还很肤浅时，我们会像井底之蛙一样，常常认为自己知道全世界；当认识逐渐深入，触及事物的核心之时，我们就会发现，我们知道得很少很少，有时甚至是一无所知。</li>
+</ul>
+<h2 id="第六章-心灵成长的四个阶段"><a href="#第六章-心灵成长的四个阶段" class="headerlink" title="第六章 心灵成长的四个阶段"></a>第六章 心灵成长的四个阶段</h2><ul>
+<li>第一阶段，也是初始阶段，是“混乱的、反社会的”；第二阶段，是“形式的、制度化的”；第三阶段，是“怀疑的、个人主义的”；第四阶段，是“神秘的，普适性的”。</li>
+<li>神秘主义者有一个特点：他们能够洞察到事物表面之下的某种联系。自古以来，神秘主义者认为男人与女人、人类与其他生物、活在世上的人与这个世界之外的生物中间，都有着各种关联。</li>
+<li>不管处于哪个阶段，最大的问题是，人们在心灵之旅不同阶段所感受到的相互威胁。（推荐一部电影《心灵捕手》）</li>
+</ul>
+<h2 id="第七章-神话：人性的旅程"><a href="#第七章-神话：人性的旅程" class="headerlink" title="第七章 神话：人性的旅程"></a>第七章 神话：人性的旅程</h2><ul>
+<li>在大多数人看来，神话讲述的都是一些虚幻的东西。但是，过去60多年来，作者在心理治疗和心理学方面取得的进展之一，就是发现神话其实非常严谨，它深刻地反映了复杂而又丰富的人性。</li>
+<li>正因为神话涵盖了人性的本质，所以它能帮助我们发掘人性、认清自我。</li>
+<li>许多伟大的考古学家一开始都被视为疯子，因为他们相信流传下来的传说或故事，而在其他人眼中，这些则是不真实的。</li>
+</ul>
+<h2 id="第八章-上瘾：神圣的疾病"><a href="#第八章-上瘾：神圣的疾病" class="headerlink" title="第八章 上瘾：神圣的疾病"></a>第八章 上瘾：神圣的疾病</h2><ul>
+<li>上瘾是一种偶像崇拜。对酗酒者来说，酒瓶就是一个偶像。偶像崇拜有许多不同的形式，一些是非常明显的，比如沉迷赌博、性生活过度和财迷心窍等，都是一种瘾。还有一些不明显的，比如家庭中的偶像崇拜：无论什么时候，当你觉得取悦父母比什么都重要时，你就陷入了家庭偶像崇拜。家庭变成了一个偶像，而且经常是最沉重的一个。</li>
+<li>人们都知道，卡尔·荣格在心理学与精神结合方面成绩斐然。但很少有人知道他间接促成了匿名戒酒协会的成立。</li>
+<li>在治疗成瘾病人时，最有效的方法是关注其进步方面——他们对精神的渴望，而不是强调他们临床表现出的退化症状。</li>
+</ul>
+<h1 id="第三部分-寻找自己的归宿"><a href="#第三部分-寻找自己的归宿" class="headerlink" title="第三部分 寻找自己的归宿"></a>第三部分 寻找自己的归宿</h1><p>只要我们能够战胜自恋，就能够克服对死亡的恐惧。</p>
+<h2 id="第九章-“未知死，安知生”"><a href="#第九章-“未知死，安知生”" class="headerlink" title="第九章 “未知死，安知生”"></a>第九章 “未知死，安知生”</h2><ul>
+<li>作为成长最重要的一步，我们必须承认这样一个事实，即每个人都将走向死亡，我们都将锈蚀，变成废铁、灰烬。</li>
+<li>即使你是为数不多的几个想要在历史上留下印记的人，随着时间的流逝，就连那些印记也会消失。</li>
+<li>莎士比亚的悲剧《麦克白》叹道：“生活只是一个移动的阴影，它是一个白痴讲述的故事，充满了喧闹和狂暴，全无意义”。</li>
+</ul>
+<h2 id="第十章-性与精神"><a href="#第十章-性与精神" class="headerlink" title="第十章 性与精神"></a>第十章 性与精神</h2><ul>
+<li>在一定范围内，性与精神是冲突的，它既像情人间的争吵，又像兄弟姐妹间的隔阂，到达一定程度后，便会爆发出来。</li>
+<li>性应该是源于人类的不完整感，源于对人类完整性的渴求，源于对神性的渴望。</li>
+<li>性是让人类最接近精神体验的一种方式。正因为如此，才会有这么多的人孜孜以求，誓死也不放弃。</li>
+</ul>
+<h2 id="第十一章-物质与精神"><a href="#第十一章-物质与精神" class="headerlink" title="第十一章 物质与精神"></a>第十一章 物质与精神</h2><ul>
+<li>近来，人们越来越不满足于物质主义和科学进步所提供的答案，他们怀有一种渴望，渴望从心灵的层次来解决内心的饥渴。</li>
+<li>为了更好地理解宗教与科学之间的鸿沟，我们需要追溯到心理学出现以前，需要回顾宗教与科学的关系史。</li>
+<li>大约2500年前，宗教和科学是合二为一的，统称为“哲学”。</li>
+</ul>
+<h2 id="第十二章-从宗教中得到的裨益"><a href="#第十二章-从宗教中得到的裨益" class="headerlink" title="第十二章 从宗教中得到的裨益"></a>第十二章 从宗教中得到的裨益</h2><ul>
+<li>甘地说过：“宗教是在不同的道路上聚集着相同的观点。所以，我们选择不同的道路又有何妨，只要我们能到达相同的目的地。”（推荐余秋雨的《中国文化课》一书，以及他在喜马拉雅FM上讲述的《中国文化必修课》音频课程）</li>
+<li>许多异端都是因为看问题片面而引起的。</li>
+<li>上帝喜欢多样化。</li>
+</ul>
+<h2 id="结语-心理治疗的困境"><a href="#结语-心理治疗的困境" class="headerlink" title="结语 心理治疗的困境"></a>结语 心理治疗的困境</h2><ul>
+<li>忽视精神疾病的心理因素，我们无疑会误入歧途。</li>
+<li>美国心理学家威廉·詹姆斯在《宗教经验之种种》中，将“宗教”定义为“寻求与一种未知秩序的和谐”。</li>
+<li>在物质世界的面纱背后，的确存在着另一个未知的世界。与这个未知世界的秩序求得和谐十分有益于人类，而且这个未知的世界秩序也在寻求与我们和谐。</li>
+</ul>
 <hr>
 <p>欢迎各位提出建议、问题，我们一起交流、学习、成长。</p>
 <p>“问渠那得清如许？为有源头活水来” ヾ(◍°∇°◍)ﾉﾞ</p>
@@ -957,9 +998,10 @@
         <category>随笔感悟</category>
       </categories>
       <tags>
-        <tag>养生</tag>
-        <tag>节气</tag>
-        <tag>寒露</tag>
+        <tag>书山有路</tag>
+        <tag>读书笔记</tag>
+        <tag>少有人走的路</tag>
+        <tag>与心灵对话</tag>
       </tags>
   </entry>
   <entry>
@@ -1140,6 +1182,91 @@
       </tags>
   </entry>
   <entry>
+    <title>【节气养生】寒露</title>
+    <url>/posts/68e0eb59/</url>
+    <content><![CDATA[<p>节气养生，寒露脚不露。</p>
+<span id="more"></span>
+
+<p>今日寒露，白露身不露，寒露脚不露。天气渐渐转凉，一层秋雨一层凉，走在路上，感受到秋雨绵绵，远处烟雨蒙蒙的气息。</p>
+<p>养生方面，应注重滋阴润肺，调养精神，保持乐观豁达的心情，天气变凉，注意增添衣物，预防感冒，调整起居，养成早睡早起的习惯，在大雾天气，减少外出运动，在室内运动为主。室内运动推荐做扎马步，俯卧撑，抬腿提膝等，运动前做好热身运动，运动后做好拉伸，不宜过度出汗。</p>
+<p>此外，还有一些养生小妙招，比如早晚泡脚，最好是晚上泡个脚，有助于睡眠，大概20-30分钟，在晚饭后1个小时之后。这个节气，也需要预防肩周炎，按压合谷穴或肩井穴。泡完脚后，可根据自身需要做足底按摩，按压太溪穴，太冲穴，太白穴等，调养肾，肝，脾。</p>
+<p>最后，寒露节气也有吃螃蟹的习俗，赏菊吃蟹，菊黄蟹肥，不过一些不适合吃螃蟹的朋友，要注意忌口。</p>
+<h3 id="参考资料："><a href="#参考资料：" class="headerlink" title="参考资料："></a>参考资料：</h3><ol>
+<li>《二十四节气养生经》-李志敏，天津科学技术出版社，2016.</li>
+</ol>
+<hr>
+<p>欢迎各位提出建议、问题，我们一起交流、学习、成长。</p>
+<p>“问渠那得清如许？为有源头活水来” ヾ(◍°∇°◍)ﾉﾞ</p>
+<p>– 我在半亩方塘等你 ^_^</p>
+]]></content>
+      <categories>
+        <category>随笔感悟</category>
+      </categories>
+      <tags>
+        <tag>养生</tag>
+        <tag>节气</tag>
+        <tag>寒露</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>【书山有路-3】少有人走的路:心智成熟的旅程</title>
+    <url>/posts/70e570a9/</url>
+    <content><![CDATA[<p>我们一起来读《少有人走的路:心智成熟的旅程》这本书吧。作者是美国的M.斯科特·派克，由中华工商联合出版社出版。</p>
+<span id="more"></span>
+
+<p><img src="/../images/syyzdl1.jpg" alt="少有人走的路:心智成熟的旅程"></p>
+<p>这本书与《少有人走的路2：勇敢地面对谎言》、《少有人走的路3：与心灵对话》、《少有人走的路4：在焦虑的年代获得精神的成长》、《少有人走的路5：不一样的鼓声》、《少有人走的路6：真诚是生命的药》、《少有人走的路7：靠窗的床》与《少有人走的路8：寻找石头》共同形成了《少有人走的路》系列。</p>
+<p>作者M.斯科特·派克（M.Scott Peck），毕业于哈佛大学，获得硕士和博士学位。他长期从事心理治疗实践，取得了卓著成绩，被誉为“我们这个时代杰出的心理医生”。由于其巨大的影响力，他获得美国政府特许，进入政府心理治疗特殊小组，为越战士兵提供治疗。他还曾接受派遣，在美军驻日本冲绳基地担任心理医生。这些特殊的职业经历，成就了他伟大的著作《少有人走的路》系列，该书在《纽约时报》畅销书排行榜连续上榜近20年，被西方媒体誉为“来自上帝之手”的时代杰作，创造了出版史上的一大奇迹！</p>
+<p>《少有人走的路:心智成熟的旅程》这本书，处处透露出沟通与理解的意味，它跨越时代限制，帮助我们探索爱的本质，引导我们过上崭新、宁静而丰富的生活；它帮助我们学习爱，也学习独立；它教诲我们成为更称职的、更有理解心的父母。归根到底，它告诉我们怎样找到真正的自我。</p>
+<p>正如本书开篇所言：人生苦难重重。M.斯科特·派克让我们更加清楚：人生是一场艰辛之旅，心智成熟的旅程相当漫长。但是，它没有让我们感到恐惧，相反，它带领我们去经历一系列艰难乃至痛苦的转变，最终达到自我认知的更高境界。</p>
+<h1 id="自律"><a href="#自律" class="headerlink" title="自律"></a>自律</h1><p>为解决问题而努力，我们的思想和心灵就会不断成长，心智就会不断成熟。</p>
+<p>回避问题和逃避痛苦的倾向，是人类心理疾病的根源。</p>
+<p>所谓自律，就是主动要求自己以积极的态度去承受痛苦，解决问题。</p>
+<h1 id="爱"><a href="#爱" class="headerlink" title="爱"></a>爱</h1><p>爱，是为了促进自己和他人心智成熟，而不断扩展自我界限，实现自我完善的一种意愿。</p>
+<p>爱是人们自律的原动力。</p>
+<p>爱是一个长期、渐进的过程。</p>
+<h1 id="成长与信仰"><a href="#成长与信仰" class="headerlink" title="成长与信仰"></a>成长与信仰</h1><p>人人都有自己的信仰，对人生的认识和了解就属于信仰的范畴。</p>
+<p>事实上，对于世界的规律和本质，每个人都有特定的看法与信念，只是未必说出来而已。</p>
+<p>患者的心理问题，常常与世界观有着密切关联，因此，对于他们的治疗，就涉及对其世界观的纠正和调整。</p>
+<h1 id="恩典"><a href="#恩典" class="headerlink" title="恩典"></a>恩典</h1><p>通过心理分析，我们可以了解患者的神经官能症产生于什么时间，什么地点，因什么原因而产生，通过什么方式而发展，怎样治疗才可使患者痊愈。</p>
+<p>众所周知，潜意识引导着身体的运动。</p>
+<p>我们迷失方向的时候，梦会成为前进的向导；我们犹豫不决时，梦会给我们正确的指引。</p>
+<h1 id="后记"><a href="#后记" class="headerlink" title="后记"></a>后记</h1><p>心理治疗是一项不小的投资，不仅需要花钱，还要投入时间和精力。</p>
+<p>口碑通常是寻找一流心理医生的有效途径。</p>
+<p>所谓预言家，并不是那种能够看清未来的人，而是能够阅读当代各种信号和特征的人。</p>
+]]></content>
+      <categories>
+        <category>随笔感悟</category>
+      </categories>
+      <tags>
+        <tag>书山有路</tag>
+        <tag>读书笔记</tag>
+        <tag>少有人走的路</tag>
+        <tag>心智成熟的旅程</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>【论文笔记-2】深度学习</title>
+    <url>/posts/c0d0024f/</url>
+    <content><![CDATA[<p>这篇文章是关于深度学习的一篇综述文章。是由深度学习界的三位大牛（YannLeCun, Yoshua Bengio, Geoffrey Hinton）所写。在本文中，介绍了反向传播算法、卷积神经网络与循环神经网络的经典应用，给出了细致的图解和深入的分析，是深度学习中的高质量的重要文献。文中还提到了深度学习未来的发展，比如将卷积神经网络、循环神经网络与强化学习结合起来；将表示学习与复杂推理结合起来。</p>
+<span id="more"></span>
+<h5 id="多层神经网络及反向传播"><a href="#多层神经网络及反向传播" class="headerlink" title="多层神经网络及反向传播"></a>多层神经网络及反向传播</h5><p><img src="https://i.loli.net/2018/12/26/5c239d8290693.jpg" alt="19-24-17.jpg"></p>
+<h5 id="给图片加描述文字"><a href="#给图片加描述文字" class="headerlink" title="给图片加描述文字"></a>给图片加描述文字</h5><ul>
+<li><a href="https://www.cv-foundation.org/openaccess/content_cvpr_2015/papers/Vinyals_Show_and_Tell_2015_CVPR_paper.pdf">Show and Tell: A Neural Image Caption Generator</a>;</li>
+<li><a href="http://proceedings.mlr.press/v37/xuc15.pdf">Show, attend and tell: Neural image caption generation with visual attention</a></li>
+</ul>
+<p><img src="https://i.loli.net/2018/12/26/5c239e4ca2174.jpg" alt="19-26-01.jpg"></p>
+<h5 id="循环神经网络单元"><a href="#循环神经网络单元" class="headerlink" title="循环神经网络单元"></a>循环神经网络单元</h5><p><img src="https://i.loli.net/2018/12/26/5c239ea287cfa.jpg" alt="19-27-35.jpg"></p>
+<h5 id="论文链接"><a href="#论文链接" class="headerlink" title="论文链接"></a>论文链接</h5><p><a href="https://creativecoding.soe.ucsc.edu/courses/cs523/slides/week3/DeepLearning_LeCun.pdf">LeCun Y, Bengio Y, Hinton G. Deep learning[J]. nature, 2015, 521(7553): 436.</a></p>
+]]></content>
+      <categories>
+        <category>论文阅读</category>
+      </categories>
+      <tags>
+        <tag>深度学习</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>【机器学习】防止过拟合的方法</title>
     <url>/posts/3634e5b5/</url>
     <content><![CDATA[<h1 id="什么是过拟合"><a href="#什么是过拟合" class="headerlink" title="什么是过拟合"></a>什么是过拟合</h1><p>从训练样本中尽可能学出适用于所有潜在样本的“普遍规律”，这样才能在遇到新样本时做出正确的判别。然而，当学习器把训练样本学得“太好”了的时候，很可能已经把训练样本自身的一些特点当作了所有潜在样本都会具有的一般性质，这样就会导致泛化性能下降。这种现象在机器学习中称为“过拟合”（overfitting）。<br>与过拟合相对的是“欠拟合”（underfitting），这是指对训练样本的一般性质尚未学好。</p>
@@ -1170,16 +1297,73 @@
       </tags>
   </entry>
   <entry>
-    <title>【机器学习】AdaBoost算法</title>
-    <url>/posts/2a69915c/</url>
-    <content><![CDATA[<p><img src="/../images/AdaBoost.png"></p>
+    <title>【论文笔记-3】用于交通预测的多范围注意力双组分图卷积网络</title>
+    <url>/posts/e8cb7573/</url>
+    <content><![CDATA[<p>Chen, Weiqi, Ling Chen, Yu Xie, Wei Cao, Yusong Gao, and Xiaojie Feng. “<a href="https://arxiv.org/pdf/1911.12093">Multi-Range Attentive Bicomponent Graph Convolutional Network for Traffic Forecasting</a>.” arXiv preprint arXiv:1911.12093 (2019). Accepted by AAAI2020.</p>
+<span id="more"></span>
+<p>提出了一种交通预测深度学习模型——多范围注意力双组分图卷积网络(MRA-BGCN)。该模型首先根据路网距离构建节点向图，根据不同的边相互模式构建边向图。然后利用双组分图卷积实现了节点和边的相互作用建模。此外引入多范围注意力机制，对不同邻域范围内的信息进行聚合，自动学习不同范围的重要性。在两个交通数据集（METR-LA和PEMS-BAY）上的实验结果表明取得了很好的效果。</p>
+<h4 id="问题定义"><a href="#问题定义" class="headerlink" title="问题定义"></a>问题定义</h4><p><img src="https://i.loli.net/2020/06/14/QH5ysCw64l38ExS.png" alt="2338_1.png"></p>
+<p>交通预测问题的任务是：学习一个函数$f$, 能够给出$T^{\prime}$历史的图信号和图$G$，预测$T$未来的图信号。</p>
+<h4 id="数据集"><a href="#数据集" class="headerlink" title="数据集"></a>数据集</h4><p><img src="https://i.loli.net/2020/06/14/j6E2md7kYRh8v3A.png" alt="2339_1.png"></p>
+<p>METR-LA and PEMS-BAY是两个公开的交通网络数据集。METR-LA记录了从2012年3月1日到2012年6月30日四个月的交通速度统计数据，包括洛杉矶公路上的207个传感器。PEMS-BAY记录了从2017年1月1日到2017年5月31日的5个月的交通速度统计数据，其中包括旧金山湾区的325个传感器。</p>
+<h4 id="方法"><a href="#方法" class="headerlink" title="方法"></a>方法</h4><p><img src="https://i.loli.net/2020/06/14/A3yE9oUKbCZGsRp.png" alt="2337_1.png"></p>
+<p>论文中的模型如上图所示，包括2部分，（1）双组分图卷积模块 （2）多范围注意力层。</p>
+<h5 id="双组分图卷积"><a href="#双组分图卷积" class="headerlink" title="双组分图卷积"></a>双组分图卷积</h5><p><img src="https://i.loli.net/2020/06/14/S9vIA3t8C7ngRXk.png" alt="2340_1.png"></p>
+<p>图卷积是对给定图结构的节点间相互作用进行建模的一种有效操作。双组分图卷积可以显式地对节点和边的相互作用进行建模。</p>
+<h6 id="流连接"><a href="#流连接" class="headerlink" title="流连接"></a>流连接</h6><p>在交通网络中，一个路段可能受到其上下游路段的影响。</p>
+<h6 id="竞争关系"><a href="#竞争关系" class="headerlink" title="竞争关系"></a>竞争关系</h6><p>共享同一源节点的道路链路可能会争夺交通资源，产生竞争关系。</p>
+<h5 id="多范围注意力"><a href="#多范围注意力" class="headerlink" title="多范围注意力"></a>多范围注意力</h5><p>提出了双组分图卷积的多范围注意力机制，能自动学习不同邻域范围的重要性，从而实现对不同邻域范围内信息的聚集，而不仅仅是给定的邻域范围。</p>
+<h5 id="双组分图卷积RNN"><a href="#双组分图卷积RNN" class="headerlink" title="双组分图卷积RNN"></a>双组分图卷积RNN</h5><p><img src="https://i.loli.net/2020/06/14/NR6qQJAofOwHpPK.png" alt="2343_1.png"></p>
+<p>将多个BGCGRU层堆叠起来，并使用Sequence to Sequence体系结构进行多步前向交通预测。</p>
+<h4 id="评估"><a href="#评估" class="headerlink" title="评估"></a>评估</h4><ul>
+<li>性能比较<br><img src="https://i.loli.net/2020/06/14/yZXAJwsHdM7niQ8.png" alt="2342_1.png"></li>
+<li>边向图的影响<br><img src="https://i.loli.net/2020/06/14/NGrHvd23eYkqgpM.png" alt="2341_1.png"></li>
+<li>多范围注意力机制的影响<br><img src="https://i.loli.net/2020/06/14/9QkNBjcV8fMJsyv.png" alt="2344_1.png"></li>
+</ul>
+<h4 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h4><p>提出了一种用于交通预测的多范围注意力双组分图卷积网络。具体来说，采用双组分图卷积来明确地建模节点和边的相关性，利用一种边向图构造方法来编码边的上下游连通性和竞争关系，使用多范围注意力机制，有效地聚合多个邻域范围信息，生成综合的表示。可以进一步研究的地方是，可以考虑更多的影响因素，比如交通事故以及周围的兴趣点；目前论文中考虑的是单模态输入图，还可以研究多模态输入图。</p>
 ]]></content>
       <categories>
-        <category>机器学习</category>
+        <category>论文阅读</category>
       </categories>
       <tags>
-        <tag>机器学习</tag>
-        <tag>AdaBoost算法</tag>
+        <tag>交通预测</tag>
+        <tag>图神经网络</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>【论文笔记-1】注意力人流量机器</title>
+    <url>/posts/a7c2a378/</url>
+    <content><![CDATA[<p>文章提出了一种称为注意力人流量机器（Attentive Crowd Flow Machines）的神经网络模型，该模型能够通过带注意力机制的时变数据动态表示来推断城市人流量的演变。它由两层ConvLSTM单元以及用于空间权重预测的卷积层组成。文章的创新点在于：1.引入了注意力机制 2.权重时变的融合方法。</p>
+<span id="more"></span>
+
+<p><img src="https://i.loli.net/2018/12/26/5c23a1622ae38.png" alt="Image.png"></p>
+<h5 id="论文链接"><a href="#论文链接" class="headerlink" title="论文链接"></a>论文链接</h5><p><a href="http://www.linliang.net/wp-content/uploads/2018/10/ACMMM2018_FlowMachines.pdf">Liu L, Zhang R, Peng J, et al. Attentive Crowd Flow Machines[C]&#x2F;&#x2F;2018 ACM Multimedia Conference on Multimedia Conference. ACM, 2018: 1553-1561.</a></p>
+]]></content>
+      <categories>
+        <category>论文阅读</category>
+      </categories>
+      <tags>
+        <tag>CNN</tag>
+        <tag>LSTM</tag>
+        <tag>Crowd Flow Prediction</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>两个数组的交集Ⅱ</title>
+    <url>/posts/8ed9ffc/</url>
+    <content><![CDATA[<h5 id="要求："><a href="#要求：" class="headerlink" title="要求："></a>要求：</h5><p>给定两个数组，写一个方法来计算它们的交集。</p>
+<span id="more"></span>
+<h5 id="示例："><a href="#示例：" class="headerlink" title="示例："></a>示例：</h5><p>给定 nums1 &#x3D; [1, 2, 2, 1], nums2 &#x3D; [2, 2], 返回 [2, 2].</p>
+<h5 id="分析："><a href="#分析：" class="headerlink" title="分析："></a>分析：</h5><p>先对两个数组由小到大排序，用两个指针index1和index2遍历两个数组，比较对应元素的大小，如果相等，则添加进result数组，如果不相等，元素小的数组指针加一，最终其中一个数组遍历结束，就停止程序。</p>
+<h5 id="代码："><a href="#代码：" class="headerlink" title="代码："></a>代码：</h5><figure class="highlight python"><table><tr><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">class</span> <span class="hljs-title class_">Solution</span>:<br>    <span class="hljs-keyword">def</span> <span class="hljs-title function_">intersect</span>(<span class="hljs-params">self, nums1, nums2</span>):<br>        <span class="hljs-string">&quot;&quot;&quot;</span><br><span class="hljs-string">        :type nums1: List[int]</span><br><span class="hljs-string">        :type nums2: List[int]</span><br><span class="hljs-string">        :rtype: List[int]</span><br><span class="hljs-string">        &quot;&quot;&quot;</span><br>        result = []<br>        nums1.sort()<br>        nums2.sort()<br>        index1, index2 = <span class="hljs-number">0</span>, <span class="hljs-number">0</span><br>        n1, n2 = <span class="hljs-built_in">len</span>(nums1), <span class="hljs-built_in">len</span>(nums2)<br>        <br>        <span class="hljs-keyword">while</span> index1 &lt; n1 <span class="hljs-keyword">and</span> index2 &lt; n2:<br>            <span class="hljs-keyword">if</span> nums1[index1] == nums2[index2]:<br>                result.append(nums1[index1])<br>                index1 += <span class="hljs-number">1</span><br>                index2 += <span class="hljs-number">1</span><br>            <span class="hljs-keyword">elif</span> nums1[index1] &gt; nums2[index2]:<br>                index2 += <span class="hljs-number">1</span><br>            <span class="hljs-keyword">else</span>:<br>                index1 += <span class="hljs-number">1</span><br>        <span class="hljs-keyword">return</span> result<br></code></pre></td></tr></table></figure>
+<h5 id="参考资料："><a href="#参考资料：" class="headerlink" title="参考资料："></a>参考资料：</h5><p>1、两数组的交 II <a href="https://blog.csdn.net/guoziqing506/article/details/51569488">https://blog.csdn.net/guoziqing506/article/details/51569488</a></p>
+]]></content>
+      <categories>
+        <category>算法</category>
+      </categories>
+      <tags>
+        <tag>python</tag>
+        <tag>数组</tag>
       </tags>
   </entry>
   <entry>
@@ -1223,79 +1407,6 @@
       </tags>
   </entry>
   <entry>
-    <title>【论文笔记-1】注意力人流量机器</title>
-    <url>/posts/a7c2a378/</url>
-    <content><![CDATA[<p>文章提出了一种称为注意力人流量机器（Attentive Crowd Flow Machines）的神经网络模型，该模型能够通过带注意力机制的时变数据动态表示来推断城市人流量的演变。它由两层ConvLSTM单元以及用于空间权重预测的卷积层组成。文章的创新点在于：1.引入了注意力机制 2.权重时变的融合方法。</p>
-<span id="more"></span>
-
-<p><img src="https://i.loli.net/2018/12/26/5c23a1622ae38.png" alt="Image.png"></p>
-<h5 id="论文链接"><a href="#论文链接" class="headerlink" title="论文链接"></a>论文链接</h5><p><a href="http://www.linliang.net/wp-content/uploads/2018/10/ACMMM2018_FlowMachines.pdf">Liu L, Zhang R, Peng J, et al. Attentive Crowd Flow Machines[C]&#x2F;&#x2F;2018 ACM Multimedia Conference on Multimedia Conference. ACM, 2018: 1553-1561.</a></p>
-]]></content>
-      <categories>
-        <category>论文阅读</category>
-      </categories>
-      <tags>
-        <tag>CNN</tag>
-        <tag>LSTM</tag>
-        <tag>Crowd Flow Prediction</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>【论文笔记-3】用于交通预测的多范围注意力双组分图卷积网络</title>
-    <url>/posts/e8cb7573/</url>
-    <content><![CDATA[<p>Chen, Weiqi, Ling Chen, Yu Xie, Wei Cao, Yusong Gao, and Xiaojie Feng. “<a href="https://arxiv.org/pdf/1911.12093">Multi-Range Attentive Bicomponent Graph Convolutional Network for Traffic Forecasting</a>.” arXiv preprint arXiv:1911.12093 (2019). Accepted by AAAI2020.</p>
-<span id="more"></span>
-<p>提出了一种交通预测深度学习模型——多范围注意力双组分图卷积网络(MRA-BGCN)。该模型首先根据路网距离构建节点向图，根据不同的边相互模式构建边向图。然后利用双组分图卷积实现了节点和边的相互作用建模。此外引入多范围注意力机制，对不同邻域范围内的信息进行聚合，自动学习不同范围的重要性。在两个交通数据集（METR-LA和PEMS-BAY）上的实验结果表明取得了很好的效果。</p>
-<h4 id="问题定义"><a href="#问题定义" class="headerlink" title="问题定义"></a>问题定义</h4><p><img src="https://i.loli.net/2020/06/14/QH5ysCw64l38ExS.png" alt="2338_1.png"></p>
-<p>交通预测问题的任务是：学习一个函数$f$, 能够给出$T^{\prime}$历史的图信号和图$G$，预测$T$未来的图信号。</p>
-<h4 id="数据集"><a href="#数据集" class="headerlink" title="数据集"></a>数据集</h4><p><img src="https://i.loli.net/2020/06/14/j6E2md7kYRh8v3A.png" alt="2339_1.png"></p>
-<p>METR-LA and PEMS-BAY是两个公开的交通网络数据集。METR-LA记录了从2012年3月1日到2012年6月30日四个月的交通速度统计数据，包括洛杉矶公路上的207个传感器。PEMS-BAY记录了从2017年1月1日到2017年5月31日的5个月的交通速度统计数据，其中包括旧金山湾区的325个传感器。</p>
-<h4 id="方法"><a href="#方法" class="headerlink" title="方法"></a>方法</h4><p><img src="https://i.loli.net/2020/06/14/A3yE9oUKbCZGsRp.png" alt="2337_1.png"></p>
-<p>论文中的模型如上图所示，包括2部分，（1）双组分图卷积模块 （2）多范围注意力层。</p>
-<h5 id="双组分图卷积"><a href="#双组分图卷积" class="headerlink" title="双组分图卷积"></a>双组分图卷积</h5><p><img src="https://i.loli.net/2020/06/14/S9vIA3t8C7ngRXk.png" alt="2340_1.png"></p>
-<p>图卷积是对给定图结构的节点间相互作用进行建模的一种有效操作。双组分图卷积可以显式地对节点和边的相互作用进行建模。</p>
-<h6 id="流连接"><a href="#流连接" class="headerlink" title="流连接"></a>流连接</h6><p>在交通网络中，一个路段可能受到其上下游路段的影响。</p>
-<h6 id="竞争关系"><a href="#竞争关系" class="headerlink" title="竞争关系"></a>竞争关系</h6><p>共享同一源节点的道路链路可能会争夺交通资源，产生竞争关系。</p>
-<h5 id="多范围注意力"><a href="#多范围注意力" class="headerlink" title="多范围注意力"></a>多范围注意力</h5><p>提出了双组分图卷积的多范围注意力机制，能自动学习不同邻域范围的重要性，从而实现对不同邻域范围内信息的聚集，而不仅仅是给定的邻域范围。</p>
-<h5 id="双组分图卷积RNN"><a href="#双组分图卷积RNN" class="headerlink" title="双组分图卷积RNN"></a>双组分图卷积RNN</h5><p><img src="https://i.loli.net/2020/06/14/NR6qQJAofOwHpPK.png" alt="2343_1.png"></p>
-<p>将多个BGCGRU层堆叠起来，并使用Sequence to Sequence体系结构进行多步前向交通预测。</p>
-<h4 id="评估"><a href="#评估" class="headerlink" title="评估"></a>评估</h4><ul>
-<li>性能比较<br><img src="https://i.loli.net/2020/06/14/yZXAJwsHdM7niQ8.png" alt="2342_1.png"></li>
-<li>边向图的影响<br><img src="https://i.loli.net/2020/06/14/NGrHvd23eYkqgpM.png" alt="2341_1.png"></li>
-<li>多范围注意力机制的影响<br><img src="https://i.loli.net/2020/06/14/9QkNBjcV8fMJsyv.png" alt="2344_1.png"></li>
-</ul>
-<h4 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h4><p>提出了一种用于交通预测的多范围注意力双组分图卷积网络。具体来说，采用双组分图卷积来明确地建模节点和边的相关性，利用一种边向图构造方法来编码边的上下游连通性和竞争关系，使用多范围注意力机制，有效地聚合多个邻域范围信息，生成综合的表示。可以进一步研究的地方是，可以考虑更多的影响因素，比如交通事故以及周围的兴趣点；目前论文中考虑的是单模态输入图，还可以研究多模态输入图。</p>
-]]></content>
-      <categories>
-        <category>论文阅读</category>
-      </categories>
-      <tags>
-        <tag>交通预测</tag>
-        <tag>图神经网络</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>【论文笔记-2】深度学习</title>
-    <url>/posts/c0d0024f/</url>
-    <content><![CDATA[<p>这篇文章是关于深度学习的一篇综述文章。是由深度学习界的三位大牛（YannLeCun, Yoshua Bengio, Geoffrey Hinton）所写。在本文中，介绍了反向传播算法、卷积神经网络与循环神经网络的经典应用，给出了细致的图解和深入的分析，是深度学习中的高质量的重要文献。文中还提到了深度学习未来的发展，比如将卷积神经网络、循环神经网络与强化学习结合起来；将表示学习与复杂推理结合起来。</p>
-<span id="more"></span>
-<h5 id="多层神经网络及反向传播"><a href="#多层神经网络及反向传播" class="headerlink" title="多层神经网络及反向传播"></a>多层神经网络及反向传播</h5><p><img src="https://i.loli.net/2018/12/26/5c239d8290693.jpg" alt="19-24-17.jpg"></p>
-<h5 id="给图片加描述文字"><a href="#给图片加描述文字" class="headerlink" title="给图片加描述文字"></a>给图片加描述文字</h5><ul>
-<li><a href="https://www.cv-foundation.org/openaccess/content_cvpr_2015/papers/Vinyals_Show_and_Tell_2015_CVPR_paper.pdf">Show and Tell: A Neural Image Caption Generator</a>;</li>
-<li><a href="http://proceedings.mlr.press/v37/xuc15.pdf">Show, attend and tell: Neural image caption generation with visual attention</a></li>
-</ul>
-<p><img src="https://i.loli.net/2018/12/26/5c239e4ca2174.jpg" alt="19-26-01.jpg"></p>
-<h5 id="循环神经网络单元"><a href="#循环神经网络单元" class="headerlink" title="循环神经网络单元"></a>循环神经网络单元</h5><p><img src="https://i.loli.net/2018/12/26/5c239ea287cfa.jpg" alt="19-27-35.jpg"></p>
-<h5 id="论文链接"><a href="#论文链接" class="headerlink" title="论文链接"></a>论文链接</h5><p><a href="https://creativecoding.soe.ucsc.edu/courses/cs523/slides/week3/DeepLearning_LeCun.pdf">LeCun Y, Bengio Y, Hinton G. Deep learning[J]. nature, 2015, 521(7553): 436.</a></p>
-]]></content>
-      <categories>
-        <category>论文阅读</category>
-      </categories>
-      <tags>
-        <tag>深度学习</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>【论文笔记-4】Attention Is All You Need</title>
     <url>/posts/d3e954aa/</url>
     <content><![CDATA[<p>Vaswani, Ashish, Noam Shazeer, Niki Parmar, Jakob Uszkoreit, Llion Jones, Aidan N. Gomez, Łukasz Kaiser, and Illia Polosukhin. “<a href="https://papers.nips.cc/paper/7181-attention-is-all-you-need.pdf">Attention is all you need</a>.” In Advances in neural information processing systems, pp. 5998-6008. 2017.</p>
@@ -1333,32 +1444,14 @@
       </tags>
   </entry>
   <entry>
-    <title>两个数组的交集Ⅱ</title>
-    <url>/posts/8ed9ffc/</url>
-    <content><![CDATA[<h5 id="要求："><a href="#要求：" class="headerlink" title="要求："></a>要求：</h5><p>给定两个数组，写一个方法来计算它们的交集。</p>
+    <title>买卖股票的最佳时机Ⅱ</title>
+    <url>/posts/43c05810/</url>
+    <content><![CDATA[<h5 id="要求："><a href="#要求：" class="headerlink" title="要求："></a>要求：</h5><p>给定一个数组，它的第 i 个元素是一支给定股票第 i 天的价格。<br>设计一个算法来计算你所能获取的最大利润。你可以尽可能地完成更多的交易（多次买卖一支股票）。<br>注意：你不能同时参与多笔交易（你必须在再次购买前出售掉之前的股票）。</p>
 <span id="more"></span>
-<h5 id="示例："><a href="#示例：" class="headerlink" title="示例："></a>示例：</h5><p>给定 nums1 &#x3D; [1, 2, 2, 1], nums2 &#x3D; [2, 2], 返回 [2, 2].</p>
-<h5 id="分析："><a href="#分析：" class="headerlink" title="分析："></a>分析：</h5><p>先对两个数组由小到大排序，用两个指针index1和index2遍历两个数组，比较对应元素的大小，如果相等，则添加进result数组，如果不相等，元素小的数组指针加一，最终其中一个数组遍历结束，就停止程序。</p>
-<h5 id="代码："><a href="#代码：" class="headerlink" title="代码："></a>代码：</h5><figure class="highlight python"><table><tr><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">class</span> <span class="hljs-title class_">Solution</span>:<br>    <span class="hljs-keyword">def</span> <span class="hljs-title function_">intersect</span>(<span class="hljs-params">self, nums1, nums2</span>):<br>        <span class="hljs-string">&quot;&quot;&quot;</span><br><span class="hljs-string">        :type nums1: List[int]</span><br><span class="hljs-string">        :type nums2: List[int]</span><br><span class="hljs-string">        :rtype: List[int]</span><br><span class="hljs-string">        &quot;&quot;&quot;</span><br>        result = []<br>        nums1.sort()<br>        nums2.sort()<br>        index1, index2 = <span class="hljs-number">0</span>, <span class="hljs-number">0</span><br>        n1, n2 = <span class="hljs-built_in">len</span>(nums1), <span class="hljs-built_in">len</span>(nums2)<br>        <br>        <span class="hljs-keyword">while</span> index1 &lt; n1 <span class="hljs-keyword">and</span> index2 &lt; n2:<br>            <span class="hljs-keyword">if</span> nums1[index1] == nums2[index2]:<br>                result.append(nums1[index1])<br>                index1 += <span class="hljs-number">1</span><br>                index2 += <span class="hljs-number">1</span><br>            <span class="hljs-keyword">elif</span> nums1[index1] &gt; nums2[index2]:<br>                index2 += <span class="hljs-number">1</span><br>            <span class="hljs-keyword">else</span>:<br>                index1 += <span class="hljs-number">1</span><br>        <span class="hljs-keyword">return</span> result<br></code></pre></td></tr></table></figure>
-<h5 id="参考资料："><a href="#参考资料：" class="headerlink" title="参考资料："></a>参考资料：</h5><p>1、两数组的交 II <a href="https://blog.csdn.net/guoziqing506/article/details/51569488">https://blog.csdn.net/guoziqing506/article/details/51569488</a></p>
-]]></content>
-      <categories>
-        <category>算法</category>
-      </categories>
-      <tags>
-        <tag>python</tag>
-        <tag>数组</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>从排序数组中删除重复项</title>
-    <url>/posts/2b4bef4e/</url>
-    <content><![CDATA[<h5 id="要求："><a href="#要求：" class="headerlink" title="要求："></a>要求：</h5><p>给定一个排序数组，你需要在原地删除重复出现的元素，使得每个元素只出现一次，返回移除后数组的新长度。（不要使用额外的数组空间，你必须在原地修改输入数组并在使用O（1）额外空间的条件下完成）。</p>
-<span id="more"></span>
-<h5 id="示例："><a href="#示例：" class="headerlink" title="示例："></a>示例：</h5><p>给定数组 nums &#x3D; [1,1,2],<br>函数应该返回新的长度 2, 并且原数组 nums 的前两个元素被修改为 1, 2。你不需要考虑数组中超出新长度后面的元素。</p>
-<h5 id="分析："><a href="#分析：" class="headerlink" title="分析："></a>分析：</h5><p>遍历一遍数组，将不重复的数字保留，重复的数字覆盖，并删除末尾剩余的数字。</p>
-<h5 id="代码（python3）"><a href="#代码（python3）" class="headerlink" title="代码（python3）:"></a>代码（python3）:</h5><figure class="highlight angelscript"><table><tr><td class="code"><pre><code class="hljs angelscript"><span class="hljs-keyword">class</span> <span class="hljs-symbol">Solution:</span><br><span class="hljs-symbol">    <span class="hljs-symbol">def</span></span> <span class="hljs-symbol">removeDuplicates</span>(<span class="hljs-symbol">self, <span class="hljs-symbol">nums</span></span>):<br>        &quot;&quot;&quot;<br>        :<span class="hljs-symbol">type</span> <span class="hljs-symbol">nums: <span class="hljs-symbol">List</span></span>[<span class="hljs-symbol">int</span>]<br>        :<span class="hljs-symbol">rtype: <span class="hljs-symbol">int</span></span><br>        &quot;&quot;&quot;<br>        <span class="hljs-symbol">k</span> = <span class="hljs-symbol">0</span><br>        <span class="hljs-symbol">for</span> <span class="hljs-symbol">i</span> <span class="hljs-symbol">in</span> <span class="hljs-symbol">range</span>(<span class="hljs-symbol">1,<span class="hljs-symbol">len</span></span>(<span class="hljs-symbol">nums</span>)):<br>            <span class="hljs-symbol">if</span> <span class="hljs-symbol">nums</span>[<span class="hljs-symbol">i</span>] != <span class="hljs-symbol">nums</span>[<span class="hljs-symbol">k</span>]:<br>                <span class="hljs-symbol">k</span> = <span class="hljs-symbol">k</span>+<span class="hljs-symbol">1</span><br>                <span class="hljs-symbol">nums</span>[<span class="hljs-symbol">k</span>] = <span class="hljs-symbol">nums</span>[<span class="hljs-symbol">i</span>]<br>        <span class="hljs-symbol">del</span> <span class="hljs-symbol">nums</span>[<span class="hljs-symbol">k</span>+<span class="hljs-symbol">1:<span class="hljs-symbol">len</span></span>(<span class="hljs-symbol">nums</span>)]<br>        <span class="hljs-symbol">return</span> <span class="hljs-symbol">len</span>(<span class="hljs-symbol">nums</span>)<br></code></pre></td></tr></table></figure>
-<h5 id="参考资料："><a href="#参考资料：" class="headerlink" title="参考资料："></a>参考资料：</h5><p>1、LintCode（100）删除排序数组中的重复数字 <a href="https://blog.csdn.net/fly_yr/article/details/51548657">https://blog.csdn.net/fly_yr/article/details/51548657</a></p>
+<h5 id="示例："><a href="#示例：" class="headerlink" title="示例："></a>示例：</h5><p>（1）输入: [7,1,5,3,6,4]<br>输出: 7<br>解释: 在第 2 天（股票价格 &#x3D; 1）的时候买入，在第 3 天（股票价格 &#x3D; 5）的时候卖出, 这笔交易所能获得利润 &#x3D; 5-1 &#x3D; 4 。<br>     随后，在第 4 天（股票价格 &#x3D; 3）的时候买入，在第 5 天（股票价格 &#x3D; 6）的时候卖出, 这笔交易所能获得利润 &#x3D; 6-3 &#x3D; 3 。<br><br>（2）输入: [1,2,3,4,5]<br>输出: 4<br>解释: 在第 1 天（股票价格 &#x3D; 1）的时候买入，在第 5 天 （股票价格 &#x3D; 5）的时候卖出, 这笔交易所能获得利润 &#x3D; 5-1 &#x3D; 4 。<br>     注意你不能在第 1 天和第 2 天接连购买股票，之后再将它们卖出。<br>     因为这样属于同时参与了多笔交易，你必须在再次购买前出售掉之前的股票。<br><br>（3）输入: [7,6,4,3,1]<br>输出: 0<br>解释: 在这种情况下, 没有交易完成, 所以最大利润为 0。</p>
+<h5 id="分析："><a href="#分析：" class="headerlink" title="分析："></a>分析：</h5><p>通过比较相邻两个值的大小，低价买入，高价卖出，然后计算收益，另外考虑不买入和不卖出的特殊情况。</p>
+<h5 id="代码："><a href="#代码：" class="headerlink" title="代码："></a>代码：</h5><figure class="highlight python"><table><tr><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">class</span> <span class="hljs-title class_">Solution</span>:<br>    <span class="hljs-keyword">def</span> <span class="hljs-title function_">maxProfit</span>(<span class="hljs-params">self, prices</span>):<br>        <span class="hljs-string">&quot;&quot;&quot;</span><br><span class="hljs-string">        :type prices: List[int]</span><br><span class="hljs-string">        :rtype: int</span><br><span class="hljs-string">        &quot;&quot;&quot;</span><br>        status = <span class="hljs-number">0</span><br>        length = <span class="hljs-built_in">len</span>(prices)<br>        result = <span class="hljs-number">0</span><br>        buy = <span class="hljs-number">0</span><br>        sell = <span class="hljs-number">0</span><br>        <span class="hljs-comment">#当列表为空或者只有一位时，返回0</span><br>        <span class="hljs-keyword">if</span> length &lt;= <span class="hljs-number">1</span>:<br>            <span class="hljs-keyword">return</span> <span class="hljs-number">0</span><br>        <span class="hljs-keyword">else</span>:<br>            <span class="hljs-comment">#遍历列表</span><br>            <span class="hljs-keyword">for</span> x <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(length-<span class="hljs-number">1</span>):<br>                <span class="hljs-comment">#当状态为未买入，并且后一位的值大于前一位值时，买入，并且把状态改为买入</span><br>                <span class="hljs-keyword">if</span> status == <span class="hljs-number">0</span> <span class="hljs-keyword">and</span> prices[x] &lt; prices[x+<span class="hljs-number">1</span>]:<br>                    buy = prices[x]<br>                    status = <span class="hljs-number">1</span><br>                <span class="hljs-comment">#当状态为买入，并且后一位的值小于等于前一位值时，卖出，并且把状态改为未买入，累计result</span><br>                <span class="hljs-keyword">elif</span> status == <span class="hljs-number">1</span> <span class="hljs-keyword">and</span> prices[x] &gt;= prices[x+<span class="hljs-number">1</span>]:<br>                    sell = prices[x]<br>                    result = result + sell - buy<br>                    status = <span class="hljs-number">0</span> <span class="hljs-comment"># 正常情况最后状态一定是未买入，即status=0</span><br>                    <br>            <span class="hljs-comment">#用来排除[5,4,3,2,1]这种一直没有买入的情况</span><br>            <span class="hljs-keyword">if</span> status == <span class="hljs-number">0</span> <span class="hljs-keyword">and</span> sell == <span class="hljs-number">0</span>:<br>                result = <span class="hljs-number">0</span><br>            <span class="hljs-comment">#用来解决[1,2,3,4,5]这种一直没有卖出的情况</span><br>            <span class="hljs-keyword">elif</span> status == <span class="hljs-number">1</span>:<br>                result = result + prices[length-<span class="hljs-number">1</span>] - buy<br>            <span class="hljs-keyword">return</span> result<br></code></pre></td></tr></table></figure>
+<h5 id="参考资料："><a href="#参考资料：" class="headerlink" title="参考资料："></a>参考资料：</h5><p>1、买卖股票的最佳时机 II-Python-LeetCode <a href="https://blog.csdn.net/linfeng886/article/details/80070804">https://blog.csdn.net/linfeng886/article/details/80070804</a></p>
 ]]></content>
       <categories>
         <category>算法</category>
@@ -1453,14 +1546,32 @@
       </tags>
   </entry>
   <entry>
-    <title>买卖股票的最佳时机Ⅱ</title>
-    <url>/posts/43c05810/</url>
-    <content><![CDATA[<h5 id="要求："><a href="#要求：" class="headerlink" title="要求："></a>要求：</h5><p>给定一个数组，它的第 i 个元素是一支给定股票第 i 天的价格。<br>设计一个算法来计算你所能获取的最大利润。你可以尽可能地完成更多的交易（多次买卖一支股票）。<br>注意：你不能同时参与多笔交易（你必须在再次购买前出售掉之前的股票）。</p>
+    <title>从排序数组中删除重复项</title>
+    <url>/posts/2b4bef4e/</url>
+    <content><![CDATA[<h5 id="要求："><a href="#要求：" class="headerlink" title="要求："></a>要求：</h5><p>给定一个排序数组，你需要在原地删除重复出现的元素，使得每个元素只出现一次，返回移除后数组的新长度。（不要使用额外的数组空间，你必须在原地修改输入数组并在使用O（1）额外空间的条件下完成）。</p>
 <span id="more"></span>
-<h5 id="示例："><a href="#示例：" class="headerlink" title="示例："></a>示例：</h5><p>（1）输入: [7,1,5,3,6,4]<br>输出: 7<br>解释: 在第 2 天（股票价格 &#x3D; 1）的时候买入，在第 3 天（股票价格 &#x3D; 5）的时候卖出, 这笔交易所能获得利润 &#x3D; 5-1 &#x3D; 4 。<br>     随后，在第 4 天（股票价格 &#x3D; 3）的时候买入，在第 5 天（股票价格 &#x3D; 6）的时候卖出, 这笔交易所能获得利润 &#x3D; 6-3 &#x3D; 3 。<br><br>（2）输入: [1,2,3,4,5]<br>输出: 4<br>解释: 在第 1 天（股票价格 &#x3D; 1）的时候买入，在第 5 天 （股票价格 &#x3D; 5）的时候卖出, 这笔交易所能获得利润 &#x3D; 5-1 &#x3D; 4 。<br>     注意你不能在第 1 天和第 2 天接连购买股票，之后再将它们卖出。<br>     因为这样属于同时参与了多笔交易，你必须在再次购买前出售掉之前的股票。<br><br>（3）输入: [7,6,4,3,1]<br>输出: 0<br>解释: 在这种情况下, 没有交易完成, 所以最大利润为 0。</p>
-<h5 id="分析："><a href="#分析：" class="headerlink" title="分析："></a>分析：</h5><p>通过比较相邻两个值的大小，低价买入，高价卖出，然后计算收益，另外考虑不买入和不卖出的特殊情况。</p>
-<h5 id="代码："><a href="#代码：" class="headerlink" title="代码："></a>代码：</h5><figure class="highlight python"><table><tr><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">class</span> <span class="hljs-title class_">Solution</span>:<br>    <span class="hljs-keyword">def</span> <span class="hljs-title function_">maxProfit</span>(<span class="hljs-params">self, prices</span>):<br>        <span class="hljs-string">&quot;&quot;&quot;</span><br><span class="hljs-string">        :type prices: List[int]</span><br><span class="hljs-string">        :rtype: int</span><br><span class="hljs-string">        &quot;&quot;&quot;</span><br>        status = <span class="hljs-number">0</span><br>        length = <span class="hljs-built_in">len</span>(prices)<br>        result = <span class="hljs-number">0</span><br>        buy = <span class="hljs-number">0</span><br>        sell = <span class="hljs-number">0</span><br>        <span class="hljs-comment">#当列表为空或者只有一位时，返回0</span><br>        <span class="hljs-keyword">if</span> length &lt;= <span class="hljs-number">1</span>:<br>            <span class="hljs-keyword">return</span> <span class="hljs-number">0</span><br>        <span class="hljs-keyword">else</span>:<br>            <span class="hljs-comment">#遍历列表</span><br>            <span class="hljs-keyword">for</span> x <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(length-<span class="hljs-number">1</span>):<br>                <span class="hljs-comment">#当状态为未买入，并且后一位的值大于前一位值时，买入，并且把状态改为买入</span><br>                <span class="hljs-keyword">if</span> status == <span class="hljs-number">0</span> <span class="hljs-keyword">and</span> prices[x] &lt; prices[x+<span class="hljs-number">1</span>]:<br>                    buy = prices[x]<br>                    status = <span class="hljs-number">1</span><br>                <span class="hljs-comment">#当状态为买入，并且后一位的值小于等于前一位值时，卖出，并且把状态改为未买入，累计result</span><br>                <span class="hljs-keyword">elif</span> status == <span class="hljs-number">1</span> <span class="hljs-keyword">and</span> prices[x] &gt;= prices[x+<span class="hljs-number">1</span>]:<br>                    sell = prices[x]<br>                    result = result + sell - buy<br>                    status = <span class="hljs-number">0</span> <span class="hljs-comment"># 正常情况最后状态一定是未买入，即status=0</span><br>                    <br>            <span class="hljs-comment">#用来排除[5,4,3,2,1]这种一直没有买入的情况</span><br>            <span class="hljs-keyword">if</span> status == <span class="hljs-number">0</span> <span class="hljs-keyword">and</span> sell == <span class="hljs-number">0</span>:<br>                result = <span class="hljs-number">0</span><br>            <span class="hljs-comment">#用来解决[1,2,3,4,5]这种一直没有卖出的情况</span><br>            <span class="hljs-keyword">elif</span> status == <span class="hljs-number">1</span>:<br>                result = result + prices[length-<span class="hljs-number">1</span>] - buy<br>            <span class="hljs-keyword">return</span> result<br></code></pre></td></tr></table></figure>
-<h5 id="参考资料："><a href="#参考资料：" class="headerlink" title="参考资料："></a>参考资料：</h5><p>1、买卖股票的最佳时机 II-Python-LeetCode <a href="https://blog.csdn.net/linfeng886/article/details/80070804">https://blog.csdn.net/linfeng886/article/details/80070804</a></p>
+<h5 id="示例："><a href="#示例：" class="headerlink" title="示例："></a>示例：</h5><p>给定数组 nums &#x3D; [1,1,2],<br>函数应该返回新的长度 2, 并且原数组 nums 的前两个元素被修改为 1, 2。你不需要考虑数组中超出新长度后面的元素。</p>
+<h5 id="分析："><a href="#分析：" class="headerlink" title="分析："></a>分析：</h5><p>遍历一遍数组，将不重复的数字保留，重复的数字覆盖，并删除末尾剩余的数字。</p>
+<h5 id="代码（python3）"><a href="#代码（python3）" class="headerlink" title="代码（python3）:"></a>代码（python3）:</h5><figure class="highlight angelscript"><table><tr><td class="code"><pre><code class="hljs angelscript"><span class="hljs-keyword">class</span> <span class="hljs-symbol">Solution:</span><br><span class="hljs-symbol">    <span class="hljs-symbol">def</span></span> <span class="hljs-symbol">removeDuplicates</span>(<span class="hljs-symbol">self, <span class="hljs-symbol">nums</span></span>):<br>        &quot;&quot;&quot;<br>        :<span class="hljs-symbol">type</span> <span class="hljs-symbol">nums: <span class="hljs-symbol">List</span></span>[<span class="hljs-symbol">int</span>]<br>        :<span class="hljs-symbol">rtype: <span class="hljs-symbol">int</span></span><br>        &quot;&quot;&quot;<br>        <span class="hljs-symbol">k</span> = <span class="hljs-symbol">0</span><br>        <span class="hljs-symbol">for</span> <span class="hljs-symbol">i</span> <span class="hljs-symbol">in</span> <span class="hljs-symbol">range</span>(<span class="hljs-symbol">1,<span class="hljs-symbol">len</span></span>(<span class="hljs-symbol">nums</span>)):<br>            <span class="hljs-symbol">if</span> <span class="hljs-symbol">nums</span>[<span class="hljs-symbol">i</span>] != <span class="hljs-symbol">nums</span>[<span class="hljs-symbol">k</span>]:<br>                <span class="hljs-symbol">k</span> = <span class="hljs-symbol">k</span>+<span class="hljs-symbol">1</span><br>                <span class="hljs-symbol">nums</span>[<span class="hljs-symbol">k</span>] = <span class="hljs-symbol">nums</span>[<span class="hljs-symbol">i</span>]<br>        <span class="hljs-symbol">del</span> <span class="hljs-symbol">nums</span>[<span class="hljs-symbol">k</span>+<span class="hljs-symbol">1:<span class="hljs-symbol">len</span></span>(<span class="hljs-symbol">nums</span>)]<br>        <span class="hljs-symbol">return</span> <span class="hljs-symbol">len</span>(<span class="hljs-symbol">nums</span>)<br></code></pre></td></tr></table></figure>
+<h5 id="参考资料："><a href="#参考资料：" class="headerlink" title="参考资料："></a>参考资料：</h5><p>1、LintCode（100）删除排序数组中的重复数字 <a href="https://blog.csdn.net/fly_yr/article/details/51548657">https://blog.csdn.net/fly_yr/article/details/51548657</a></p>
+]]></content>
+      <categories>
+        <category>算法</category>
+      </categories>
+      <tags>
+        <tag>python</tag>
+        <tag>数组</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>加一</title>
+    <url>/posts/2e394548/</url>
+    <content><![CDATA[<h5 id="要求："><a href="#要求：" class="headerlink" title="要求："></a>要求：</h5><p>给定一个非负整数组成的非空数组，在该数的基础上加一，返回一个新的数组。<br><br>最高位数字存放在数组的首位， 数组中每个元素只存储一个数字。<br><br>你可以假设除了整数 0 之外，这个整数不会以零开头。</p>
+<span id="more"></span>
+<h5 id="示例："><a href="#示例：" class="headerlink" title="示例："></a>示例：</h5><p>（1）<br><br>输入: [1,2,3]<br><br>输出: [1,2,4]<br><br>解释: 输入数组表示数字 123。<br><br>（2）<br><br>输入: [4,3,2,1]<br><br>输出: [4,3,2,2]<br><br>解释: 输入数组表示数字 4321。</p>
+<h5 id="分析："><a href="#分析：" class="headerlink" title="分析："></a>分析：</h5><p>从后向前判断每个元素，如有进位，将进位符flag置为1，将元素所在位变为0；若无进位，将元素所在位+1，并将进位符置0，最后判断进位符标志，如果为1，则在数组第0位增加一个元素1。</p>
+<h5 id="代码："><a href="#代码：" class="headerlink" title="代码："></a>代码：</h5><figure class="highlight python"><table><tr><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">class</span> <span class="hljs-title class_">Solution</span>:<br>    <span class="hljs-keyword">def</span> <span class="hljs-title function_">plusOne</span>(<span class="hljs-params">self, digits</span>):<br>        <span class="hljs-string">&quot;&quot;&quot;</span><br><span class="hljs-string">        :type digits: List[int]</span><br><span class="hljs-string">        :rtype: List[int]</span><br><span class="hljs-string">        &quot;&quot;&quot;</span><br>        <br>        flag = <span class="hljs-number">1</span><br>        <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(<span class="hljs-built_in">len</span>(digits)-<span class="hljs-number">1</span>,-<span class="hljs-number">1</span>,-<span class="hljs-number">1</span>):<br>            <span class="hljs-keyword">if</span> flag + digits[i] == <span class="hljs-number">10</span>:<br>                digits[i] = <span class="hljs-number">0</span><br>                flag = <span class="hljs-number">1</span><br>            <span class="hljs-keyword">else</span>:<br>                digits[i] = digits[i] + flag<br>                flag = <span class="hljs-number">0</span><br>        <span class="hljs-keyword">if</span> flag == <span class="hljs-number">1</span>:<br>            digits.insert(<span class="hljs-number">0</span>,<span class="hljs-number">1</span>)<br>        <span class="hljs-keyword">return</span> digits<br></code></pre></td></tr></table></figure>
+<h5 id="参考资料："><a href="#参考资料：" class="headerlink" title="参考资料："></a>参考资料：</h5><p>1、leetcode 66.Plus One python <a href="https://blog.csdn.net/mario_mmh/article/details/79845181">https://blog.csdn.net/mario_mmh/article/details/79845181</a></p>
 ]]></content>
       <categories>
         <category>算法</category>
@@ -1497,29 +1608,6 @@
       <tags>
         <tag>python</tag>
         <tag>可视化</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>关于科学范式的感悟</title>
-    <url>/posts/fe6166bc/</url>
-    <content><![CDATA[<p>一个国家的科学发展，在于体制机制和科学思想（文化氛围、理念），它就相当于科学发展的土壤。</p>
-<span id="more"></span>
-
-<p>库恩提出的科学范式是一种科学规范、规则，也是一种科学理论，从实践中来，又能够经得起历史和实践的检验。科学的发展，不仅仅是科学知识的积累，还应当是科学范式的传承和发展。另外，学科和科学看似是两个相同的字组成，但两者包含的研究方法和理念，应当是有区别的。学科代表分而治之的观念，分科治学，能让学科走向更深的深度，更大限度拓深人的专长，解决某个专门领域的问题。而科学不仅仅是一种理论，也是一种体制机制下追求真理的精神，是一种理念、文化和氛围，能够在全社会广泛认可，取得广泛的影响。</p>
-<p>由科学产生的范式，犹如大海航行中的海图，犹如探险家的攻略，也代表着进行科研的一种规则，通用的理念与方法，它是经过无数科学家在科研实践中，总结、提炼、升华出来的一种理论，并经过了历史与实践的检验，能引领后来的科研工作者，站在巨人的肩上，继续探索科学，为我们指明了科学发现与研究的路线，也为我们指出了科学的界限、层次与禁忌。</p>
-<p>作为计算机科学与技术专业的一名研究生，正如在专业名字中体现出的内涵一致，研究计算机，不仅要当作一门学科，也要注重它的技术应用，更重要的是了解它的起源、研究规则、规范、该领域优秀科学家的思想和理念，这也就涉及到了范式。在一定的科研规范、路径下，遵循前人的科研理念，方法，在已有的科研基础上，继承与发展科研范式，创新开展科研工作，形成新时代、新阶段下的科研范式，进而提升为该学科、各学科通用，并能有效融合的，大家公认的具有广泛理论应用基础的科学范式。</p>
-<p>科学与学科，分久必合，合久必分，在这个过程中，范式调整与发展、传承与创新、范式一直在发展，变得适合科学，助力科学发展。</p>
-<p>注：感悟来自《自然辩证法》课程。</p>
-<h1 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h1><ol>
-<li>维基百科-范式<br> <a href="https://zh.wikipedia.org/wiki/%E8%8C%83%E5%BC%8F">https://zh.wikipedia.org/wiki/%E8%8C%83%E5%BC%8F</a></li>
-<li>豆瓣-库恩范式理论及其发展模式<br> <a href="https://site.douban.com/134820/widget/notes/5899818/note/186441816/">https://site.douban.com/134820/widget/notes/5899818/note/186441816/</a></li>
-</ol>
-]]></content>
-      <categories>
-        <category>随笔感悟</category>
-      </categories>
-      <tags>
-        <tag>科学范式</tag>
       </tags>
   </entry>
   <entry>
@@ -1561,42 +1649,6 @@
         <tag>博客</tag>
         <tag>中文博客</tag>
         <tag>英文博客</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>存在重复</title>
-    <url>/posts/e449a9c3/</url>
-    <content><![CDATA[<h5 id="要求："><a href="#要求：" class="headerlink" title="要求："></a>要求：</h5><p>给定一个整数数组，判断是否存在重复元素。<br>如果任何值在数组中出现至少两次，函数返回 true。如果数组中每个元素都不相同，则返回 false。</p>
-<span id="more"></span>
-<h5 id="示例："><a href="#示例：" class="headerlink" title="示例："></a>示例：</h5><p>(1)<br>输入: [1,2,3,1]<br><br>输出: true <br><br>(2)<br>输入: [1,2,3,4]<br><br>输出: false <br><br>(3)<br>输入: [1,1,1,3,3,4,3,2,4,2]<br><br>输出: true</p>
-<h5 id="分析："><a href="#分析：" class="headerlink" title="分析："></a>分析：</h5><p>直接元素之间比较，会很容易想到用两个for循环来进行元素间判断，但是这种方法会超时，所以不使用这种方法；可以通过将数组转换成集合，然后判断转换前的数组和集合的长度是否相等，如果相等，则没有重复元素，如果不相等，则存在重复元素。（这种方法，很巧妙，也应用了集合的特性）。</p>
-<h5 id="代码："><a href="#代码：" class="headerlink" title="代码："></a>代码：</h5><figure class="highlight angelscript"><table><tr><td class="code"><pre><code class="hljs angelscript"><span class="hljs-keyword">class</span> <span class="hljs-symbol">Solution:</span><br><span class="hljs-symbol">    <span class="hljs-symbol">def</span></span> <span class="hljs-symbol">containsDuplicate</span>(<span class="hljs-symbol">self, <span class="hljs-symbol">nums</span></span>):<br>        &quot;&quot;&quot;<br>        :<span class="hljs-symbol">type</span> <span class="hljs-symbol">nums: <span class="hljs-symbol">List</span></span>[<span class="hljs-symbol">int</span>]<br>        :<span class="hljs-symbol">rtype: <span class="hljs-symbol">bool</span></span><br>        &quot;&quot;&quot;<br>        <span class="hljs-symbol">if</span> (<span class="hljs-symbol">len</span>(<span class="hljs-symbol">nums</span>) != <span class="hljs-symbol">len</span>(<span class="hljs-symbol">set</span>(<span class="hljs-symbol">nums</span>))):<br>            <span class="hljs-symbol">return</span> <span class="hljs-symbol">True</span><br>        <span class="hljs-symbol">else:</span><br><span class="hljs-symbol">            <span class="hljs-symbol">return</span></span> <span class="hljs-symbol">False</span><br></code></pre></td></tr></table></figure>
-<h5 id="参考资料："><a href="#参考资料：" class="headerlink" title="参考资料："></a>参考资料：</h5><p>1、LeetCode-containsDuplicate-存在重复 <a href="https://segmentfault.com/a/1190000014325206">https://segmentfault.com/a/1190000014325206</a></p>
-]]></content>
-      <categories>
-        <category>算法</category>
-      </categories>
-      <tags>
-        <tag>python</tag>
-        <tag>数组</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>加一</title>
-    <url>/posts/2e394548/</url>
-    <content><![CDATA[<h5 id="要求："><a href="#要求：" class="headerlink" title="要求："></a>要求：</h5><p>给定一个非负整数组成的非空数组，在该数的基础上加一，返回一个新的数组。<br><br>最高位数字存放在数组的首位， 数组中每个元素只存储一个数字。<br><br>你可以假设除了整数 0 之外，这个整数不会以零开头。</p>
-<span id="more"></span>
-<h5 id="示例："><a href="#示例：" class="headerlink" title="示例："></a>示例：</h5><p>（1）<br><br>输入: [1,2,3]<br><br>输出: [1,2,4]<br><br>解释: 输入数组表示数字 123。<br><br>（2）<br><br>输入: [4,3,2,1]<br><br>输出: [4,3,2,2]<br><br>解释: 输入数组表示数字 4321。</p>
-<h5 id="分析："><a href="#分析：" class="headerlink" title="分析："></a>分析：</h5><p>从后向前判断每个元素，如有进位，将进位符flag置为1，将元素所在位变为0；若无进位，将元素所在位+1，并将进位符置0，最后判断进位符标志，如果为1，则在数组第0位增加一个元素1。</p>
-<h5 id="代码："><a href="#代码：" class="headerlink" title="代码："></a>代码：</h5><figure class="highlight python"><table><tr><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">class</span> <span class="hljs-title class_">Solution</span>:<br>    <span class="hljs-keyword">def</span> <span class="hljs-title function_">plusOne</span>(<span class="hljs-params">self, digits</span>):<br>        <span class="hljs-string">&quot;&quot;&quot;</span><br><span class="hljs-string">        :type digits: List[int]</span><br><span class="hljs-string">        :rtype: List[int]</span><br><span class="hljs-string">        &quot;&quot;&quot;</span><br>        <br>        flag = <span class="hljs-number">1</span><br>        <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(<span class="hljs-built_in">len</span>(digits)-<span class="hljs-number">1</span>,-<span class="hljs-number">1</span>,-<span class="hljs-number">1</span>):<br>            <span class="hljs-keyword">if</span> flag + digits[i] == <span class="hljs-number">10</span>:<br>                digits[i] = <span class="hljs-number">0</span><br>                flag = <span class="hljs-number">1</span><br>            <span class="hljs-keyword">else</span>:<br>                digits[i] = digits[i] + flag<br>                flag = <span class="hljs-number">0</span><br>        <span class="hljs-keyword">if</span> flag == <span class="hljs-number">1</span>:<br>            digits.insert(<span class="hljs-number">0</span>,<span class="hljs-number">1</span>)<br>        <span class="hljs-keyword">return</span> digits<br></code></pre></td></tr></table></figure>
-<h5 id="参考资料："><a href="#参考资料：" class="headerlink" title="参考资料："></a>参考资料：</h5><p>1、leetcode 66.Plus One python <a href="https://blog.csdn.net/mario_mmh/article/details/79845181">https://blog.csdn.net/mario_mmh/article/details/79845181</a></p>
-]]></content>
-      <categories>
-        <category>算法</category>
-      </categories>
-      <tags>
-        <tag>python</tag>
-        <tag>数组</tag>
       </tags>
   </entry>
   <entry>
@@ -1659,6 +1711,47 @@
       <tags>
         <tag>Markdown</tag>
         <tag>写作</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>存在重复</title>
+    <url>/posts/e449a9c3/</url>
+    <content><![CDATA[<h5 id="要求："><a href="#要求：" class="headerlink" title="要求："></a>要求：</h5><p>给定一个整数数组，判断是否存在重复元素。<br>如果任何值在数组中出现至少两次，函数返回 true。如果数组中每个元素都不相同，则返回 false。</p>
+<span id="more"></span>
+<h5 id="示例："><a href="#示例：" class="headerlink" title="示例："></a>示例：</h5><p>(1)<br>输入: [1,2,3,1]<br><br>输出: true <br><br>(2)<br>输入: [1,2,3,4]<br><br>输出: false <br><br>(3)<br>输入: [1,1,1,3,3,4,3,2,4,2]<br><br>输出: true</p>
+<h5 id="分析："><a href="#分析：" class="headerlink" title="分析："></a>分析：</h5><p>直接元素之间比较，会很容易想到用两个for循环来进行元素间判断，但是这种方法会超时，所以不使用这种方法；可以通过将数组转换成集合，然后判断转换前的数组和集合的长度是否相等，如果相等，则没有重复元素，如果不相等，则存在重复元素。（这种方法，很巧妙，也应用了集合的特性）。</p>
+<h5 id="代码："><a href="#代码：" class="headerlink" title="代码："></a>代码：</h5><figure class="highlight angelscript"><table><tr><td class="code"><pre><code class="hljs angelscript"><span class="hljs-keyword">class</span> <span class="hljs-symbol">Solution:</span><br><span class="hljs-symbol">    <span class="hljs-symbol">def</span></span> <span class="hljs-symbol">containsDuplicate</span>(<span class="hljs-symbol">self, <span class="hljs-symbol">nums</span></span>):<br>        &quot;&quot;&quot;<br>        :<span class="hljs-symbol">type</span> <span class="hljs-symbol">nums: <span class="hljs-symbol">List</span></span>[<span class="hljs-symbol">int</span>]<br>        :<span class="hljs-symbol">rtype: <span class="hljs-symbol">bool</span></span><br>        &quot;&quot;&quot;<br>        <span class="hljs-symbol">if</span> (<span class="hljs-symbol">len</span>(<span class="hljs-symbol">nums</span>) != <span class="hljs-symbol">len</span>(<span class="hljs-symbol">set</span>(<span class="hljs-symbol">nums</span>))):<br>            <span class="hljs-symbol">return</span> <span class="hljs-symbol">True</span><br>        <span class="hljs-symbol">else:</span><br><span class="hljs-symbol">            <span class="hljs-symbol">return</span></span> <span class="hljs-symbol">False</span><br></code></pre></td></tr></table></figure>
+<h5 id="参考资料："><a href="#参考资料：" class="headerlink" title="参考资料："></a>参考资料：</h5><p>1、LeetCode-containsDuplicate-存在重复 <a href="https://segmentfault.com/a/1190000014325206">https://segmentfault.com/a/1190000014325206</a></p>
+]]></content>
+      <categories>
+        <category>算法</category>
+      </categories>
+      <tags>
+        <tag>python</tag>
+        <tag>数组</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>关于科学范式的感悟</title>
+    <url>/posts/fe6166bc/</url>
+    <content><![CDATA[<p>一个国家的科学发展，在于体制机制和科学思想（文化氛围、理念），它就相当于科学发展的土壤。</p>
+<span id="more"></span>
+
+<p>库恩提出的科学范式是一种科学规范、规则，也是一种科学理论，从实践中来，又能够经得起历史和实践的检验。科学的发展，不仅仅是科学知识的积累，还应当是科学范式的传承和发展。另外，学科和科学看似是两个相同的字组成，但两者包含的研究方法和理念，应当是有区别的。学科代表分而治之的观念，分科治学，能让学科走向更深的深度，更大限度拓深人的专长，解决某个专门领域的问题。而科学不仅仅是一种理论，也是一种体制机制下追求真理的精神，是一种理念、文化和氛围，能够在全社会广泛认可，取得广泛的影响。</p>
+<p>由科学产生的范式，犹如大海航行中的海图，犹如探险家的攻略，也代表着进行科研的一种规则，通用的理念与方法，它是经过无数科学家在科研实践中，总结、提炼、升华出来的一种理论，并经过了历史与实践的检验，能引领后来的科研工作者，站在巨人的肩上，继续探索科学，为我们指明了科学发现与研究的路线，也为我们指出了科学的界限、层次与禁忌。</p>
+<p>作为计算机科学与技术专业的一名研究生，正如在专业名字中体现出的内涵一致，研究计算机，不仅要当作一门学科，也要注重它的技术应用，更重要的是了解它的起源、研究规则、规范、该领域优秀科学家的思想和理念，这也就涉及到了范式。在一定的科研规范、路径下，遵循前人的科研理念，方法，在已有的科研基础上，继承与发展科研范式，创新开展科研工作，形成新时代、新阶段下的科研范式，进而提升为该学科、各学科通用，并能有效融合的，大家公认的具有广泛理论应用基础的科学范式。</p>
+<p>科学与学科，分久必合，合久必分，在这个过程中，范式调整与发展、传承与创新、范式一直在发展，变得适合科学，助力科学发展。</p>
+<p>注：感悟来自《自然辩证法》课程。</p>
+<h1 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h1><ol>
+<li>维基百科-范式<br> <a href="https://zh.wikipedia.org/wiki/%E8%8C%83%E5%BC%8F">https://zh.wikipedia.org/wiki/%E8%8C%83%E5%BC%8F</a></li>
+<li>豆瓣-库恩范式理论及其发展模式<br> <a href="https://site.douban.com/134820/widget/notes/5899818/note/186441816/">https://site.douban.com/134820/widget/notes/5899818/note/186441816/</a></li>
+</ol>
+]]></content>
+      <categories>
+        <category>随笔感悟</category>
+      </categories>
+      <tags>
+        <tag>科学范式</tag>
       </tags>
   </entry>
   <entry>
@@ -1746,49 +1839,6 @@
       <tags>
         <tag>年度总结</tag>
         <tag>趁年轻 去运动</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>旋转数组</title>
-    <url>/posts/fb62c7d3/</url>
-    <content><![CDATA[<h5 id="要求："><a href="#要求：" class="headerlink" title="要求："></a>要求：</h5><p>给定一个数组，将数组中的元素向右移动 k 个位置，其中 k 是非负数。</p>
-<span id="more"></span>
-<h5 id="示例："><a href="#示例：" class="headerlink" title="示例："></a>示例：</h5><p>（1）<br>输入: [1,2,3,4,5,6,7] 和 k &#x3D; 3<br>输出: [5,6,7,1,2,3,4]解释:<br>向右旋转 1 步: [7,1,2,3,4,5,6]<br>向右旋转 2 步: [6,7,1,2,3,4,5]<br>向右旋转 3 步: [5,6,7,1,2,3,4] <br><br>（2）<br>输入: [-1,-100,3,99] 和 k &#x3D; 2<br>输出: [3,99,-1,-100]<br>解释:<br>向右旋转 1 步: [99,-1,-100,3]<br>向右旋转 2 步: [3,99,-1,-100]</p>
-<h5 id="分析："><a href="#分析：" class="headerlink" title="分析："></a>分析：</h5><p>将前k个元素移动到数组的后半部分，将后(n-k)个元素移动到数组的前半部分。</p>
-<h5 id="代码："><a href="#代码：" class="headerlink" title="代码："></a>代码：</h5><figure class="highlight python"><table><tr><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">class</span> <span class="hljs-title class_">Solution</span>:<br>    <span class="hljs-keyword">def</span> <span class="hljs-title function_">rotate</span>(<span class="hljs-params">self, nums, k</span>):<br>        <span class="hljs-string">&quot;&quot;&quot;</span><br><span class="hljs-string">        :type nums: List[int]</span><br><span class="hljs-string">        :type k: int</span><br><span class="hljs-string">        :rtype: void Do not return anything, modify nums in-place instead.</span><br><span class="hljs-string">        &quot;&quot;&quot;</span><br>        n = <span class="hljs-built_in">len</span>(nums) - k  <br>        nums[:] = nums[n:] + nums[:n]<br></code></pre></td></tr></table></figure>
-<h5 id="拓展："><a href="#拓展：" class="headerlink" title="拓展："></a>拓展：</h5><p>1、这是一个直观的算法操作，以切片（分块）的方式操作数组，比较符合人的思维，但是要注重观察示例特征，否则容易陷入单个元素移动的怪圈。<br><br>2、nums[:] &#x3D; 和 nums &#x3D; 的区别：</p>
-<figure class="highlight python-repl"><table><tr><td class="code"><pre><code class="hljs python-repl"><span class="hljs-meta prompt_">&gt;&gt;&gt;</span> <span class="language-python">a = <span class="hljs-built_in">list</span>(<span class="hljs-built_in">range</span>(<span class="hljs-number">10</span>))</span><br><span class="hljs-meta prompt_">&gt;&gt;&gt;</span> <span class="language-python">b = a</span><br><span class="hljs-meta prompt_">&gt;&gt;&gt;</span> <span class="language-python">a[:] = [<span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>] <span class="hljs-comment"># changes what a and b both refer to</span></span><br><span class="hljs-meta prompt_">&gt;&gt;&gt;</span> <span class="language-python">b</span><br>[0, 0, 0]<br><br><span class="hljs-meta prompt_">&gt;&gt;&gt;</span> <span class="language-python">a = <span class="hljs-built_in">list</span>(<span class="hljs-built_in">range</span>(<span class="hljs-number">10</span>))</span><br><span class="hljs-meta prompt_">&gt;&gt;&gt;</span> <span class="language-python">b = a</span><br><span class="hljs-meta prompt_">&gt;&gt;&gt;</span> <span class="language-python">a = [<span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>] <span class="hljs-comment"># a now refers to a different list than b</span></span><br><span class="hljs-meta prompt_">&gt;&gt;&gt;</span> <span class="language-python">b</span><br>[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]<br></code></pre></td></tr></table></figure>]]></content>
-      <categories>
-        <category>算法</category>
-      </categories>
-      <tags>
-        <tag>python</tag>
-        <tag>数组</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>数学之美第二版读后感</title>
-    <url>/posts/553248e1/</url>
-    <content><![CDATA[<h2 id="感悟："><a href="#感悟：" class="headerlink" title="感悟："></a>感悟：</h2><ul>
-<li>一个正确的数学模型形式上通常是简单的。从这本书中，领会到了，google背后算法的力量，数学的力量，大数据的力量。</li>
-<li>正确的数学模型可以将一个计算量看似很大的问题的计算复杂度大大降低，这便是数学的妙用。</li>
-<li>数学是描述世间万般表象背后规律的最好工具，它是简单的，它是美的。<span id="more"></span></li>
-<li>计算机本身没有智能，只有极强的计算能力，只有找到解决这些问题的数学模型，才能让计算机在数据的驱动下，变得看起来智能。</li>
-<li>数据的重要性，大量准确的数据对研发很重要，让我们迫切需要学会收集数据，处理数据，善于运用数据，才能不被数据的海洋淹没。</li>
-<li>在计算机科学领域，一个好的算法应该像AK-47冲锋枪那样：简单、有效、可靠性好而且容易读懂（或者说易操作），而不应该是故弄玄虚。</li>
-<li>信息指纹：是指将一段信息（文字、图片、音频、视频等）随机地映射到一个多维二进制空间中的一个点（一个二进制数字）。只要这个随机函数做得好，那么不同信息对应的这些点就不会重合，因此，这些二进制的数字就成了原来的信息所具有的独一无二的指纹。</li>
-</ul>
-<h2 id="推荐阅读："><a href="#推荐阅读：" class="headerlink" title="推荐阅读："></a>推荐阅读：</h2><ol>
-<li><a href="https://book.douban.com/subject/10750155/" title="数学之美第一版">数学之美第一版</a></li>
-<li><a href="https://book.douban.com/subject/26163454/" title="数学之美第二版">数学之美第二版</a></li>
-<li>文本分类的经典论文，<a href="http://www.aclweb.org/anthology/P99-1022">http://www.aclweb.org/anthology/P99-1022</a></li>
-</ol>
-]]></content>
-      <categories>
-        <category>随笔感悟</category>
-      </categories>
-      <tags>
-        <tag>读后感</tag>
       </tags>
   </entry>
   <entry>
@@ -2020,23 +2070,46 @@
       </tags>
   </entry>
   <entry>
-    <title>【Latex经验】用Latex编译中文文档</title>
-    <url>/posts/59479fbc/</url>
-    <content><![CDATA[<p>我们知道用Latex编辑和编译英文文章十分高效和便捷，但是编译中文文档，经常会出现问题。那么常见的解决办法，如下：</p>
-<span id="more"></span>
-
-<p>加入包\usepackage[UTF8]{ctex}, 使用xelatex编译器。</p>
-<p>或者<br>修改\documentclass [UTF8]{ctexart}<br>\begin {document}</p>
-<p>及时做好文件备份，采用记事本复制粘贴文本，统一使用UTF8编码格式。</p>
-<h4 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h4><ol>
-<li><a href="https://blog.csdn.net/njc_sec/article/details/88630813">https://blog.csdn.net/njc_sec/article/details/88630813</a> LaTeX之TexStudio中文无法显示问题解决</li>
+    <title>数学之美第二版读后感</title>
+    <url>/posts/553248e1/</url>
+    <content><![CDATA[<h2 id="感悟："><a href="#感悟：" class="headerlink" title="感悟："></a>感悟：</h2><ul>
+<li>一个正确的数学模型形式上通常是简单的。从这本书中，领会到了，google背后算法的力量，数学的力量，大数据的力量。</li>
+<li>正确的数学模型可以将一个计算量看似很大的问题的计算复杂度大大降低，这便是数学的妙用。</li>
+<li>数学是描述世间万般表象背后规律的最好工具，它是简单的，它是美的。<span id="more"></span></li>
+<li>计算机本身没有智能，只有极强的计算能力，只有找到解决这些问题的数学模型，才能让计算机在数据的驱动下，变得看起来智能。</li>
+<li>数据的重要性，大量准确的数据对研发很重要，让我们迫切需要学会收集数据，处理数据，善于运用数据，才能不被数据的海洋淹没。</li>
+<li>在计算机科学领域，一个好的算法应该像AK-47冲锋枪那样：简单、有效、可靠性好而且容易读懂（或者说易操作），而不应该是故弄玄虚。</li>
+<li>信息指纹：是指将一段信息（文字、图片、音频、视频等）随机地映射到一个多维二进制空间中的一个点（一个二进制数字）。只要这个随机函数做得好，那么不同信息对应的这些点就不会重合，因此，这些二进制的数字就成了原来的信息所具有的独一无二的指纹。</li>
+</ul>
+<h2 id="推荐阅读："><a href="#推荐阅读：" class="headerlink" title="推荐阅读："></a>推荐阅读：</h2><ol>
+<li><a href="https://book.douban.com/subject/10750155/" title="数学之美第一版">数学之美第一版</a></li>
+<li><a href="https://book.douban.com/subject/26163454/" title="数学之美第二版">数学之美第二版</a></li>
+<li>文本分类的经典论文，<a href="http://www.aclweb.org/anthology/P99-1022">http://www.aclweb.org/anthology/P99-1022</a></li>
 </ol>
 ]]></content>
       <categories>
-        <category>经验技巧</category>
+        <category>随笔感悟</category>
       </categories>
       <tags>
-        <tag>Latex</tag>
+        <tag>读后感</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>旋转数组</title>
+    <url>/posts/fb62c7d3/</url>
+    <content><![CDATA[<h5 id="要求："><a href="#要求：" class="headerlink" title="要求："></a>要求：</h5><p>给定一个数组，将数组中的元素向右移动 k 个位置，其中 k 是非负数。</p>
+<span id="more"></span>
+<h5 id="示例："><a href="#示例：" class="headerlink" title="示例："></a>示例：</h5><p>（1）<br>输入: [1,2,3,4,5,6,7] 和 k &#x3D; 3<br>输出: [5,6,7,1,2,3,4]解释:<br>向右旋转 1 步: [7,1,2,3,4,5,6]<br>向右旋转 2 步: [6,7,1,2,3,4,5]<br>向右旋转 3 步: [5,6,7,1,2,3,4] <br><br>（2）<br>输入: [-1,-100,3,99] 和 k &#x3D; 2<br>输出: [3,99,-1,-100]<br>解释:<br>向右旋转 1 步: [99,-1,-100,3]<br>向右旋转 2 步: [3,99,-1,-100]</p>
+<h5 id="分析："><a href="#分析：" class="headerlink" title="分析："></a>分析：</h5><p>将前k个元素移动到数组的后半部分，将后(n-k)个元素移动到数组的前半部分。</p>
+<h5 id="代码："><a href="#代码：" class="headerlink" title="代码："></a>代码：</h5><figure class="highlight python"><table><tr><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">class</span> <span class="hljs-title class_">Solution</span>:<br>    <span class="hljs-keyword">def</span> <span class="hljs-title function_">rotate</span>(<span class="hljs-params">self, nums, k</span>):<br>        <span class="hljs-string">&quot;&quot;&quot;</span><br><span class="hljs-string">        :type nums: List[int]</span><br><span class="hljs-string">        :type k: int</span><br><span class="hljs-string">        :rtype: void Do not return anything, modify nums in-place instead.</span><br><span class="hljs-string">        &quot;&quot;&quot;</span><br>        n = <span class="hljs-built_in">len</span>(nums) - k  <br>        nums[:] = nums[n:] + nums[:n]<br></code></pre></td></tr></table></figure>
+<h5 id="拓展："><a href="#拓展：" class="headerlink" title="拓展："></a>拓展：</h5><p>1、这是一个直观的算法操作，以切片（分块）的方式操作数组，比较符合人的思维，但是要注重观察示例特征，否则容易陷入单个元素移动的怪圈。<br><br>2、nums[:] &#x3D; 和 nums &#x3D; 的区别：</p>
+<figure class="highlight python-repl"><table><tr><td class="code"><pre><code class="hljs python-repl"><span class="hljs-meta prompt_">&gt;&gt;&gt;</span> <span class="language-python">a = <span class="hljs-built_in">list</span>(<span class="hljs-built_in">range</span>(<span class="hljs-number">10</span>))</span><br><span class="hljs-meta prompt_">&gt;&gt;&gt;</span> <span class="language-python">b = a</span><br><span class="hljs-meta prompt_">&gt;&gt;&gt;</span> <span class="language-python">a[:] = [<span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>] <span class="hljs-comment"># changes what a and b both refer to</span></span><br><span class="hljs-meta prompt_">&gt;&gt;&gt;</span> <span class="language-python">b</span><br>[0, 0, 0]<br><br><span class="hljs-meta prompt_">&gt;&gt;&gt;</span> <span class="language-python">a = <span class="hljs-built_in">list</span>(<span class="hljs-built_in">range</span>(<span class="hljs-number">10</span>))</span><br><span class="hljs-meta prompt_">&gt;&gt;&gt;</span> <span class="language-python">b = a</span><br><span class="hljs-meta prompt_">&gt;&gt;&gt;</span> <span class="language-python">a = [<span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>] <span class="hljs-comment"># a now refers to a different list than b</span></span><br><span class="hljs-meta prompt_">&gt;&gt;&gt;</span> <span class="language-python">b</span><br>[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]<br></code></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>算法</category>
+      </categories>
+      <tags>
+        <tag>python</tag>
+        <tag>数组</tag>
       </tags>
   </entry>
   <entry>
@@ -2094,6 +2167,26 @@
       <tags>
         <tag>时空数据挖掘</tag>
         <tag>GNN</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>【Latex经验】用Latex编译中文文档</title>
+    <url>/posts/59479fbc/</url>
+    <content><![CDATA[<p>我们知道用Latex编辑和编译英文文章十分高效和便捷，但是编译中文文档，经常会出现问题。那么常见的解决办法，如下：</p>
+<span id="more"></span>
+
+<p>加入包\usepackage[UTF8]{ctex}, 使用xelatex编译器。</p>
+<p>或者<br>修改\documentclass [UTF8]{ctexart}<br>\begin {document}</p>
+<p>及时做好文件备份，采用记事本复制粘贴文本，统一使用UTF8编码格式。</p>
+<h4 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h4><ol>
+<li><a href="https://blog.csdn.net/njc_sec/article/details/88630813">https://blog.csdn.net/njc_sec/article/details/88630813</a> LaTeX之TexStudio中文无法显示问题解决</li>
+</ol>
+]]></content>
+      <categories>
+        <category>经验技巧</category>
+      </categories>
+      <tags>
+        <tag>Latex</tag>
       </tags>
   </entry>
 </search>
