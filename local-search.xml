@@ -4,6 +4,33 @@
   
   
   <entry>
+    <title>【寻找石头】-第3期-20231124</title>
+    <link href="/posts/8fbdec1/"/>
+    <url>/posts/8fbdec1/</url>
+    
+    <content type="html"><![CDATA[<p>记录过去一周值得记录的“石头”。</p><span id="more"></span><h2 id="科技"><a href="#科技" class="headerlink" title="科技"></a>科技</h2><ul><li>大模型创业者李博杰对AI Agent、多模态、记忆等的个人思考和经验分享 | <a href="https://zhuanlan.zhihu.com/p/662704254">Chat 向左，Agent 向右</a></li><li>AI Agent 面临的关键挑战 | <a href="https://01.me/2023/11/ai-agents-talk/">Chat 向左，Agent 向右——我对 AI Agent 的思考｜嘉程创业流水席 197 席精彩回顾</a></li><li>谷歌DeepMind团队提出全球天气预报模型GraphCast | <a href="https://mp.weixin.qq.com/s/qIIR5uCNG9NnopcGGpaK4Q">1分钟预测10天全球天气！谷歌DeepMind全新AI天气预报登上Science，碾压行业SOTA</a></li><li>大模型技术实践之心灵疗愈机器人 | <a href="https://www.zhihu.com/tardis/zm/art/654858266?source_id=1003">大模型技术实践（三）｜用LangChain和Llama 2打造心灵疗愈机器人</a></li><li>负责任的人工智能 | <a href="https://mp.weixin.qq.com/s/i8-2ScUwQHkpbfiHw9ViYg">让AI拥有人类的价值观，和让AI拥有人类智能同样重要</a></li><li>大模型是在玩角色扮演吗？ | <a href="https://mp.weixin.qq.com/s/3V43pgc7SNWpFAhiAnYEhQ">观点分享丨Nature：大模型只会搞角色扮演，并不真正具有自我意识</a></li><li>问了问几个大模型一个问题“如何评估大模型具备了自我意识，如果发现大模型具备了自我意识，人类应该怎么办?”，下图是它们给出的回答，挺有意思的。欢迎在留言区说一说，你怎么看？</li></ul><p><em>New Bing</em><br><img src="/../images/new_bing.png" alt="New Bing"></p><p><em>Pi</em><br><img src="/../images/Pi.png" alt="Pi"></p><p><em>ChatGPT</em><br><img src="/../images/ChatGPT.png" alt="ChatGPT"></p><p><em>Claude</em><br><img src="/../images/Claude.png" alt="Claude"></p><p><em>文心一言</em><br><img src="/../images/wxyy.png" alt="文心一言"></p><h2 id="文化"><a href="#文化" class="headerlink" title="文化"></a>文化</h2><ul><li>书籍推荐：《<a href="https://book.douban.com/subject/35097551/">人生由我</a>》</li></ul><h2 id="生活"><a href="#生活" class="headerlink" title="生活"></a>生活</h2><ul><li>网络社区的发展与消亡 | <a href="https://www.ruanyifeng.com/blog/2023/11/weekly-issue-279.html">科技爱好者周刊（第 279 期）：网络社区的悲剧</a><br><img src="/../images/sq.png" alt="网络社区的发展与消亡"></li></ul><h2 id="新知"><a href="#新知" class="headerlink" title="新知"></a>新知</h2><ul><li>从市场需求出发做产品，而不是从技术出发：理清需求，自上而下推导出来使用什么技术实现，而不是看看手里掌握的技术，琢磨琢磨能做出什么产品。</li><li>克服内耗的方法：<ol><li>培养积极的思维，和自己一直重复：“我能够解决问题的”、“我是能做好的”、“没关系，我会从错误中学习的”。</li><li>健康的生活方式，睡眠足够、吃得均衡、常做些体育运动，这些都能提高精神状态、降低负面情绪。</li><li>专注于自己，把握自己的掌控权。你不能控制他人或者环境，但是你可以控制自己的态度与反应。</li></ol></li></ul><hr><p>欢迎各位提出建议、问题，我们一起交流、学习、成长。</p><p>“问渠那得清如许？为有源头活水来” ヾ(◍°∇°◍)ﾉﾞ</p><p>——— 我在半亩方塘等你 ^_^</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>随笔感悟</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>寻找石头</tag>
+      
+      <tag>人生旅程</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>【节气养生】小雪</title>
     <link href="/posts/6a1bd1f4/"/>
     <url>/posts/6a1bd1f4/</url>
@@ -606,11 +633,11 @@
     
     <tags>
       
+      <tag>人工智能</tag>
+      
       <tag>数据挖掘</tag>
       
       <tag>论文投稿</tag>
-      
-      <tag>人工智能</tag>
       
     </tags>
     
@@ -712,11 +739,11 @@
     
     <tags>
       
-      <tag>机器学习</tag>
-      
       <tag>数据挖掘</tag>
       
       <tag>论文投稿</tag>
+      
+      <tag>机器学习</tag>
       
     </tags>
     
