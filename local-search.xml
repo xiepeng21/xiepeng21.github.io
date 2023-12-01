@@ -4,6 +4,33 @@
   
   
   <entry>
+    <title>【寻找石头】-第4期-20231201</title>
+    <link href="/posts/3592f0cd/"/>
+    <url>/posts/3592f0cd/</url>
+    
+    <content type="html"><![CDATA[<p>记录过去一周值得记录的“石头”。</p><span id="more"></span><h2 id="科技"><a href="#科技" class="headerlink" title="科技"></a>科技</h2><ul><li>ICLR 2024投稿论文，一种更轻量化的时间序列分析模型 <a href="https://arxiv.org/abs/2307.03756">FITS</a>，适合部署在计算资源受限的场景 </li><li>ICLR 2024的<a href="https://zhuanlan.zhihu.com/p/667435342">时间序列分析高分投稿论文</a></li><li><a href="https://medium.com/@bijit211987/power-of-vector-databases-for-gen-ai-applications-a63d4cf7e352">向量数据库</a>，一种新的数据表示和存储方案，适合于AI时代的数据库<br><img src="/../images/Vector_Database.png" alt="向量数据库"></li><li><a href="https://openai.com/">OpenAI</a>的组织结构图<br><img src="/../images/OpenAI.png" alt="OpenAI组织结构图"></li></ul><h2 id="文化"><a href="#文化" class="headerlink" title="文化"></a>文化</h2><ul><li>2023.11.29 美国政治家<a href="https://zh.wikipedia.org/wiki/%E4%BA%A8%E5%88%A9%C2%B7%E5%9F%BA%E8%BE%9B%E6%A0%BC">亨利·基辛格</a>逝世，享嵩寿100岁</li><li>2023.11.28 美国企业家<a href="https://zh.wikipedia.org/wiki/%E6%9F%A5%E7%90%86%C2%B7%E8%8A%92%E6%A0%BC">查理·芒格</a>逝世，享耆寿99岁</li><li>博客推荐 | <a href="https://darmau.design/">可可托海没有海-李大毛</a> 写作不只是记录，更是思考</li><li>博客集合站 | <a href="https://firewood.news/">积薪</a></li></ul><h2 id="生活"><a href="#生活" class="headerlink" title="生活"></a>生活</h2><ul><li>李博杰分享的备婚流程和细节，很全面，周到的记录分享 <a href="https://01.me/2023/09/wedding-story/">https://01.me/2023/09/wedding-story/</a></li><li>最近感冒的人越来越多，注意<a href="https://xiepeng21.cn/posts/6a1bd1f4/">御寒保暖</a>，保持好心情，正气存内，邪不可干<br><img src="/../images/cute.jpg" alt="偶遇可爱"><br><img src="/../images/zqcnxbkg.jpg" alt="正气存内，邪不可干"></li></ul><h2 id="新知"><a href="#新知" class="headerlink" title="新知"></a>新知</h2><ul><li>记笔记，是为了给未来的自己看的，提升自己的学习效率</li><li>写作不只是记录，更是为了更好地思考</li><li>越来越多的交叉学科出现，以及跨领域融合协作，那么有哪些学科领域呢？<ol><li>商业与经济学（Business and economics）</li><li>教育学（Education）</li><li>社会科学（Social sciences）</li><li>人文与艺术（Arts &amp; humanities）</li><li>计算机科学（Computer science）</li><li>临床与健康（Clinical and health）</li><li>工学（Engineering）</li><li>法学（Law）</li><li>生命科学（Life sciences）</li><li>理学（Physical sciences）</li><li>心理学（Psychology）</li></ol></li><li>人的一生，总要赶上50—60年的资本主义长周期（康德拉季耶夫周期，也叫康波周期），20年左右的房地产周期（库兹涅茨周期），10年的设备投资周期（朱格拉周期），4年的库存周期（基钦周期）</li></ul><hr><p>欢迎各位提出建议、问题，我们一起交流、学习、成长。</p><p>“问渠那得清如许？为有源头活水来” ヾ(◍°∇°◍)ﾉﾞ</p><p>——— 我在半亩方塘等你 ^_^</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>随笔感悟</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>寻找石头</tag>
+      
+      <tag>人生旅程</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>【寻找石头】-第3期-20231124</title>
     <link href="/posts/8fbdec1/"/>
     <url>/posts/8fbdec1/</url>
@@ -633,11 +660,11 @@
     
     <tags>
       
-      <tag>人工智能</tag>
-      
       <tag>数据挖掘</tag>
       
       <tag>论文投稿</tag>
+      
+      <tag>人工智能</tag>
       
     </tags>
     
@@ -739,11 +766,11 @@
     
     <tags>
       
+      <tag>机器学习</tag>
+      
       <tag>数据挖掘</tag>
       
       <tag>论文投稿</tag>
-      
-      <tag>机器学习</tag>
       
     </tags>
     
