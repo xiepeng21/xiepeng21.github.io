@@ -317,6 +317,44 @@
       </tags>
   </entry>
   <entry>
+    <title>Longest Substring Without Repeating Characters</title>
+    <url>/posts/8e8877f3/</url>
+    <content><![CDATA[<h5 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h5><p>Given a string, find the length of the longest substring without repeating characters.</p>
+<span id="more"></span>
+
+<h5 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h5><ul>
+<li>Example 1:</li>
+</ul>
+<p>Input: “abcabcbb”<br>Output: 3<br>Explanation: The answer is “abc”, with the length of 3. </p>
+<ul>
+<li>Example 2:</li>
+</ul>
+<p>Input: “bbbbb”<br>Output: 1<br>Explanation: The answer is “b”, with the length of 1.</p>
+<ul>
+<li>Example 3:</li>
+</ul>
+<p>Input: “pwwkew”<br>Output: 3<br>Explanation: The answer is “wke”, with the length of 3.<br>             Note that the answer must be a substring, “pwke” is a subsequence and not a substring. </p>
+<h5 id="算法思路"><a href="#算法思路" class="headerlink" title="算法思路"></a>算法思路</h5><p>该问题可以简化成查找一个字符串中最长的不重复字符子串，返回子串的长度。第一种方法用到了枚举和字典，感觉有点绕，我没有理解清楚；第二种方法采用了字符串的split方法，很巧妙，不过比较难想到。两种方法相比，第二种方法运行时间更短（84ms &lt; 88ms）,推荐使用第二种方法，感兴趣的朋友可以研究下第一种方法。</p>
+<p>方法一：</p>
+<figure class="highlight vim"><table><tr><td class="code"><pre><code class="hljs vim">class Solution(object):<br>    def lengthOfLongestSubstring(self, s):<br>        dic, <span class="hljs-keyword">res</span>, start, = &#123;&#125;, <span class="hljs-number">0</span>, <span class="hljs-number">0</span><br>        <span class="hljs-keyword">for</span> i, ch in enumerate(s):<br>            # when char already in dictionary<br>            <span class="hljs-keyword">if</span> ch in dic:<br>                # check length from start of <span class="hljs-built_in">string</span> <span class="hljs-keyword">to</span> <span class="hljs-built_in">index</span><br>                <span class="hljs-keyword">res</span> = <span class="hljs-built_in">max</span>(<span class="hljs-keyword">res</span>, i-start)<br>                # <span class="hljs-keyword">update</span> start of <span class="hljs-built_in">string</span> <span class="hljs-built_in">index</span> <span class="hljs-keyword">to</span> the <span class="hljs-keyword">next</span> <span class="hljs-built_in">index</span><br>                start = <span class="hljs-built_in">max</span>(start, dic[ch]+<span class="hljs-number">1</span>)<br>            # <span class="hljs-built_in">add</span>/<span class="hljs-keyword">update</span> char <span class="hljs-keyword">to</span>/of dictionary <br>            dic[ch] = i<br>        # answer <span class="hljs-keyword">is</span> either in the begining/middle OR some mid <span class="hljs-keyword">to</span> the end of <span class="hljs-built_in">string</span><br>        <span class="hljs-keyword">return</span> <span class="hljs-built_in">max</span>(<span class="hljs-keyword">res</span>, <span class="hljs-built_in">len</span>(s)-start)<br></code></pre></td></tr></table></figure>
+
+<p>方法二：</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">class</span> <span class="hljs-title class_">Solution</span>:<br>    <span class="hljs-keyword">def</span> <span class="hljs-title function_">lengthOfLongestSubstring</span>(<span class="hljs-params">self, s</span>):<br>        <span class="hljs-string">&quot;&quot;&quot;</span><br><span class="hljs-string">        :type s: str</span><br><span class="hljs-string">        :rtype: int</span><br><span class="hljs-string">        &quot;&quot;&quot;</span><br>        maxnum,num,ss =<span class="hljs-number">0</span>,<span class="hljs-number">0</span>,<span class="hljs-string">&#x27;&#x27;</span><br>        <span class="hljs-keyword">for</span> each <span class="hljs-keyword">in</span> s:<br>            <span class="hljs-keyword">if</span> each <span class="hljs-keyword">in</span> ss:<br>                ss = ss.split(each)[-<span class="hljs-number">1</span>]+each <span class="hljs-comment"># ‘’+each</span><br>                num =<span class="hljs-built_in">len</span>(ss)<br>            <span class="hljs-keyword">else</span>:<br>                num += <span class="hljs-number">1</span><br>                ss += each<br>                <span class="hljs-keyword">if</span> num&gt;=maxnum:<br>                    maxnum = num<br>        <span class="hljs-keyword">return</span> maxnum<br></code></pre></td></tr></table></figure>
+
+<h5 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h5><ol>
+<li><a href="https://www.w3schools.com/python/ref_string_split.asp">https://www.w3schools.com/python/ref_string_split.asp</a> Python String split() Method</li>
+<li><a href="https://leetcode.com/problems/longest-substring-without-repeating-characters/">https://leetcode.com/problems/longest-substring-without-repeating-characters/</a> longest-substring-without-repeating-characters</li>
+</ol>
+]]></content>
+      <categories>
+        <category>算法</category>
+      </categories>
+      <tags>
+        <tag>算法</tag>
+        <tag>python</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>OneDrive 登录时一直转圈圈</title>
     <url>/posts/7340ecaf/</url>
     <content><![CDATA[<p>今天早上突然遇到OneDrive登录时，一直转圈圈，登录不了，采取了几种方法，查询了一些网上资料，现总结如下。</p>
@@ -352,44 +390,6 @@
 <li><a href="https://www.tutorialspoint.com/python/python_dictionary.htm">https://www.tutorialspoint.com/python/python_dictionary.htm</a> Python - Dictionary</li>
 <li><a href="https://www.geeksforgeeks.org/enumerate-in-python/">https://www.geeksforgeeks.org/enumerate-in-python/</a> Enumerate() in Python</li>
 <li><a href="https://leetcode.com/problems/two-sum/">https://leetcode.com/problems/two-sum/</a> two-sum</li>
-</ol>
-]]></content>
-      <categories>
-        <category>算法</category>
-      </categories>
-      <tags>
-        <tag>算法</tag>
-        <tag>python</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Longest Substring Without Repeating Characters</title>
-    <url>/posts/8e8877f3/</url>
-    <content><![CDATA[<h5 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h5><p>Given a string, find the length of the longest substring without repeating characters.</p>
-<span id="more"></span>
-
-<h5 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h5><ul>
-<li>Example 1:</li>
-</ul>
-<p>Input: “abcabcbb”<br>Output: 3<br>Explanation: The answer is “abc”, with the length of 3. </p>
-<ul>
-<li>Example 2:</li>
-</ul>
-<p>Input: “bbbbb”<br>Output: 1<br>Explanation: The answer is “b”, with the length of 1.</p>
-<ul>
-<li>Example 3:</li>
-</ul>
-<p>Input: “pwwkew”<br>Output: 3<br>Explanation: The answer is “wke”, with the length of 3.<br>             Note that the answer must be a substring, “pwke” is a subsequence and not a substring. </p>
-<h5 id="算法思路"><a href="#算法思路" class="headerlink" title="算法思路"></a>算法思路</h5><p>该问题可以简化成查找一个字符串中最长的不重复字符子串，返回子串的长度。第一种方法用到了枚举和字典，感觉有点绕，我没有理解清楚；第二种方法采用了字符串的split方法，很巧妙，不过比较难想到。两种方法相比，第二种方法运行时间更短（84ms &lt; 88ms）,推荐使用第二种方法，感兴趣的朋友可以研究下第一种方法。</p>
-<p>方法一：</p>
-<figure class="highlight vim"><table><tr><td class="code"><pre><code class="hljs vim">class Solution(object):<br>    def lengthOfLongestSubstring(self, s):<br>        dic, <span class="hljs-keyword">res</span>, start, = &#123;&#125;, <span class="hljs-number">0</span>, <span class="hljs-number">0</span><br>        <span class="hljs-keyword">for</span> i, ch in enumerate(s):<br>            # when char already in dictionary<br>            <span class="hljs-keyword">if</span> ch in dic:<br>                # check length from start of <span class="hljs-built_in">string</span> <span class="hljs-keyword">to</span> <span class="hljs-built_in">index</span><br>                <span class="hljs-keyword">res</span> = <span class="hljs-built_in">max</span>(<span class="hljs-keyword">res</span>, i-start)<br>                # <span class="hljs-keyword">update</span> start of <span class="hljs-built_in">string</span> <span class="hljs-built_in">index</span> <span class="hljs-keyword">to</span> the <span class="hljs-keyword">next</span> <span class="hljs-built_in">index</span><br>                start = <span class="hljs-built_in">max</span>(start, dic[ch]+<span class="hljs-number">1</span>)<br>            # <span class="hljs-built_in">add</span>/<span class="hljs-keyword">update</span> char <span class="hljs-keyword">to</span>/of dictionary <br>            dic[ch] = i<br>        # answer <span class="hljs-keyword">is</span> either in the begining/middle OR some mid <span class="hljs-keyword">to</span> the end of <span class="hljs-built_in">string</span><br>        <span class="hljs-keyword">return</span> <span class="hljs-built_in">max</span>(<span class="hljs-keyword">res</span>, <span class="hljs-built_in">len</span>(s)-start)<br></code></pre></td></tr></table></figure>
-
-<p>方法二：</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">class</span> <span class="hljs-title class_">Solution</span>:<br>    <span class="hljs-keyword">def</span> <span class="hljs-title function_">lengthOfLongestSubstring</span>(<span class="hljs-params">self, s</span>):<br>        <span class="hljs-string">&quot;&quot;&quot;</span><br><span class="hljs-string">        :type s: str</span><br><span class="hljs-string">        :rtype: int</span><br><span class="hljs-string">        &quot;&quot;&quot;</span><br>        maxnum,num,ss =<span class="hljs-number">0</span>,<span class="hljs-number">0</span>,<span class="hljs-string">&#x27;&#x27;</span><br>        <span class="hljs-keyword">for</span> each <span class="hljs-keyword">in</span> s:<br>            <span class="hljs-keyword">if</span> each <span class="hljs-keyword">in</span> ss:<br>                ss = ss.split(each)[-<span class="hljs-number">1</span>]+each <span class="hljs-comment"># ‘’+each</span><br>                num =<span class="hljs-built_in">len</span>(ss)<br>            <span class="hljs-keyword">else</span>:<br>                num += <span class="hljs-number">1</span><br>                ss += each<br>                <span class="hljs-keyword">if</span> num&gt;=maxnum:<br>                    maxnum = num<br>        <span class="hljs-keyword">return</span> maxnum<br></code></pre></td></tr></table></figure>
-
-<h5 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h5><ol>
-<li><a href="https://www.w3schools.com/python/ref_string_split.asp">https://www.w3schools.com/python/ref_string_split.asp</a> Python String split() Method</li>
-<li><a href="https://leetcode.com/problems/longest-substring-without-repeating-characters/">https://leetcode.com/problems/longest-substring-without-repeating-characters/</a> longest-substring-without-repeating-characters</li>
 </ol>
 ]]></content>
       <categories>
@@ -847,43 +847,6 @@
       </tags>
   </entry>
   <entry>
-    <title>【书山有路-3】少有人走的路:心智成熟的旅程</title>
-    <url>/posts/70e570a9/</url>
-    <content><![CDATA[<p>我们一起来读《少有人走的路:心智成熟的旅程》这本书吧。作者是美国的M.斯科特·派克，由中华工商联合出版社出版。</p>
-<span id="more"></span>
-
-<p><img src="/../images/syyzdl1.jpg" alt="少有人走的路:心智成熟的旅程"></p>
-<p>这本书与《少有人走的路2：勇敢地面对谎言》、《少有人走的路3：与心灵对话》、《少有人走的路4：在焦虑的年代获得精神的成长》、《少有人走的路5：不一样的鼓声》、《少有人走的路6：真诚是生命的药》、《少有人走的路7：靠窗的床》与《少有人走的路8：寻找石头》共同形成了《少有人走的路》系列。</p>
-<p>作者M.斯科特·派克（M.Scott Peck），毕业于哈佛大学，获得硕士和博士学位。他长期从事心理治疗实践，取得了卓著成绩，被誉为“我们这个时代杰出的心理医生”。由于其巨大的影响力，他获得美国政府特许，进入政府心理治疗特殊小组，为越战士兵提供治疗。他还曾接受派遣，在美军驻日本冲绳基地担任心理医生。这些特殊的职业经历，成就了他伟大的著作《少有人走的路》系列，该书在《纽约时报》畅销书排行榜连续上榜近20年，被西方媒体誉为“来自上帝之手”的时代杰作，创造了出版史上的一大奇迹！</p>
-<p>《少有人走的路:心智成熟的旅程》这本书，处处透露出沟通与理解的意味，它跨越时代限制，帮助我们探索爱的本质，引导我们过上崭新、宁静而丰富的生活；它帮助我们学习爱，也学习独立；它教诲我们成为更称职的、更有理解心的父母。归根到底，它告诉我们怎样找到真正的自我。</p>
-<p>正如本书开篇所言：人生苦难重重。M.斯科特·派克让我们更加清楚：人生是一场艰辛之旅，心智成熟的旅程相当漫长。但是，它没有让我们感到恐惧，相反，它带领我们去经历一系列艰难乃至痛苦的转变，最终达到自我认知的更高境界。</p>
-<h1 id="自律"><a href="#自律" class="headerlink" title="自律"></a>自律</h1><p>为解决问题而努力，我们的思想和心灵就会不断成长，心智就会不断成熟。</p>
-<p>回避问题和逃避痛苦的倾向，是人类心理疾病的根源。</p>
-<p>所谓自律，就是主动要求自己以积极的态度去承受痛苦，解决问题。</p>
-<h1 id="爱"><a href="#爱" class="headerlink" title="爱"></a>爱</h1><p>爱，是为了促进自己和他人心智成熟，而不断扩展自我界限，实现自我完善的一种意愿。</p>
-<p>爱是人们自律的原动力。</p>
-<p>爱是一个长期、渐进的过程。</p>
-<h1 id="成长与信仰"><a href="#成长与信仰" class="headerlink" title="成长与信仰"></a>成长与信仰</h1><p>人人都有自己的信仰，对人生的认识和了解就属于信仰的范畴。</p>
-<p>事实上，对于世界的规律和本质，每个人都有特定的看法与信念，只是未必说出来而已。</p>
-<p>患者的心理问题，常常与世界观有着密切关联，因此，对于他们的治疗，就涉及对其世界观的纠正和调整。</p>
-<h1 id="恩典"><a href="#恩典" class="headerlink" title="恩典"></a>恩典</h1><p>通过心理分析，我们可以了解患者的神经官能症产生于什么时间，什么地点，因什么原因而产生，通过什么方式而发展，怎样治疗才可使患者痊愈。</p>
-<p>众所周知，潜意识引导着身体的运动。</p>
-<p>我们迷失方向的时候，梦会成为前进的向导；我们犹豫不决时，梦会给我们正确的指引。</p>
-<h1 id="后记"><a href="#后记" class="headerlink" title="后记"></a>后记</h1><p>心理治疗是一项不小的投资，不仅需要花钱，还要投入时间和精力。</p>
-<p>口碑通常是寻找一流心理医生的有效途径。</p>
-<p>所谓预言家，并不是那种能够看清未来的人，而是能够阅读当代各种信号和特征的人。</p>
-]]></content>
-      <categories>
-        <category>随笔感悟</category>
-      </categories>
-      <tags>
-        <tag>书山有路</tag>
-        <tag>读书笔记</tag>
-        <tag>少有人走的路</tag>
-        <tag>心智成熟的旅程</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>【书山有路-4】少有人走的路2:勇敢地面对谎言</title>
     <url>/posts/117e144d/</url>
     <content><![CDATA[<p>我们一起来读《少有人走的路2:勇敢地面对谎言》这本书吧。这本书是《少有人走的路》系列的第2本，讲的主要内容是勇敢地面对谎言。</p>
@@ -1029,6 +992,43 @@
       </tags>
   </entry>
   <entry>
+    <title>【书山有路-3】少有人走的路:心智成熟的旅程</title>
+    <url>/posts/70e570a9/</url>
+    <content><![CDATA[<p>我们一起来读《少有人走的路:心智成熟的旅程》这本书吧。作者是美国的M.斯科特·派克，由中华工商联合出版社出版。</p>
+<span id="more"></span>
+
+<p><img src="/../images/syyzdl1.jpg" alt="少有人走的路:心智成熟的旅程"></p>
+<p>这本书与《少有人走的路2：勇敢地面对谎言》、《少有人走的路3：与心灵对话》、《少有人走的路4：在焦虑的年代获得精神的成长》、《少有人走的路5：不一样的鼓声》、《少有人走的路6：真诚是生命的药》、《少有人走的路7：靠窗的床》与《少有人走的路8：寻找石头》共同形成了《少有人走的路》系列。</p>
+<p>作者M.斯科特·派克（M.Scott Peck），毕业于哈佛大学，获得硕士和博士学位。他长期从事心理治疗实践，取得了卓著成绩，被誉为“我们这个时代杰出的心理医生”。由于其巨大的影响力，他获得美国政府特许，进入政府心理治疗特殊小组，为越战士兵提供治疗。他还曾接受派遣，在美军驻日本冲绳基地担任心理医生。这些特殊的职业经历，成就了他伟大的著作《少有人走的路》系列，该书在《纽约时报》畅销书排行榜连续上榜近20年，被西方媒体誉为“来自上帝之手”的时代杰作，创造了出版史上的一大奇迹！</p>
+<p>《少有人走的路:心智成熟的旅程》这本书，处处透露出沟通与理解的意味，它跨越时代限制，帮助我们探索爱的本质，引导我们过上崭新、宁静而丰富的生活；它帮助我们学习爱，也学习独立；它教诲我们成为更称职的、更有理解心的父母。归根到底，它告诉我们怎样找到真正的自我。</p>
+<p>正如本书开篇所言：人生苦难重重。M.斯科特·派克让我们更加清楚：人生是一场艰辛之旅，心智成熟的旅程相当漫长。但是，它没有让我们感到恐惧，相反，它带领我们去经历一系列艰难乃至痛苦的转变，最终达到自我认知的更高境界。</p>
+<h1 id="自律"><a href="#自律" class="headerlink" title="自律"></a>自律</h1><p>为解决问题而努力，我们的思想和心灵就会不断成长，心智就会不断成熟。</p>
+<p>回避问题和逃避痛苦的倾向，是人类心理疾病的根源。</p>
+<p>所谓自律，就是主动要求自己以积极的态度去承受痛苦，解决问题。</p>
+<h1 id="爱"><a href="#爱" class="headerlink" title="爱"></a>爱</h1><p>爱，是为了促进自己和他人心智成熟，而不断扩展自我界限，实现自我完善的一种意愿。</p>
+<p>爱是人们自律的原动力。</p>
+<p>爱是一个长期、渐进的过程。</p>
+<h1 id="成长与信仰"><a href="#成长与信仰" class="headerlink" title="成长与信仰"></a>成长与信仰</h1><p>人人都有自己的信仰，对人生的认识和了解就属于信仰的范畴。</p>
+<p>事实上，对于世界的规律和本质，每个人都有特定的看法与信念，只是未必说出来而已。</p>
+<p>患者的心理问题，常常与世界观有着密切关联，因此，对于他们的治疗，就涉及对其世界观的纠正和调整。</p>
+<h1 id="恩典"><a href="#恩典" class="headerlink" title="恩典"></a>恩典</h1><p>通过心理分析，我们可以了解患者的神经官能症产生于什么时间，什么地点，因什么原因而产生，通过什么方式而发展，怎样治疗才可使患者痊愈。</p>
+<p>众所周知，潜意识引导着身体的运动。</p>
+<p>我们迷失方向的时候，梦会成为前进的向导；我们犹豫不决时，梦会给我们正确的指引。</p>
+<h1 id="后记"><a href="#后记" class="headerlink" title="后记"></a>后记</h1><p>心理治疗是一项不小的投资，不仅需要花钱，还要投入时间和精力。</p>
+<p>口碑通常是寻找一流心理医生的有效途径。</p>
+<p>所谓预言家，并不是那种能够看清未来的人，而是能够阅读当代各种信号和特征的人。</p>
+]]></content>
+      <categories>
+        <category>随笔感悟</category>
+      </categories>
+      <tags>
+        <tag>书山有路</tag>
+        <tag>读书笔记</tag>
+        <tag>少有人走的路</tag>
+        <tag>心智成熟的旅程</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>【书山有路-6】少有人走的路4：在焦虑的年代获得精神的成长</title>
     <url>/posts/2cb15dfa/</url>
     <content><![CDATA[<p>我们一起来读《少有人走的路4:在焦虑的年代获得精神的成长》这本书吧。这本书是《少有人走的路》系列的第4本，讲的主要内容是如何在焦虑的年代获得精神的成长。</p>
@@ -1086,6 +1086,46 @@
         <tag>少有人走的路</tag>
         <tag>焦虑</tag>
         <tag>精神成长</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>【寻找石头】-第1期-20231113</title>
+    <url>/posts/60a517c0/</url>
+    <content><![CDATA[<p>记录过去一周值得记录的“石头”。</p>
+<span id="more"></span>
+
+<p><img src="/../images/Stonehenge.jpg" alt="寻找石头"></p>
+<p>每天我们都会刷着看不完的信息，回复着接踵而至的消息，注意力时而停留，手指时而点击。或许今天已经忘了上周的今天在做些什么，在这个容易遗忘的时代，我想我们也需要记录些什么。我们就像航行在汪洋大海的一艘小船，每天既可以看到天空的云卷云舒，也可以看到大海的波涛汹涌，还可以看到水下的神秘多姿。当我们的小船靠岸，岸边的沙粒，路边的石子，家里的人们迎接着我们归来。我期望，在航海归途、在漫漫旅途，寻找到一颗颗“石头”，与你一同分享值得记住的那些人、事、物，也期待你与我分享你所看到的那些人、事、物，让生活丰富多彩、新鲜有趣、意义非凡。——《寻找石头系列》开篇语</p>
+<h2 id="科技"><a href="#科技" class="headerlink" title="科技"></a>科技</h2><ul>
+<li>告诉机器人，我渴了🤣 | 北大具身智能团队在NeurIPS 2023的<a href="https://arxiv.org/pdf/2309.08138.pdf">Find What You Want</a>论文中提出需求驱动导航：对齐人类需求，让机器人更懂你</li>
+<li><a href="https://arxiv.org/abs/2309.16354">Transformer-VQ</a>，线性复杂度Transformer | <a href="https://kexue.fm/archives/9844">VQ一下Key，Transformer的复杂度就变成线性了</a></li>
+<li>城市出行流量分析 | 清华数据科学与智能实验室团队以跨学科视角<a href="https://mp.weixin.qq.com/s/SfTLaS2V4GCUaY_DgqCO1g">综述城市出行流量分析的理论和技术</a> </li>
+<li>时序大模型 <ul>
+<li>One Fits All | <a href="https://www.researchgate.net/profile/Tian-Zhou-18/publication/368753168_One_Fits_AllPower_General_Time_Series_Analysis_by_Pretrained_LM/links/647d80e3b3dfd73b77662460/One-Fits-AllPower-General-Time-Series-Analysis-by-Pretrained-LM.pdf">One Fits All: Power General Time Series Analysis by Pretrained LM</a> </li>
+<li>TimeGPT | <a href="https://arxiv.org/pdf/2310.03589.pdf">TimeGPT-1</a> </li>
+<li>Lag-Llama | <a href="https://arxiv.org/pdf/2310.08278.pdf">Lag-Llama: Towards Foundation Models for Time Series Forecasting</a> </li>
+<li>TIME-LLM | <a href="https://arxiv.org/pdf/2310.01728.pdf">TIME-LLM: TIME SERIES FORECASTING BY REPROGRAMMING LARGE LANGUAGE MODELS</a></li>
+</ul>
+</li>
+<li>11月6日 成都科创生态岛1号馆正式运行 | <a href="https://mp.weixin.qq.com/s/DRYxPIzmyuGEgLFN9g6bGw">登岛！探秘！</a></li>
+</ul>
+<h2 id="文化"><a href="#文化" class="headerlink" title="文化"></a>文化</h2><ul>
+<li>周轶君：中国战地记者，纪录片导演，制片人 | 纪录片：《<a href="https://movie.douban.com/subject/34807388/">他乡的童年</a>》；书籍：《<a href="https://book.douban.com/subject/27097062/">走出中东</a>》</li>
+<li>静观、沉思才能让我们不与生命疏远，走向更高层次的幸福与善，而不被盲目的行动激情绑架 |<a href="https://mp.weixin.qq.com/s/nJUvHleOZAn0hSkuSzDurA">为无所事事辩护</a></li>
+</ul>
+<h2 id="生活"><a href="#生活" class="headerlink" title="生活"></a>生活</h2><ul>
+<li>ROCK STAR, 一起歌唱、一起欢呼、一起年轻，you rock | <a href="https://zh.wikipedia.org/wiki/%E4%BC%8D%E4%BD%B0">伍佰</a> &amp; China Blue ROCK STAR 2023 巡回演唱会-成都站</li>
+</ul>
+<h2 id="新知"><a href="#新知" class="headerlink" title="新知"></a>新知</h2><ul>
+<li>如何构建你的系统，也许先构建一个简单系统用起来？| 加尔定律：一个有效的复杂系统总是由一个有效的简单系统演化而来。只有傻瓜和现代技术官僚才会尝试从头开始创建复杂的系统</li>
+</ul>
+]]></content>
+      <categories>
+        <category>随笔感悟</category>
+      </categories>
+      <tags>
+        <tag>寻找石头</tag>
+        <tag>人生旅程</tag>
       </tags>
   </entry>
   <entry>
@@ -1151,46 +1191,6 @@
       </tags>
   </entry>
   <entry>
-    <title>【寻找石头】-第1期-20231113</title>
-    <url>/posts/60a517c0/</url>
-    <content><![CDATA[<p>记录过去一周值得记录的“石头”。</p>
-<span id="more"></span>
-
-<p><img src="/../images/Stonehenge.jpg" alt="寻找石头"></p>
-<p>每天我们都会刷着看不完的信息，回复着接踵而至的消息，注意力时而停留，手指时而点击。或许今天已经忘了上周的今天在做些什么，在这个容易遗忘的时代，我想我们也需要记录些什么。我们就像航行在汪洋大海的一艘小船，每天既可以看到天空的云卷云舒，也可以看到大海的波涛汹涌，还可以看到水下的神秘多姿。当我们的小船靠岸，岸边的沙粒，路边的石子，家里的人们迎接着我们归来。我期望，在航海归途、在漫漫旅途，寻找到一颗颗“石头”，与你一同分享值得记住的那些人、事、物，也期待你与我分享你所看到的那些人、事、物，让生活丰富多彩、新鲜有趣、意义非凡。——《寻找石头系列》开篇语</p>
-<h2 id="科技"><a href="#科技" class="headerlink" title="科技"></a>科技</h2><ul>
-<li>告诉机器人，我渴了🤣 | 北大具身智能团队在NeurIPS 2023的<a href="https://arxiv.org/pdf/2309.08138.pdf">Find What You Want</a>论文中提出需求驱动导航：对齐人类需求，让机器人更懂你</li>
-<li><a href="https://arxiv.org/abs/2309.16354">Transformer-VQ</a>，线性复杂度Transformer | <a href="https://kexue.fm/archives/9844">VQ一下Key，Transformer的复杂度就变成线性了</a></li>
-<li>城市出行流量分析 | 清华数据科学与智能实验室团队以跨学科视角<a href="https://mp.weixin.qq.com/s/SfTLaS2V4GCUaY_DgqCO1g">综述城市出行流量分析的理论和技术</a> </li>
-<li>时序大模型 <ul>
-<li>One Fits All | <a href="https://www.researchgate.net/profile/Tian-Zhou-18/publication/368753168_One_Fits_AllPower_General_Time_Series_Analysis_by_Pretrained_LM/links/647d80e3b3dfd73b77662460/One-Fits-AllPower-General-Time-Series-Analysis-by-Pretrained-LM.pdf">One Fits All: Power General Time Series Analysis by Pretrained LM</a> </li>
-<li>TimeGPT | <a href="https://arxiv.org/pdf/2310.03589.pdf">TimeGPT-1</a> </li>
-<li>Lag-Llama | <a href="https://arxiv.org/pdf/2310.08278.pdf">Lag-Llama: Towards Foundation Models for Time Series Forecasting</a> </li>
-<li>TIME-LLM | <a href="https://arxiv.org/pdf/2310.01728.pdf">TIME-LLM: TIME SERIES FORECASTING BY REPROGRAMMING LARGE LANGUAGE MODELS</a></li>
-</ul>
-</li>
-<li>11月6日 成都科创生态岛1号馆正式运行 | <a href="https://mp.weixin.qq.com/s/DRYxPIzmyuGEgLFN9g6bGw">登岛！探秘！</a></li>
-</ul>
-<h2 id="文化"><a href="#文化" class="headerlink" title="文化"></a>文化</h2><ul>
-<li>周轶君：中国战地记者，纪录片导演，制片人 | 纪录片：《<a href="https://movie.douban.com/subject/34807388/">他乡的童年</a>》；书籍：《<a href="https://book.douban.com/subject/27097062/">走出中东</a>》</li>
-<li>静观、沉思才能让我们不与生命疏远，走向更高层次的幸福与善，而不被盲目的行动激情绑架 |<a href="https://mp.weixin.qq.com/s/nJUvHleOZAn0hSkuSzDurA">为无所事事辩护</a></li>
-</ul>
-<h2 id="生活"><a href="#生活" class="headerlink" title="生活"></a>生活</h2><ul>
-<li>ROCK STAR, 一起歌唱、一起欢呼、一起年轻，you rock | <a href="https://zh.wikipedia.org/wiki/%E4%BC%8D%E4%BD%B0">伍佰</a> &amp; China Blue ROCK STAR 2023 巡回演唱会-成都站</li>
-</ul>
-<h2 id="新知"><a href="#新知" class="headerlink" title="新知"></a>新知</h2><ul>
-<li>如何构建你的系统，也许先构建一个简单系统用起来？| 加尔定律：一个有效的复杂系统总是由一个有效的简单系统演化而来。只有傻瓜和现代技术官僚才会尝试从头开始创建复杂的系统</li>
-</ul>
-]]></content>
-      <categories>
-        <category>随笔感悟</category>
-      </categories>
-      <tags>
-        <tag>寻找石头</tag>
-        <tag>人生旅程</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>【寻找石头】-第2期-20231117</title>
     <url>/posts/28c5f201/</url>
     <content><![CDATA[<p>记录过去一周值得记录的“石头”。</p>
@@ -1235,54 +1235,6 @@
 <h2 id="新知"><a href="#新知" class="headerlink" title="新知"></a>新知</h2><ul>
 <li>最珍贵的不是你如今有多好，只是努力让每天的你都更好。——《天府发布》微信公众号</li>
 </ul>
-]]></content>
-      <categories>
-        <category>随笔感悟</category>
-      </categories>
-      <tags>
-        <tag>寻找石头</tag>
-        <tag>人生旅程</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>【寻找石头】-第3期-20231124</title>
-    <url>/posts/8fbdec1/</url>
-    <content><![CDATA[<p>记录过去一周值得记录的“石头”。</p>
-<span id="more"></span>
-
-<h2 id="科技"><a href="#科技" class="headerlink" title="科技"></a>科技</h2><ul>
-<li>大模型创业者李博杰对AI Agent、多模态、记忆等的个人思考和经验分享 | <a href="https://zhuanlan.zhihu.com/p/662704254">Chat 向左，Agent 向右</a></li>
-<li>AI Agent 面临的关键挑战 | <a href="https://01.me/2023/11/ai-agents-talk/">Chat 向左，Agent 向右——我对 AI Agent 的思考｜嘉程创业流水席 197 席精彩回顾</a></li>
-<li>谷歌DeepMind团队提出全球天气预报模型GraphCast | <a href="https://mp.weixin.qq.com/s/qIIR5uCNG9NnopcGGpaK4Q">1分钟预测10天全球天气！谷歌DeepMind全新AI天气预报登上Science，碾压行业SOTA</a></li>
-<li>大模型技术实践之心灵疗愈机器人 | <a href="https://www.zhihu.com/tardis/zm/art/654858266?source_id=1003">大模型技术实践（三）｜用LangChain和Llama 2打造心灵疗愈机器人</a></li>
-<li>负责任的人工智能 | <a href="https://mp.weixin.qq.com/s/i8-2ScUwQHkpbfiHw9ViYg">让AI拥有人类的价值观，和让AI拥有人类智能同样重要</a></li>
-<li>大模型是在玩角色扮演吗？ | <a href="https://mp.weixin.qq.com/s/3V43pgc7SNWpFAhiAnYEhQ">观点分享丨Nature：大模型只会搞角色扮演，并不真正具有自我意识</a></li>
-<li>问了问几个大模型一个问题“如何评估大模型具备了自我意识，如果发现大模型具备了自我意识，人类应该怎么办?”，下图是它们给出的回答，挺有意思的。欢迎在留言区说一说，你怎么看？</li>
-</ul>
-<p><em>New Bing</em><br><img src="/../images/new_bing.png" alt="New Bing"></p>
-<p><em>Pi</em><br><img src="/../images/Pi.png" alt="Pi"></p>
-<p><em>ChatGPT</em><br><img src="/../images/ChatGPT.png" alt="ChatGPT"></p>
-<p><em>Claude</em><br><img src="/../images/Claude.png" alt="Claude"></p>
-<p><em>文心一言</em><br><img src="/../images/wxyy.png" alt="文心一言"></p>
-<h2 id="文化"><a href="#文化" class="headerlink" title="文化"></a>文化</h2><ul>
-<li>书籍推荐：《<a href="https://book.douban.com/subject/35097551/">人生由我</a>》</li>
-</ul>
-<h2 id="生活"><a href="#生活" class="headerlink" title="生活"></a>生活</h2><ul>
-<li>网络社区的发展与消亡 | <a href="https://www.ruanyifeng.com/blog/2023/11/weekly-issue-279.html">科技爱好者周刊（第 279 期）：网络社区的悲剧</a><br><img src="/../images/sq.png" alt="网络社区的发展与消亡"></li>
-</ul>
-<h2 id="新知"><a href="#新知" class="headerlink" title="新知"></a>新知</h2><ul>
-<li>从市场需求出发做产品，而不是从技术出发：理清需求，自上而下推导出来使用什么技术实现，而不是看看手里掌握的技术，琢磨琢磨能做出什么产品。</li>
-<li>克服内耗的方法：<ol>
-<li>培养积极的思维，和自己一直重复：“我能够解决问题的”、“我是能做好的”、“没关系，我会从错误中学习的”。</li>
-<li>健康的生活方式，睡眠足够、吃得均衡、常做些体育运动，这些都能提高精神状态、降低负面情绪。</li>
-<li>专注于自己，把握自己的掌控权。你不能控制他人或者环境，但是你可以控制自己的态度与反应。</li>
-</ol>
-</li>
-</ul>
-<hr>
-<p>欢迎各位提出建议、问题，我们一起交流、学习、成长。</p>
-<p>“问渠那得清如许？为有源头活水来” ヾ(◍°∇°◍)ﾉﾞ</p>
-<p>——— 我在半亩方塘等你 ^_^</p>
 ]]></content>
       <categories>
         <category>随笔感悟</category>
@@ -1347,6 +1299,54 @@
       </tags>
   </entry>
   <entry>
+    <title>【寻找石头】-第3期-20231124</title>
+    <url>/posts/8fbdec1/</url>
+    <content><![CDATA[<p>记录过去一周值得记录的“石头”。</p>
+<span id="more"></span>
+
+<h2 id="科技"><a href="#科技" class="headerlink" title="科技"></a>科技</h2><ul>
+<li>大模型创业者李博杰对AI Agent、多模态、记忆等的个人思考和经验分享 | <a href="https://zhuanlan.zhihu.com/p/662704254">Chat 向左，Agent 向右</a></li>
+<li>AI Agent 面临的关键挑战 | <a href="https://01.me/2023/11/ai-agents-talk/">Chat 向左，Agent 向右——我对 AI Agent 的思考｜嘉程创业流水席 197 席精彩回顾</a></li>
+<li>谷歌DeepMind团队提出全球天气预报模型GraphCast | <a href="https://mp.weixin.qq.com/s/qIIR5uCNG9NnopcGGpaK4Q">1分钟预测10天全球天气！谷歌DeepMind全新AI天气预报登上Science，碾压行业SOTA</a></li>
+<li>大模型技术实践之心灵疗愈机器人 | <a href="https://www.zhihu.com/tardis/zm/art/654858266?source_id=1003">大模型技术实践（三）｜用LangChain和Llama 2打造心灵疗愈机器人</a></li>
+<li>负责任的人工智能 | <a href="https://mp.weixin.qq.com/s/i8-2ScUwQHkpbfiHw9ViYg">让AI拥有人类的价值观，和让AI拥有人类智能同样重要</a></li>
+<li>大模型是在玩角色扮演吗？ | <a href="https://mp.weixin.qq.com/s/3V43pgc7SNWpFAhiAnYEhQ">观点分享丨Nature：大模型只会搞角色扮演，并不真正具有自我意识</a></li>
+<li>问了问几个大模型一个问题“如何评估大模型具备了自我意识，如果发现大模型具备了自我意识，人类应该怎么办?”，下图是它们给出的回答，挺有意思的。欢迎在留言区说一说，你怎么看？</li>
+</ul>
+<p><em>New Bing</em><br><img src="/../images/new_bing.png" alt="New Bing"></p>
+<p><em>Pi</em><br><img src="/../images/Pi.png" alt="Pi"></p>
+<p><em>ChatGPT</em><br><img src="/../images/ChatGPT.png" alt="ChatGPT"></p>
+<p><em>Claude</em><br><img src="/../images/Claude.png" alt="Claude"></p>
+<p><em>文心一言</em><br><img src="/../images/wxyy.png" alt="文心一言"></p>
+<h2 id="文化"><a href="#文化" class="headerlink" title="文化"></a>文化</h2><ul>
+<li>书籍推荐：《<a href="https://book.douban.com/subject/35097551/">人生由我</a>》</li>
+</ul>
+<h2 id="生活"><a href="#生活" class="headerlink" title="生活"></a>生活</h2><ul>
+<li>网络社区的发展与消亡 | <a href="https://www.ruanyifeng.com/blog/2023/11/weekly-issue-279.html">科技爱好者周刊（第 279 期）：网络社区的悲剧</a><br><img src="/../images/sq.png" alt="网络社区的发展与消亡"></li>
+</ul>
+<h2 id="新知"><a href="#新知" class="headerlink" title="新知"></a>新知</h2><ul>
+<li>从市场需求出发做产品，而不是从技术出发：理清需求，自上而下推导出来使用什么技术实现，而不是看看手里掌握的技术，琢磨琢磨能做出什么产品。</li>
+<li>克服内耗的方法：<ol>
+<li>培养积极的思维，和自己一直重复：“我能够解决问题的”、“我是能做好的”、“没关系，我会从错误中学习的”。</li>
+<li>健康的生活方式，睡眠足够、吃得均衡、常做些体育运动，这些都能提高精神状态、降低负面情绪。</li>
+<li>专注于自己，把握自己的掌控权。你不能控制他人或者环境，但是你可以控制自己的态度与反应。</li>
+</ol>
+</li>
+</ul>
+<hr>
+<p>欢迎各位提出建议、问题，我们一起交流、学习、成长。</p>
+<p>“问渠那得清如许？为有源头活水来” ヾ(◍°∇°◍)ﾉﾞ</p>
+<p>——— 我在半亩方塘等你 ^_^</p>
+]]></content>
+      <categories>
+        <category>随笔感悟</category>
+      </categories>
+      <tags>
+        <tag>寻找石头</tag>
+        <tag>人生旅程</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>【寻找石头】-第5期-20231208</title>
     <url>/posts/91d891ec/</url>
     <content><![CDATA[<p>记录过去一周值得记录的“石头”。</p>
@@ -1381,6 +1381,56 @@
 <li>对一件事做判断时，你需要了解背景和事实，了解之后需要的不是睿智，而是面对事实时是否还有勇气用理性和常识来判断。</li>
 <li>阅读数学、科学和哲学领域的经典作品，不要读畅销书，不要看新闻，避免加入任何所谓的“读书俱乐部”，避免追求任何的社群认同，把真理置于社群认同之上。——埃里克·乔根森</li>
 <li>择一事，终一生。从个人的安顿来说，做就是了，做就是一切。活着有什么意义？没意义。做就是意义。蓦然回首，木已成林。——<a href="https://zh.wikipedia.org/wiki/%E5%91%A8%E8%BD%B6%E5%90%9B">周轶君</a></li>
+</ul>
+<hr>
+<p>欢迎各位提出建议、问题，我们一起交流、学习、成长。</p>
+<p>“问渠那得清如许？为有源头活水来” ヾ(◍°∇°◍)ﾉﾞ</p>
+<p>——— 我在半亩方塘等你 ^_^</p>
+]]></content>
+      <categories>
+        <category>随笔感悟</category>
+      </categories>
+      <tags>
+        <tag>寻找石头</tag>
+        <tag>人生旅程</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>【寻找石头】-第7期-20231222</title>
+    <url>/posts/2367af3b/</url>
+    <content><![CDATA[<p>记录过去一周值得记录的“石头”。</p>
+<span id="more"></span>
+
+<h2 id="科技"><a href="#科技" class="headerlink" title="科技"></a>科技</h2><ul>
+<li><p>Imagine | 文生图工具，Meta推出 <a href="https://imagine.meta.com/?prompt=a+cute+dog+on+mars">https://imagine.meta.com/?prompt=a+cute+dog+on+mars</a> </p>
+<p>  a cute dog on mars<br>  <img src="/../images/cute_dog_mars.png" alt="a cute dog on mars"></p>
+</li>
+<li><p>基于大规模城市交通速度数据，研究发现交通拥堵的消散持续时间近似于幂律分布 | ​<a href="https://mp.weixin.qq.com/s/YqWI4CW9jyHYcxduIc1rMQ">Nat. Commun.速递：交通瓶颈的时空动力学预测严重交通拥堵的早期信号</a></p>
+</li>
+<li><p>充分发挥数据要素的放大、叠加、倍增作用，构建以数据为关键要素的数字经济。数据要素×智能制造、智慧农业、商贸流通、交通运输、金融服务、科技创新、文化旅游、医疗健康、应急管理、气象服务、智慧城市、绿色低碳。| <a href="https://mp.weixin.qq.com/s/HOwO2rivZs196fdRk3KnCA">关于向社会公开征求《“数据要素×”三年行动计划（2024—2026年）（征求意见稿）》意见的公告</a></p>
+</li>
+<li><p>国内外大模型清单，<a href="https://mp.weixin.qq.com/s/TR1YzvxaVmrUNgI_8bXgaw">来源:国内外AI大模型(LLMs)排行榜</a>：<br><img src="/../images/llm.png" alt="国内外大模型清单"></p>
+</li>
+</ul>
+<h2 id="文化"><a href="#文化" class="headerlink" title="文化"></a>文化</h2><ul>
+<li>书籍推荐 | 《<a href="https://book.douban.com/subject/35639086/">猫和狗的生活哲学</a>》-简单心理 这是一本有趣的心理学漫画书。</li>
+<li>书籍推荐 | 《<a href="http://survivor.ruanyifeng.com/index.html">未来世界的幸存者</a>》-阮一峰</li>
+<li>书籍推荐 | 《<a href="https://book.douban.com/subject/34871733/">人生的智慧</a>》-亚瑟·叔本华 深入思考并回答了我是谁、我有什么，什么是幸福等一系列问题</li>
+<li>博客推荐 | <a href="https://yeshu.cloud/">一颗小树</a></li>
+</ul>
+<h2 id="生活"><a href="#生活" class="headerlink" title="生活"></a>生活</h2><ul>
+<li>播客推荐 | 《文化有限》、《三五环》、《硅谷101》、《纵横四海》、《梁永安的播客》习惯走路、做家务时听，颇有所得。</li>
+<li>节气养生 | 今日<a href="https://xiepeng21.cn/posts/752303a8/">冬至</a></li>
+</ul>
+<h2 id="新知"><a href="#新知" class="headerlink" title="新知"></a>新知</h2><ul>
+<li>具有讽刺意味的是，忠诚的员工更可能被选为企业的剥削目标。企业会假设，忠诚的员工更愿意为企业做出个人牺牲。</li>
+<li>好的问题通常并不是我们提出来的第一个问题。你会在持续的提问和持续的回复之间渐渐发现，那些更本质和更有趣的问题。</li>
+<li>想要做好一件事，更好的不是把完成作为目标，更不用强制规定自己每天必须完成多少工作量，更重要的，是搭建一个让自己可以持续做下去的环境。</li>
+<li>今天，我们正身处最新一次、也是最大一次的技术革命：信息技术革命。技术进步的速度日新月异，而且还在加速，这就注定了目前的人类社会也会随之大变。</li>
+<li>“熟悉科技史以后，我看待历史的观点，再一次发生了巨大的变化。我现在认为，主导历史的因素，短期（一年到几年）是政治，中期（几年到几十年）是经济，长期（几十年到几百年）则是技术”-阮一峰 而我认为，时时刻刻影响历史的因素是文化。</li>
+<li>如果说第一轮国家“双一流”建设及此前的学科建设的特征是“重数量”“重学术”“重学术影响”，那么第二轮国家“双一流”建设的特征应该是“重大成果”“重大服务”“重社会影响”。这里，“重大成果”指的并不是论文发表或项目获批，因为论文、项目并不是真正的成果，而只是成果的表现形式或成果产生的载体，真正的成果则是实实在在的重大发现、技术、方案、标准等。“重大服务”则是指成果的方向不是纯粹自由的学术，而是指向解决重大问题。“重社会影响”指的不是在学术共同体内部产生的影响，而是服务国家战略或经济社会发展重大需求中所产生的影响。</li>
+<li>只要你按照自己的信念，不断地努力去做事、去尝试，就可以了，至于能做到哪一步，顺其自然就好了。因上做事，果上随缘。</li>
+<li>如果一个行业向不擅长其工作的人支付高薪，这是一个信号，表明该行业存在泡沫。</li>
 </ul>
 <hr>
 <p>欢迎各位提出建议、问题，我们一起交流、学习、成长。</p>
@@ -1437,56 +1487,6 @@
 </ul>
 <h2 id="新知"><a href="#新知" class="headerlink" title="新知"></a>新知</h2><ul>
 <li>人生短暂，阅读可以让我们的生命变得宽阔而无限。</li>
-</ul>
-<hr>
-<p>欢迎各位提出建议、问题，我们一起交流、学习、成长。</p>
-<p>“问渠那得清如许？为有源头活水来” ヾ(◍°∇°◍)ﾉﾞ</p>
-<p>——— 我在半亩方塘等你 ^_^</p>
-]]></content>
-      <categories>
-        <category>随笔感悟</category>
-      </categories>
-      <tags>
-        <tag>寻找石头</tag>
-        <tag>人生旅程</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>【寻找石头】-第7期-20231222</title>
-    <url>/posts/2367af3b/</url>
-    <content><![CDATA[<p>记录过去一周值得记录的“石头”。</p>
-<span id="more"></span>
-
-<h2 id="科技"><a href="#科技" class="headerlink" title="科技"></a>科技</h2><ul>
-<li><p>Imagine | 文生图工具，Meta推出 <a href="https://imagine.meta.com/?prompt=a+cute+dog+on+mars">https://imagine.meta.com/?prompt=a+cute+dog+on+mars</a> </p>
-<p>  a cute dog on mars<br>  <img src="/../images/cute_dog_mars.png" alt="a cute dog on mars"></p>
-</li>
-<li><p>基于大规模城市交通速度数据，研究发现交通拥堵的消散持续时间近似于幂律分布 | ​<a href="https://mp.weixin.qq.com/s/YqWI4CW9jyHYcxduIc1rMQ">Nat. Commun.速递：交通瓶颈的时空动力学预测严重交通拥堵的早期信号</a></p>
-</li>
-<li><p>充分发挥数据要素的放大、叠加、倍增作用，构建以数据为关键要素的数字经济。数据要素×智能制造、智慧农业、商贸流通、交通运输、金融服务、科技创新、文化旅游、医疗健康、应急管理、气象服务、智慧城市、绿色低碳。| <a href="https://mp.weixin.qq.com/s/HOwO2rivZs196fdRk3KnCA">关于向社会公开征求《“数据要素×”三年行动计划（2024—2026年）（征求意见稿）》意见的公告</a></p>
-</li>
-<li><p>国内外大模型清单，<a href="https://mp.weixin.qq.com/s/TR1YzvxaVmrUNgI_8bXgaw">来源:国内外AI大模型(LLMs)排行榜</a>：<br><img src="/../images/llm.png" alt="国内外大模型清单"></p>
-</li>
-</ul>
-<h2 id="文化"><a href="#文化" class="headerlink" title="文化"></a>文化</h2><ul>
-<li>书籍推荐 | 《<a href="https://book.douban.com/subject/35639086/">猫和狗的生活哲学</a>》-简单心理 这是一本有趣的心理学漫画书。</li>
-<li>书籍推荐 | 《<a href="http://survivor.ruanyifeng.com/index.html">未来世界的幸存者</a>》-阮一峰</li>
-<li>书籍推荐 | 《<a href="https://book.douban.com/subject/34871733/">人生的智慧</a>》-亚瑟·叔本华 深入思考并回答了我是谁、我有什么，什么是幸福等一系列问题</li>
-<li>博客推荐 | <a href="https://yeshu.cloud/">一颗小树</a></li>
-</ul>
-<h2 id="生活"><a href="#生活" class="headerlink" title="生活"></a>生活</h2><ul>
-<li>播客推荐 | 《文化有限》、《三五环》、《硅谷101》、《纵横四海》、《梁永安的播客》习惯走路、做家务时听，颇有所得。</li>
-<li>节气养生 | 今日<a href="https://xiepeng21.cn/posts/752303a8/">冬至</a></li>
-</ul>
-<h2 id="新知"><a href="#新知" class="headerlink" title="新知"></a>新知</h2><ul>
-<li>具有讽刺意味的是，忠诚的员工更可能被选为企业的剥削目标。企业会假设，忠诚的员工更愿意为企业做出个人牺牲。</li>
-<li>好的问题通常并不是我们提出来的第一个问题。你会在持续的提问和持续的回复之间渐渐发现，那些更本质和更有趣的问题。</li>
-<li>想要做好一件事，更好的不是把完成作为目标，更不用强制规定自己每天必须完成多少工作量，更重要的，是搭建一个让自己可以持续做下去的环境。</li>
-<li>今天，我们正身处最新一次、也是最大一次的技术革命：信息技术革命。技术进步的速度日新月异，而且还在加速，这就注定了目前的人类社会也会随之大变。</li>
-<li>“熟悉科技史以后，我看待历史的观点，再一次发生了巨大的变化。我现在认为，主导历史的因素，短期（一年到几年）是政治，中期（几年到几十年）是经济，长期（几十年到几百年）则是技术”-阮一峰 而我认为，时时刻刻影响历史的因素是文化。</li>
-<li>如果说第一轮国家“双一流”建设及此前的学科建设的特征是“重数量”“重学术”“重学术影响”，那么第二轮国家“双一流”建设的特征应该是“重大成果”“重大服务”“重社会影响”。这里，“重大成果”指的并不是论文发表或项目获批，因为论文、项目并不是真正的成果，而只是成果的表现形式或成果产生的载体，真正的成果则是实实在在的重大发现、技术、方案、标准等。“重大服务”则是指成果的方向不是纯粹自由的学术，而是指向解决重大问题。“重社会影响”指的不是在学术共同体内部产生的影响，而是服务国家战略或经济社会发展重大需求中所产生的影响。</li>
-<li>只要你按照自己的信念，不断地努力去做事、去尝试，就可以了，至于能做到哪一步，顺其自然就好了。因上做事，果上随缘。</li>
-<li>如果一个行业向不擅长其工作的人支付高薪，这是一个信号，表明该行业存在泡沫。</li>
 </ul>
 <hr>
 <p>欢迎各位提出建议、问题，我们一起交流、学习、成长。</p>
@@ -1773,6 +1773,59 @@
       </tags>
   </entry>
   <entry>
+    <title>【机器学习】AdaBoost算法</title>
+    <url>/posts/2a69915c/</url>
+    <content><![CDATA[<p><img src="/../images/AdaBoost.png"></p>
+]]></content>
+      <categories>
+        <category>机器学习</category>
+      </categories>
+      <tags>
+        <tag>机器学习</tag>
+        <tag>AdaBoost算法</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>【节气养生】大雪</title>
+    <url>/posts/9afd6767/</url>
+    <content><![CDATA[<p>节气养生，大雪补得进藏得住。</p>
+<span id="more"></span>
+
+<p>今日大雪。古人云：“大者，盛也，至此而雪盛也”，应注重精神内守，养生重点为『补』和『藏』。是二十四节气的第21个节气。</p>
+<p><img src="/../images/dx.jpg" alt="大雪"></p>
+<p>养生指南：</p>
+<ol>
+<li>进补的原则：养精神、调饮食、练形体、慎房事、适温寒等。</li>
+<li>食补。适当吃些牛肉、兔肉、羊肉等性温的肉类，增强抗寒能力。为了避免上火，还可以搭配白萝卜。此外，吃些核桃、黑芝麻、橘子等。</li>
+<li>脚部保暖。寒从脚下起。保持脚部的干燥，晚上可泡一泡热水脚。</li>
+<li>起居防寒。注意早卧晚起，不要熬夜，也不宜过早起床晨练。</li>
+<li>适当的室内运动和户外活动，莫剧烈运动。</li>
+</ol>
+<p>小妙招：</p>
+<ol>
+<li>保持元气满满：吃点葡萄，补充能量；吃点醋，缓解运动后肌肉酸痛；深呼吸，缓解紧张；伸展运动，提神醒脑。</li>
+<li>保持口气清新：嚼花生；嚼茶叶；刷牙；饮食清淡，避免熬夜，多吃一些利于润肠通便的食物，如黑木耳、土豆、红薯、香蕉、苹果等；早晨喝一杯蜂蜜水，帮助排便。</li>
+<li>先排毒，再进补：适量饮用葡萄酒，利尿排毒；吃海带和紫菜，通便排毒；吃豆豉，助消化，促进新陈代谢；喝绿茶，降血脂；吃黑木耳，降低胆固醇，排体内灰尘杂质；吃红薯、土豆、玉米、荞麦等粗粮、芋头、芹菜等蔬菜，通便排毒；早晨起床，空腹喝200毫升的白开水；在肚脐下用手掌心顺时针、逆时针各按50下，早晚各一次，帮助通便排毒。</li>
+</ol>
+<p>节气习俗：<br><a href="https://xiepeng21.cn/posts/6a1bd1f4/">小雪</a>腌菜，大雪腌肉。</p>
+<h3 id="参考资料："><a href="#参考资料：" class="headerlink" title="参考资料："></a>参考资料：</h3><ol>
+<li>《二十四节气养生经》-李志敏，天津科学技术出版社，2016.</li>
+</ol>
+<hr>
+<p>欢迎各位提出建议、问题，我们一起交流、学习、成长。</p>
+<p>“问渠那得清如许？为有源头活水来” ヾ(◍°∇°◍)ﾉﾞ</p>
+<p>——— 我在半亩方塘等你 ^_^</p>
+]]></content>
+      <categories>
+        <category>随笔感悟</category>
+      </categories>
+      <tags>
+        <tag>养生</tag>
+        <tag>节气</tag>
+        <tag>大雪</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>【机器学习】防止过拟合的方法</title>
     <url>/posts/3634e5b5/</url>
     <content><![CDATA[<h1 id="什么是过拟合"><a href="#什么是过拟合" class="headerlink" title="什么是过拟合"></a>什么是过拟合</h1><p>从训练样本中尽可能学出适用于所有潜在样本的“普遍规律”，这样才能在遇到新样本时做出正确的判别。然而，当学习器把训练样本学得“太好”了的时候，很可能已经把训练样本自身的一些特点当作了所有潜在样本都会具有的一般性质，这样就会导致泛化性能下降。这种现象在机器学习中称为“过拟合”（overfitting）。<br>与过拟合相对的是“欠拟合”（underfitting），这是指对训练样本的一般性质尚未学好。</p>
@@ -1803,16 +1856,39 @@
       </tags>
   </entry>
   <entry>
-    <title>【机器学习】AdaBoost算法</title>
-    <url>/posts/2a69915c/</url>
-    <content><![CDATA[<p><img src="/../images/AdaBoost.png"></p>
+    <title>【节气养生】小寒</title>
+    <url>/posts/f02963f9/</url>
+    <content><![CDATA[<p>节气养生，小寒养肾壮阳。</p>
+<span id="more"></span>
+
+<p>小寒，是24节气的第23个节气，阴冷干燥、寒意逼人，是一年中最寒冷的日子，是关节痛、颈椎病甚至是心脑血管疾病的高发期。俗话说：“小寒大寒，冷成冰团”。</p>
+<h2 id="养生指南"><a href="#养生指南" class="headerlink" title="养生指南"></a>养生指南</h2><ol>
+<li>食补。进食一些温热食物，如羊肉、鸡肉、韭菜等。</li>
+<li>合理锻炼。如散步、慢跑、做操等。</li>
+<li>调理起居。如早睡晚起，早睡是为了养身体的阳气，晚起是为了养身体的阴气。入睡前可以泡个热水脚，改善睡眠质量。俗话说：“寒从脚起，冷从腿来”。</li>
+</ol>
+<h2 id="小妙招"><a href="#小妙招" class="headerlink" title="小妙招"></a>小妙招</h2><ol>
+<li>敲打肝胆经，清理内湿热。其中肝主疏泄，胆主升阳。肝经在大腿的正内侧，胆经在大腿的外侧。早起敲胆经，晚睡前推拿肝经。</li>
+<li>小心着凉，预防感冒。早上洗脸时，可用冷水轻轻吸入鼻腔进行清洗，既清洗鼻腔，又能帮助提升自身抵抗力。睡前可以泡个热水脚，用40-50℃的热水泡脚15分钟。</li>
+<li>桂枝大米粥，预防风湿病。患风湿病的人注意适当运动，如体操、走路、打太极拳、跳舞、爬山等慢运动。</li>
+<li>常在暖房里，注意暖气病。早晚应开窗通通风。室内养一点植物。谨慎使用加湿器，最好少用。吃些润肺的食物，如百合、梨、蜂蜜等。喝点热汤，如白菜豆腐汤、菠菜豆腐汤、羊肉白萝卜汤等。</li>
+</ol>
+<h2 id="节气习俗"><a href="#节气习俗" class="headerlink" title="节气习俗"></a>节气习俗</h2><p>喝腊八粥，腊八粥易于吸收，有和胃、补脾、养心等作用。</p>
+<h3 id="参考资料："><a href="#参考资料：" class="headerlink" title="参考资料："></a>参考资料：</h3><ol>
+<li>《二十四节气养生经》-李志敏，天津科学技术出版社，2016.</li>
+</ol>
+<hr>
+<p>欢迎各位提出建议、问题，我们一起交流、学习、成长。</p>
+<p>“问渠那得清如许？为有源头活水来” ヾ(◍°∇°◍)ﾉﾞ</p>
+<p>——— 我在半亩方塘等你 ^_^</p>
 ]]></content>
       <categories>
-        <category>机器学习</category>
+        <category>随笔感悟</category>
       </categories>
       <tags>
-        <tag>机器学习</tag>
-        <tag>AdaBoost算法</tag>
+        <tag>养生</tag>
+        <tag>节气</tag>
+        <tag>小寒</tag>
       </tags>
   </entry>
   <entry>
@@ -1863,109 +1939,6 @@
       </tags>
   </entry>
   <entry>
-    <title>【节气养生】大雪</title>
-    <url>/posts/9afd6767/</url>
-    <content><![CDATA[<p>节气养生，大雪补得进藏得住。</p>
-<span id="more"></span>
-
-<p>今日大雪。古人云：“大者，盛也，至此而雪盛也”，应注重精神内守，养生重点为『补』和『藏』。是二十四节气的第21个节气。</p>
-<p><img src="/../images/dx.jpg" alt="大雪"></p>
-<p>养生指南：</p>
-<ol>
-<li>进补的原则：养精神、调饮食、练形体、慎房事、适温寒等。</li>
-<li>食补。适当吃些牛肉、兔肉、羊肉等性温的肉类，增强抗寒能力。为了避免上火，还可以搭配白萝卜。此外，吃些核桃、黑芝麻、橘子等。</li>
-<li>脚部保暖。寒从脚下起。保持脚部的干燥，晚上可泡一泡热水脚。</li>
-<li>起居防寒。注意早卧晚起，不要熬夜，也不宜过早起床晨练。</li>
-<li>适当的室内运动和户外活动，莫剧烈运动。</li>
-</ol>
-<p>小妙招：</p>
-<ol>
-<li>保持元气满满：吃点葡萄，补充能量；吃点醋，缓解运动后肌肉酸痛；深呼吸，缓解紧张；伸展运动，提神醒脑。</li>
-<li>保持口气清新：嚼花生；嚼茶叶；刷牙；饮食清淡，避免熬夜，多吃一些利于润肠通便的食物，如黑木耳、土豆、红薯、香蕉、苹果等；早晨喝一杯蜂蜜水，帮助排便。</li>
-<li>先排毒，再进补：适量饮用葡萄酒，利尿排毒；吃海带和紫菜，通便排毒；吃豆豉，助消化，促进新陈代谢；喝绿茶，降血脂；吃黑木耳，降低胆固醇，排体内灰尘杂质；吃红薯、土豆、玉米、荞麦等粗粮、芋头、芹菜等蔬菜，通便排毒；早晨起床，空腹喝200毫升的白开水；在肚脐下用手掌心顺时针、逆时针各按50下，早晚各一次，帮助通便排毒。</li>
-</ol>
-<p>节气习俗：<br><a href="https://xiepeng21.cn/posts/6a1bd1f4/">小雪</a>腌菜，大雪腌肉。</p>
-<h3 id="参考资料："><a href="#参考资料：" class="headerlink" title="参考资料："></a>参考资料：</h3><ol>
-<li>《二十四节气养生经》-李志敏，天津科学技术出版社，2016.</li>
-</ol>
-<hr>
-<p>欢迎各位提出建议、问题，我们一起交流、学习、成长。</p>
-<p>“问渠那得清如许？为有源头活水来” ヾ(◍°∇°◍)ﾉﾞ</p>
-<p>——— 我在半亩方塘等你 ^_^</p>
-]]></content>
-      <categories>
-        <category>随笔感悟</category>
-      </categories>
-      <tags>
-        <tag>养生</tag>
-        <tag>节气</tag>
-        <tag>大雪</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>【节气养生】寒露</title>
-    <url>/posts/68e0eb59/</url>
-    <content><![CDATA[<p>节气养生，寒露脚不露。</p>
-<span id="more"></span>
-
-<p>今日寒露，白露身不露，寒露脚不露。天气渐渐转凉，一层秋雨一层凉，走在路上，感受到秋雨绵绵，远处烟雨蒙蒙的气息。</p>
-<p>养生方面，应注重滋阴润肺，调养精神，保持乐观豁达的心情，天气变凉，注意增添衣物，预防感冒，调整起居，养成早睡早起的习惯，在大雾天气，减少外出运动，在室内运动为主。室内运动推荐做扎马步，俯卧撑，抬腿提膝等，运动前做好热身运动，运动后做好拉伸，不宜过度出汗。</p>
-<p>此外，还有一些养生小妙招，比如早晚泡脚，最好是晚上泡个脚，有助于睡眠，大概20-30分钟，在晚饭后1个小时之后。这个节气，也需要预防肩周炎，按压合谷穴或肩井穴。泡完脚后，可根据自身需要做足底按摩，按压太溪穴，太冲穴，太白穴等，调养肾，肝，脾。</p>
-<p>最后，寒露节气也有吃螃蟹的习俗，赏菊吃蟹，菊黄蟹肥，不过一些不适合吃螃蟹的朋友，要注意忌口。</p>
-<h3 id="参考资料："><a href="#参考资料：" class="headerlink" title="参考资料："></a>参考资料：</h3><ol>
-<li>《二十四节气养生经》-李志敏，天津科学技术出版社，2016.</li>
-</ol>
-<hr>
-<p>欢迎各位提出建议、问题，我们一起交流、学习、成长。</p>
-<p>“问渠那得清如许？为有源头活水来” ヾ(◍°∇°◍)ﾉﾞ</p>
-<p>– 我在半亩方塘等你 ^_^</p>
-]]></content>
-      <categories>
-        <category>随笔感悟</category>
-      </categories>
-      <tags>
-        <tag>养生</tag>
-        <tag>节气</tag>
-        <tag>寒露</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>【节气养生】小寒</title>
-    <url>/posts/f02963f9/</url>
-    <content><![CDATA[<p>节气养生，小寒养肾壮阳。</p>
-<span id="more"></span>
-
-<p>小寒，是24节气的第23个节气，阴冷干燥、寒意逼人，是一年中最寒冷的日子，是关节痛、颈椎病甚至是心脑血管疾病的高发期。俗话说：“小寒大寒，冷成冰团”。</p>
-<h2 id="养生指南"><a href="#养生指南" class="headerlink" title="养生指南"></a>养生指南</h2><ol>
-<li>食补。进食一些温热食物，如羊肉、鸡肉、韭菜等。</li>
-<li>合理锻炼。如散步、慢跑、做操等。</li>
-<li>调理起居。如早睡晚起，早睡是为了养身体的阳气，晚起是为了养身体的阴气。入睡前可以泡个热水脚，改善睡眠质量。俗话说：“寒从脚起，冷从腿来”。</li>
-</ol>
-<h2 id="小妙招"><a href="#小妙招" class="headerlink" title="小妙招"></a>小妙招</h2><ol>
-<li>敲打肝胆经，清理内湿热。其中肝主疏泄，胆主升阳。肝经在大腿的正内侧，胆经在大腿的外侧。早起敲胆经，晚睡前推拿肝经。</li>
-<li>小心着凉，预防感冒。早上洗脸时，可用冷水轻轻吸入鼻腔进行清洗，既清洗鼻腔，又能帮助提升自身抵抗力。睡前可以泡个热水脚，用40-50℃的热水泡脚15分钟。</li>
-<li>桂枝大米粥，预防风湿病。患风湿病的人注意适当运动，如体操、走路、打太极拳、跳舞、爬山等慢运动。</li>
-<li>常在暖房里，注意暖气病。早晚应开窗通通风。室内养一点植物。谨慎使用加湿器，最好少用。吃些润肺的食物，如百合、梨、蜂蜜等。喝点热汤，如白菜豆腐汤、菠菜豆腐汤、羊肉白萝卜汤等。</li>
-</ol>
-<h2 id="节气习俗"><a href="#节气习俗" class="headerlink" title="节气习俗"></a>节气习俗</h2><p>喝腊八粥，腊八粥易于吸收，有和胃、补脾、养心等作用。</p>
-<h3 id="参考资料："><a href="#参考资料：" class="headerlink" title="参考资料："></a>参考资料：</h3><ol>
-<li>《二十四节气养生经》-李志敏，天津科学技术出版社，2016.</li>
-</ol>
-<hr>
-<p>欢迎各位提出建议、问题，我们一起交流、学习、成长。</p>
-<p>“问渠那得清如许？为有源头活水来” ヾ(◍°∇°◍)ﾉﾞ</p>
-<p>——— 我在半亩方塘等你 ^_^</p>
-]]></content>
-      <categories>
-        <category>随笔感悟</category>
-      </categories>
-      <tags>
-        <tag>养生</tag>
-        <tag>节气</tag>
-        <tag>小寒</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>【节气养生】小雪</title>
     <url>/posts/6a1bd1f4/</url>
     <content><![CDATA[<p>节气养生，小雪御寒保暖。</p>
@@ -2002,6 +1975,33 @@
         <tag>养生</tag>
         <tag>节气</tag>
         <tag>小雪</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>【节气养生】寒露</title>
+    <url>/posts/68e0eb59/</url>
+    <content><![CDATA[<p>节气养生，寒露脚不露。</p>
+<span id="more"></span>
+
+<p>今日寒露，白露身不露，寒露脚不露。天气渐渐转凉，一层秋雨一层凉，走在路上，感受到秋雨绵绵，远处烟雨蒙蒙的气息。</p>
+<p>养生方面，应注重滋阴润肺，调养精神，保持乐观豁达的心情，天气变凉，注意增添衣物，预防感冒，调整起居，养成早睡早起的习惯，在大雾天气，减少外出运动，在室内运动为主。室内运动推荐做扎马步，俯卧撑，抬腿提膝等，运动前做好热身运动，运动后做好拉伸，不宜过度出汗。</p>
+<p>此外，还有一些养生小妙招，比如早晚泡脚，最好是晚上泡个脚，有助于睡眠，大概20-30分钟，在晚饭后1个小时之后。这个节气，也需要预防肩周炎，按压合谷穴或肩井穴。泡完脚后，可根据自身需要做足底按摩，按压太溪穴，太冲穴，太白穴等，调养肾，肝，脾。</p>
+<p>最后，寒露节气也有吃螃蟹的习俗，赏菊吃蟹，菊黄蟹肥，不过一些不适合吃螃蟹的朋友，要注意忌口。</p>
+<h3 id="参考资料："><a href="#参考资料：" class="headerlink" title="参考资料："></a>参考资料：</h3><ol>
+<li>《二十四节气养生经》-李志敏，天津科学技术出版社，2016.</li>
+</ol>
+<hr>
+<p>欢迎各位提出建议、问题，我们一起交流、学习、成长。</p>
+<p>“问渠那得清如许？为有源头活水来” ヾ(◍°∇°◍)ﾉﾞ</p>
+<p>– 我在半亩方塘等你 ^_^</p>
+]]></content>
+      <categories>
+        <category>随笔感悟</category>
+      </categories>
+      <tags>
+        <tag>养生</tag>
+        <tag>节气</tag>
+        <tag>寒露</tag>
       </tags>
   </entry>
   <entry>
@@ -2045,6 +2045,24 @@
       </tags>
   </entry>
   <entry>
+    <title>【论文笔记-1】注意力人流量机器</title>
+    <url>/posts/a7c2a378/</url>
+    <content><![CDATA[<p>文章提出了一种称为注意力人流量机器（Attentive Crowd Flow Machines）的神经网络模型，该模型能够通过带注意力机制的时变数据动态表示来推断城市人流量的演变。它由两层ConvLSTM单元以及用于空间权重预测的卷积层组成。文章的创新点在于：1.引入了注意力机制 2.权重时变的融合方法。</p>
+<span id="more"></span>
+
+<p><img src="https://i.loli.net/2018/12/26/5c23a1622ae38.png" alt="Image.png"></p>
+<h5 id="论文链接"><a href="#论文链接" class="headerlink" title="论文链接"></a>论文链接</h5><p><a href="http://www.linliang.net/wp-content/uploads/2018/10/ACMMM2018_FlowMachines.pdf">Liu L, Zhang R, Peng J, et al. Attentive Crowd Flow Machines[C]&#x2F;&#x2F;2018 ACM Multimedia Conference on Multimedia Conference. ACM, 2018: 1553-1561.</a></p>
+]]></content>
+      <categories>
+        <category>论文阅读</category>
+      </categories>
+      <tags>
+        <tag>CNN</tag>
+        <tag>LSTM</tag>
+        <tag>Crowd Flow Prediction</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>【论文笔记-2】深度学习</title>
     <url>/posts/c0d0024f/</url>
     <content><![CDATA[<p>这篇文章是关于深度学习的一篇综述文章。是由深度学习界的三位大牛（YannLeCun, Yoshua Bengio, Geoffrey Hinton）所写。在本文中，介绍了反向传播算法、卷积神经网络与循环神经网络的经典应用，给出了细致的图解和深入的分析，是深度学习中的高质量的重要文献。文中还提到了深度学习未来的发展，比如将卷积神经网络、循环神经网络与强化学习结合起来；将表示学习与复杂推理结合起来。</p>
@@ -2066,21 +2084,21 @@
       </tags>
   </entry>
   <entry>
-    <title>【论文笔记-1】注意力人流量机器</title>
-    <url>/posts/a7c2a378/</url>
-    <content><![CDATA[<p>文章提出了一种称为注意力人流量机器（Attentive Crowd Flow Machines）的神经网络模型，该模型能够通过带注意力机制的时变数据动态表示来推断城市人流量的演变。它由两层ConvLSTM单元以及用于空间权重预测的卷积层组成。文章的创新点在于：1.引入了注意力机制 2.权重时变的融合方法。</p>
+    <title>两个数组的交集Ⅱ</title>
+    <url>/posts/8ed9ffc/</url>
+    <content><![CDATA[<h5 id="要求："><a href="#要求：" class="headerlink" title="要求："></a>要求：</h5><p>给定两个数组，写一个方法来计算它们的交集。</p>
 <span id="more"></span>
-
-<p><img src="https://i.loli.net/2018/12/26/5c23a1622ae38.png" alt="Image.png"></p>
-<h5 id="论文链接"><a href="#论文链接" class="headerlink" title="论文链接"></a>论文链接</h5><p><a href="http://www.linliang.net/wp-content/uploads/2018/10/ACMMM2018_FlowMachines.pdf">Liu L, Zhang R, Peng J, et al. Attentive Crowd Flow Machines[C]&#x2F;&#x2F;2018 ACM Multimedia Conference on Multimedia Conference. ACM, 2018: 1553-1561.</a></p>
+<h5 id="示例："><a href="#示例：" class="headerlink" title="示例："></a>示例：</h5><p>给定 nums1 &#x3D; [1, 2, 2, 1], nums2 &#x3D; [2, 2], 返回 [2, 2].</p>
+<h5 id="分析："><a href="#分析：" class="headerlink" title="分析："></a>分析：</h5><p>先对两个数组由小到大排序，用两个指针index1和index2遍历两个数组，比较对应元素的大小，如果相等，则添加进result数组，如果不相等，元素小的数组指针加一，最终其中一个数组遍历结束，就停止程序。</p>
+<h5 id="代码："><a href="#代码：" class="headerlink" title="代码："></a>代码：</h5><figure class="highlight python"><table><tr><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">class</span> <span class="hljs-title class_">Solution</span>:<br>    <span class="hljs-keyword">def</span> <span class="hljs-title function_">intersect</span>(<span class="hljs-params">self, nums1, nums2</span>):<br>        <span class="hljs-string">&quot;&quot;&quot;</span><br><span class="hljs-string">        :type nums1: List[int]</span><br><span class="hljs-string">        :type nums2: List[int]</span><br><span class="hljs-string">        :rtype: List[int]</span><br><span class="hljs-string">        &quot;&quot;&quot;</span><br>        result = []<br>        nums1.sort()<br>        nums2.sort()<br>        index1, index2 = <span class="hljs-number">0</span>, <span class="hljs-number">0</span><br>        n1, n2 = <span class="hljs-built_in">len</span>(nums1), <span class="hljs-built_in">len</span>(nums2)<br>        <br>        <span class="hljs-keyword">while</span> index1 &lt; n1 <span class="hljs-keyword">and</span> index2 &lt; n2:<br>            <span class="hljs-keyword">if</span> nums1[index1] == nums2[index2]:<br>                result.append(nums1[index1])<br>                index1 += <span class="hljs-number">1</span><br>                index2 += <span class="hljs-number">1</span><br>            <span class="hljs-keyword">elif</span> nums1[index1] &gt; nums2[index2]:<br>                index2 += <span class="hljs-number">1</span><br>            <span class="hljs-keyword">else</span>:<br>                index1 += <span class="hljs-number">1</span><br>        <span class="hljs-keyword">return</span> result<br></code></pre></td></tr></table></figure>
+<h5 id="参考资料："><a href="#参考资料：" class="headerlink" title="参考资料："></a>参考资料：</h5><p>1、两数组的交 II <a href="https://blog.csdn.net/guoziqing506/article/details/51569488">https://blog.csdn.net/guoziqing506/article/details/51569488</a></p>
 ]]></content>
       <categories>
-        <category>论文阅读</category>
+        <category>算法</category>
       </categories>
       <tags>
-        <tag>CNN</tag>
-        <tag>LSTM</tag>
-        <tag>Crowd Flow Prediction</tag>
+        <tag>python</tag>
+        <tag>数组</tag>
       </tags>
   </entry>
   <entry>
@@ -2152,42 +2170,6 @@
       <tags>
         <tag>注意力</tag>
         <tag>Transformer</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>两个数组的交集Ⅱ</title>
-    <url>/posts/8ed9ffc/</url>
-    <content><![CDATA[<h5 id="要求："><a href="#要求：" class="headerlink" title="要求："></a>要求：</h5><p>给定两个数组，写一个方法来计算它们的交集。</p>
-<span id="more"></span>
-<h5 id="示例："><a href="#示例：" class="headerlink" title="示例："></a>示例：</h5><p>给定 nums1 &#x3D; [1, 2, 2, 1], nums2 &#x3D; [2, 2], 返回 [2, 2].</p>
-<h5 id="分析："><a href="#分析：" class="headerlink" title="分析："></a>分析：</h5><p>先对两个数组由小到大排序，用两个指针index1和index2遍历两个数组，比较对应元素的大小，如果相等，则添加进result数组，如果不相等，元素小的数组指针加一，最终其中一个数组遍历结束，就停止程序。</p>
-<h5 id="代码："><a href="#代码：" class="headerlink" title="代码："></a>代码：</h5><figure class="highlight python"><table><tr><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">class</span> <span class="hljs-title class_">Solution</span>:<br>    <span class="hljs-keyword">def</span> <span class="hljs-title function_">intersect</span>(<span class="hljs-params">self, nums1, nums2</span>):<br>        <span class="hljs-string">&quot;&quot;&quot;</span><br><span class="hljs-string">        :type nums1: List[int]</span><br><span class="hljs-string">        :type nums2: List[int]</span><br><span class="hljs-string">        :rtype: List[int]</span><br><span class="hljs-string">        &quot;&quot;&quot;</span><br>        result = []<br>        nums1.sort()<br>        nums2.sort()<br>        index1, index2 = <span class="hljs-number">0</span>, <span class="hljs-number">0</span><br>        n1, n2 = <span class="hljs-built_in">len</span>(nums1), <span class="hljs-built_in">len</span>(nums2)<br>        <br>        <span class="hljs-keyword">while</span> index1 &lt; n1 <span class="hljs-keyword">and</span> index2 &lt; n2:<br>            <span class="hljs-keyword">if</span> nums1[index1] == nums2[index2]:<br>                result.append(nums1[index1])<br>                index1 += <span class="hljs-number">1</span><br>                index2 += <span class="hljs-number">1</span><br>            <span class="hljs-keyword">elif</span> nums1[index1] &gt; nums2[index2]:<br>                index2 += <span class="hljs-number">1</span><br>            <span class="hljs-keyword">else</span>:<br>                index1 += <span class="hljs-number">1</span><br>        <span class="hljs-keyword">return</span> result<br></code></pre></td></tr></table></figure>
-<h5 id="参考资料："><a href="#参考资料：" class="headerlink" title="参考资料："></a>参考资料：</h5><p>1、两数组的交 II <a href="https://blog.csdn.net/guoziqing506/article/details/51569488">https://blog.csdn.net/guoziqing506/article/details/51569488</a></p>
-]]></content>
-      <categories>
-        <category>算法</category>
-      </categories>
-      <tags>
-        <tag>python</tag>
-        <tag>数组</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>买卖股票的最佳时机Ⅱ</title>
-    <url>/posts/43c05810/</url>
-    <content><![CDATA[<h5 id="要求："><a href="#要求：" class="headerlink" title="要求："></a>要求：</h5><p>给定一个数组，它的第 i 个元素是一支给定股票第 i 天的价格。<br>设计一个算法来计算你所能获取的最大利润。你可以尽可能地完成更多的交易（多次买卖一支股票）。<br>注意：你不能同时参与多笔交易（你必须在再次购买前出售掉之前的股票）。</p>
-<span id="more"></span>
-<h5 id="示例："><a href="#示例：" class="headerlink" title="示例："></a>示例：</h5><p>（1）输入: [7,1,5,3,6,4]<br>输出: 7<br>解释: 在第 2 天（股票价格 &#x3D; 1）的时候买入，在第 3 天（股票价格 &#x3D; 5）的时候卖出, 这笔交易所能获得利润 &#x3D; 5-1 &#x3D; 4 。<br>     随后，在第 4 天（股票价格 &#x3D; 3）的时候买入，在第 5 天（股票价格 &#x3D; 6）的时候卖出, 这笔交易所能获得利润 &#x3D; 6-3 &#x3D; 3 。<br><br>（2）输入: [1,2,3,4,5]<br>输出: 4<br>解释: 在第 1 天（股票价格 &#x3D; 1）的时候买入，在第 5 天 （股票价格 &#x3D; 5）的时候卖出, 这笔交易所能获得利润 &#x3D; 5-1 &#x3D; 4 。<br>     注意你不能在第 1 天和第 2 天接连购买股票，之后再将它们卖出。<br>     因为这样属于同时参与了多笔交易，你必须在再次购买前出售掉之前的股票。<br><br>（3）输入: [7,6,4,3,1]<br>输出: 0<br>解释: 在这种情况下, 没有交易完成, 所以最大利润为 0。</p>
-<h5 id="分析："><a href="#分析：" class="headerlink" title="分析："></a>分析：</h5><p>通过比较相邻两个值的大小，低价买入，高价卖出，然后计算收益，另外考虑不买入和不卖出的特殊情况。</p>
-<h5 id="代码："><a href="#代码：" class="headerlink" title="代码："></a>代码：</h5><figure class="highlight python"><table><tr><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">class</span> <span class="hljs-title class_">Solution</span>:<br>    <span class="hljs-keyword">def</span> <span class="hljs-title function_">maxProfit</span>(<span class="hljs-params">self, prices</span>):<br>        <span class="hljs-string">&quot;&quot;&quot;</span><br><span class="hljs-string">        :type prices: List[int]</span><br><span class="hljs-string">        :rtype: int</span><br><span class="hljs-string">        &quot;&quot;&quot;</span><br>        status = <span class="hljs-number">0</span><br>        length = <span class="hljs-built_in">len</span>(prices)<br>        result = <span class="hljs-number">0</span><br>        buy = <span class="hljs-number">0</span><br>        sell = <span class="hljs-number">0</span><br>        <span class="hljs-comment">#当列表为空或者只有一位时，返回0</span><br>        <span class="hljs-keyword">if</span> length &lt;= <span class="hljs-number">1</span>:<br>            <span class="hljs-keyword">return</span> <span class="hljs-number">0</span><br>        <span class="hljs-keyword">else</span>:<br>            <span class="hljs-comment">#遍历列表</span><br>            <span class="hljs-keyword">for</span> x <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(length-<span class="hljs-number">1</span>):<br>                <span class="hljs-comment">#当状态为未买入，并且后一位的值大于前一位值时，买入，并且把状态改为买入</span><br>                <span class="hljs-keyword">if</span> status == <span class="hljs-number">0</span> <span class="hljs-keyword">and</span> prices[x] &lt; prices[x+<span class="hljs-number">1</span>]:<br>                    buy = prices[x]<br>                    status = <span class="hljs-number">1</span><br>                <span class="hljs-comment">#当状态为买入，并且后一位的值小于等于前一位值时，卖出，并且把状态改为未买入，累计result</span><br>                <span class="hljs-keyword">elif</span> status == <span class="hljs-number">1</span> <span class="hljs-keyword">and</span> prices[x] &gt;= prices[x+<span class="hljs-number">1</span>]:<br>                    sell = prices[x]<br>                    result = result + sell - buy<br>                    status = <span class="hljs-number">0</span> <span class="hljs-comment"># 正常情况最后状态一定是未买入，即status=0</span><br>                    <br>            <span class="hljs-comment">#用来排除[5,4,3,2,1]这种一直没有买入的情况</span><br>            <span class="hljs-keyword">if</span> status == <span class="hljs-number">0</span> <span class="hljs-keyword">and</span> sell == <span class="hljs-number">0</span>:<br>                result = <span class="hljs-number">0</span><br>            <span class="hljs-comment">#用来解决[1,2,3,4,5]这种一直没有卖出的情况</span><br>            <span class="hljs-keyword">elif</span> status == <span class="hljs-number">1</span>:<br>                result = result + prices[length-<span class="hljs-number">1</span>] - buy<br>            <span class="hljs-keyword">return</span> result<br></code></pre></td></tr></table></figure>
-<h5 id="参考资料："><a href="#参考资料：" class="headerlink" title="参考资料："></a>参考资料：</h5><p>1、买卖股票的最佳时机 II-Python-LeetCode <a href="https://blog.csdn.net/linfeng886/article/details/80070804">https://blog.csdn.net/linfeng886/article/details/80070804</a></p>
-]]></content>
-      <categories>
-        <category>算法</category>
-      </categories>
-      <tags>
-        <tag>python</tag>
-        <tag>数组</tag>
       </tags>
   </entry>
   <entry>
@@ -2275,6 +2257,24 @@
       </tags>
   </entry>
   <entry>
+    <title>买卖股票的最佳时机Ⅱ</title>
+    <url>/posts/43c05810/</url>
+    <content><![CDATA[<h5 id="要求："><a href="#要求：" class="headerlink" title="要求："></a>要求：</h5><p>给定一个数组，它的第 i 个元素是一支给定股票第 i 天的价格。<br>设计一个算法来计算你所能获取的最大利润。你可以尽可能地完成更多的交易（多次买卖一支股票）。<br>注意：你不能同时参与多笔交易（你必须在再次购买前出售掉之前的股票）。</p>
+<span id="more"></span>
+<h5 id="示例："><a href="#示例：" class="headerlink" title="示例："></a>示例：</h5><p>（1）输入: [7,1,5,3,6,4]<br>输出: 7<br>解释: 在第 2 天（股票价格 &#x3D; 1）的时候买入，在第 3 天（股票价格 &#x3D; 5）的时候卖出, 这笔交易所能获得利润 &#x3D; 5-1 &#x3D; 4 。<br>     随后，在第 4 天（股票价格 &#x3D; 3）的时候买入，在第 5 天（股票价格 &#x3D; 6）的时候卖出, 这笔交易所能获得利润 &#x3D; 6-3 &#x3D; 3 。<br><br>（2）输入: [1,2,3,4,5]<br>输出: 4<br>解释: 在第 1 天（股票价格 &#x3D; 1）的时候买入，在第 5 天 （股票价格 &#x3D; 5）的时候卖出, 这笔交易所能获得利润 &#x3D; 5-1 &#x3D; 4 。<br>     注意你不能在第 1 天和第 2 天接连购买股票，之后再将它们卖出。<br>     因为这样属于同时参与了多笔交易，你必须在再次购买前出售掉之前的股票。<br><br>（3）输入: [7,6,4,3,1]<br>输出: 0<br>解释: 在这种情况下, 没有交易完成, 所以最大利润为 0。</p>
+<h5 id="分析："><a href="#分析：" class="headerlink" title="分析："></a>分析：</h5><p>通过比较相邻两个值的大小，低价买入，高价卖出，然后计算收益，另外考虑不买入和不卖出的特殊情况。</p>
+<h5 id="代码："><a href="#代码：" class="headerlink" title="代码："></a>代码：</h5><figure class="highlight python"><table><tr><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">class</span> <span class="hljs-title class_">Solution</span>:<br>    <span class="hljs-keyword">def</span> <span class="hljs-title function_">maxProfit</span>(<span class="hljs-params">self, prices</span>):<br>        <span class="hljs-string">&quot;&quot;&quot;</span><br><span class="hljs-string">        :type prices: List[int]</span><br><span class="hljs-string">        :rtype: int</span><br><span class="hljs-string">        &quot;&quot;&quot;</span><br>        status = <span class="hljs-number">0</span><br>        length = <span class="hljs-built_in">len</span>(prices)<br>        result = <span class="hljs-number">0</span><br>        buy = <span class="hljs-number">0</span><br>        sell = <span class="hljs-number">0</span><br>        <span class="hljs-comment">#当列表为空或者只有一位时，返回0</span><br>        <span class="hljs-keyword">if</span> length &lt;= <span class="hljs-number">1</span>:<br>            <span class="hljs-keyword">return</span> <span class="hljs-number">0</span><br>        <span class="hljs-keyword">else</span>:<br>            <span class="hljs-comment">#遍历列表</span><br>            <span class="hljs-keyword">for</span> x <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(length-<span class="hljs-number">1</span>):<br>                <span class="hljs-comment">#当状态为未买入，并且后一位的值大于前一位值时，买入，并且把状态改为买入</span><br>                <span class="hljs-keyword">if</span> status == <span class="hljs-number">0</span> <span class="hljs-keyword">and</span> prices[x] &lt; prices[x+<span class="hljs-number">1</span>]:<br>                    buy = prices[x]<br>                    status = <span class="hljs-number">1</span><br>                <span class="hljs-comment">#当状态为买入，并且后一位的值小于等于前一位值时，卖出，并且把状态改为未买入，累计result</span><br>                <span class="hljs-keyword">elif</span> status == <span class="hljs-number">1</span> <span class="hljs-keyword">and</span> prices[x] &gt;= prices[x+<span class="hljs-number">1</span>]:<br>                    sell = prices[x]<br>                    result = result + sell - buy<br>                    status = <span class="hljs-number">0</span> <span class="hljs-comment"># 正常情况最后状态一定是未买入，即status=0</span><br>                    <br>            <span class="hljs-comment">#用来排除[5,4,3,2,1]这种一直没有买入的情况</span><br>            <span class="hljs-keyword">if</span> status == <span class="hljs-number">0</span> <span class="hljs-keyword">and</span> sell == <span class="hljs-number">0</span>:<br>                result = <span class="hljs-number">0</span><br>            <span class="hljs-comment">#用来解决[1,2,3,4,5]这种一直没有卖出的情况</span><br>            <span class="hljs-keyword">elif</span> status == <span class="hljs-number">1</span>:<br>                result = result + prices[length-<span class="hljs-number">1</span>] - buy<br>            <span class="hljs-keyword">return</span> result<br></code></pre></td></tr></table></figure>
+<h5 id="参考资料："><a href="#参考资料：" class="headerlink" title="参考资料："></a>参考资料：</h5><p>1、买卖股票的最佳时机 II-Python-LeetCode <a href="https://blog.csdn.net/linfeng886/article/details/80070804">https://blog.csdn.net/linfeng886/article/details/80070804</a></p>
+]]></content>
+      <categories>
+        <category>算法</category>
+      </categories>
+      <tags>
+        <tag>python</tag>
+        <tag>数组</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>从排序数组中删除重复项</title>
     <url>/posts/2b4bef4e/</url>
     <content><![CDATA[<h5 id="要求："><a href="#要求：" class="headerlink" title="要求："></a>要求：</h5><p>给定一个排序数组，你需要在原地删除重复出现的元素，使得每个元素只出现一次，返回移除后数组的新长度。（不要使用额外的数组空间，你必须在原地修改输入数组并在使用O（1）额外空间的条件下完成）。</p>
@@ -2345,24 +2345,6 @@
       </tags>
   </entry>
   <entry>
-    <title>加一</title>
-    <url>/posts/2e394548/</url>
-    <content><![CDATA[<h5 id="要求："><a href="#要求：" class="headerlink" title="要求："></a>要求：</h5><p>给定一个非负整数组成的非空数组，在该数的基础上加一，返回一个新的数组。<br><br>最高位数字存放在数组的首位， 数组中每个元素只存储一个数字。<br><br>你可以假设除了整数 0 之外，这个整数不会以零开头。</p>
-<span id="more"></span>
-<h5 id="示例："><a href="#示例：" class="headerlink" title="示例："></a>示例：</h5><p>（1）<br><br>输入: [1,2,3]<br><br>输出: [1,2,4]<br><br>解释: 输入数组表示数字 123。<br><br>（2）<br><br>输入: [4,3,2,1]<br><br>输出: [4,3,2,2]<br><br>解释: 输入数组表示数字 4321。</p>
-<h5 id="分析："><a href="#分析：" class="headerlink" title="分析："></a>分析：</h5><p>从后向前判断每个元素，如有进位，将进位符flag置为1，将元素所在位变为0；若无进位，将元素所在位+1，并将进位符置0，最后判断进位符标志，如果为1，则在数组第0位增加一个元素1。</p>
-<h5 id="代码："><a href="#代码：" class="headerlink" title="代码："></a>代码：</h5><figure class="highlight python"><table><tr><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">class</span> <span class="hljs-title class_">Solution</span>:<br>    <span class="hljs-keyword">def</span> <span class="hljs-title function_">plusOne</span>(<span class="hljs-params">self, digits</span>):<br>        <span class="hljs-string">&quot;&quot;&quot;</span><br><span class="hljs-string">        :type digits: List[int]</span><br><span class="hljs-string">        :rtype: List[int]</span><br><span class="hljs-string">        &quot;&quot;&quot;</span><br>        <br>        flag = <span class="hljs-number">1</span><br>        <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(<span class="hljs-built_in">len</span>(digits)-<span class="hljs-number">1</span>,-<span class="hljs-number">1</span>,-<span class="hljs-number">1</span>):<br>            <span class="hljs-keyword">if</span> flag + digits[i] == <span class="hljs-number">10</span>:<br>                digits[i] = <span class="hljs-number">0</span><br>                flag = <span class="hljs-number">1</span><br>            <span class="hljs-keyword">else</span>:<br>                digits[i] = digits[i] + flag<br>                flag = <span class="hljs-number">0</span><br>        <span class="hljs-keyword">if</span> flag == <span class="hljs-number">1</span>:<br>            digits.insert(<span class="hljs-number">0</span>,<span class="hljs-number">1</span>)<br>        <span class="hljs-keyword">return</span> digits<br></code></pre></td></tr></table></figure>
-<h5 id="参考资料："><a href="#参考资料：" class="headerlink" title="参考资料："></a>参考资料：</h5><p>1、leetcode 66.Plus One python <a href="https://blog.csdn.net/mario_mmh/article/details/79845181">https://blog.csdn.net/mario_mmh/article/details/79845181</a></p>
-]]></content>
-      <categories>
-        <category>算法</category>
-      </categories>
-      <tags>
-        <tag>python</tag>
-        <tag>数组</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>博客推荐</title>
     <url>/posts/418a12ae/</url>
     <content><![CDATA[<p>笔者在写博客、看博客的过程中，发现了一些有价值、有意思的博客，现记录下来、分享出来，以方便自己和网友访问。也欢迎网友们留言，将您认为有用、有趣的博客链接和简要描述放在评论区。</p>
@@ -2422,6 +2404,24 @@
       </tags>
   </entry>
   <entry>
+    <title>加一</title>
+    <url>/posts/2e394548/</url>
+    <content><![CDATA[<h5 id="要求："><a href="#要求：" class="headerlink" title="要求："></a>要求：</h5><p>给定一个非负整数组成的非空数组，在该数的基础上加一，返回一个新的数组。<br><br>最高位数字存放在数组的首位， 数组中每个元素只存储一个数字。<br><br>你可以假设除了整数 0 之外，这个整数不会以零开头。</p>
+<span id="more"></span>
+<h5 id="示例："><a href="#示例：" class="headerlink" title="示例："></a>示例：</h5><p>（1）<br><br>输入: [1,2,3]<br><br>输出: [1,2,4]<br><br>解释: 输入数组表示数字 123。<br><br>（2）<br><br>输入: [4,3,2,1]<br><br>输出: [4,3,2,2]<br><br>解释: 输入数组表示数字 4321。</p>
+<h5 id="分析："><a href="#分析：" class="headerlink" title="分析："></a>分析：</h5><p>从后向前判断每个元素，如有进位，将进位符flag置为1，将元素所在位变为0；若无进位，将元素所在位+1，并将进位符置0，最后判断进位符标志，如果为1，则在数组第0位增加一个元素1。</p>
+<h5 id="代码："><a href="#代码：" class="headerlink" title="代码："></a>代码：</h5><figure class="highlight python"><table><tr><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">class</span> <span class="hljs-title class_">Solution</span>:<br>    <span class="hljs-keyword">def</span> <span class="hljs-title function_">plusOne</span>(<span class="hljs-params">self, digits</span>):<br>        <span class="hljs-string">&quot;&quot;&quot;</span><br><span class="hljs-string">        :type digits: List[int]</span><br><span class="hljs-string">        :rtype: List[int]</span><br><span class="hljs-string">        &quot;&quot;&quot;</span><br>        <br>        flag = <span class="hljs-number">1</span><br>        <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(<span class="hljs-built_in">len</span>(digits)-<span class="hljs-number">1</span>,-<span class="hljs-number">1</span>,-<span class="hljs-number">1</span>):<br>            <span class="hljs-keyword">if</span> flag + digits[i] == <span class="hljs-number">10</span>:<br>                digits[i] = <span class="hljs-number">0</span><br>                flag = <span class="hljs-number">1</span><br>            <span class="hljs-keyword">else</span>:<br>                digits[i] = digits[i] + flag<br>                flag = <span class="hljs-number">0</span><br>        <span class="hljs-keyword">if</span> flag == <span class="hljs-number">1</span>:<br>            digits.insert(<span class="hljs-number">0</span>,<span class="hljs-number">1</span>)<br>        <span class="hljs-keyword">return</span> digits<br></code></pre></td></tr></table></figure>
+<h5 id="参考资料："><a href="#参考资料：" class="headerlink" title="参考资料："></a>参考资料：</h5><p>1、leetcode 66.Plus One python <a href="https://blog.csdn.net/mario_mmh/article/details/79845181">https://blog.csdn.net/mario_mmh/article/details/79845181</a></p>
+]]></content>
+      <categories>
+        <category>算法</category>
+      </categories>
+      <tags>
+        <tag>python</tag>
+        <tag>数组</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>存在重复</title>
     <url>/posts/e449a9c3/</url>
     <content><![CDATA[<h5 id="要求："><a href="#要求：" class="headerlink" title="要求："></a>要求：</h5><p>给定一个整数数组，判断是否存在重复元素。<br>如果任何值在数组中出现至少两次，函数返回 true。如果数组中每个元素都不相同，则返回 false。</p>
@@ -2437,6 +2437,31 @@
       <tags>
         <tag>python</tag>
         <tag>数组</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>常用linux命令</title>
+    <url>/posts/4206c037/</url>
+    <content><![CDATA[<p>下列命令在Ubuntu16.04 LTS 系统下测试通过。</p>
+<span id="more"></span>
+<h5 id="查看内存"><a href="#查看内存" class="headerlink" title="查看内存"></a>查看内存</h5><p>free<br>参数：<br>-help: 查看free命令的帮助内容<br>-h 以人类可读的直观方式<br>-b －k －m：分别以Byte、KB、MB为单位显示内存使用情况<br>-t：显示内存总和列</p>
+<h5 id="查看CPU"><a href="#查看CPU" class="headerlink" title="查看CPU"></a>查看CPU</h5><p>lscpu<br>查看当前操作系统内核信息  uname -a<br>查看当前操作系统发行版信息  cat &#x2F;etc&#x2F;issue<br>查看物理cpu颗数  cat &#x2F;proc&#x2F;cpuinfo | grep physical | uniq -c<br>查看完整CPU信息  cat &#x2F;proc&#x2F;cpuinfo</p>
+<h5 id="查看GPU"><a href="#查看GPU" class="headerlink" title="查看GPU"></a>查看GPU</h5><p>nvidia-smi<br>查看显卡信息 lspci | grep -i nvidia<br>周期性的输出显卡的使用情况 watch -n 10 nvidia-smi</p>
+<h5 id="查看硬盘大小"><a href="#查看硬盘大小" class="headerlink" title="查看硬盘大小"></a>查看硬盘大小</h5><p>df -h</p>
+<h5 id="创建用户"><a href="#创建用户" class="headerlink" title="创建用户"></a>创建用户</h5><p>sudo useradd -d &#x2F;usr&#x2F;sam -m sam 创建一个名为sam的用户</p>
+<h5 id="删除用户"><a href="#删除用户" class="headerlink" title="删除用户"></a>删除用户</h5><p>sudo userdel -r sam  其中，-r的作用是把该用户的主目录一起删除</p>
+<h5 id="将用户加入组"><a href="#将用户加入组" class="headerlink" title="将用户加入组"></a>将用户加入组</h5><p>sudo usermod -G xiep sam 将用户sam加入xiep组</p>
+<h5 id="查看当前登录用户名"><a href="#查看当前登录用户名" class="headerlink" title="查看当前登录用户名"></a>查看当前登录用户名</h5><p>whoami</p>
+<h5 id="查看当前用户所在组"><a href="#查看当前用户所在组" class="headerlink" title="查看当前用户所在组"></a>查看当前用户所在组</h5><p>groups sam</p>
+<h5 id="查看系统用户"><a href="#查看系统用户" class="headerlink" title="查看系统用户"></a>查看系统用户</h5><p>cat &#x2F;etc&#x2F;passwd</p>
+<h5 id="查看系统用户分组"><a href="#查看系统用户分组" class="headerlink" title="查看系统用户分组"></a>查看系统用户分组</h5><p>cat &#x2F;etc&#x2F;group</p>
+]]></content>
+      <categories>
+        <category>经验技巧</category>
+      </categories>
+      <tags>
+        <tag>Linux</tag>
+        <tag>Ubuntu</tag>
       </tags>
   </entry>
   <entry>
@@ -2481,31 +2506,6 @@
       <tags>
         <tag>Markdown</tag>
         <tag>写作</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>常用linux命令</title>
-    <url>/posts/4206c037/</url>
-    <content><![CDATA[<p>下列命令在Ubuntu16.04 LTS 系统下测试通过。</p>
-<span id="more"></span>
-<h5 id="查看内存"><a href="#查看内存" class="headerlink" title="查看内存"></a>查看内存</h5><p>free<br>参数：<br>-help: 查看free命令的帮助内容<br>-h 以人类可读的直观方式<br>-b －k －m：分别以Byte、KB、MB为单位显示内存使用情况<br>-t：显示内存总和列</p>
-<h5 id="查看CPU"><a href="#查看CPU" class="headerlink" title="查看CPU"></a>查看CPU</h5><p>lscpu<br>查看当前操作系统内核信息  uname -a<br>查看当前操作系统发行版信息  cat &#x2F;etc&#x2F;issue<br>查看物理cpu颗数  cat &#x2F;proc&#x2F;cpuinfo | grep physical | uniq -c<br>查看完整CPU信息  cat &#x2F;proc&#x2F;cpuinfo</p>
-<h5 id="查看GPU"><a href="#查看GPU" class="headerlink" title="查看GPU"></a>查看GPU</h5><p>nvidia-smi<br>查看显卡信息 lspci | grep -i nvidia<br>周期性的输出显卡的使用情况 watch -n 10 nvidia-smi</p>
-<h5 id="查看硬盘大小"><a href="#查看硬盘大小" class="headerlink" title="查看硬盘大小"></a>查看硬盘大小</h5><p>df -h</p>
-<h5 id="创建用户"><a href="#创建用户" class="headerlink" title="创建用户"></a>创建用户</h5><p>sudo useradd -d &#x2F;usr&#x2F;sam -m sam 创建一个名为sam的用户</p>
-<h5 id="删除用户"><a href="#删除用户" class="headerlink" title="删除用户"></a>删除用户</h5><p>sudo userdel -r sam  其中，-r的作用是把该用户的主目录一起删除</p>
-<h5 id="将用户加入组"><a href="#将用户加入组" class="headerlink" title="将用户加入组"></a>将用户加入组</h5><p>sudo usermod -G xiep sam 将用户sam加入xiep组</p>
-<h5 id="查看当前登录用户名"><a href="#查看当前登录用户名" class="headerlink" title="查看当前登录用户名"></a>查看当前登录用户名</h5><p>whoami</p>
-<h5 id="查看当前用户所在组"><a href="#查看当前用户所在组" class="headerlink" title="查看当前用户所在组"></a>查看当前用户所在组</h5><p>groups sam</p>
-<h5 id="查看系统用户"><a href="#查看系统用户" class="headerlink" title="查看系统用户"></a>查看系统用户</h5><p>cat &#x2F;etc&#x2F;passwd</p>
-<h5 id="查看系统用户分组"><a href="#查看系统用户分组" class="headerlink" title="查看系统用户分组"></a>查看系统用户分组</h5><p>cat &#x2F;etc&#x2F;group</p>
-]]></content>
-      <categories>
-        <category>经验技巧</category>
-      </categories>
-      <tags>
-        <tag>Linux</tag>
-        <tag>Ubuntu</tag>
       </tags>
   </entry>
   <entry>
@@ -2622,6 +2622,49 @@
       </tags>
   </entry>
   <entry>
+    <title>数学之美第二版读后感</title>
+    <url>/posts/553248e1/</url>
+    <content><![CDATA[<h2 id="感悟："><a href="#感悟：" class="headerlink" title="感悟："></a>感悟：</h2><ul>
+<li>一个正确的数学模型形式上通常是简单的。从这本书中，领会到了，google背后算法的力量，数学的力量，大数据的力量。</li>
+<li>正确的数学模型可以将一个计算量看似很大的问题的计算复杂度大大降低，这便是数学的妙用。</li>
+<li>数学是描述世间万般表象背后规律的最好工具，它是简单的，它是美的。<span id="more"></span></li>
+<li>计算机本身没有智能，只有极强的计算能力，只有找到解决这些问题的数学模型，才能让计算机在数据的驱动下，变得看起来智能。</li>
+<li>数据的重要性，大量准确的数据对研发很重要，让我们迫切需要学会收集数据，处理数据，善于运用数据，才能不被数据的海洋淹没。</li>
+<li>在计算机科学领域，一个好的算法应该像AK-47冲锋枪那样：简单、有效、可靠性好而且容易读懂（或者说易操作），而不应该是故弄玄虚。</li>
+<li>信息指纹：是指将一段信息（文字、图片、音频、视频等）随机地映射到一个多维二进制空间中的一个点（一个二进制数字）。只要这个随机函数做得好，那么不同信息对应的这些点就不会重合，因此，这些二进制的数字就成了原来的信息所具有的独一无二的指纹。</li>
+</ul>
+<h2 id="推荐阅读："><a href="#推荐阅读：" class="headerlink" title="推荐阅读："></a>推荐阅读：</h2><ol>
+<li><a href="https://book.douban.com/subject/10750155/" title="数学之美第一版">数学之美第一版</a></li>
+<li><a href="https://book.douban.com/subject/26163454/" title="数学之美第二版">数学之美第二版</a></li>
+<li>文本分类的经典论文，<a href="http://www.aclweb.org/anthology/P99-1022">http://www.aclweb.org/anthology/P99-1022</a></li>
+</ol>
+]]></content>
+      <categories>
+        <category>随笔感悟</category>
+      </categories>
+      <tags>
+        <tag>读后感</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>旋转数组</title>
+    <url>/posts/fb62c7d3/</url>
+    <content><![CDATA[<h5 id="要求："><a href="#要求：" class="headerlink" title="要求："></a>要求：</h5><p>给定一个数组，将数组中的元素向右移动 k 个位置，其中 k 是非负数。</p>
+<span id="more"></span>
+<h5 id="示例："><a href="#示例：" class="headerlink" title="示例："></a>示例：</h5><p>（1）<br>输入: [1,2,3,4,5,6,7] 和 k &#x3D; 3<br>输出: [5,6,7,1,2,3,4]解释:<br>向右旋转 1 步: [7,1,2,3,4,5,6]<br>向右旋转 2 步: [6,7,1,2,3,4,5]<br>向右旋转 3 步: [5,6,7,1,2,3,4] <br><br>（2）<br>输入: [-1,-100,3,99] 和 k &#x3D; 2<br>输出: [3,99,-1,-100]<br>解释:<br>向右旋转 1 步: [99,-1,-100,3]<br>向右旋转 2 步: [3,99,-1,-100]</p>
+<h5 id="分析："><a href="#分析：" class="headerlink" title="分析："></a>分析：</h5><p>将前k个元素移动到数组的后半部分，将后(n-k)个元素移动到数组的前半部分。</p>
+<h5 id="代码："><a href="#代码：" class="headerlink" title="代码："></a>代码：</h5><figure class="highlight python"><table><tr><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">class</span> <span class="hljs-title class_">Solution</span>:<br>    <span class="hljs-keyword">def</span> <span class="hljs-title function_">rotate</span>(<span class="hljs-params">self, nums, k</span>):<br>        <span class="hljs-string">&quot;&quot;&quot;</span><br><span class="hljs-string">        :type nums: List[int]</span><br><span class="hljs-string">        :type k: int</span><br><span class="hljs-string">        :rtype: void Do not return anything, modify nums in-place instead.</span><br><span class="hljs-string">        &quot;&quot;&quot;</span><br>        n = <span class="hljs-built_in">len</span>(nums) - k  <br>        nums[:] = nums[n:] + nums[:n]<br></code></pre></td></tr></table></figure>
+<h5 id="拓展："><a href="#拓展：" class="headerlink" title="拓展："></a>拓展：</h5><p>1、这是一个直观的算法操作，以切片（分块）的方式操作数组，比较符合人的思维，但是要注重观察示例特征，否则容易陷入单个元素移动的怪圈。<br><br>2、nums[:] &#x3D; 和 nums &#x3D; 的区别：</p>
+<figure class="highlight python-repl"><table><tr><td class="code"><pre><code class="hljs python-repl"><span class="hljs-meta prompt_">&gt;&gt;&gt;</span> <span class="language-python">a = <span class="hljs-built_in">list</span>(<span class="hljs-built_in">range</span>(<span class="hljs-number">10</span>))</span><br><span class="hljs-meta prompt_">&gt;&gt;&gt;</span> <span class="language-python">b = a</span><br><span class="hljs-meta prompt_">&gt;&gt;&gt;</span> <span class="language-python">a[:] = [<span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>] <span class="hljs-comment"># changes what a and b both refer to</span></span><br><span class="hljs-meta prompt_">&gt;&gt;&gt;</span> <span class="language-python">b</span><br>[0, 0, 0]<br><br><span class="hljs-meta prompt_">&gt;&gt;&gt;</span> <span class="language-python">a = <span class="hljs-built_in">list</span>(<span class="hljs-built_in">range</span>(<span class="hljs-number">10</span>))</span><br><span class="hljs-meta prompt_">&gt;&gt;&gt;</span> <span class="language-python">b = a</span><br><span class="hljs-meta prompt_">&gt;&gt;&gt;</span> <span class="language-python">a = [<span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>] <span class="hljs-comment"># a now refers to a different list than b</span></span><br><span class="hljs-meta prompt_">&gt;&gt;&gt;</span> <span class="language-python">b</span><br>[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]<br></code></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>算法</category>
+      </categories>
+      <tags>
+        <tag>python</tag>
+        <tag>数组</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>数说2021 展望2022</title>
     <url>/posts/23dbe718/</url>
     <content><![CDATA[<p>过去的一年，疫情一直持续着，在过好自己生活的同时，也关注着疫情的发展。</p>
@@ -2681,49 +2724,6 @@
       <tags>
         <tag>年度总结</tag>
         <tag>趁年轻 去运动</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>数学之美第二版读后感</title>
-    <url>/posts/553248e1/</url>
-    <content><![CDATA[<h2 id="感悟："><a href="#感悟：" class="headerlink" title="感悟："></a>感悟：</h2><ul>
-<li>一个正确的数学模型形式上通常是简单的。从这本书中，领会到了，google背后算法的力量，数学的力量，大数据的力量。</li>
-<li>正确的数学模型可以将一个计算量看似很大的问题的计算复杂度大大降低，这便是数学的妙用。</li>
-<li>数学是描述世间万般表象背后规律的最好工具，它是简单的，它是美的。<span id="more"></span></li>
-<li>计算机本身没有智能，只有极强的计算能力，只有找到解决这些问题的数学模型，才能让计算机在数据的驱动下，变得看起来智能。</li>
-<li>数据的重要性，大量准确的数据对研发很重要，让我们迫切需要学会收集数据，处理数据，善于运用数据，才能不被数据的海洋淹没。</li>
-<li>在计算机科学领域，一个好的算法应该像AK-47冲锋枪那样：简单、有效、可靠性好而且容易读懂（或者说易操作），而不应该是故弄玄虚。</li>
-<li>信息指纹：是指将一段信息（文字、图片、音频、视频等）随机地映射到一个多维二进制空间中的一个点（一个二进制数字）。只要这个随机函数做得好，那么不同信息对应的这些点就不会重合，因此，这些二进制的数字就成了原来的信息所具有的独一无二的指纹。</li>
-</ul>
-<h2 id="推荐阅读："><a href="#推荐阅读：" class="headerlink" title="推荐阅读："></a>推荐阅读：</h2><ol>
-<li><a href="https://book.douban.com/subject/10750155/" title="数学之美第一版">数学之美第一版</a></li>
-<li><a href="https://book.douban.com/subject/26163454/" title="数学之美第二版">数学之美第二版</a></li>
-<li>文本分类的经典论文，<a href="http://www.aclweb.org/anthology/P99-1022">http://www.aclweb.org/anthology/P99-1022</a></li>
-</ol>
-]]></content>
-      <categories>
-        <category>随笔感悟</category>
-      </categories>
-      <tags>
-        <tag>读后感</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>旋转数组</title>
-    <url>/posts/fb62c7d3/</url>
-    <content><![CDATA[<h5 id="要求："><a href="#要求：" class="headerlink" title="要求："></a>要求：</h5><p>给定一个数组，将数组中的元素向右移动 k 个位置，其中 k 是非负数。</p>
-<span id="more"></span>
-<h5 id="示例："><a href="#示例：" class="headerlink" title="示例："></a>示例：</h5><p>（1）<br>输入: [1,2,3,4,5,6,7] 和 k &#x3D; 3<br>输出: [5,6,7,1,2,3,4]解释:<br>向右旋转 1 步: [7,1,2,3,4,5,6]<br>向右旋转 2 步: [6,7,1,2,3,4,5]<br>向右旋转 3 步: [5,6,7,1,2,3,4] <br><br>（2）<br>输入: [-1,-100,3,99] 和 k &#x3D; 2<br>输出: [3,99,-1,-100]<br>解释:<br>向右旋转 1 步: [99,-1,-100,3]<br>向右旋转 2 步: [3,99,-1,-100]</p>
-<h5 id="分析："><a href="#分析：" class="headerlink" title="分析："></a>分析：</h5><p>将前k个元素移动到数组的后半部分，将后(n-k)个元素移动到数组的前半部分。</p>
-<h5 id="代码："><a href="#代码：" class="headerlink" title="代码："></a>代码：</h5><figure class="highlight python"><table><tr><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">class</span> <span class="hljs-title class_">Solution</span>:<br>    <span class="hljs-keyword">def</span> <span class="hljs-title function_">rotate</span>(<span class="hljs-params">self, nums, k</span>):<br>        <span class="hljs-string">&quot;&quot;&quot;</span><br><span class="hljs-string">        :type nums: List[int]</span><br><span class="hljs-string">        :type k: int</span><br><span class="hljs-string">        :rtype: void Do not return anything, modify nums in-place instead.</span><br><span class="hljs-string">        &quot;&quot;&quot;</span><br>        n = <span class="hljs-built_in">len</span>(nums) - k  <br>        nums[:] = nums[n:] + nums[:n]<br></code></pre></td></tr></table></figure>
-<h5 id="拓展："><a href="#拓展：" class="headerlink" title="拓展："></a>拓展：</h5><p>1、这是一个直观的算法操作，以切片（分块）的方式操作数组，比较符合人的思维，但是要注重观察示例特征，否则容易陷入单个元素移动的怪圈。<br><br>2、nums[:] &#x3D; 和 nums &#x3D; 的区别：</p>
-<figure class="highlight python-repl"><table><tr><td class="code"><pre><code class="hljs python-repl"><span class="hljs-meta prompt_">&gt;&gt;&gt;</span> <span class="language-python">a = <span class="hljs-built_in">list</span>(<span class="hljs-built_in">range</span>(<span class="hljs-number">10</span>))</span><br><span class="hljs-meta prompt_">&gt;&gt;&gt;</span> <span class="language-python">b = a</span><br><span class="hljs-meta prompt_">&gt;&gt;&gt;</span> <span class="language-python">a[:] = [<span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>] <span class="hljs-comment"># changes what a and b both refer to</span></span><br><span class="hljs-meta prompt_">&gt;&gt;&gt;</span> <span class="language-python">b</span><br>[0, 0, 0]<br><br><span class="hljs-meta prompt_">&gt;&gt;&gt;</span> <span class="language-python">a = <span class="hljs-built_in">list</span>(<span class="hljs-built_in">range</span>(<span class="hljs-number">10</span>))</span><br><span class="hljs-meta prompt_">&gt;&gt;&gt;</span> <span class="language-python">b = a</span><br><span class="hljs-meta prompt_">&gt;&gt;&gt;</span> <span class="language-python">a = [<span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>] <span class="hljs-comment"># a now refers to a different list than b</span></span><br><span class="hljs-meta prompt_">&gt;&gt;&gt;</span> <span class="language-python">b</span><br>[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]<br></code></pre></td></tr></table></figure>]]></content>
-      <categories>
-        <category>算法</category>
-      </categories>
-      <tags>
-        <tag>python</tag>
-        <tag>数组</tag>
       </tags>
   </entry>
   <entry>
@@ -2939,6 +2939,22 @@
       </tags>
   </entry>
   <entry>
+    <title>红楼梦书评</title>
+    <url>/posts/637f259f/</url>
+    <content><![CDATA[<p>昨天看完了《红楼梦》一书，还记得是从去年暑假开始看，差不多花了半年时间。因为之前身边有同学看，加之暑假打算看一看书，之前也没有看过，只零星看过红楼梦的电视剧，所以就选择了《红楼梦》。</p>
+<span id="more"></span>
+<p><img src="https://i.loli.net/2019/01/03/5c2e2d1619a35.jpg" alt="s1070959.jpg"></p>
+<p>在这本书里，见证了大量的诗词、中医养生的内容以及人物言谈对话，感受到了荣、宁二府由兴到衰再到“兴”的过程，还有贾宝玉、林黛玉、薛宝钗、老太太以及王熙凤等人生命历程。<br /><br>其中，给我印象最深的是薛宝钗，她不仅担负起薛家的家庭重担，也要承受着贾宝玉无心功名、沉迷闺阁的反传统压力。而她自己却是旧传统下的知书达理、贤良之妻。这个世界给了她不公，但她却从容应对，不刻薄他人，维持着家庭的和睦，不失高贵和优雅。<br /><br>总的来说，这本书，包含的内容及其丰富，从日常生活到社会万象，囊括万千，值得一读，甚至多读。<br /><br><strong>注:</strong> 这本书，我看的是Kindle电子书版本（《红楼梦》（古典名著普及文库）），在当当上搜索了一下，红楼梦有不同版本，推荐人民文学出版社的《红楼梦》。</p>
+]]></content>
+      <categories>
+        <category>随笔感悟</category>
+      </categories>
+      <tags>
+        <tag>书籍</tag>
+        <tag>阅读</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>【Latex经验】用Latex编译中文文档</title>
     <url>/posts/59479fbc/</url>
     <content><![CDATA[<p>我们知道用Latex编辑和编译英文文章十分高效和便捷，但是编译中文文档，经常会出现问题。那么常见的解决办法，如下：</p>
@@ -2956,22 +2972,6 @@
       </categories>
       <tags>
         <tag>Latex</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>红楼梦书评</title>
-    <url>/posts/637f259f/</url>
-    <content><![CDATA[<p>昨天看完了《红楼梦》一书，还记得是从去年暑假开始看，差不多花了半年时间。因为之前身边有同学看，加之暑假打算看一看书，之前也没有看过，只零星看过红楼梦的电视剧，所以就选择了《红楼梦》。</p>
-<span id="more"></span>
-<p><img src="https://i.loli.net/2019/01/03/5c2e2d1619a35.jpg" alt="s1070959.jpg"></p>
-<p>在这本书里，见证了大量的诗词、中医养生的内容以及人物言谈对话，感受到了荣、宁二府由兴到衰再到“兴”的过程，还有贾宝玉、林黛玉、薛宝钗、老太太以及王熙凤等人生命历程。<br /><br>其中，给我印象最深的是薛宝钗，她不仅担负起薛家的家庭重担，也要承受着贾宝玉无心功名、沉迷闺阁的反传统压力。而她自己却是旧传统下的知书达理、贤良之妻。这个世界给了她不公，但她却从容应对，不刻薄他人，维持着家庭的和睦，不失高贵和优雅。<br /><br>总的来说，这本书，包含的内容及其丰富，从日常生活到社会万象，囊括万千，值得一读，甚至多读。<br /><br><strong>注:</strong> 这本书，我看的是Kindle电子书版本（《红楼梦》（古典名著普及文库）），在当当上搜索了一下，红楼梦有不同版本，推荐人民文学出版社的《红楼梦》。</p>
-]]></content>
-      <categories>
-        <category>随笔感悟</category>
-      </categories>
-      <tags>
-        <tag>书籍</tag>
-        <tag>阅读</tag>
       </tags>
   </entry>
   <entry>
