@@ -29,7 +29,7 @@
 <meta property="og:image" content="https://i.loli.net/2020/10/26/zg2RiLaEK7du9WQ.png">
 <meta property="og:image" content="https://i.loli.net/2020/10/26/LbFpjcHBoX2TqOx.png">
 <meta property="article:published_time" content="2020-10-26T08:07:00.000Z">
-<meta property="article:modified_time" content="2023-10-07T12:11:58.157Z">
+<meta property="article:modified_time" content="2024-02-05T13:03:57.857Z">
 <meta property="article:author" content="Peter">
 <meta property="article:tag" content="注意力">
 <meta property="article:tag" content="Transformer">
@@ -550,6 +550,12 @@
   
 
 
+  
+  
+
+
+
+
 
 
 
@@ -765,6 +771,49 @@
 
 
   <script>Fluid.plugins.imageCaption();</script>
+
+  
+      <script>
+        if (!window.MathJax) {
+          window.MathJax = {
+            tex    : {
+              inlineMath: { '[+]': [['$', '$']] }
+            },
+            loader : {
+              load: ['ui/lazy']
+            },
+            options: {
+              renderActions: {
+                insertedScript: [200, () => {
+                  document.querySelectorAll('mjx-container').forEach(node => {
+                    let target = node.parentNode;
+                    if (target.nodeName.toLowerCase() === 'li') {
+                      target.parentNode.classList.add('has-jax');
+                    }
+                  });
+                }, '', false]
+              }
+            }
+          };
+        } else {
+          MathJax.startup.document.state(0);
+          MathJax.texReset();
+          MathJax.typeset();
+          MathJax.typesetPromise();
+        }
+
+        Fluid.events.registerRefreshCallback(function() {
+          if ('MathJax' in window && MathJax.startup.document && typeof MathJax.startup.document.state === 'function') {
+            MathJax.startup.document.state(0);
+            MathJax.texReset();
+            MathJax.typeset();
+            MathJax.typesetPromise();
+          }
+        });
+      </script>
+    
+
+  <script  src="https://lib.baomitu.com/mathjax/3.2.2/es5/tex-mml-chtml.js" ></script>
 
   <script defer src="/js/leancloud.js" ></script>
 

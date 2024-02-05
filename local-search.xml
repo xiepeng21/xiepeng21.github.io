@@ -4,6 +4,35 @@
   
   
   <entry>
+    <title>【论文笔记-5】iTransformer</title>
+    <link href="/posts/4b43950f/"/>
+    <url>/posts/4b43950f/</url>
+    
+    <content type="html"><![CDATA[<p><strong><a href="https://openreview.net/pdf?id=JePfAI8fah">ITRANSFORMER: INVERTED TRANSFORMERS ARE EFFECTIVE FOR TIME SERIES FORECASTING</a></strong>. Yong Liu, Tengge Hu, Haoran Zhang, Haixu Wu, Shiyu Wang, Lintao Ma, Mingsheng Long. ICLR 2024.</p><span id="more"></span><p>这篇论文是<a href="https://xiepeng21.cn/posts/3d1ac43b/">ICLR2024时空数据挖掘论文系列</a>的论文笔记第1篇。</p><h1 id="动机"><a href="#动机" class="headerlink" title="动机"></a>动机</h1><p>作者认为Transformer用于时间序列预测不够有效，是由于Transformer没有被正确地利用。</p><h1 id="任务"><a href="#任务" class="headerlink" title="任务"></a>任务</h1><p>提出了iTransformer框架用于多元时间序列预测，这是一种倒置的Transformer框架，将注意力机制和前馈神经网络倒置。</p><h1 id="方法"><a href="#方法" class="headerlink" title="方法"></a>方法</h1><ul><li>用layer normalization和前馈神经网络来学习每个时间序列的非线性表示。</li><li>用自注意力机制来学习多变量之间的关系。</li></ul><p><img src="/../images/iTransformer%E4%B8%8ETransformer%E5%8F%8A%E5%85%B6%E5%8F%98%E7%A7%8D%E7%9A%84%E6%AF%94%E8%BE%83.png" alt="iTransformer与Transformer及其变种的比较"></p><p><img src="/../images/iTransformer%E6%A1%86%E6%9E%B6.png" alt="iTransformer框架"></p><h1 id="评价"><a href="#评价" class="headerlink" title="评价"></a>评价</h1><ul><li><p>Data</p><ul><li>ETT</li><li>Weather</li><li>Electricity</li><li>Traffic</li><li>Solar-Energy</li><li>PEMS</li><li>Market (6 subsets)</li></ul></li><li><p>Comparative Methods</p><ul><li>Transformer-based methods<ul><li>Informer (Li et al., 2021)</li><li>Autoformer (Wu et al., 2021)</li><li>FEDformer (Zhou et al., 2022)</li><li>Stationary (Liu et al., 2022b)</li><li>Crossformer (Zhang &amp; Yan, 2023)</li><li>PatchTST (Nie et al., 2023)</li></ul></li><li>Linear-based methods<ul><li>DLinear (Zeng et al., 2023)</li><li>TiDE (Das et al., 2023)</li></ul></li><li>TCN-based methods<ul><li>SCINet (Liu et al., 2022a)</li><li>TimesNet (Wu et al., 2023)</li></ul></li></ul></li><li><p>Result<br><img src="/../images/Results_of_iTransformer.png" alt="对比方法实验结果"></p></li><li><p>Code</p><ul><li><a href="https://github.com/thuml/iTransformer">https://github.com/thuml/iTransformer</a> 官方实现</li><li><a href="https://github.com/lucidrains/iTransformer">https://github.com/lucidrains/iTransformer</a> 第三方实现</li></ul></li><li><p>Reddit讨论<br><a href="https://www.reddit.com/r/MachineLearning/comments/175ep6x/r_tsinghua_university_inverting_transformers/">https://www.reddit.com/r/MachineLearning/comments/175ep6x/r_tsinghua_university_inverting_transformers/</a></p></li><li><p>时间序列库TSlib： <a href="https://github.com/thuml/Time-Series-Library">https://github.com/thuml/Time-Series-Library</a> 这里面包含了iTransformer及相关时间序列预测最新的代码实现</p></li></ul><h1 id="展望"><a href="#展望" class="headerlink" title="展望"></a>展望</h1><p>文中提出的iTransformer框架，有望成为时间序列预测的基础骨干框架。</p><h1 id="更多"><a href="#更多" class="headerlink" title="更多"></a>更多</h1><ol><li>iTransformer论文解读<br><a href="https://mp.weixin.qq.com/s/_PKwnt9hjJJyxUiEDZ1EhA">https://mp.weixin.qq.com/s/_PKwnt9hjJJyxUiEDZ1EhA</a></li><li>【论文笔记-1】注意力人流量机器<br><a href="https://xiepeng21.cn/posts/a7c2a378/">https://xiepeng21.cn/posts/a7c2a378/</a></li><li>【论文笔记-2】深度学习<br><a href="https://xiepeng21.cn/posts/c0d0024f/">https://xiepeng21.cn/posts/c0d0024f/</a></li><li>【论文笔记-3】用于交通预测的多范围注意力双组分图卷积网络<br><a href="https://xiepeng21.cn/posts/e8cb7573/">https://xiepeng21.cn/posts/e8cb7573/</a></li><li>【论文笔记-4】Attention Is All You Need<br><a href="https://xiepeng21.cn/posts/d3e954aa/">https://xiepeng21.cn/posts/d3e954aa/</a></li><li>时空数据挖掘论文库<br><a href="https://github.com/xiepeng21/research_spatio-temporal-data-mining">https://github.com/xiepeng21/research_spatio-temporal-data-mining</a></li></ol>]]></content>
+    
+    
+    <categories>
+      
+      <category>论文阅读</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Transformer</tag>
+      
+      <tag>时间序列预测</tag>
+      
+      <tag>iTransformer</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>【节气养生】立春</title>
     <link href="/posts/f4f4854/"/>
     <url>/posts/f4f4854/</url>
@@ -1083,11 +1112,11 @@
     
     <tags>
       
+      <tag>人工智能</tag>
+      
       <tag>数据挖掘</tag>
       
       <tag>论文投稿</tag>
-      
-      <tag>人工智能</tag>
       
     </tags>
     
@@ -1189,11 +1218,11 @@
     
     <tags>
       
-      <tag>机器学习</tag>
-      
       <tag>数据挖掘</tag>
       
       <tag>论文投稿</tag>
+      
+      <tag>机器学习</tag>
       
     </tags>
     
