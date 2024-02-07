@@ -28,9 +28,9 @@
 <meta property="article:published_time" content="2022-10-01T05:34:59.000Z">
 <meta property="article:modified_time" content="2023-10-07T12:11:58.142Z">
 <meta property="article:author" content="Peter">
-<meta property="article:tag" content="阅读">
 <meta property="article:tag" content="趁年轻，去运动">
 <meta property="article:tag" content="国庆">
+<meta property="article:tag" content="阅读">
 <meta property="article:tag" content="电影">
 <meta property="article:tag" content="纪录片">
 <meta name="twitter:card" content="summary_large_image">
@@ -378,11 +378,11 @@
     <div class="post-meta">
       <i class="iconfont icon-tags"></i>
       
-        <a href="/tags/%E9%98%85%E8%AF%BB/" class="print-no-link">#阅读</a>
-      
         <a href="/tags/%E8%B6%81%E5%B9%B4%E8%BD%BB%EF%BC%8C%E5%8E%BB%E8%BF%90%E5%8A%A8/" class="print-no-link">#趁年轻，去运动</a>
       
         <a href="/tags/%E5%9B%BD%E5%BA%86/" class="print-no-link">#国庆</a>
+      
+        <a href="/tags/%E9%98%85%E8%AF%BB/" class="print-no-link">#阅读</a>
       
         <a href="/tags/%E7%94%B5%E5%BD%B1/" class="print-no-link">#电影</a>
       
@@ -469,20 +469,21 @@
   
     <article id="comments" lazyload>
       
-  <div id="valine"></div>
+  <div id="waline"></div>
   <script type="text/javascript">
-    Fluid.utils.loadComments('#valine', function() {
-      Fluid.utils.createScript('https://lib.baomitu.com/valine/1.5.1/Valine.min.js', function() {
+    Fluid.utils.loadComments('#waline', function() {
+      Fluid.utils.createCssLink('https://cdn.staticfile.org/waline/2.15.5/waline.min.css')
+      Fluid.utils.createScript('https://cdn.staticfile.org/waline/2.15.5/waline.min.js', function() {
         var options = Object.assign(
-          {"appId":"8I26PgYnHHH4hKBzkYy5qoDF-gzGzoHsz","appKey":"LDYuFbdAt4qYgkfjc2VriQM6","path":"window.location.pathname","placeholder":"欢迎评论","avatar":"retro","meta":["nick","mail","link"],"requiredFields":["nick","mail"],"pageSize":10,"lang":"zh-CN","highlight":false,"recordIP":false,"serverURLs":"","emojiCDN":null,"emojiMaps":null,"enableQQ":false},
+          {"serverURL":"https://waline-1-w8645244.deta.app/","path":"window.location.pathname","meta":["nick","mail","link"],"requiredMeta":["nick","mail"],"lang":"zh-CN","emoji":["https://cdn.jsdelivr.net/gh/walinejs/emojis/weibo"],"dark":"html[data-user-color-scheme=\"dark\"]","wordLimit":0,"pageSize":10},
           {
-            el: "#valine",
+            el: '#waline',
             path: window.location.pathname
           }
         )
-        new Valine(options);
-        Fluid.utils.waitElementVisible('#valine .vcontent', () => {
-          var imgSelector = '#valine .vcontent img:not(.vemoji)';
+        Waline.init(options);
+        Fluid.utils.waitElementVisible('#waline .vcontent', () => {
+          var imgSelector = '#waline .vcontent img:not(.vemoji)';
           Fluid.plugins.imageCaption(imgSelector);
           Fluid.plugins.fancyBox(imgSelector);
         })
