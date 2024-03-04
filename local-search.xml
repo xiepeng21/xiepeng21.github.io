@@ -4,6 +4,33 @@
   
   
   <entry>
+    <title>【论文笔记-6】城市大模型综述</title>
+    <link href="/posts/92078746/"/>
+    <url>/posts/92078746/</url>
+    
+    <content type="html"><![CDATA[<p><em><a href="https://arxiv.org/abs/2402.01749">Towards Urban General Intelligence: A Review and Outlook of Urban Foundation Models</a></em>. <a href="https://scholar.google.com/citations?user=lSi3CIoAAAAJ&hl=zh-CN&oi=ao">Weijia Zhang</a>, Jindong Han, Zhao Xu, Hang Ni, Hao Liu and <a href="https://scholar.google.com/citations?user=cVDF1tkAAAAJ&hl=zh-CN&oi=ao">Hui Xiong</a>. arXiv 2024.</p><span id="more"></span><h1 id="动机"><a href="#动机" class="headerlink" title="动机"></a>动机</h1><p>随着ChatGPT等大模型的兴起，关于城市大模型的讨论和研究兴趣也在不断增加，然而这一迅速发展起来的领域，也面临许多挑战，比如缺乏对城市大模型的清晰定义、系统的研究梳理、通用的解决方案。</p><h1 id="任务"><a href="#任务" class="headerlink" title="任务"></a>任务</h1><p>本文提出了城市大模型的概念，讨论了构建城市大模型面临的挑战、将城市大模型相关的研究工作按照数据（模态、类型）进行分类，并给出了城市大模型框架图，最后从应用的角度，探讨了大模型对不同应用场景的可能影响。相关的论文和开源资料发布在了GitHub库 <a href="https://github.com/usail-hkust/Awesome-Urban-Foundation-Models">https://github.com/usail-hkust/Awesome-Urban-Foundation-Models</a> </p><h1 id="方法"><a href="#方法" class="headerlink" title="方法"></a>方法</h1><p><img src="/../images/%E5%9F%8E%E5%B8%82%E5%A4%A7%E6%A8%A1%E5%9E%8B%E6%A1%86%E6%9E%B6%E5%9B%BE.png" alt="城市大模型框架图"></p><p>这个框架图包含三个部分，1. 多源多粒度多模态城市数据，如城市文本语料、街景图像、空间轨迹、时间序列数据、城市知识图谱等；2. 城市基础模型； 3. 下游应用场景，涵盖交通、城市规划、能源管理、环境监测及公共安全等领域。</p><p><img src="/../images/%E5%9F%8E%E5%B8%82%E5%A4%A7%E6%A8%A1%E5%9E%8B%E5%88%86%E7%B1%BB.png" alt="城市大模型分类"></p><p>将城市大模型按照数据的模态、类型进行分类，包括基于语言的、视觉的、轨迹的、时间序列的、多模态的以及其他类型的城市大模型。</p><p><img src="/../images/%E5%A4%9A%E6%A8%A1%E6%80%81%E5%9F%8E%E5%B8%82%E5%A4%A7%E6%A8%A1%E5%9E%8B%E6%9E%84%E5%BB%BA%E6%A1%86%E6%9E%B6.png" alt="多模态城市大模型构建框架"></p><p>从城市数据的集成、融合到多模态城市大模型构建，再到不同的城市应用场景。提升城市大模型的时空推理以及隐私保护能力。</p><h1 id="评价"><a href="#评价" class="headerlink" title="评价"></a>评价</h1><ol><li>文章对城市大模型进行了全面且比较深入的调研和分析；</li><li>按照城市大数据的不同模态对相关工作进行了分类；</li><li>给出了当前的城市大模型研究存在的一些挑战以及未来研究方向。</li></ol><h1 id="展望"><a href="#展望" class="headerlink" title="展望"></a>展望</h1><ol><li>如何将大模型的能力用于解决时空数据挖掘、城市计算领域存在的一些有挑战且尚未解决好的问题？</li><li>探索城市大模型的隐私保护问题。</li><li>城市大模型的发展给时空数据挖掘领域带来了哪些新的有意思的研究问题？</li></ol><h1 id="更多"><a href="#更多" class="headerlink" title="更多"></a>更多</h1><ol><li>【论文笔记-1】注意力人流量机器<br><a href="https://xiepeng21.cn/posts/a7c2a378/">https://xiepeng21.cn/posts/a7c2a378/</a></li><li>【论文笔记-2】深度学习<br><a href="https://xiepeng21.cn/posts/c0d0024f/">https://xiepeng21.cn/posts/c0d0024f/</a></li><li>【论文笔记-3】用于交通预测的多范围注意力双组分图卷积网络<br><a href="https://xiepeng21.cn/posts/e8cb7573/">https://xiepeng21.cn/posts/e8cb7573/</a></li><li>【论文笔记-4】Attention Is All You Need<br><a href="https://xiepeng21.cn/posts/d3e954aa/">https://xiepeng21.cn/posts/d3e954aa/</a></li><li>【论文笔记-5】iTransformer<br><a href="https://xiepeng21.cn/posts/4b43950f/">https://xiepeng21.cn/posts/4b43950f/</a></li><li>时空数据挖掘论文库<br><a href="https://github.com/xiepeng21/research_spatio-temporal-data-mining">https://github.com/xiepeng21/research_spatio-temporal-data-mining</a></li><li>AI论文速读 |【综述】城市基础模型回顾与展望——迈向城市通用智能<br><a href="https://mp.weixin.qq.com/s/hoC9g8hnOpZcSnmvv5Ac8A">https://mp.weixin.qq.com/s/hoC9g8hnOpZcSnmvv5Ac8A</a></li></ol>]]></content>
+    
+    
+    <categories>
+      
+      <category>论文阅读</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>城市大模型</tag>
+      
+      <tag>综述</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>【寻找石头】-第13期-20240223</title>
     <link href="/posts/421db1e9/"/>
     <url>/posts/421db1e9/</url>
@@ -1050,11 +1077,11 @@
     
     <tags>
       
+      <tag>阅读</tag>
+      
       <tag>趁年轻，去运动</tag>
       
       <tag>国庆</tag>
-      
-      <tag>阅读</tag>
       
       <tag>电影</tag>
       
@@ -1602,9 +1629,9 @@
     
     <tags>
       
-      <tag>阅读</tag>
-      
       <tag>书籍</tag>
+      
+      <tag>阅读</tag>
       
     </tags>
     
@@ -1629,9 +1656,9 @@
     
     <tags>
       
-      <tag>阅读</tag>
-      
       <tag>书籍</tag>
+      
+      <tag>阅读</tag>
       
     </tags>
     

@@ -6,7 +6,7 @@
   <link href="https://xiepeng21.cn/atom.xml" rel="self"/>
   
   <link href="https://xiepeng21.cn/"/>
-  <updated>2024-02-23T02:04:04.697Z</updated>
+  <updated>2024-03-04T02:08:18.267Z</updated>
   <id>https://xiepeng21.cn/</id>
   
   <author>
@@ -17,11 +17,34 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>【论文笔记-6】城市大模型综述</title>
+    <link href="https://xiepeng21.cn/posts/92078746/"/>
+    <id>https://xiepeng21.cn/posts/92078746/</id>
+    <published>2024-03-04T01:54:48.000Z</published>
+    <updated>2024-03-04T02:08:18.267Z</updated>
+    
+    <content type="html"><![CDATA[<p><em><a href="https://arxiv.org/abs/2402.01749">Towards Urban General Intelligence: A Review and Outlook of Urban Foundation Models</a></em>. <a href="https://scholar.google.com/citations?user=lSi3CIoAAAAJ&hl=zh-CN&oi=ao">Weijia Zhang</a>, Jindong Han, Zhao Xu, Hang Ni, Hao Liu and <a href="https://scholar.google.com/citations?user=cVDF1tkAAAAJ&hl=zh-CN&oi=ao">Hui Xiong</a>. arXiv 2024.</p><span id="more"></span><h1 id="动机"><a href="#动机" class="headerlink" title="动机"></a>动机</h1><p>随着ChatGPT等大模型的兴起，关于城市大模型的讨论和研究兴趣也在不断增加，然而这一迅速发展起来的领域，也面临许多挑战，比如缺乏对城市大模型的清晰定义、系统的研究梳理、通用的解决方案。</p><h1 id="任务"><a href="#任务" class="headerlink" title="任务"></a>任务</h1><p>本文提出了城市大模型的概念，讨论了构建城市大模型面临的挑战、将城市大模型相关的研究工作按照数据（模态、类型）进行分类，并给出了城市大模型框架图，最后从应用的角度，探讨了大模型对不同应用场景的可能影响。相关的论文和开源资料发布在了GitHub库 <a href="https://github.com/usail-hkust/Awesome-Urban-Foundation-Models">https://github.com/usail-hkust/Awesome-Urban-Foundation-Models</a> </p><h1 id="方法"><a href="#方法" class="headerlink" title="方法"></a>方法</h1><p><img src="/../images/%E5%9F%8E%E5%B8%82%E5%A4%A7%E6%A8%A1%E5%9E%8B%E6%A1%86%E6%9E%B6%E5%9B%BE.png" alt="城市大模型框架图"></p><p>这个框架图包含三个部分，1. 多源多粒度多模态城市数据，如城市文本语料、街景图像、空间轨迹、时间序列数据、城市知识图谱等；2. 城市基础模型； 3. 下游应用场景，涵盖交通、城市规划、能源管理、环境监测及公共安全等领域。</p><p><img src="/../images/%E5%9F%8E%E5%B8%82%E5%A4%A7%E6%A8%A1%E5%9E%8B%E5%88%86%E7%B1%BB.png" alt="城市大模型分类"></p><p>将城市大模型按照数据的模态、类型进行分类，包括基于语言的、视觉的、轨迹的、时间序列的、多模态的以及其他类型的城市大模型。</p><p><img src="/../images/%E5%A4%9A%E6%A8%A1%E6%80%81%E5%9F%8E%E5%B8%82%E5%A4%A7%E6%A8%A1%E5%9E%8B%E6%9E%84%E5%BB%BA%E6%A1%86%E6%9E%B6.png" alt="多模态城市大模型构建框架"></p><p>从城市数据的集成、融合到多模态城市大模型构建，再到不同的城市应用场景。提升城市大模型的时空推理以及隐私保护能力。</p><h1 id="评价"><a href="#评价" class="headerlink" title="评价"></a>评价</h1><ol><li>文章对城市大模型进行了全面且比较深入的调研和分析；</li><li>按照城市大数据的不同模态对相关工作进行了分类；</li><li>给出了当前的城市大模型研究存在的一些挑战以及未来研究方向。</li></ol><h1 id="展望"><a href="#展望" class="headerlink" title="展望"></a>展望</h1><ol><li>如何将大模型的能力用于解决时空数据挖掘、城市计算领域存在的一些有挑战且尚未解决好的问题？</li><li>探索城市大模型的隐私保护问题。</li><li>城市大模型的发展给时空数据挖掘领域带来了哪些新的有意思的研究问题？</li></ol><h1 id="更多"><a href="#更多" class="headerlink" title="更多"></a>更多</h1><ol><li>【论文笔记-1】注意力人流量机器<br><a href="https://xiepeng21.cn/posts/a7c2a378/">https://xiepeng21.cn/posts/a7c2a378/</a></li><li>【论文笔记-2】深度学习<br><a href="https://xiepeng21.cn/posts/c0d0024f/">https://xiepeng21.cn/posts/c0d0024f/</a></li><li>【论文笔记-3】用于交通预测的多范围注意力双组分图卷积网络<br><a href="https://xiepeng21.cn/posts/e8cb7573/">https://xiepeng21.cn/posts/e8cb7573/</a></li><li>【论文笔记-4】Attention Is All You Need<br><a href="https://xiepeng21.cn/posts/d3e954aa/">https://xiepeng21.cn/posts/d3e954aa/</a></li><li>【论文笔记-5】iTransformer<br><a href="https://xiepeng21.cn/posts/4b43950f/">https://xiepeng21.cn/posts/4b43950f/</a></li><li>时空数据挖掘论文库<br><a href="https://github.com/xiepeng21/research_spatio-temporal-data-mining">https://github.com/xiepeng21/research_spatio-temporal-data-mining</a></li><li>AI论文速读 |【综述】城市基础模型回顾与展望——迈向城市通用智能<br><a href="https://mp.weixin.qq.com/s/hoC9g8hnOpZcSnmvv5Ac8A">https://mp.weixin.qq.com/s/hoC9g8hnOpZcSnmvv5Ac8A</a></li></ol>]]></content>
+    
+    
+    <summary type="html">&lt;p&gt;&lt;em&gt;&lt;a href=&quot;https://arxiv.org/abs/2402.01749&quot;&gt;Towards Urban General Intelligence: A Review and Outlook of Urban Foundation Models&lt;/a&gt;&lt;/em&gt;. &lt;a href=&quot;https://scholar.google.com/citations?user=lSi3CIoAAAAJ&amp;hl=zh-CN&amp;oi=ao&quot;&gt;Weijia Zhang&lt;/a&gt;, Jindong Han, Zhao Xu, Hang Ni, Hao Liu and &lt;a href=&quot;https://scholar.google.com/citations?user=cVDF1tkAAAAJ&amp;hl=zh-CN&amp;oi=ao&quot;&gt;Hui Xiong&lt;/a&gt;. arXiv 2024.&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="论文阅读" scheme="https://xiepeng21.cn/categories/%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB/"/>
+    
+    
+    <category term="城市大模型" scheme="https://xiepeng21.cn/tags/%E5%9F%8E%E5%B8%82%E5%A4%A7%E6%A8%A1%E5%9E%8B/"/>
+    
+    <category term="综述" scheme="https://xiepeng21.cn/tags/%E7%BB%BC%E8%BF%B0/"/>
+    
+  </entry>
+  
+  <entry>
     <title>【寻找石头】-第13期-20240223</title>
     <link href="https://xiepeng21.cn/posts/421db1e9/"/>
     <id>https://xiepeng21.cn/posts/421db1e9/</id>
     <published>2024-02-23T01:30:26.000Z</published>
-    <updated>2024-02-23T02:04:04.697Z</updated>
+    <updated>2024-02-23T02:05:01.338Z</updated>
     
     <content type="html"><![CDATA[<p>记录过去一周值得记录的“石头”。全身贯注，用心专一，事大成。</p><span id="more"></span><h2 id="科技"><a href="#科技" class="headerlink" title="科技"></a>科技</h2><ul><li><p>腾讯发布影响2024年的十大科技应用趋势 | <a href="https://mp.weixin.qq.com/s/UPEgSeAuaId3F_gYboQWxw">影响2024年的十大科技应用趋势</a></p><ol><li>高性能计算的“四算聚变”：高算集群、量子计算、云计算和边缘计算“四算”融合，衍生新技术路径；高性能芯片多元发展，QPU 发展由数量转向质量；云原生技术将释放高性能算力潜能，科学计算模拟应用大量增加；业界将加大可持续高性能计算的践行力度。</li><li>多模态智能体加速AGI进程：多模态解析世界的本来面貌，并实现“三生万物”；从大脑到Agent，大模型从CoPilot副驾，走向主驾驶；端侧大模型加速部署，或将成为未来交互新入口；AI助力科研探索，贯穿科研全过程；负责任AI走向深入，价值对齐助力大模型稳健发展。</li><li>AI加速人形机器人“手、脑”进化：大模型在文本、自然语言和视觉领域取得重要突破，提升机器人的理解能力；云边结合的分布式算力平台发展强化了机器人的训练速率，降低产业化门槛；多感知、多自由度功能融合的灵巧手强化了人形机器人的微操作能力。</li><li>AI+基因计算解读生命密码：AI已成为基因组学创新的关键驱动力；利用大模型破解复杂生物问题成为布局热点；AI+生物技术正在加速育种4.0时代到来；AI+基因计算将助力实现个性化健康预测；AI+基因工程促进分子药物设计和研发规则创新。</li><li>数字交互引擎激发超级数字场景：数字交互引擎与AIGC互相驱动，打造构建超级数字场景的高效工具集；大众应用方面，数字交互引擎或走向UGC形态内容工具；行业应用方面，数字交互引擎推动各行业数字孪生走向实时性。</li><li>沉浸式媒体催生3D在场：沉浸式体验与交互：从平面到沉浸式体验的升级；高效内容生成与呈现：AI技术的加持；从消费互联网到产业互联网：根据场景进行优化。</li><li>脑机接口从医疗突破迈向交互革命：脑机接口加速脑科学研究，助力医疗领域神经系统疾病监测及诊疗突破；脑机接口与混合现实深化融合，将推动新一代人机交互模式变革；脑机接口与人工智能相辅相成，成为促进人机和谐共生的重要路径之一。</li><li>星地直连通信推动泛在网络覆盖：“Anytime，Anywhere，Anyone，Anything”为终极目标。</li><li>eVTOL（electric vertical take-off and landing）加速空中出行奔赴新时代：纯电推进的eVTOL成为主流，细分技术路线的优势需在场景中体现；高能量密度锂电池的技术突破，进一步提升eVTOL续航里程；“软件定义飞行器”和空中交通管理智能化共同加速无人驾驶愿景。</li><li>多能流实时协同重塑虚拟电厂：规模巨大、可调性强的工业可调节负荷可提供规模灵活性；数字基础设施的能耗优化，数据中心任务移动可改变负荷；与C端互动平移伸缩电动车充电状态，聚合为“大电池”。</li></ol></li><li><p>微软研究院发布2024年值得关注的三大人工智能趋势 | <a href="https://mp.weixin.qq.com/s/jugTw-HV7_S4TBP73JdswA">2024年值得关注的三大人工智能趋势</a></p><ol><li>小语言模型</li><li>多模态人工智能</li><li>科学探索中的人工智能</li></ol></li><li><p>国务院国资委提出中央企业要把发展人工智能放在全局工作中统筹谋划，加快建设一批智能算力中心 | <a href="http://finance.people.com.cn/n1/2024/0223/c1004-40182006.html">AI赋能产业焕新</a></p><ul><li>中央企业要把发展人工智能放在全局工作中统筹谋划，深入推进产业焕新，加快布局和发展智能产业。</li><li>要夯实发展基础底座，把主要资源集中投入到最需要、最有优势的领域，加快建设一批智能算力中心，进一步深化开放合作，更好发挥跨央企协同创新平台作用。</li><li>开展AI+专项行动，强化需求牵引，加快重点行业赋能，构建一批产业多模态优质数据集打造从基础设施、算法工具、智能平台到解决方案的大模型赋能产业生态。</li></ul></li></ul><h2 id="文化"><a href="#文化" class="headerlink" title="文化"></a>文化</h2><ul><li>播客推荐 | 《纵横四海》之<a href="https://www.xiaoyuzhoufm.com/episode/65cf16010bef6c2074f130e1">EP40《情绪》：如何精神稳定地『发疯』</a> 带我们更好地认识情绪，与自己的情绪相处，改善人际关系，提升情商和智商。</li><li>书籍推荐 | 《<a href="https://xiepeng21.cn/posts/c379d604/">穿越小径分岔的花园：赫伯特·西蒙和他的科学迷宫</a>》：通过西蒙了解丰富多彩的跨学科、管理、组织、系统科学、心理学、人工智能等内容，提出了很多引人思考的问题以及可行的解决方案。</li></ul><h2 id="生活"><a href="#生活" class="headerlink" title="生活"></a>生活</h2><ul><li>明天就是元宵节了，祝大家元宵节快乐，幸福安康。</li></ul><h2 id="新知"><a href="#新知" class="headerlink" title="新知"></a>新知</h2><ul><li>预测未来的最好方式，就是创造未来。</li></ul><h2 id="更多"><a href="#更多" class="headerlink" title="更多"></a>更多</h2><ol><li>【寻找石头】-第1期-20231113<br><a href="https://xiepeng21.cn/posts/60a517c0/">https://xiepeng21.cn/posts/60a517c0/</a></li><li>【寻找石头】-第2期-20231117<br><a href="https://xiepeng21.cn/posts/28c5f201/">https://xiepeng21.cn/posts/28c5f201/</a></li><li>【寻找石头】-第3期-20231124<br><a href="https://xiepeng21.cn/posts/8fbdec1/">https://xiepeng21.cn/posts/8fbdec1/</a></li><li>【寻找石头】-第4期-20231201<br><a href="https://xiepeng21.cn/posts/3592f0cd/">https://xiepeng21.cn/posts/3592f0cd/</a></li><li>【寻找石头】-第5期-20231208<br><a href="https://xiepeng21.cn/posts/91d891ec/">https://xiepeng21.cn/posts/91d891ec/</a></li><li>【寻找石头】-第6期-20231215<br><a href="https://xiepeng21.cn/posts/4bb8b0de/">https://xiepeng21.cn/posts/4bb8b0de/</a></li><li>【寻找石头】-第7期-20231222<br><a href="https://xiepeng21.cn/posts/2367af3b/">https://xiepeng21.cn/posts/2367af3b/</a></li><li>【寻找石头】-第8期-20240112<br><a href="https://xiepeng21.cn/posts/27e02ce1/">https://xiepeng21.cn/posts/27e02ce1/</a></li><li>【寻找石头】-第9期-20240119<br><a href="https://xiepeng21.cn/posts/6da42cec/">https://xiepeng21.cn/posts/6da42cec/</a></li><li>【寻找石头】-第10期-20240126<br><a href="https://xiepeng21.cn/posts/8dfb97f1/">https://xiepeng21.cn/posts/8dfb97f1/</a></li><li>【寻找石头】-第11期-20240203<br><a href="https://xiepeng21.cn/posts/10776620/">https://xiepeng21.cn/posts/10776620/</a></li><li>【寻找石头】-第12期-20240220<br><a href="https://xiepeng21.cn/posts/68239d6/">https://xiepeng21.cn/posts/68239d6/</a></li></ol><hr><p>欢迎各位提出建议、问题，我们一起交流、学习、成长。</p><p>“问渠那得清如许？为有源头活水来” ヾ(◍°∇°◍)ﾉﾞ</p><p>——— 我在半亩方塘等你 ^_^</p>]]></content>
     
@@ -919,11 +942,11 @@
     <category term="随笔感悟" scheme="https://xiepeng21.cn/categories/%E9%9A%8F%E7%AC%94%E6%84%9F%E6%82%9F/"/>
     
     
+    <category term="阅读" scheme="https://xiepeng21.cn/tags/%E9%98%85%E8%AF%BB/"/>
+    
     <category term="趁年轻，去运动" scheme="https://xiepeng21.cn/tags/%E8%B6%81%E5%B9%B4%E8%BD%BB%EF%BC%8C%E5%8E%BB%E8%BF%90%E5%8A%A8/"/>
     
     <category term="国庆" scheme="https://xiepeng21.cn/tags/%E5%9B%BD%E5%BA%86/"/>
-    
-    <category term="阅读" scheme="https://xiepeng21.cn/tags/%E9%98%85%E8%AF%BB/"/>
     
     <category term="电影" scheme="https://xiepeng21.cn/tags/%E7%94%B5%E5%BD%B1/"/>
     
@@ -1396,9 +1419,9 @@
     <category term="随笔感悟" scheme="https://xiepeng21.cn/categories/%E9%9A%8F%E7%AC%94%E6%84%9F%E6%82%9F/"/>
     
     
-    <category term="阅读" scheme="https://xiepeng21.cn/tags/%E9%98%85%E8%AF%BB/"/>
-    
     <category term="书籍" scheme="https://xiepeng21.cn/tags/%E4%B9%A6%E7%B1%8D/"/>
+    
+    <category term="阅读" scheme="https://xiepeng21.cn/tags/%E9%98%85%E8%AF%BB/"/>
     
   </entry>
   
@@ -1419,9 +1442,9 @@
     <category term="随笔感悟" scheme="https://xiepeng21.cn/categories/%E9%9A%8F%E7%AC%94%E6%84%9F%E6%82%9F/"/>
     
     
-    <category term="阅读" scheme="https://xiepeng21.cn/tags/%E9%98%85%E8%AF%BB/"/>
-    
     <category term="书籍" scheme="https://xiepeng21.cn/tags/%E4%B9%A6%E7%B1%8D/"/>
+    
+    <category term="阅读" scheme="https://xiepeng21.cn/tags/%E9%98%85%E8%AF%BB/"/>
     
   </entry>
   
