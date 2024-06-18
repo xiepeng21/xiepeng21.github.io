@@ -4,6 +4,35 @@
   
   
   <entry>
+    <title>【论文笔记-7】LLMLight-城市交通信号灯控制智能体</title>
+    <link href="/posts/cfe671a9/"/>
+    <url>/posts/cfe671a9/</url>
+    
+    <content type="html"><![CDATA[<p><em><a href="https://arxiv.org/pdf/2312.16044">LLMLight: Large Language Models as Traffic Signal Control Agents</a></em>. <a href="https://scholar.google.com/citations?user=K4YI7ksAAAAJ&hl=zh-CN&oi=ao">Siqi Lai</a>, Zhao Xu, Weijia Zhang, Hao Liu and <a href="https://scholar.google.com/citations?user=cVDF1tkAAAAJ&hl=zh-CN&oi=ao">Hui Xiong</a>. arXiv 2024.</p><span id="more"></span><h1 id="动机"><a href="#动机" class="headerlink" title="动机"></a>动机</h1><p>挑战1：如何让大语言模型LLM理解实时的交通动态信息和有效地与交通环境交互，对于基于大语言模型的交通信号控制是至关重要的？</p><p>挑战2：通用的大语言模型缺乏特定的领域知识，且容易出现幻觉问题。</p><h1 id="任务"><a href="#任务" class="headerlink" title="任务"></a>任务</h1><p>提出了一种交通信号控制代理框架LLMLight以及采用微调，为交通信号灯控制量身订做了智能体LightGPT。</p><h1 id="方法"><a href="#方法" class="headerlink" title="方法"></a>方法</h1><p><img src="/../images/LLMLight.png" alt="LLMLight"></p><ul><li>Real time observation</li><li>Task description</li><li>Control action space</li></ul><p><img src="/../images/LightGPT.png" alt="LightGPT"></p><ul><li>Reasoning Trajectory Collection &amp; Filtering</li><li>Imitation Fine-tuning</li><li>Critic-guided Policy Refinement</li></ul><blockquote><p>演示系统：<a href="https://llmtscs-demo.vercel.app/">https://llmtscs-demo.vercel.app/</a></p></blockquote><blockquote><p>源代码：<a href="https://github.com/usail-hkust/LLMTSCS">https://github.com/usail-hkust/LLMTSCS</a></p></blockquote><h1 id="评价"><a href="#评价" class="headerlink" title="评价"></a>评价</h1><ol><li>This is the first exploration of LLMs as <em>decision-making agents</em> in TSC (Traffic Signal Control).</li><li>Extensive experiments on nine traffic flow datasets demonstrate the <em>superior effectiveness</em>, <em>generalization capabilities</em>, and <em>interpretability</em> of the LLMLight framework.</li></ol><h1 id="展望"><a href="#展望" class="headerlink" title="展望"></a>展望</h1><ol><li>多个交通十字路口的联合控制如何做？</li><li>实时交通信息只考虑了汽车，没有考虑行人以及自行车、电瓶车等。</li><li>实时的交通流量预测信息如何输入到这个LightGPT中，辅助交通信号灯控制？</li></ol><h1 id="更多"><a href="#更多" class="headerlink" title="更多"></a>更多</h1><ol><li>【论文笔记-1】注意力人流量机器<br><a href="https://xiepeng21.cn/posts/a7c2a378/">https://xiepeng21.cn/posts/a7c2a378/</a></li><li>【论文笔记-2】深度学习<br><a href="https://xiepeng21.cn/posts/c0d0024f/">https://xiepeng21.cn/posts/c0d0024f/</a></li><li>【论文笔记-3】用于交通预测的多范围注意力双组分图卷积网络<br><a href="https://xiepeng21.cn/posts/e8cb7573/">https://xiepeng21.cn/posts/e8cb7573/</a></li><li>【论文笔记-4】Attention Is All You Need<br><a href="https://xiepeng21.cn/posts/d3e954aa/">https://xiepeng21.cn/posts/d3e954aa/</a></li><li>【论文笔记-5】iTransformer<br><a href="https://xiepeng21.cn/posts/4b43950f/">https://xiepeng21.cn/posts/4b43950f/</a></li><li>【论文笔记-6】城市大模型综述<br><a href="https://xiepeng21.cn/posts/92078746/">https://xiepeng21.cn/posts/92078746/</a></li><li>【时空论文库】时空数据挖掘论文库<br><a href="https://github.com/xiepeng21/research_spatio-temporal-data-mining">https://github.com/xiepeng21/research_spatio-temporal-data-mining</a></li><li>【AI论文速读】综述：城市基础模型回顾与展望——迈向城市通用智能<br><a href="https://mp.weixin.qq.com/s/hoC9g8hnOpZcSnmvv5Ac8A">https://mp.weixin.qq.com/s/hoC9g8hnOpZcSnmvv5Ac8A</a></li><li>【论文解读】港科大（广州）发布大模型交通信号灯控制框架LLMLight<br><a href="https://mp.weixin.qq.com/s/TxeeNKFqaP9rKj5Hd-xsXw">https://mp.weixin.qq.com/s/TxeeNKFqaP9rKj5Hd-xsXw</a></li></ol>]]></content>
+    
+    
+    <categories>
+      
+      <category>论文阅读</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>城市大模型</tag>
+      
+      <tag>LLMLight</tag>
+      
+      <tag>交通信号灯控制</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>【寻找石头】-第29期-20240618-艺术之美</title>
     <link href="/posts/967ff32a/"/>
     <url>/posts/967ff32a/</url>
@@ -1917,11 +1946,11 @@
     
     <tags>
       
-      <tag>人工智能</tag>
-      
       <tag>数据挖掘</tag>
       
       <tag>论文投稿</tag>
+      
+      <tag>人工智能</tag>
       
     </tags>
     
@@ -2023,11 +2052,11 @@
     
     <tags>
       
+      <tag>机器学习</tag>
+      
       <tag>数据挖掘</tag>
       
       <tag>论文投稿</tag>
-      
-      <tag>机器学习</tag>
       
     </tags>
     

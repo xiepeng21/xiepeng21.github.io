@@ -6,7 +6,7 @@
   <link href="https://xiepeng21.cn/atom.xml" rel="self"/>
   
   <link href="https://xiepeng21.cn/"/>
-  <updated>2024-06-18T02:11:01.364Z</updated>
+  <updated>2024-06-18T02:43:26.919Z</updated>
   <id>https://xiepeng21.cn/</id>
   
   <author>
@@ -17,11 +17,36 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>【论文笔记-7】LLMLight-城市交通信号灯控制智能体</title>
+    <link href="https://xiepeng21.cn/posts/cfe671a9/"/>
+    <id>https://xiepeng21.cn/posts/cfe671a9/</id>
+    <published>2024-06-18T02:24:49.000Z</published>
+    <updated>2024-06-18T02:43:26.919Z</updated>
+    
+    <content type="html"><![CDATA[<p><em><a href="https://arxiv.org/pdf/2312.16044">LLMLight: Large Language Models as Traffic Signal Control Agents</a></em>. <a href="https://scholar.google.com/citations?user=K4YI7ksAAAAJ&hl=zh-CN&oi=ao">Siqi Lai</a>, Zhao Xu, Weijia Zhang, Hao Liu and <a href="https://scholar.google.com/citations?user=cVDF1tkAAAAJ&hl=zh-CN&oi=ao">Hui Xiong</a>. arXiv 2024.</p><span id="more"></span><h1 id="动机"><a href="#动机" class="headerlink" title="动机"></a>动机</h1><p>挑战1：如何让大语言模型LLM理解实时的交通动态信息和有效地与交通环境交互，对于基于大语言模型的交通信号控制是至关重要的？</p><p>挑战2：通用的大语言模型缺乏特定的领域知识，且容易出现幻觉问题。</p><h1 id="任务"><a href="#任务" class="headerlink" title="任务"></a>任务</h1><p>提出了一种交通信号控制代理框架LLMLight以及采用微调，为交通信号灯控制量身订做了智能体LightGPT。</p><h1 id="方法"><a href="#方法" class="headerlink" title="方法"></a>方法</h1><p><img src="/../images/LLMLight.png" alt="LLMLight"></p><ul><li>Real time observation</li><li>Task description</li><li>Control action space</li></ul><p><img src="/../images/LightGPT.png" alt="LightGPT"></p><ul><li>Reasoning Trajectory Collection &amp; Filtering</li><li>Imitation Fine-tuning</li><li>Critic-guided Policy Refinement</li></ul><blockquote><p>演示系统：<a href="https://llmtscs-demo.vercel.app/">https://llmtscs-demo.vercel.app/</a></p></blockquote><blockquote><p>源代码：<a href="https://github.com/usail-hkust/LLMTSCS">https://github.com/usail-hkust/LLMTSCS</a></p></blockquote><h1 id="评价"><a href="#评价" class="headerlink" title="评价"></a>评价</h1><ol><li>This is the first exploration of LLMs as <em>decision-making agents</em> in TSC (Traffic Signal Control).</li><li>Extensive experiments on nine traffic flow datasets demonstrate the <em>superior effectiveness</em>, <em>generalization capabilities</em>, and <em>interpretability</em> of the LLMLight framework.</li></ol><h1 id="展望"><a href="#展望" class="headerlink" title="展望"></a>展望</h1><ol><li>多个交通十字路口的联合控制如何做？</li><li>实时交通信息只考虑了汽车，没有考虑行人以及自行车、电瓶车等。</li><li>实时的交通流量预测信息如何输入到这个LightGPT中，辅助交通信号灯控制？</li></ol><h1 id="更多"><a href="#更多" class="headerlink" title="更多"></a>更多</h1><ol><li>【论文笔记-1】注意力人流量机器<br><a href="https://xiepeng21.cn/posts/a7c2a378/">https://xiepeng21.cn/posts/a7c2a378/</a></li><li>【论文笔记-2】深度学习<br><a href="https://xiepeng21.cn/posts/c0d0024f/">https://xiepeng21.cn/posts/c0d0024f/</a></li><li>【论文笔记-3】用于交通预测的多范围注意力双组分图卷积网络<br><a href="https://xiepeng21.cn/posts/e8cb7573/">https://xiepeng21.cn/posts/e8cb7573/</a></li><li>【论文笔记-4】Attention Is All You Need<br><a href="https://xiepeng21.cn/posts/d3e954aa/">https://xiepeng21.cn/posts/d3e954aa/</a></li><li>【论文笔记-5】iTransformer<br><a href="https://xiepeng21.cn/posts/4b43950f/">https://xiepeng21.cn/posts/4b43950f/</a></li><li>【论文笔记-6】城市大模型综述<br><a href="https://xiepeng21.cn/posts/92078746/">https://xiepeng21.cn/posts/92078746/</a></li><li>【时空论文库】时空数据挖掘论文库<br><a href="https://github.com/xiepeng21/research_spatio-temporal-data-mining">https://github.com/xiepeng21/research_spatio-temporal-data-mining</a></li><li>【AI论文速读】综述：城市基础模型回顾与展望——迈向城市通用智能<br><a href="https://mp.weixin.qq.com/s/hoC9g8hnOpZcSnmvv5Ac8A">https://mp.weixin.qq.com/s/hoC9g8hnOpZcSnmvv5Ac8A</a></li><li>【论文解读】港科大（广州）发布大模型交通信号灯控制框架LLMLight<br><a href="https://mp.weixin.qq.com/s/TxeeNKFqaP9rKj5Hd-xsXw">https://mp.weixin.qq.com/s/TxeeNKFqaP9rKj5Hd-xsXw</a></li></ol>]]></content>
+    
+    
+    <summary type="html">&lt;p&gt;&lt;em&gt;&lt;a href=&quot;https://arxiv.org/pdf/2312.16044&quot;&gt;LLMLight: Large Language Models as Traffic Signal Control Agents&lt;/a&gt;&lt;/em&gt;. &lt;a href=&quot;https://scholar.google.com/citations?user=K4YI7ksAAAAJ&amp;hl=zh-CN&amp;oi=ao&quot;&gt;Siqi Lai&lt;/a&gt;, Zhao Xu, Weijia Zhang, Hao Liu and &lt;a href=&quot;https://scholar.google.com/citations?user=cVDF1tkAAAAJ&amp;hl=zh-CN&amp;oi=ao&quot;&gt;Hui Xiong&lt;/a&gt;. arXiv 2024.&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="论文阅读" scheme="https://xiepeng21.cn/categories/%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB/"/>
+    
+    
+    <category term="城市大模型" scheme="https://xiepeng21.cn/tags/%E5%9F%8E%E5%B8%82%E5%A4%A7%E6%A8%A1%E5%9E%8B/"/>
+    
+    <category term="LLMLight" scheme="https://xiepeng21.cn/tags/LLMLight/"/>
+    
+    <category term="交通信号灯控制" scheme="https://xiepeng21.cn/tags/%E4%BA%A4%E9%80%9A%E4%BF%A1%E5%8F%B7%E7%81%AF%E6%8E%A7%E5%88%B6/"/>
+    
+  </entry>
+  
+  <entry>
     <title>【寻找石头】-第29期-20240618-艺术之美</title>
     <link href="https://xiepeng21.cn/posts/967ff32a/"/>
     <id>https://xiepeng21.cn/posts/967ff32a/</id>
     <published>2024-06-18T01:13:39.000Z</published>
-    <updated>2024-06-18T02:11:01.364Z</updated>
+    <updated>2024-06-18T02:11:38.972Z</updated>
     
     <content type="html"><![CDATA[<p>记录过去一周值得记录的“石头”。每周二更新，欢迎关注。它山之石，可以攻玉。</p><span id="more"></span><p><img src="/../images/yszm.jpg" alt="艺术之美"></p><h2 id="科技"><a href="#科技" class="headerlink" title="科技"></a>科技</h2><ul><li><p>【时空早期预测】过早得到的预测结果可能会导致较高的误报率，而能够获取更多信息的延迟预测可能会使结果失去时效性。如何平衡准确性和时效性是时空预测领域的一个难点问题，研究者提出一种基于多目标强化学习的时空早期预测模型STEMO，自适应地确定最佳预测时间，达到了时效性和准确性全新的平衡 | <a href="https://mp.weixin.qq.com/s/KlekBd7GRibsh_Fd266dfw">基于多目标强化学习的时空早期预测</a></p></li><li><p>【生成式AI】生成式AI的发展方向，应当是Chat还是Agent？您怎么看？欢迎在评论区留言。前者更擅长说，后者更擅长做，个人观点认为Chat和Agent应该协同起来，达到真正的知行合一 | <a href="https://www.zhihu.com/question/637090848/answer/3363233578?utm_campaign=shareopn&utm_content=group3_Answer&utm_medium=social&utm_psn=1784485373545693185&utm_source=wechat_session">Chat or Agent or Together</a></p></li><li><p>【Agent &amp; RAG】Agent &amp; RAG 精选论文、开源项目及产品案例 | <a href="https://mp.weixin.qq.com/s/qDxSgVOp8GirjJ89rHit8g">Agent &amp; RAG学习资料</a></p></li></ul><h2 id="文化"><a href="#文化" class="headerlink" title="文化"></a>文化</h2><ul><li>【天才少女】在2024年阿里巴巴全球数学竞赛的决赛名单上，一位来自江苏省涟水中等专业学校的17岁少女姜萍，以其93分的高分成绩，全球排名12的耀眼表现，成为首位闯入决赛的中专生。她与老师的故事，也引发了人们对千里马与伯乐的讨论，俗话说，“千里马常有，而伯乐不常有”，或者是“莫愁前路无知己，天下谁人不识君？”，您怎么看？| <a href="https://www.sohu.com/a/786011581_120118031">天才少女</a></li></ul><h2 id="生活"><a href="#生活" class="headerlink" title="生活"></a>生活</h2><ul><li><p>【电影推荐】《<a href="https://movie.douban.com/subject/6722879/">她</a>》，这是一部我认为除了《<a href="https://movie.douban.com/subject/1652587/">阿凡达</a>》，我也愿意给满分的电影，值得一看，就不剧透了。</p></li><li><p>【天府艺术公园】上周，饭后去了成都天府艺术公园逛逛，在当代艺术馆看展，下面分享一些照片。您如果有空，也可以去看看，感受艺术之美。<br><img src="/../images/yszm_1.jpg" alt="艺术之美-1"></p></li></ul><p><img src="/../images/yszm_2.jpg" alt="艺术之美-2"></p><p><img src="/../images/yszm_3.jpg" alt="艺术之美-3"></p><p><img src="/../images/yszm_4.jpg" alt="艺术之美-4"></p><p><img src="/../images/yszm_5.jpg" alt="艺术之美-5"></p><p><img src="/../images/yszm_6.jpg" alt="艺术之美-6"></p><p><img src="/../images/yszm_7.jpg" alt="艺术之美-7"></p><p><img src="/../images/yszm_8.jpg" alt="艺术之美-8"></p><p><img src="/../images/yszm_9.jpg" alt="艺术之美-9"></p><p><img src="/../images/yszm_10.jpg" alt="艺术之美-10"></p><h2 id="新知"><a href="#新知" class="headerlink" title="新知"></a>新知</h2><ul><li><p>【爱自己】真诚不只是唯一的必杀技，爱自己也是。</p></li><li><p>【体验】随着AI技术的快速发展，我们感叹于科技改变生活，让生活变得更加便利，获取知识的速度变得越来越快。当我们在生活中，慢下来的时候，独特的生活体验，我认为才是让人变得与众不同和有趣的核心所在。</p></li></ul><h2 id="更多"><a href="#更多" class="headerlink" title="更多"></a>更多</h2><ol><li><p>【寻找石头】-第1期-20231113<br><a href="https://xiepeng21.cn/posts/60a517c0/">https://xiepeng21.cn/posts/60a517c0/</a></p></li><li><p>【寻找石头】-第2期-20231117<br><a href="https://xiepeng21.cn/posts/28c5f201/">https://xiepeng21.cn/posts/28c5f201/</a></p></li><li><p>【寻找石头】-第3期-20231124<br><a href="https://xiepeng21.cn/posts/8fbdec1/">https://xiepeng21.cn/posts/8fbdec1/</a></p></li><li><p>【寻找石头】-第4期-20231201<br><a href="https://xiepeng21.cn/posts/3592f0cd/">https://xiepeng21.cn/posts/3592f0cd/</a></p></li><li><p>【寻找石头】-第5期-20231208<br><a href="https://xiepeng21.cn/posts/91d891ec/">https://xiepeng21.cn/posts/91d891ec/</a></p></li><li><p>【寻找石头】-第6期-20231215<br><a href="https://xiepeng21.cn/posts/4bb8b0de/">https://xiepeng21.cn/posts/4bb8b0de/</a></p></li><li><p>【寻找石头】-第7期-20231222<br><a href="https://xiepeng21.cn/posts/2367af3b/">https://xiepeng21.cn/posts/2367af3b/</a></p></li><li><p>【寻找石头】-第8期-20240112<br><a href="https://xiepeng21.cn/posts/27e02ce1/">https://xiepeng21.cn/posts/27e02ce1/</a></p></li><li><p>【寻找石头】-第9期-20240119<br><a href="https://xiepeng21.cn/posts/6da42cec/">https://xiepeng21.cn/posts/6da42cec/</a></p></li><li><p>【寻找石头】-第10期-20240126<br><a href="https://xiepeng21.cn/posts/8dfb97f1/">https://xiepeng21.cn/posts/8dfb97f1/</a></p></li><li><p>【寻找石头】-第11期-20240203<br><a href="https://xiepeng21.cn/posts/10776620/">https://xiepeng21.cn/posts/10776620/</a></p></li><li><p>【寻找石头】-第12期-20240220<br><a href="https://xiepeng21.cn/posts/68239d6/">https://xiepeng21.cn/posts/68239d6/</a></p></li><li><p>【寻找石头】-第13期-20240223<br><a href="https://xiepeng21.cn/posts/421db1e9/">https://xiepeng21.cn/posts/421db1e9/</a></p></li><li><p>【寻找石头】-第14期-20240305<br><a href="https://xiepeng21.cn/posts/e5f91a31/">https://xiepeng21.cn/posts/e5f91a31/</a></p></li><li><p>【寻找石头】-第15期-20240312<br><a href="https://xiepeng21.cn/posts/bf106756/">https://xiepeng21.cn/posts/bf106756/</a></p></li><li><p>【寻找石头】-第16期-20240319<br><a href="https://xiepeng21.cn/posts/9508d210/">https://xiepeng21.cn/posts/9508d210/</a></p></li><li><p>【寻找石头】-第17期-20240326<br><a href="https://xiepeng21.cn/posts/f30c45c7/">https://xiepeng21.cn/posts/f30c45c7/</a></p></li><li><p>【寻找石头】-第18期-20240402<br><a href="https://xiepeng21.cn/posts/e46820ec/">https://xiepeng21.cn/posts/e46820ec/</a></p></li><li><p>【寻找石头】-第19期-20240409<br><a href="https://xiepeng21.cn/posts/ae2c20e1/">https://xiepeng21.cn/posts/ae2c20e1/</a></p></li><li><p>【寻找石头】-第20期-20240416<br><a href="https://xiepeng21.cn/posts/dc7c2302/">https://xiepeng21.cn/posts/dc7c2302/</a></p></li><li><p>【寻找石头】-第21期-20240423<br><a href="https://xiepeng21.cn/posts/5aad5dcb/">https://xiepeng21.cn/posts/5aad5dcb/</a></p></li><li><p>【寻找石头】-第22期-20240430<br><a href="https://xiepeng21.cn/posts/677551fe/">https://xiepeng21.cn/posts/677551fe/</a></p></li><li><p>【寻找石头】-第23期-20240507<br><a href="https://xiepeng21.cn/posts/e68242c/">https://xiepeng21.cn/posts/e68242c/</a></p></li><li><p>【寻找石头】-第24期-20240514<br><a href="https://xiepeng21.cn/posts/f309428f/">https://xiepeng21.cn/posts/f309428f/</a></p></li><li><p>【寻找石头】-第25期-20240521<br><a href="https://xiepeng21.cn/posts/75d83c46/">https://xiepeng21.cn/posts/75d83c46/</a></p></li><li><p>【寻找石头】-第26期-20240528<br><a href="https://xiepeng21.cn/posts/b1cee82c/">https://xiepeng21.cn/posts/b1cee82c/</a></p></li><li><p>【寻找石头】-第27期-20240604-迎接下半场挑战<br><a href="https://xiepeng21.cn/posts/17dc9243/">https://xiepeng21.cn/posts/17dc9243/</a></p></li><li><p>【寻找石头】-第28期-20240611-滔滔嘉陵江<br><a href="https://xiepeng21.cn/posts/d1e9272/">https://xiepeng21.cn/posts/d1e9272/</a></p></li></ol><hr><p>欢迎各位提出建议、问题，我们一起交流、学习、成长。</p><p>“问渠那得清如许？为有源头活水来” ヾ(◍°∇°◍)ﾉﾞ</p><p>——— 我在半亩方塘等你 ^_^</p>]]></content>
     
@@ -593,7 +618,7 @@
     <link href="https://xiepeng21.cn/posts/92078746/"/>
     <id>https://xiepeng21.cn/posts/92078746/</id>
     <published>2024-03-04T01:54:48.000Z</published>
-    <updated>2024-03-04T02:08:18.267Z</updated>
+    <updated>2024-06-18T02:22:48.570Z</updated>
     
     <content type="html"><![CDATA[<p><em><a href="https://arxiv.org/abs/2402.01749">Towards Urban General Intelligence: A Review and Outlook of Urban Foundation Models</a></em>. <a href="https://scholar.google.com/citations?user=lSi3CIoAAAAJ&hl=zh-CN&oi=ao">Weijia Zhang</a>, Jindong Han, Zhao Xu, Hang Ni, Hao Liu and <a href="https://scholar.google.com/citations?user=cVDF1tkAAAAJ&hl=zh-CN&oi=ao">Hui Xiong</a>. arXiv 2024.</p><span id="more"></span><h1 id="动机"><a href="#动机" class="headerlink" title="动机"></a>动机</h1><p>随着ChatGPT等大模型的兴起，关于城市大模型的讨论和研究兴趣也在不断增加，然而这一迅速发展起来的领域，也面临许多挑战，比如缺乏对城市大模型的清晰定义、系统的研究梳理、通用的解决方案。</p><h1 id="任务"><a href="#任务" class="headerlink" title="任务"></a>任务</h1><p>本文提出了城市大模型的概念，讨论了构建城市大模型面临的挑战、将城市大模型相关的研究工作按照数据（模态、类型）进行分类，并给出了城市大模型框架图，最后从应用的角度，探讨了大模型对不同应用场景的可能影响。相关的论文和开源资料发布在了GitHub库 <a href="https://github.com/usail-hkust/Awesome-Urban-Foundation-Models">https://github.com/usail-hkust/Awesome-Urban-Foundation-Models</a> </p><h1 id="方法"><a href="#方法" class="headerlink" title="方法"></a>方法</h1><p><img src="/../images/%E5%9F%8E%E5%B8%82%E5%A4%A7%E6%A8%A1%E5%9E%8B%E6%A1%86%E6%9E%B6%E5%9B%BE.png" alt="城市大模型框架图"></p><p>这个框架图包含三个部分，1. 多源多粒度多模态城市数据，如城市文本语料、街景图像、空间轨迹、时间序列数据、城市知识图谱等；2. 城市基础模型； 3. 下游应用场景，涵盖交通、城市规划、能源管理、环境监测及公共安全等领域。</p><p><img src="/../images/%E5%9F%8E%E5%B8%82%E5%A4%A7%E6%A8%A1%E5%9E%8B%E5%88%86%E7%B1%BB.png" alt="城市大模型分类"></p><p>将城市大模型按照数据的模态、类型进行分类，包括基于语言的、视觉的、轨迹的、时间序列的、多模态的以及其他类型的城市大模型。</p><p><img src="/../images/%E5%A4%9A%E6%A8%A1%E6%80%81%E5%9F%8E%E5%B8%82%E5%A4%A7%E6%A8%A1%E5%9E%8B%E6%9E%84%E5%BB%BA%E6%A1%86%E6%9E%B6.png" alt="多模态城市大模型构建框架"></p><p>从城市数据的集成、融合到多模态城市大模型构建，再到不同的城市应用场景。提升城市大模型的时空推理以及隐私保护能力。</p><h1 id="评价"><a href="#评价" class="headerlink" title="评价"></a>评价</h1><ol><li>文章对城市大模型进行了全面且比较深入的调研和分析；</li><li>按照城市大数据的不同模态对相关工作进行了分类；</li><li>给出了当前的城市大模型研究存在的一些挑战以及未来研究方向。</li></ol><h1 id="展望"><a href="#展望" class="headerlink" title="展望"></a>展望</h1><ol><li>如何将大模型的能力用于解决时空数据挖掘、城市计算领域存在的一些有挑战且尚未解决好的问题？</li><li>探索城市大模型的隐私保护问题。</li><li>城市大模型的发展给时空数据挖掘领域带来了哪些新的有意思的研究问题？</li></ol><h1 id="更多"><a href="#更多" class="headerlink" title="更多"></a>更多</h1><ol><li>【论文笔记-1】注意力人流量机器<br><a href="https://xiepeng21.cn/posts/a7c2a378/">https://xiepeng21.cn/posts/a7c2a378/</a></li><li>【论文笔记-2】深度学习<br><a href="https://xiepeng21.cn/posts/c0d0024f/">https://xiepeng21.cn/posts/c0d0024f/</a></li><li>【论文笔记-3】用于交通预测的多范围注意力双组分图卷积网络<br><a href="https://xiepeng21.cn/posts/e8cb7573/">https://xiepeng21.cn/posts/e8cb7573/</a></li><li>【论文笔记-4】Attention Is All You Need<br><a href="https://xiepeng21.cn/posts/d3e954aa/">https://xiepeng21.cn/posts/d3e954aa/</a></li><li>【论文笔记-5】iTransformer<br><a href="https://xiepeng21.cn/posts/4b43950f/">https://xiepeng21.cn/posts/4b43950f/</a></li><li>时空数据挖掘论文库<br><a href="https://github.com/xiepeng21/research_spatio-temporal-data-mining">https://github.com/xiepeng21/research_spatio-temporal-data-mining</a></li><li>AI论文速读 |【综述】城市基础模型回顾与展望——迈向城市通用智能<br><a href="https://mp.weixin.qq.com/s/hoC9g8hnOpZcSnmvv5Ac8A">https://mp.weixin.qq.com/s/hoC9g8hnOpZcSnmvv5Ac8A</a></li></ol>]]></content>
     
@@ -1666,11 +1691,11 @@
     <category term="论文阅读" scheme="https://xiepeng21.cn/categories/%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB/"/>
     
     
-    <category term="人工智能" scheme="https://xiepeng21.cn/tags/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/"/>
-    
     <category term="数据挖掘" scheme="https://xiepeng21.cn/tags/%E6%95%B0%E6%8D%AE%E6%8C%96%E6%8E%98/"/>
     
     <category term="论文投稿" scheme="https://xiepeng21.cn/tags/%E8%AE%BA%E6%96%87%E6%8A%95%E7%A8%BF/"/>
+    
+    <category term="人工智能" scheme="https://xiepeng21.cn/tags/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/"/>
     
   </entry>
   
@@ -1756,11 +1781,11 @@
     <category term="论文阅读" scheme="https://xiepeng21.cn/categories/%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB/"/>
     
     
+    <category term="机器学习" scheme="https://xiepeng21.cn/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
+    
     <category term="数据挖掘" scheme="https://xiepeng21.cn/tags/%E6%95%B0%E6%8D%AE%E6%8C%96%E6%8E%98/"/>
     
     <category term="论文投稿" scheme="https://xiepeng21.cn/tags/%E8%AE%BA%E6%96%87%E6%8A%95%E7%A8%BF/"/>
-    
-    <category term="机器学习" scheme="https://xiepeng21.cn/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
     
   </entry>
   
