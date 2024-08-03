@@ -18,30 +18,27 @@
   <meta name="author" content="Peter">
   <meta name="keywords" content="">
   
-    <meta name="description" content="ITRANSFORMER: INVERTED TRANSFORMERS ARE EFFECTIVE FOR TIME SERIES FORECASTING. Yong Liu, Tengge Hu, Haoran Zhang, Haixu Wu, Shiyu Wang, Lintao Ma, Mingsheng Long. ICLR 2024.">
+    <meta name="description" content="记录过去一周值得记录的“石头”。每周二更新，欢迎关注。它山之石，可以攻玉。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="【论文笔记-5】iTransformer">
-<meta property="og:url" content="https://xiepeng21.cn/posts/4b43950f/index.html">
+<meta property="og:title" content="【寻找石头】-第35期-20240803-活出自我">
+<meta property="og:url" content="https://xiepeng21.cn/posts/ed33a13d/index.html">
 <meta property="og:site_name" content="半亩方塘">
-<meta property="og:description" content="ITRANSFORMER: INVERTED TRANSFORMERS ARE EFFECTIVE FOR TIME SERIES FORECASTING. Yong Liu, Tengge Hu, Haoran Zhang, Haixu Wu, Shiyu Wang, Lintao Ma, Mingsheng Long. ICLR 2024.">
+<meta property="og:description" content="记录过去一周值得记录的“石头”。每周二更新，欢迎关注。它山之石，可以攻玉。">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://xiepeng21.cn/images/iTransformer%E4%B8%8ETransformer%E5%8F%8A%E5%85%B6%E5%8F%98%E7%A7%8D%E7%9A%84%E6%AF%94%E8%BE%83.png">
-<meta property="og:image" content="https://xiepeng21.cn/images/iTransformer%E6%A1%86%E6%9E%B6.png">
-<meta property="og:image" content="https://xiepeng21.cn/images/Results_of_iTransformer.png">
-<meta property="article:published_time" content="2024-02-05T12:16:24.000Z">
-<meta property="article:modified_time" content="2024-02-05T12:57:35.569Z">
+<meta property="og:image" content="https://xiepeng21.cn/images/hczw.jpg">
+<meta property="article:published_time" content="2024-08-03T08:39:11.000Z">
+<meta property="article:modified_time" content="2024-08-03T09:19:54.253Z">
 <meta property="article:author" content="Peter">
-<meta property="article:tag" content="时间序列预测">
-<meta property="article:tag" content="Transformer">
-<meta property="article:tag" content="iTransformer">
+<meta property="article:tag" content="寻找石头">
+<meta property="article:tag" content="人生旅程">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://xiepeng21.cn/images/iTransformer%E4%B8%8ETransformer%E5%8F%8A%E5%85%B6%E5%8F%98%E7%A7%8D%E7%9A%84%E6%AF%94%E8%BE%83.png">
+<meta name="twitter:image" content="https://xiepeng21.cn/images/hczw.jpg">
   
   
     <meta name="referrer" content="no-referrer-when-downgrade">
   
   
-  <title>【论文笔记-5】iTransformer - 半亩方塘</title>
+  <title>【寻找石头】-第35期-20240803-活出自我 - 半亩方塘</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -249,7 +246,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="【论文笔记-5】iTransformer"></span>
+            <span id="subtitle" data-typed-text="【寻找石头】-第35期-20240803-活出自我"></span>
           
         </div>
 
@@ -260,8 +257,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2024-02-05 20:16" pubdate>
-          2024年2月5日 晚上
+        <time datetime="2024-08-03 16:39" pubdate>
+          2024年8月3日 下午
         </time>
       </span>
     
@@ -272,7 +269,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          1.5k 字
+          2.7k 字
         
       </span>
     
@@ -283,7 +280,7 @@
         
         
         
-          13 分钟
+          23 分钟
         
       </span>
     
@@ -328,80 +325,108 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">【论文笔记-5】iTransformer</h1>
+            <h1 id="seo-header">【寻找石头】-第35期-20240803-活出自我</h1>
             
             
               <div class="markdown-body">
                 
-                <p><strong><a target="_blank" rel="noopener" href="https://openreview.net/pdf?id=JePfAI8fah">ITRANSFORMER: INVERTED TRANSFORMERS ARE EFFECTIVE FOR TIME SERIES FORECASTING</a></strong>. Yong Liu, Tengge Hu, Haoran Zhang, Haixu Wu, Shiyu Wang, Lintao Ma, Mingsheng Long. ICLR 2024.</p>
+                <p>记录过去一周值得记录的“石头”。每周二更新，欢迎关注。它山之石，可以攻玉。</p>
 <span id="more"></span>
-
-<p>这篇论文是<a href="https://xiepeng21.cn/posts/3d1ac43b/">ICLR2024时空数据挖掘论文系列</a>的论文笔记第1篇。</p>
-<h1 id="动机"><a href="#动机" class="headerlink" title="动机"></a>动机</h1><p>作者认为Transformer用于时间序列预测不够有效，是由于Transformer没有被正确地利用。</p>
-<h1 id="任务"><a href="#任务" class="headerlink" title="任务"></a>任务</h1><p>提出了iTransformer框架用于多元时间序列预测，这是一种倒置的Transformer框架，将注意力机制和前馈神经网络倒置。</p>
-<h1 id="方法"><a href="#方法" class="headerlink" title="方法"></a>方法</h1><ul>
-<li>用layer normalization和前馈神经网络来学习每个时间序列的非线性表示。</li>
-<li>用自注意力机制来学习多变量之间的关系。</li>
-</ul>
-<p><img src="/../images/iTransformer%E4%B8%8ETransformer%E5%8F%8A%E5%85%B6%E5%8F%98%E7%A7%8D%E7%9A%84%E6%AF%94%E8%BE%83.png" srcset="/img/loading.gif" lazyload alt="iTransformer与Transformer及其变种的比较"></p>
-<p><img src="/../images/iTransformer%E6%A1%86%E6%9E%B6.png" srcset="/img/loading.gif" lazyload alt="iTransformer框架"></p>
-<h1 id="评价"><a href="#评价" class="headerlink" title="评价"></a>评价</h1><ul>
-<li><p>Data</p>
-<ul>
-<li>ETT</li>
-<li>Weather</li>
-<li>Electricity</li>
-<li>Traffic</li>
-<li>Solar-Energy</li>
-<li>PEMS</li>
-<li>Market (6 subsets)</li>
-</ul>
+<p><img src="/../images/hczw.jpg" srcset="/img/loading.gif" lazyload alt="活出自我"></p>
+<h2 id="科技"><a href="#科技" class="headerlink" title="科技"></a>科技</h2><ul>
+<li><p>【推理能力】斯坦福大学教授Noah D. Goodman称STaR让AI模型能够通过迭代创建自己的训练数据来“指导”自己进入更高的智能水平，理论上可以让语言模型超越人类水平的智能，成为创造者。| <a target="_blank" rel="noopener" href="https://mp.weixin.qq.com/s/gpC3uIA86-lrxWjInE0EnQ">像人一样思考</a></p>
 </li>
-<li><p>Comparative Methods</p>
-<ul>
-<li>Transformer-based methods<ul>
-<li>Informer (Li et al., 2021)</li>
-<li>Autoformer (Wu et al., 2021)</li>
-<li>FEDformer (Zhou et al., 2022)</li>
-<li>Stationary (Liu et al., 2022b)</li>
-<li>Crossformer (Zhang &amp; Yan, 2023)</li>
-<li>PatchTST (Nie et al., 2023)</li>
-</ul>
+<li><p>【Mem0】Mem0可实现个性化的AI交互，1. 具有多层次的记忆：它能记住用户的偏好、过去的交互、事情的进展，就像你跟朋友聊天，朋友能记住你喜欢什么、不喜欢什么；2. 自适应的个性化：从交互中持续学习，越用越聪明，真是个贴心的小助手；3. 跨平台、API 友好：支持私有化部署，开发者可以轻松集成到各种平台。| <a target="_blank" rel="noopener" href="https://mp.weixin.qq.com/s/qtLQS2_bBu6lFrtrGIM1CQ">Mem0</a></p>
 </li>
-<li>Linear-based methods<ul>
-<li>DLinear (Zeng et al., 2023)</li>
-<li>TiDE (Das et al., 2023)</li>
-</ul>
-</li>
-<li>TCN-based methods<ul>
-<li>SCINet (Liu et al., 2022a)</li>
-<li>TimesNet (Wu et al., 2023)</li>
-</ul>
+<li><p>【天气预报】Google Research 研究团队提出一种将传统的基于物理建模与 ML 相结合的新方法——NeuralGCM，可以准确高效地模拟地球大气层。比现有模型更快、计算成本更低、更准确。NeuralGCM 可以生成 2-15 天的天气预报，比目前基于物理的「黄金标准」模型更准确。| <a target="_blank" rel="noopener" href="https://mp.weixin.qq.com/s/niZ_CpF1cI-2_dCzqdUanQ">天气预报</a></p>
 </li>
 </ul>
+<h2 id="生活"><a href="#生活" class="headerlink" title="生活"></a>生活</h2><ul>
+<li><p>【骑行】上周四独自骑行，绕着成都三环，骑行一圈，目前已经骑完成都二环、三环以及绕城天府绿道，自在骑行，探索世界，耶。</p>
 </li>
-<li><p>Result<br><img src="/../images/Results_of_iTransformer.png" srcset="/img/loading.gif" lazyload alt="对比方法实验结果"></p>
-</li>
-<li><p>Code</p>
-<ul>
-<li><a target="_blank" rel="noopener" href="https://github.com/thuml/iTransformer">https://github.com/thuml/iTransformer</a> 官方实现</li>
-<li><a target="_blank" rel="noopener" href="https://github.com/lucidrains/iTransformer">https://github.com/lucidrains/iTransformer</a> 第三方实现</li>
-</ul>
-</li>
-<li><p>Reddit讨论<br><a target="_blank" rel="noopener" href="https://www.reddit.com/r/MachineLearning/comments/175ep6x/r_tsinghua_university_inverting_transformers/">https://www.reddit.com/r/MachineLearning/comments/175ep6x/r_tsinghua_university_inverting_transformers/</a></p>
-</li>
-<li><p>时间序列库TSlib： <a target="_blank" rel="noopener" href="https://github.com/thuml/Time-Series-Library">https://github.com/thuml/Time-Series-Library</a> 这里面包含了iTransformer及相关时间序列预测最新的代码实现</p>
+<li><p>【电影推荐】《<a target="_blank" rel="noopener" href="https://movie.douban.com/subject/36653918/?from=showing">抓娃娃</a>》——闫非&#x2F;彭大魔，一部关于值得观看的反思家庭教育的影片，从剧中可以看到自己，也可以看到自己希望成为的样子。你愿意如何教育孩子，你希望活出怎样的人生，值得思考。</p>
 </li>
 </ul>
-<h1 id="展望"><a href="#展望" class="headerlink" title="展望"></a>展望</h1><p>文中提出的iTransformer框架，有望成为时间序列预测的基础骨干框架。</p>
-<h1 id="更多"><a href="#更多" class="headerlink" title="更多"></a>更多</h1><ol>
-<li>iTransformer论文解读<br><a target="_blank" rel="noopener" href="https://mp.weixin.qq.com/s/_PKwnt9hjJJyxUiEDZ1EhA">https://mp.weixin.qq.com/s/_PKwnt9hjJJyxUiEDZ1EhA</a></li>
-<li>【论文笔记-1】注意力人流量机器<br><a href="https://xiepeng21.cn/posts/a7c2a378/">https://xiepeng21.cn/posts/a7c2a378/</a></li>
-<li>【论文笔记-2】深度学习<br><a href="https://xiepeng21.cn/posts/c0d0024f/">https://xiepeng21.cn/posts/c0d0024f/</a></li>
-<li>【论文笔记-3】用于交通预测的多范围注意力双组分图卷积网络<br><a href="https://xiepeng21.cn/posts/e8cb7573/">https://xiepeng21.cn/posts/e8cb7573/</a></li>
-<li>【论文笔记-4】Attention Is All You Need<br><a href="https://xiepeng21.cn/posts/d3e954aa/">https://xiepeng21.cn/posts/d3e954aa/</a></li>
-<li>时空数据挖掘论文库<br><a target="_blank" rel="noopener" href="https://github.com/xiepeng21/research_spatio-temporal-data-mining">https://github.com/xiepeng21/research_spatio-temporal-data-mining</a></li>
+<h2 id="新知"><a href="#新知" class="headerlink" title="新知"></a>新知</h2><ul>
+<li><p>【拖延】拖延的最大坏处还不是耽误，而是会使自己变得犹豫，甚至丧失信心。不管什么事，决定了，就立刻去做，这本身就能使人生气勃勃，保持一种主动和快乐的心情。</p>
+</li>
+<li><p>【淡然】去留无意，望天空云卷云舒。</p>
+</li>
+</ul>
+<h2 id="更多"><a href="#更多" class="headerlink" title="更多"></a>更多</h2><ol>
+<li><p>【寻找石头】-第1期-20231113<br><a href="https://xiepeng21.cn/posts/60a517c0/">https://xiepeng21.cn/posts/60a517c0/</a></p>
+</li>
+<li><p>【寻找石头】-第2期-20231117<br><a href="https://xiepeng21.cn/posts/28c5f201/">https://xiepeng21.cn/posts/28c5f201/</a></p>
+</li>
+<li><p>【寻找石头】-第3期-20231124<br><a href="https://xiepeng21.cn/posts/8fbdec1/">https://xiepeng21.cn/posts/8fbdec1/</a></p>
+</li>
+<li><p>【寻找石头】-第4期-20231201<br><a href="https://xiepeng21.cn/posts/3592f0cd/">https://xiepeng21.cn/posts/3592f0cd/</a></p>
+</li>
+<li><p>【寻找石头】-第5期-20231208<br><a href="https://xiepeng21.cn/posts/91d891ec/">https://xiepeng21.cn/posts/91d891ec/</a></p>
+</li>
+<li><p>【寻找石头】-第6期-20231215<br><a href="https://xiepeng21.cn/posts/4bb8b0de/">https://xiepeng21.cn/posts/4bb8b0de/</a></p>
+</li>
+<li><p>【寻找石头】-第7期-20231222<br><a href="https://xiepeng21.cn/posts/2367af3b/">https://xiepeng21.cn/posts/2367af3b/</a></p>
+</li>
+<li><p>【寻找石头】-第8期-20240112<br><a href="https://xiepeng21.cn/posts/27e02ce1/">https://xiepeng21.cn/posts/27e02ce1/</a></p>
+</li>
+<li><p>【寻找石头】-第9期-20240119<br><a href="https://xiepeng21.cn/posts/6da42cec/">https://xiepeng21.cn/posts/6da42cec/</a></p>
+</li>
+<li><p>【寻找石头】-第10期-20240126<br><a href="https://xiepeng21.cn/posts/8dfb97f1/">https://xiepeng21.cn/posts/8dfb97f1/</a></p>
+</li>
+<li><p>【寻找石头】-第11期-20240203<br><a href="https://xiepeng21.cn/posts/10776620/">https://xiepeng21.cn/posts/10776620/</a></p>
+</li>
+<li><p>【寻找石头】-第12期-20240220<br><a href="https://xiepeng21.cn/posts/68239d6/">https://xiepeng21.cn/posts/68239d6/</a></p>
+</li>
+<li><p>【寻找石头】-第13期-20240223<br><a href="https://xiepeng21.cn/posts/421db1e9/">https://xiepeng21.cn/posts/421db1e9/</a></p>
+</li>
+<li><p>【寻找石头】-第14期-20240305<br><a href="https://xiepeng21.cn/posts/e5f91a31/">https://xiepeng21.cn/posts/e5f91a31/</a></p>
+</li>
+<li><p>【寻找石头】-第15期-20240312<br><a href="https://xiepeng21.cn/posts/bf106756/">https://xiepeng21.cn/posts/bf106756/</a></p>
+</li>
+<li><p>【寻找石头】-第16期-20240319<br><a href="https://xiepeng21.cn/posts/9508d210/">https://xiepeng21.cn/posts/9508d210/</a></p>
+</li>
+<li><p>【寻找石头】-第17期-20240326<br><a href="https://xiepeng21.cn/posts/f30c45c7/">https://xiepeng21.cn/posts/f30c45c7/</a></p>
+</li>
+<li><p>【寻找石头】-第18期-20240402<br><a href="https://xiepeng21.cn/posts/e46820ec/">https://xiepeng21.cn/posts/e46820ec/</a></p>
+</li>
+<li><p>【寻找石头】-第19期-20240409<br><a href="https://xiepeng21.cn/posts/ae2c20e1/">https://xiepeng21.cn/posts/ae2c20e1/</a></p>
+</li>
+<li><p>【寻找石头】-第20期-20240416<br><a href="https://xiepeng21.cn/posts/dc7c2302/">https://xiepeng21.cn/posts/dc7c2302/</a></p>
+</li>
+<li><p>【寻找石头】-第21期-20240423<br><a href="https://xiepeng21.cn/posts/5aad5dcb/">https://xiepeng21.cn/posts/5aad5dcb/</a></p>
+</li>
+<li><p>【寻找石头】-第22期-20240430<br><a href="https://xiepeng21.cn/posts/677551fe/">https://xiepeng21.cn/posts/677551fe/</a></p>
+</li>
+<li><p>【寻找石头】-第23期-20240507<br><a href="https://xiepeng21.cn/posts/e68242c/">https://xiepeng21.cn/posts/e68242c/</a></p>
+</li>
+<li><p>【寻找石头】-第24期-20240514<br><a href="https://xiepeng21.cn/posts/f309428f/">https://xiepeng21.cn/posts/f309428f/</a></p>
+</li>
+<li><p>【寻找石头】-第25期-20240521<br><a href="https://xiepeng21.cn/posts/75d83c46/">https://xiepeng21.cn/posts/75d83c46/</a></p>
+</li>
+<li><p>【寻找石头】-第26期-20240528<br><a href="https://xiepeng21.cn/posts/b1cee82c/">https://xiepeng21.cn/posts/b1cee82c/</a></p>
+</li>
+<li><p>【寻找石头】-第27期-20240604-迎接下半场挑战<br><a href="https://xiepeng21.cn/posts/17dc9243/">https://xiepeng21.cn/posts/17dc9243/</a></p>
+</li>
+<li><p>【寻找石头】-第28期-20240611-滔滔嘉陵江<br><a href="https://xiepeng21.cn/posts/d1e9272/">https://xiepeng21.cn/posts/d1e9272/</a></p>
+</li>
+<li><p>【寻找石头】-第29期-20240618-艺术之美<br><a href="https://xiepeng21.cn/posts/967ff32a/">https://xiepeng21.cn/posts/967ff32a/</a></p>
+</li>
+<li><p>【寻找石头】-第30期-20240625-实践出真知<br><a href="https://xiepeng21.cn/posts/4117bea7/">https://xiepeng21.cn/posts/4117bea7/</a></p>
+</li>
+<li><p>【寻找石头】-第31期-20240702-自我关怀<br><a href="https://xiepeng21.cn/posts/20a61424/">https://xiepeng21.cn/posts/20a61424/</a></p>
+</li>
+<li><p>【寻找石头】-第32期-20240709-从健身到养生<br><a href="https://xiepeng21.cn/posts/67ca5d35/">https://xiepeng21.cn/posts/67ca5d35/</a></p>
+</li>
+<li><p>【寻找石头】-第33期-20240716-自行车<br><a href="https://xiepeng21.cn/posts/d90d011d/">https://xiepeng21.cn/posts/d90d011d/</a></p>
+</li>
+<li><p>【寻找石头】-第34期-20240723-健康生活<br><a href="https://xiepeng21.cn/posts/fd3295a5/">https://xiepeng21.cn/posts/fd3295a5/</a></p>
+</li>
 </ol>
+<hr>
+<p>欢迎各位提出建议、问题，我们一起交流、学习、成长。</p>
+<p>“问渠那得清如许？为有源头活水来” ヾ(◍°∇°◍)ﾉﾞ</p>
+<p>——— 我在半亩方塘等你 ^_^</p>
 
                 
               </div>
@@ -420,7 +445,7 @@
     
       <span class="category-chain">
         
-  <a href="/categories/%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB/" class="category-chain-item">论文阅读</a>
+  <a href="/categories/%E9%9A%8F%E7%AC%94%E6%84%9F%E6%82%9F/" class="category-chain-item">随笔感悟</a>
   
   
 
@@ -435,11 +460,9 @@
     <div class="post-meta">
       <i class="iconfont icon-tags"></i>
       
-        <a href="/tags/%E6%97%B6%E9%97%B4%E5%BA%8F%E5%88%97%E9%A2%84%E6%B5%8B/" class="print-no-link">#时间序列预测</a>
+        <a href="/tags/%E5%AF%BB%E6%89%BE%E7%9F%B3%E5%A4%B4/" class="print-no-link">#寻找石头</a>
       
-        <a href="/tags/Transformer/" class="print-no-link">#Transformer</a>
-      
-        <a href="/tags/iTransformer/" class="print-no-link">#iTransformer</a>
+        <a href="/tags/%E4%BA%BA%E7%94%9F%E6%97%85%E7%A8%8B/" class="print-no-link">#人生旅程</a>
       
     </div>
   
@@ -451,8 +474,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>【论文笔记-5】iTransformer</div>
-      <div>https://xiepeng21.cn/posts/4b43950f/</div>
+      <div>【寻找石头】-第35期-20240803-活出自我</div>
+      <div>https://xiepeng21.cn/posts/ed33a13d/</div>
     </div>
     <div class="license-meta">
       
@@ -464,7 +487,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2024年2月5日</div>
+          <div>2024年8月3日</div>
         </div>
       
       
@@ -496,18 +519,12 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/posts/110e1f2a/" title="【节气养生】雨水">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">【节气养生】雨水</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/posts/f4f4854/" title="【节气养生】立春">
-                        <span class="hidden-mobile">【节气养生】立春</span>
+                      <a href="/posts/fd3295a5/" title="【寻找石头】-第34期-20240723-健康生活">
+                        <span class="hidden-mobile">【寻找石头】-第34期-20240723-健康生活</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
