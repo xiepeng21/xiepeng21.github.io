@@ -82,7 +82,7 @@
   <script id="fluid-configs">
     var Fluid = window.Fluid || {};
     Fluid.ctx = Object.assign({}, Fluid.ctx)
-    var CONFIG = {"hostname":"xiepeng21.cn","root":"/","version":"1.9.5-a","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":true,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":"1VgGyI3YmwimeFNy7b721A8y-gzGzoHsz","app_key":"cR1d1NnFVhO4BgvhAocR93xs","server_url":"https://1vggyi3y.lc-cn-n1-shared.com","path":"window.location.pathname","ignore_local":true}},"search_path":"/local-search.xml","include_content_in_search":true};
+    var CONFIG = {"hostname":"xiepeng21.cn","root":"/","version":"1.9.5-a","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":false,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":true,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":"1VgGyI3YmwimeFNy7b721A8y-gzGzoHsz","app_key":"cR1d1NnFVhO4BgvhAocR93xs","server_url":"https://1vggyi3y.lc-cn-n1-shared.com","path":"window.location.pathname","ignore_local":true}},"search_path":"/local-search.xml","include_content_in_search":true};
 
     if (CONFIG.web_analytics.follow_dnt) {
       var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
@@ -343,22 +343,22 @@
 <p>那么，首先，我们会问，什么是时空数据挖掘，从这6个字来看，可以分为两部分，时空+数据挖掘，提到时空，第一印象可能就是想到《错位时空》这首歌，“我吹过你吹过的晚风，那我们算不算相拥”，还有疫情期间出现的“时空伴随者”这个词，时空伴随者是指一个人与确诊患者手机号码在同一时空网格（范围为800m*800m）共同停留超过10分钟，且最近14天任一方号码累计停留时间超过30小时以上，查出的号码为时空伴随者号码。想必，大家对时空这一个词有一个直观的印象了。时空，就是时间和空间两个维度，风和人都是时空维度下的对象，我们研究空气质量、天气预报、交通预测、密接人员发现等，都会对对象所处的时间段、空间范围进行分析，分析其时空特征，进行数据分析、建模，得出有意思的分析结果。然后，数据挖掘，与日常听到的数据分析、大数据、机器学习、人工智能等词语，都有一定联系，其主要是指对数据进行清洗、处理、分析、可视化的过程，研究频繁模式挖掘、分类、聚类、异常检测等任务。推荐阅读韩家炜老师的《数据挖掘：概念与技术》这本书，当时我也是开始看这本书进入数据挖掘领域。最后，介绍一下，时空数据挖掘的定义、任务、数据、方法、论文以及如何入门。</p>
 <h3 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h3><p>采用人工智能和大数据技术对城市时空数据进行分析与挖掘，旨在挖掘时空数据，理解城市本质，解决城市问题。</p>
 <h3 id="任务"><a href="#任务" class="headerlink" title="任务"></a>任务</h3><p>从任务的特点、属性、层级进行分类，可分为底层的数据处理层级的任务，中层的时空模式发现任务，以及顶层的应用任务。如图1所示。</p>
-<p><img src="/../images/%E6%97%B6%E7%A9%BA%E6%95%B0%E6%8D%AE%E6%8C%96%E6%8E%98-%E4%BB%BB%E5%8A%A1.png" srcset="/img/loading.gif" lazyload alt="时空数据挖掘-任务.png"></p>
+<p><img src="/../images/%E6%97%B6%E7%A9%BA%E6%95%B0%E6%8D%AE%E6%8C%96%E6%8E%98-%E4%BB%BB%E5%8A%A1.png" alt="时空数据挖掘-任务.png"></p>
 <center>图1：时空数据挖掘-任务</center>
 
 <p>其中，底层任务包括时空数据预处理，时空数据融合和时空数据管理等。中层任务包括时空数据模式挖掘。顶层任务包括时空预测，时空推荐，异常检测，调度和优化等。</p>
 <h3 id="数据"><a href="#数据" class="headerlink" title="数据"></a>数据</h3><p>针对时空数据挖掘，数据是必不可少的原料，而且这类数据具有明显的时空特性，包括时间特性（时间的邻近性、周期性、趋势性等）、空间特性（距离远近，空间层次等）。有必要将<strong>时空数据</strong>进行分类，对时空数据进行了如图2分类：</p>
-<p><img src="/../images/%E6%97%B6%E7%A9%BA%E6%95%B0%E6%8D%AE.png" srcset="/img/loading.gif" lazyload alt="时空数据.png"></p>
+<p><img src="/../images/%E6%97%B6%E7%A9%BA%E6%95%B0%E6%8D%AE.png" alt="时空数据.png"></p>
 <center>图2：时空数据挖掘-时空数据分类</center>
 
 <p>按时空动态，可以分成空间静态点数据、空间点时序数据、时空动态点数据、空间静态网数据、空间静态时间动态网数据、时空动态网数据。这种分类方式是由京东城市的Yu Zheng老师团队提出，具有时空特色。如图3所示：</p>
-<p><img src="/../images/ST%20dataset.png" srcset="/img/loading.gif" lazyload alt="ST dataset.png"></p>
+<p><img src="/../images/ST%20dataset.png" alt="ST dataset.png"></p>
 <center>图3：时空数据-时空动态分类</center>
 
 <p>按个体交互，可以分为个体数据和环境数据。侧重于个体、群体、环境之间的交互和协同。</p>
 <p>按数据构造，可以分为基本单元数据、组合数据、关系数据。这种分类方式，适合于对数据进行形式化组织和描述，具有层次递进关系。</p>
 <p>按点线面，可以分为基于点、基于线、基于面的数据。这种分类，和几何上的点线面结构，可以直观地对应上，是比较自然的一种分类方式。如图4所示：</p>
-<p><img src="/../images/%E7%82%B9%E7%BA%BF%E9%9D%A2.png" srcset="/img/loading.gif" lazyload alt="点线面.png"></p>
+<p><img src="/../images/%E7%82%B9%E7%BA%BF%E9%9D%A2.png" alt="点线面.png"></p>
 <center>图4：时空数据-点线面分类</center>
 
 <p>后面的三种分类方式，是笔者在参加2020年京东城市计算夏令营的时候，与北航Jingyuan Wang老师和Dayan Pan, Geyuan Wang同学等的交流、讨论中形成的，感谢他们。</p>
@@ -371,14 +371,14 @@
 <p>时空数据多见于时空数据挖掘、城市计算、智能交通系统等领域；多模态数据覆盖范围更广，计算机视觉、自然语言处理、数据挖掘领域都有研究；多源异构数据主要侧重于从数据的多来源，结构差异的角度对数据进行描述，可以看做是时空数据和多模态数据的特性之一，另外还有缺失性、不平衡性、动态突变性等，根据具体的数据集质量情况而定。</p>
 <p>三者关系可以大致如下：多模态数据&gt;时空数据，多源异构数据用于描述这两类数据的部分特性，从多源和异构角度。</p>
 <h3 id="方法"><a href="#方法" class="headerlink" title="方法"></a>方法</h3><h4 id="层次体系构建"><a href="#层次体系构建" class="headerlink" title="层次体系构建"></a>层次体系构建</h4><p>为了更好地进行时空数据挖掘，我们提出了一种时空数据挖掘的层次体系，包括数据层、任务层、方法层。如图5所示。</p>
-<p><img src="/../images/%E6%97%B6%E7%A9%BA%E6%95%B0%E6%8D%AE%E6%8C%96%E6%8E%98-%E5%B1%82%E6%AC%A1%E4%BD%93%E7%B3%BB.png" srcset="/img/loading.gif" lazyload alt="时空数据挖掘-层次体系.png"></p>
+<p><img src="/../images/%E6%97%B6%E7%A9%BA%E6%95%B0%E6%8D%AE%E6%8C%96%E6%8E%98-%E5%B1%82%E6%AC%A1%E4%BD%93%E7%B3%BB.png" alt="时空数据挖掘-层次体系.png"></p>
 <center>图5：时空数据挖掘-层次体系</center>
 
 <p>该层次体系，首先从数据出发，将时空数据分为静态数据、时间动态数据和时空动态数据，更加详细的时空数据分类方式，可以参考前文数据部分；然后针对时空任务，分成了底层任务、中层任务和顶层任务，更具体的任务分类，可以参考前文任务部分；最后针对特定的数据和任务，选择相应的时空数据挖掘方法，更多的时空数据挖掘方法，可以参考下文方法部分。</p>
 <p>在进行具体时空数据挖掘研究中，也可以参照上述的层次体系，思考要研究的时空数据、时空任务、时空方法，从整体的角度进行分析，希望其能对于您的研究有所助益。</p>
 <p>注：时空数据挖掘的层次体系构建，感谢北航的Jingyuan Wang和Geyuan Wang等的讨论、交流。</p>
 <h4 id="方法论"><a href="#方法论" class="headerlink" title="方法论"></a>方法论</h4><p>笔者对时空数据挖掘中常用方法进行分类，主要是站在方法论的角度，进行大致分类。因为方法往往是跟任务、数据和需求等是紧密联系，还需根据实际情况，实际分析。方法的分类，如图6所示。</p>
-<p><img src="/../images/%E6%97%B6%E7%A9%BA%E6%95%B0%E6%8D%AE%E6%8C%96%E6%8E%98-%E6%96%B9%E6%B3%95.png" srcset="/img/loading.gif" lazyload alt="时空数据挖掘-方法.png"></p>
+<p><img src="/../images/%E6%97%B6%E7%A9%BA%E6%95%B0%E6%8D%AE%E6%8C%96%E6%8E%98-%E6%96%B9%E6%B3%95.png" alt="时空数据挖掘-方法.png"></p>
 <center>图6：时空数据挖掘方法</center>
 
 <p>时空数据挖掘的方法主要分为时空数据预处理方法、传统的机器学习方法、先进的机器学习方法和常用技术框架。</p>
@@ -618,7 +618,7 @@
             
   
   
-    <article id="comments" lazyload>
+    <article id="comments">
       
   <div id="waline"></div>
   <script type="text/javascript">
@@ -811,10 +811,6 @@
 
 
 
-
-  
-    <script  src="/js/img-lazyload.js" ></script>
-  
 
 
 

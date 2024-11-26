@@ -78,7 +78,7 @@
   <script id="fluid-configs">
     var Fluid = window.Fluid || {};
     Fluid.ctx = Object.assign({}, Fluid.ctx)
-    var CONFIG = {"hostname":"xiepeng21.cn","root":"/","version":"1.9.5-a","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":true,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":"1VgGyI3YmwimeFNy7b721A8y-gzGzoHsz","app_key":"cR1d1NnFVhO4BgvhAocR93xs","server_url":"https://1vggyi3y.lc-cn-n1-shared.com","path":"window.location.pathname","ignore_local":true}},"search_path":"/local-search.xml","include_content_in_search":true};
+    var CONFIG = {"hostname":"xiepeng21.cn","root":"/","version":"1.9.5-a","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":false,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":true,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":"1VgGyI3YmwimeFNy7b721A8y-gzGzoHsz","app_key":"cR1d1NnFVhO4BgvhAocR93xs","server_url":"https://1vggyi3y.lc-cn-n1-shared.com","path":"window.location.pathname","ignore_local":true}},"search_path":"/local-search.xml","include_content_in_search":true};
 
     if (CONFIG.web_analytics.follow_dnt) {
       var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
@@ -337,11 +337,11 @@
 
 <h1 id="动机"><a href="#动机" class="headerlink" title="动机"></a>动机</h1><p>随着ChatGPT等大模型的兴起，关于城市大模型的讨论和研究兴趣也在不断增加，然而这一迅速发展起来的领域，也面临许多挑战，比如缺乏对城市大模型的清晰定义、系统的研究梳理、通用的解决方案。</p>
 <h1 id="任务"><a href="#任务" class="headerlink" title="任务"></a>任务</h1><p>本文提出了城市大模型的概念，讨论了构建城市大模型面临的挑战、将城市大模型相关的研究工作按照数据（模态、类型）进行分类，并给出了城市大模型框架图，最后从应用的角度，探讨了大模型对不同应用场景的可能影响。相关的论文和开源资料发布在了GitHub库 <a target="_blank" rel="noopener" href="https://github.com/usail-hkust/Awesome-Urban-Foundation-Models">https://github.com/usail-hkust/Awesome-Urban-Foundation-Models</a> </p>
-<h1 id="方法"><a href="#方法" class="headerlink" title="方法"></a>方法</h1><p><img src="/../images/%E5%9F%8E%E5%B8%82%E5%A4%A7%E6%A8%A1%E5%9E%8B%E6%A1%86%E6%9E%B6%E5%9B%BE.png" srcset="/img/loading.gif" lazyload alt="城市大模型框架图"></p>
+<h1 id="方法"><a href="#方法" class="headerlink" title="方法"></a>方法</h1><p><img src="/../images/%E5%9F%8E%E5%B8%82%E5%A4%A7%E6%A8%A1%E5%9E%8B%E6%A1%86%E6%9E%B6%E5%9B%BE.png" alt="城市大模型框架图"></p>
 <p>这个框架图包含三个部分，1. 多源多粒度多模态城市数据，如城市文本语料、街景图像、空间轨迹、时间序列数据、城市知识图谱等；2. 城市基础模型； 3. 下游应用场景，涵盖交通、城市规划、能源管理、环境监测及公共安全等领域。</p>
-<p><img src="/../images/%E5%9F%8E%E5%B8%82%E5%A4%A7%E6%A8%A1%E5%9E%8B%E5%88%86%E7%B1%BB.png" srcset="/img/loading.gif" lazyload alt="城市大模型分类"></p>
+<p><img src="/../images/%E5%9F%8E%E5%B8%82%E5%A4%A7%E6%A8%A1%E5%9E%8B%E5%88%86%E7%B1%BB.png" alt="城市大模型分类"></p>
 <p>将城市大模型按照数据的模态、类型进行分类，包括基于语言的、视觉的、轨迹的、时间序列的、多模态的以及其他类型的城市大模型。</p>
-<p><img src="/../images/%E5%A4%9A%E6%A8%A1%E6%80%81%E5%9F%8E%E5%B8%82%E5%A4%A7%E6%A8%A1%E5%9E%8B%E6%9E%84%E5%BB%BA%E6%A1%86%E6%9E%B6.png" srcset="/img/loading.gif" lazyload alt="多模态城市大模型构建框架"></p>
+<p><img src="/../images/%E5%A4%9A%E6%A8%A1%E6%80%81%E5%9F%8E%E5%B8%82%E5%A4%A7%E6%A8%A1%E5%9E%8B%E6%9E%84%E5%BB%BA%E6%A1%86%E6%9E%B6.png" alt="多模态城市大模型构建框架"></p>
 <p>从城市数据的集成、融合到多模态城市大模型构建，再到不同的城市应用场景。提升城市大模型的时空推理以及隐私保护能力。</p>
 <h1 id="评价"><a href="#评价" class="headerlink" title="评价"></a>评价</h1><ol>
 <li>文章对城市大模型进行了全面且比较深入的调研和分析；</li>
@@ -478,7 +478,7 @@
             
   
   
-    <article id="comments" lazyload>
+    <article id="comments">
       
   <div id="waline"></div>
   <script type="text/javascript">
@@ -671,10 +671,6 @@
 
 
 
-
-  
-    <script  src="/js/img-lazyload.js" ></script>
-  
 
 
 

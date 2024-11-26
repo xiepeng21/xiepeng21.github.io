@@ -78,7 +78,7 @@
   <script id="fluid-configs">
     var Fluid = window.Fluid || {};
     Fluid.ctx = Object.assign({}, Fluid.ctx)
-    var CONFIG = {"hostname":"xiepeng21.cn","root":"/","version":"1.9.5-a","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":true,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":"1VgGyI3YmwimeFNy7b721A8y-gzGzoHsz","app_key":"cR1d1NnFVhO4BgvhAocR93xs","server_url":"https://1vggyi3y.lc-cn-n1-shared.com","path":"window.location.pathname","ignore_local":true}},"search_path":"/local-search.xml","include_content_in_search":true};
+    var CONFIG = {"hostname":"xiepeng21.cn","root":"/","version":"1.9.5-a","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":false,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":true,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":"1VgGyI3YmwimeFNy7b721A8y-gzGzoHsz","app_key":"cR1d1NnFVhO4BgvhAocR93xs","server_url":"https://1vggyi3y.lc-cn-n1-shared.com","path":"window.location.pathname","ignore_local":true}},"search_path":"/local-search.xml","include_content_in_search":true};
 
     if (CONFIG.web_analytics.follow_dnt) {
       var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
@@ -339,12 +339,12 @@
 <p>注意力机制已经成为序列建模和转换模型中引人注目的一个组成部分，允许建模依赖关系而不考虑它们在输入或输出序列中的距离。除了少数情况外，注意力机制往往与循环神经网络一起使用。</p>
 <p>在文章中，作者提出了Transformer模型，该模型避免了循环，而完全依赖于一个注意力机制来刻画输入和输出之间的全局依赖关系。</p>
 <p>Transformer可以实现更大程度的并行化，在8块P100 GPU上只训练了12个小时，就可以在翻译质量方面达到一个新的水平。</p>
-<h4 id="模型结构"><a href="#模型结构" class="headerlink" title="模型结构"></a>模型结构</h4><p>大多数的经典神经序列转换模型都有一个编码器-解码器的结构。编码器将一个符号表示的输入序列$(x_1,…,x_n)$映射成连续表示的序列$z&#x3D;(z_1,…,z_n)$。给定$z$，解码器接下来生成符号表示的输出序列$(y_1,…,y_m)$，每次生成一个元素。在每一步，模型都是自回归的，在生成下一个符号时，使用先前生成的符号作为附加输入。Transformer模型沿袭了这种结构，在编码器和解码器中使用堆叠的自注意力、逐点的和全连接层，如下图所示，左边是编码器，右边是解码器。<br><img src="https://i.loli.net/2020/10/26/1XYm8ghp7R3nMtk.png" srcset="/img/loading.gif" lazyload alt="1.png"></p>
+<h4 id="模型结构"><a href="#模型结构" class="headerlink" title="模型结构"></a>模型结构</h4><p>大多数的经典神经序列转换模型都有一个编码器-解码器的结构。编码器将一个符号表示的输入序列$(x_1,…,x_n)$映射成连续表示的序列$z&#x3D;(z_1,…,z_n)$。给定$z$，解码器接下来生成符号表示的输出序列$(y_1,…,y_m)$，每次生成一个元素。在每一步，模型都是自回归的，在生成下一个符号时，使用先前生成的符号作为附加输入。Transformer模型沿袭了这种结构，在编码器和解码器中使用堆叠的自注意力、逐点的和全连接层，如下图所示，左边是编码器，右边是解码器。<br><img src="https://i.loli.net/2020/10/26/1XYm8ghp7R3nMtk.png" alt="1.png"></p>
 <h5 id="编码器和解码器"><a href="#编码器和解码器" class="headerlink" title="编码器和解码器"></a>编码器和解码器</h5><p><strong>编码器部分：</strong> 编码器由6个相同的层堆叠组成。每层有两个子层，由下往上，第一层是一个多头自注意力机制，第二层是逐点式的全连接前馈网络。在每个子层上使用一个残差连接，然后进行层规范化（layer normalization）。也就是说每个子层的输出是LayerNorm($x$+Sublayer($x$))。</p>
 <p><strong>解码器部分：</strong> 解码器也由6个相同的层堆叠组成。除了编码器的两个子层，解码器还加入了第三个子层，这个子层在编码器的输出上执行多头注意力操作。与编码器类似，解码器也会在每个子层上使用一个残差连接，然后进行层规范化。修改了解码器堆栈中的自注意力子层，以防止位置注意到后续位置。这个修改，是基于输出嵌入有一个位置偏移的事实考虑，确保了对位置$i$的预测只能依赖于小于$i$的已知输出。</p>
 <h5 id="注意力机制"><a href="#注意力机制" class="headerlink" title="注意力机制"></a>注意力机制</h5><p>注意力机制函数可以被描述成将查询（query）、键（key）、值（value）映射到一个输出，其中查询、键、值和输出都是向量。输出以值的加权和的形式计算，其中分配给每个值的权重由查询与相应键的兼容函数计算。</p>
-<h6 id="按比例的点积注意力（Scaled-Dot-Product-Attention）"><a href="#按比例的点积注意力（Scaled-Dot-Product-Attention）" class="headerlink" title="按比例的点积注意力（Scaled Dot-Product Attention）"></a>按比例的点积注意力（Scaled Dot-Product Attention）</h6><p>按比例的点积注意力结构如下图所示。输入包括$d_k$维的查询和键，以及$d_v$维的值。计算公式是$Attention(Q, K, V)&#x3D;\operatorname{softmax}\left(\frac{Q K^{T}}{\sqrt{d_{k}}}\right) V$。<br><img src="https://i.loli.net/2020/10/26/zg2RiLaEK7du9WQ.png" srcset="/img/loading.gif" lazyload alt="2.png"></p>
-<h6 id="多头注意力-Multi-Head-Attention"><a href="#多头注意力-Multi-Head-Attention" class="headerlink" title="多头注意力 (Multi-Head Attention)"></a>多头注意力 (Multi-Head Attention)</h6><p>与使用$d_{model}$维的键，值，查询执行单一注意力函数不同，作者发现使用不同的学习线性投影将查询，键，值投影到$d_k, d_k, d_v$维是有益的。然后，对每一个查询、键和值的投影版本并行执行注意力函数，生成$d_v$维的输出值。它们被连接起来并再次投影，从而产生最终的值。如下图所示。多头注意力使模型能够在不同的表示子空间中，在不同的位置共同关注信息。计算公式是<br>$$<br>\begin{aligned}<br>\text { MultiHead }(Q, K, V) &amp;&#x3D;\text { Concat }\left(\text { head }<em>{1}, \ldots, \text { head }</em>{\mathrm{h}}\right) W^{O} \<br>\text { where head }<em>{\mathrm{i}} &amp;&#x3D;\text { Attention }\left(Q W</em>{i}^{Q}, K W_{i}^{K}, V W_{i}^{V}\right)<br>\end{aligned}<br>$$<br><img src="https://i.loli.net/2020/10/26/LbFpjcHBoX2TqOx.png" srcset="/img/loading.gif" lazyload alt="3.png"><br>其中，投影是参数矩阵，$W_{i}^{Q} \in \mathbb{R}^{d_{\text {model }} \times d_{k}}$，$W_{i}^{K} \in \mathbb{R}^{d_{\text {model }} \times d_{k}}$，$W_{i}^{V} \in \mathbb{R}^{d_{\text {model }} \times d_{v}}$ and $W^{O} \in \mathbb{R}^{h d_{v} \times d_{model}}$。本文中采用了$h&#x3D;8$个分布式的注意力层（头），每层的$d_k&#x3D;d_v&#x3D;d_{model}&#x2F;h&#x3D;64$。由于每个头的维数降低，其总计算代价与全维单头关注的计算代价相似。</p>
+<h6 id="按比例的点积注意力（Scaled-Dot-Product-Attention）"><a href="#按比例的点积注意力（Scaled-Dot-Product-Attention）" class="headerlink" title="按比例的点积注意力（Scaled Dot-Product Attention）"></a>按比例的点积注意力（Scaled Dot-Product Attention）</h6><p>按比例的点积注意力结构如下图所示。输入包括$d_k$维的查询和键，以及$d_v$维的值。计算公式是$Attention(Q, K, V)&#x3D;\operatorname{softmax}\left(\frac{Q K^{T}}{\sqrt{d_{k}}}\right) V$。<br><img src="https://i.loli.net/2020/10/26/zg2RiLaEK7du9WQ.png" alt="2.png"></p>
+<h6 id="多头注意力-Multi-Head-Attention"><a href="#多头注意力-Multi-Head-Attention" class="headerlink" title="多头注意力 (Multi-Head Attention)"></a>多头注意力 (Multi-Head Attention)</h6><p>与使用$d_{model}$维的键，值，查询执行单一注意力函数不同，作者发现使用不同的学习线性投影将查询，键，值投影到$d_k, d_k, d_v$维是有益的。然后，对每一个查询、键和值的投影版本并行执行注意力函数，生成$d_v$维的输出值。它们被连接起来并再次投影，从而产生最终的值。如下图所示。多头注意力使模型能够在不同的表示子空间中，在不同的位置共同关注信息。计算公式是<br>$$<br>\begin{aligned}<br>\text { MultiHead }(Q, K, V) &amp;&#x3D;\text { Concat }\left(\text { head }<em>{1}, \ldots, \text { head }</em>{\mathrm{h}}\right) W^{O} \<br>\text { where head }<em>{\mathrm{i}} &amp;&#x3D;\text { Attention }\left(Q W</em>{i}^{Q}, K W_{i}^{K}, V W_{i}^{V}\right)<br>\end{aligned}<br>$$<br><img src="https://i.loli.net/2020/10/26/LbFpjcHBoX2TqOx.png" alt="3.png"><br>其中，投影是参数矩阵，$W_{i}^{Q} \in \mathbb{R}^{d_{\text {model }} \times d_{k}}$，$W_{i}^{K} \in \mathbb{R}^{d_{\text {model }} \times d_{k}}$，$W_{i}^{V} \in \mathbb{R}^{d_{\text {model }} \times d_{v}}$ and $W^{O} \in \mathbb{R}^{h d_{v} \times d_{model}}$。本文中采用了$h&#x3D;8$个分布式的注意力层（头），每层的$d_k&#x3D;d_v&#x3D;d_{model}&#x2F;h&#x3D;64$。由于每个头的维数降低，其总计算代价与全维单头关注的计算代价相似。</p>
 <h6 id="注意力机制在模型中的应用"><a href="#注意力机制在模型中的应用" class="headerlink" title="注意力机制在模型中的应用"></a>注意力机制在模型中的应用</h6><ul>
 <li>在“编码器-解码器注意力”层中，查询来自前一解码器层，键和值来自编码器的输出。</li>
 <li>编码器包含子注意力层。在自注意力层中，所有的键、值和查询都来自相同的位置，在本例中是编码器中前一层的输出。所述编码器中的每个位置都可以顾及所述编码器的前一层中的所有位置。</li>
@@ -473,7 +473,7 @@
             
   
   
-    <article id="comments" lazyload>
+    <article id="comments">
       
   <div id="waline"></div>
   <script type="text/javascript">
@@ -666,10 +666,6 @@
 
 
 
-
-  
-    <script  src="/js/img-lazyload.js" ></script>
-  
 
 
 

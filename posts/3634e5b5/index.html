@@ -76,7 +76,7 @@
   <script id="fluid-configs">
     var Fluid = window.Fluid || {};
     Fluid.ctx = Object.assign({}, Fluid.ctx)
-    var CONFIG = {"hostname":"xiepeng21.cn","root":"/","version":"1.9.5-a","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":true,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":"1VgGyI3YmwimeFNy7b721A8y-gzGzoHsz","app_key":"cR1d1NnFVhO4BgvhAocR93xs","server_url":"https://1vggyi3y.lc-cn-n1-shared.com","path":"window.location.pathname","ignore_local":true}},"search_path":"/local-search.xml","include_content_in_search":true};
+    var CONFIG = {"hostname":"xiepeng21.cn","root":"/","version":"1.9.5-a","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":false,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":true,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":"1VgGyI3YmwimeFNy7b721A8y-gzGzoHsz","app_key":"cR1d1NnFVhO4BgvhAocR93xs","server_url":"https://1vggyi3y.lc-cn-n1-shared.com","path":"window.location.pathname","ignore_local":true}},"search_path":"/local-search.xml","include_content_in_search":true};
 
     if (CONFIG.web_analytics.follow_dnt) {
       var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
@@ -340,7 +340,7 @@
 <h1 id="防止过拟合的方法"><a href="#防止过拟合的方法" class="headerlink" title="防止过拟合的方法"></a>防止过拟合的方法</h1><ol>
 <li>数据增强（data augmentation）：一般想要获得更好的模型，需要大量的训练参数，这也是为什么CNN网络越来越深的原因之一，而如果训练样本缺乏多样性，那再多的训练参数也毫无意义，因为这造成了过拟合，训练模型的泛化能力相应也会很差。大量数据带来的特征多样性有助于充分利用所有的训练参数。办法一般有：（1）收集更多的数据 （2）对已有的数据进行修剪（crop），翻动（flip），加光照等（3）利用生成模型（比如GAN）生成一些数据。</li>
 <li>权重衰减（weight decay）:常用的权重衰减有L1和L2正则化，L1较L2能够获得更稀疏的参数，但L1零点不可导。在损失函数中，权重衰减是放在正则项（regulation）前面的一个系数，正则项一般指示模型的复杂度，所以权重衰减的作用是调节模型复杂度对损失函数的影响，若权重衰减很大，则复杂的模型损失函数的值也就大。</li>
-<li>提前终止：提前终止其实是另一种正则化方法，就是在训练集和验证集上，一次迭代之后计算各自的错误率，当在验证集上的错误率最小，在没开始增大之前就停止训练，因为如果接着训练，训练集上的错误率一般是会继续减小的，但验证集上的错误率会上升，这就说明模型的泛化能力开始变差了，出现过拟合问题，及时停止能获得泛化能力更好的模型。如下图（左图是训练集错误率，右图是验证集错误率，在虚线处提前结束训练）：<br><img src="https://res.cloudinary.com/pengpeng/image/upload/v1524219052/%E8%BF%87%E6%8B%9F%E5%90%88.png" srcset="/img/loading.gif" lazyload alt="image"></li>
+<li>提前终止：提前终止其实是另一种正则化方法，就是在训练集和验证集上，一次迭代之后计算各自的错误率，当在验证集上的错误率最小，在没开始增大之前就停止训练，因为如果接着训练，训练集上的错误率一般是会继续减小的，但验证集上的错误率会上升，这就说明模型的泛化能力开始变差了，出现过拟合问题，及时停止能获得泛化能力更好的模型。如下图（左图是训练集错误率，右图是验证集错误率，在虚线处提前结束训练）：<br><img src="https://res.cloudinary.com/pengpeng/image/upload/v1524219052/%E8%BF%87%E6%8B%9F%E5%90%88.png" alt="image"></li>
 <li>退出（dropout）：CNN训练过程中使用dropout是在每次训练中随机将部分神经元的权重置为0，即让一些神经元失效，这样可以缩减参数量，避免过拟合。原因在于：（1）每次迭代随机使部分神经元失效，使得模型的多样性增强，获得了类似于多个模型组合（ensemble,合唱）的效果，避免过拟合；（2）dropout其实也是一个数据增强的过程，它导致了稀疏性，使得局部数据簇差异性明显增强，有效避免过拟合。</li>
 </ol>
 <h1 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h1><ol>
@@ -464,7 +464,7 @@
             
   
   
-    <article id="comments" lazyload>
+    <article id="comments">
       
   <div id="waline"></div>
   <script type="text/javascript">
@@ -657,10 +657,6 @@
 
 
 
-
-  
-    <script  src="/js/img-lazyload.js" ></script>
-  
 
 
 

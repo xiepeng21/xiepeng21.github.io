@@ -83,7 +83,7 @@
   <script id="fluid-configs">
     var Fluid = window.Fluid || {};
     Fluid.ctx = Object.assign({}, Fluid.ctx)
-    var CONFIG = {"hostname":"xiepeng21.cn","root":"/","version":"1.9.5-a","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":true,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":"1VgGyI3YmwimeFNy7b721A8y-gzGzoHsz","app_key":"cR1d1NnFVhO4BgvhAocR93xs","server_url":"https://1vggyi3y.lc-cn-n1-shared.com","path":"window.location.pathname","ignore_local":true}},"search_path":"/local-search.xml","include_content_in_search":true};
+    var CONFIG = {"hostname":"xiepeng21.cn","root":"/","version":"1.9.5-a","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":false,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":true,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":"1VgGyI3YmwimeFNy7b721A8y-gzGzoHsz","app_key":"cR1d1NnFVhO4BgvhAocR93xs","server_url":"https://1vggyi3y.lc-cn-n1-shared.com","path":"window.location.pathname","ignore_local":true}},"search_path":"/local-search.xml","include_content_in_search":true};
 
     if (CONFIG.web_analytics.follow_dnt) {
       var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
@@ -340,23 +340,23 @@
                 <p>Chen, Weiqi, Ling Chen, Yu Xie, Wei Cao, Yusong Gao, and Xiaojie Feng. “<a target="_blank" rel="noopener" href="https://arxiv.org/pdf/1911.12093">Multi-Range Attentive Bicomponent Graph Convolutional Network for Traffic Forecasting</a>.” arXiv preprint arXiv:1911.12093 (2019). Accepted by AAAI2020.</p>
 <span id="more"></span>
 <p>提出了一种交通预测深度学习模型——多范围注意力双组分图卷积网络(MRA-BGCN)。该模型首先根据路网距离构建节点向图，根据不同的边相互模式构建边向图。然后利用双组分图卷积实现了节点和边的相互作用建模。此外引入多范围注意力机制，对不同邻域范围内的信息进行聚合，自动学习不同范围的重要性。在两个交通数据集（METR-LA和PEMS-BAY）上的实验结果表明取得了很好的效果。</p>
-<h4 id="问题定义"><a href="#问题定义" class="headerlink" title="问题定义"></a>问题定义</h4><p><img src="https://i.loli.net/2020/06/14/QH5ysCw64l38ExS.png" srcset="/img/loading.gif" lazyload alt="2338_1.png"></p>
+<h4 id="问题定义"><a href="#问题定义" class="headerlink" title="问题定义"></a>问题定义</h4><p><img src="https://i.loli.net/2020/06/14/QH5ysCw64l38ExS.png" alt="2338_1.png"></p>
 <p>交通预测问题的任务是：学习一个函数$f$, 能够给出$T^{\prime}$历史的图信号和图$G$，预测$T$未来的图信号。</p>
-<h4 id="数据集"><a href="#数据集" class="headerlink" title="数据集"></a>数据集</h4><p><img src="https://i.loli.net/2020/06/14/j6E2md7kYRh8v3A.png" srcset="/img/loading.gif" lazyload alt="2339_1.png"></p>
+<h4 id="数据集"><a href="#数据集" class="headerlink" title="数据集"></a>数据集</h4><p><img src="https://i.loli.net/2020/06/14/j6E2md7kYRh8v3A.png" alt="2339_1.png"></p>
 <p>METR-LA and PEMS-BAY是两个公开的交通网络数据集。METR-LA记录了从2012年3月1日到2012年6月30日四个月的交通速度统计数据，包括洛杉矶公路上的207个传感器。PEMS-BAY记录了从2017年1月1日到2017年5月31日的5个月的交通速度统计数据，其中包括旧金山湾区的325个传感器。</p>
-<h4 id="方法"><a href="#方法" class="headerlink" title="方法"></a>方法</h4><p><img src="https://i.loli.net/2020/06/14/A3yE9oUKbCZGsRp.png" srcset="/img/loading.gif" lazyload alt="2337_1.png"></p>
+<h4 id="方法"><a href="#方法" class="headerlink" title="方法"></a>方法</h4><p><img src="https://i.loli.net/2020/06/14/A3yE9oUKbCZGsRp.png" alt="2337_1.png"></p>
 <p>论文中的模型如上图所示，包括2部分，（1）双组分图卷积模块 （2）多范围注意力层。</p>
-<h5 id="双组分图卷积"><a href="#双组分图卷积" class="headerlink" title="双组分图卷积"></a>双组分图卷积</h5><p><img src="https://i.loli.net/2020/06/14/S9vIA3t8C7ngRXk.png" srcset="/img/loading.gif" lazyload alt="2340_1.png"></p>
+<h5 id="双组分图卷积"><a href="#双组分图卷积" class="headerlink" title="双组分图卷积"></a>双组分图卷积</h5><p><img src="https://i.loli.net/2020/06/14/S9vIA3t8C7ngRXk.png" alt="2340_1.png"></p>
 <p>图卷积是对给定图结构的节点间相互作用进行建模的一种有效操作。双组分图卷积可以显式地对节点和边的相互作用进行建模。</p>
 <h6 id="流连接"><a href="#流连接" class="headerlink" title="流连接"></a>流连接</h6><p>在交通网络中，一个路段可能受到其上下游路段的影响。</p>
 <h6 id="竞争关系"><a href="#竞争关系" class="headerlink" title="竞争关系"></a>竞争关系</h6><p>共享同一源节点的道路链路可能会争夺交通资源，产生竞争关系。</p>
 <h5 id="多范围注意力"><a href="#多范围注意力" class="headerlink" title="多范围注意力"></a>多范围注意力</h5><p>提出了双组分图卷积的多范围注意力机制，能自动学习不同邻域范围的重要性，从而实现对不同邻域范围内信息的聚集，而不仅仅是给定的邻域范围。</p>
-<h5 id="双组分图卷积RNN"><a href="#双组分图卷积RNN" class="headerlink" title="双组分图卷积RNN"></a>双组分图卷积RNN</h5><p><img src="https://i.loli.net/2020/06/14/NR6qQJAofOwHpPK.png" srcset="/img/loading.gif" lazyload alt="2343_1.png"></p>
+<h5 id="双组分图卷积RNN"><a href="#双组分图卷积RNN" class="headerlink" title="双组分图卷积RNN"></a>双组分图卷积RNN</h5><p><img src="https://i.loli.net/2020/06/14/NR6qQJAofOwHpPK.png" alt="2343_1.png"></p>
 <p>将多个BGCGRU层堆叠起来，并使用Sequence to Sequence体系结构进行多步前向交通预测。</p>
 <h4 id="评估"><a href="#评估" class="headerlink" title="评估"></a>评估</h4><ul>
-<li>性能比较<br><img src="https://i.loli.net/2020/06/14/yZXAJwsHdM7niQ8.png" srcset="/img/loading.gif" lazyload alt="2342_1.png"></li>
-<li>边向图的影响<br><img src="https://i.loli.net/2020/06/14/NGrHvd23eYkqgpM.png" srcset="/img/loading.gif" lazyload alt="2341_1.png"></li>
-<li>多范围注意力机制的影响<br><img src="https://i.loli.net/2020/06/14/9QkNBjcV8fMJsyv.png" srcset="/img/loading.gif" lazyload alt="2344_1.png"></li>
+<li>性能比较<br><img src="https://i.loli.net/2020/06/14/yZXAJwsHdM7niQ8.png" alt="2342_1.png"></li>
+<li>边向图的影响<br><img src="https://i.loli.net/2020/06/14/NGrHvd23eYkqgpM.png" alt="2341_1.png"></li>
+<li>多范围注意力机制的影响<br><img src="https://i.loli.net/2020/06/14/9QkNBjcV8fMJsyv.png" alt="2344_1.png"></li>
 </ul>
 <h4 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h4><p>提出了一种用于交通预测的多范围注意力双组分图卷积网络。具体来说，采用双组分图卷积来明确地建模节点和边的相关性，利用一种边向图构造方法来编码边的上下游连通性和竞争关系，使用多范围注意力机制，有效地聚合多个邻域范围信息，生成综合的表示。可以进一步研究的地方是，可以考虑更多的影响因素，比如交通事故以及周围的兴趣点；目前论文中考虑的是单模态输入图，还可以研究多模态输入图。</p>
 
@@ -475,7 +475,7 @@
             
   
   
-    <article id="comments" lazyload>
+    <article id="comments">
       
   <div id="waline"></div>
   <script type="text/javascript">
@@ -668,10 +668,6 @@
 
 
 
-
-  
-    <script  src="/js/img-lazyload.js" ></script>
-  
 
 
 
