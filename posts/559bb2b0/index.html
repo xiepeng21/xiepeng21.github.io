@@ -18,29 +18,28 @@
   <meta name="author" content="Peter">
   <meta name="keywords" content="">
   
-    <meta name="description" content="Vaswani, Ashish, Noam Shazeer, Niki Parmar, Jakob Uszkoreit, Llion Jones, Aidan N. Gomez, Łukasz Kaiser, and Illia Polosukhin. “Attention is all you need.” In Advances in neural information processing">
+    <meta name="description" content="我们一起来读《少有人走的路8: 寻找石头》这本书吧。这本书是《少有人走的路》系列的第8本，也是这个系列的收官之作，最后一本书。讲的主要内容是作者对于金钱、婚姻、子女、健康与死亡的终极思考，没有标准答案，这是一个无尽的探索之旅，每个人给出的答案都不太可能会是一样的。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="【论文笔记-4】Attention Is All You Need">
-<meta property="og:url" content="https://xiepeng21.cn/posts/d3e954aa/index.html">
+<meta property="og:title" content="【书山有路-13】少有人走的路8：寻找石头">
+<meta property="og:url" content="https://xiepeng21.cn/posts/559bb2b0/index.html">
 <meta property="og:site_name" content="半亩方塘">
-<meta property="og:description" content="Vaswani, Ashish, Noam Shazeer, Niki Parmar, Jakob Uszkoreit, Llion Jones, Aidan N. Gomez, Łukasz Kaiser, and Illia Polosukhin. “Attention is all you need.” In Advances in neural information processing">
+<meta property="og:description" content="我们一起来读《少有人走的路8: 寻找石头》这本书吧。这本书是《少有人走的路》系列的第8本，也是这个系列的收官之作，最后一本书。讲的主要内容是作者对于金钱、婚姻、子女、健康与死亡的终极思考，没有标准答案，这是一个无尽的探索之旅，每个人给出的答案都不太可能会是一样的。">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://i.loli.net/2020/10/26/1XYm8ghp7R3nMtk.png">
-<meta property="og:image" content="https://i.loli.net/2020/10/26/zg2RiLaEK7du9WQ.png">
-<meta property="og:image" content="https://i.loli.net/2020/10/26/LbFpjcHBoX2TqOx.png">
-<meta property="article:published_time" content="2020-10-26T08:07:00.000Z">
-<meta property="article:modified_time" content="2024-02-05T13:09:48.563Z">
+<meta property="og:image" content="https://xiepeng21.cn/images/xzst.jpg">
+<meta property="article:published_time" content="2024-12-24T00:29:37.000Z">
+<meta property="article:modified_time" content="2024-12-24T01:05:49.758Z">
 <meta property="article:author" content="Peter">
-<meta property="article:tag" content="Transformer">
-<meta property="article:tag" content="注意力">
+<meta property="article:tag" content="书山有路">
+<meta property="article:tag" content="读书笔记">
+<meta property="article:tag" content="少有人走的路">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://i.loli.net/2020/10/26/1XYm8ghp7R3nMtk.png">
+<meta name="twitter:image" content="https://xiepeng21.cn/images/xzst.jpg">
   
   
     <meta name="referrer" content="no-referrer-when-downgrade">
   
   
-  <title>【论文笔记-4】Attention Is All You Need - 半亩方塘</title>
+  <title>【书山有路-13】少有人走的路8：寻找石头 - 半亩方塘</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -248,7 +247,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="【论文笔记-4】Attention Is All You Need"></span>
+            <span id="subtitle" data-typed-text="【书山有路-13】少有人走的路8：寻找石头"></span>
           
         </div>
 
@@ -259,8 +258,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2020-10-26 16:07" pubdate>
-          2020年10月26日 下午
+        <time datetime="2024-12-24 08:29" pubdate>
+          2024年12月24日 早上
         </time>
       </span>
     
@@ -271,7 +270,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          3.3k 字
+          1.4k 字
         
       </span>
     
@@ -282,7 +281,7 @@
         
         
         
-          28 分钟
+          12 分钟
         
       </span>
     
@@ -327,36 +326,45 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">【论文笔记-4】Attention Is All You Need</h1>
+            <h1 id="seo-header">【书山有路-13】少有人走的路8：寻找石头</h1>
             
             
               <div class="markdown-body">
                 
-                <p>Vaswani, Ashish, Noam Shazeer, Niki Parmar, Jakob Uszkoreit, Llion Jones, Aidan N. Gomez, Łukasz Kaiser, and Illia Polosukhin. “<a target="_blank" rel="noopener" href="https://papers.nips.cc/paper/7181-attention-is-all-you-need.pdf">Attention is all you need</a>.” In Advances in neural information processing systems, pp. 5998-6008. 2017.</p>
+                <p>我们一起来读<a target="_blank" rel="noopener" href="https://book.douban.com/subject/35232776/">《少有人走的路8: 寻找石头》</a>这本书吧。这本书是《少有人走的路》系列的第8本，也是这个系列的收官之作，最后一本书。讲的主要内容是作者对于金钱、婚姻、子女、健康与死亡的终极思考，没有标准答案，这是一个无尽的探索之旅，每个人给出的答案都不太可能会是一样的。</p>
 <span id="more"></span>
 
-<h4 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h4><p>RNN、LSTM和GRU在序列建模、语言建模和机器翻译等领域被广泛应用。大量的工作来研究如何突破循环语言模型和编码器-解码器模型之间的界限。循环模型通常沿着输入和输出序列的符号位置进行因子计算。在计算时间中将位置与步骤对齐，生成隐含状态$h_t$的一个序列，作为先前的隐含状态$h_{t-1}$和位置$t$的输入的函数。这种固有的顺序特性妨碍了训练样本的并行化，而在较长的序列长度下，并行化就变得至关重要，因为内存约束限制了样本之间的批处理。最近的工作通过因子分解技巧和条件计算在计算效率上取得了显著的提高，同时也提高了后者的模型性能。然而，顺序计算的基本约束仍然存在。</p>
-<p>注意力机制已经成为序列建模和转换模型中引人注目的一个组成部分，允许建模依赖关系而不考虑它们在输入或输出序列中的距离。除了少数情况外，注意力机制往往与循环神经网络一起使用。</p>
-<p>在文章中，作者提出了Transformer模型，该模型避免了循环，而完全依赖于一个注意力机制来刻画输入和输出之间的全局依赖关系。</p>
-<p>Transformer可以实现更大程度的并行化，在8块P100 GPU上只训练了12个小时，就可以在翻译质量方面达到一个新的水平。</p>
-<h4 id="模型结构"><a href="#模型结构" class="headerlink" title="模型结构"></a>模型结构</h4><p>大多数的经典神经序列转换模型都有一个编码器-解码器的结构。编码器将一个符号表示的输入序列$(x_1,…,x_n)$映射成连续表示的序列$z&#x3D;(z_1,…,z_n)$。给定$z$，解码器接下来生成符号表示的输出序列$(y_1,…,y_m)$，每次生成一个元素。在每一步，模型都是自回归的，在生成下一个符号时，使用先前生成的符号作为附加输入。Transformer模型沿袭了这种结构，在编码器和解码器中使用堆叠的自注意力、逐点的和全连接层，如下图所示，左边是编码器，右边是解码器。<br><img src="https://i.loli.net/2020/10/26/1XYm8ghp7R3nMtk.png" alt="1.png"></p>
-<h5 id="编码器和解码器"><a href="#编码器和解码器" class="headerlink" title="编码器和解码器"></a>编码器和解码器</h5><p><strong>编码器部分：</strong> 编码器由6个相同的层堆叠组成。每层有两个子层，由下往上，第一层是一个多头自注意力机制，第二层是逐点式的全连接前馈网络。在每个子层上使用一个残差连接，然后进行层规范化（layer normalization）。也就是说每个子层的输出是LayerNorm($x$+Sublayer($x$))。</p>
-<p><strong>解码器部分：</strong> 解码器也由6个相同的层堆叠组成。除了编码器的两个子层，解码器还加入了第三个子层，这个子层在编码器的输出上执行多头注意力操作。与编码器类似，解码器也会在每个子层上使用一个残差连接，然后进行层规范化。修改了解码器堆栈中的自注意力子层，以防止位置注意到后续位置。这个修改，是基于输出嵌入有一个位置偏移的事实考虑，确保了对位置$i$的预测只能依赖于小于$i$的已知输出。</p>
-<h5 id="注意力机制"><a href="#注意力机制" class="headerlink" title="注意力机制"></a>注意力机制</h5><p>注意力机制函数可以被描述成将查询（query）、键（key）、值（value）映射到一个输出，其中查询、键、值和输出都是向量。输出以值的加权和的形式计算，其中分配给每个值的权重由查询与相应键的兼容函数计算。</p>
-<h6 id="按比例的点积注意力（Scaled-Dot-Product-Attention）"><a href="#按比例的点积注意力（Scaled-Dot-Product-Attention）" class="headerlink" title="按比例的点积注意力（Scaled Dot-Product Attention）"></a>按比例的点积注意力（Scaled Dot-Product Attention）</h6><p>按比例的点积注意力结构如下图所示。输入包括$d_k$维的查询和键，以及$d_v$维的值。计算公式是$Attention(Q, K, V)&#x3D;\operatorname{softmax}\left(\frac{Q K^{T}}{\sqrt{d_{k}}}\right) V$。<br><img src="https://i.loli.net/2020/10/26/zg2RiLaEK7du9WQ.png" alt="2.png"></p>
-<h6 id="多头注意力-Multi-Head-Attention"><a href="#多头注意力-Multi-Head-Attention" class="headerlink" title="多头注意力 (Multi-Head Attention)"></a>多头注意力 (Multi-Head Attention)</h6><p>与使用$d_{model}$维的键，值，查询执行单一注意力函数不同，作者发现使用不同的学习线性投影将查询，键，值投影到$d_k, d_k, d_v$维是有益的。然后，对每一个查询、键和值的投影版本并行执行注意力函数，生成$d_v$维的输出值。它们被连接起来并再次投影，从而产生最终的值。如下图所示。多头注意力使模型能够在不同的表示子空间中，在不同的位置共同关注信息。计算公式是<br>$$<br>\begin{aligned}<br>\text { MultiHead }(Q, K, V) &amp;&#x3D;\text { Concat }\left(\text { head }<em>{1}, \ldots, \text { head }</em>{\mathrm{h}}\right) W^{O} \<br>\text { where head }<em>{\mathrm{i}} &amp;&#x3D;\text { Attention }\left(Q W</em>{i}^{Q}, K W_{i}^{K}, V W_{i}^{V}\right)<br>\end{aligned}<br>$$<br><img src="https://i.loli.net/2020/10/26/LbFpjcHBoX2TqOx.png" alt="3.png"><br>其中，投影是参数矩阵，$W_{i}^{Q} \in \mathbb{R}^{d_{\text {model }} \times d_{k}}$，$W_{i}^{K} \in \mathbb{R}^{d_{\text {model }} \times d_{k}}$，$W_{i}^{V} \in \mathbb{R}^{d_{\text {model }} \times d_{v}}$ and $W^{O} \in \mathbb{R}^{h d_{v} \times d_{model}}$。本文中采用了$h&#x3D;8$个分布式的注意力层（头），每层的$d_k&#x3D;d_v&#x3D;d_{model}&#x2F;h&#x3D;64$。由于每个头的维数降低，其总计算代价与全维单头关注的计算代价相似。</p>
-<h6 id="注意力机制在模型中的应用"><a href="#注意力机制在模型中的应用" class="headerlink" title="注意力机制在模型中的应用"></a>注意力机制在模型中的应用</h6><ul>
-<li>在“编码器-解码器注意力”层中，查询来自前一解码器层，键和值来自编码器的输出。</li>
-<li>编码器包含子注意力层。在自注意力层中，所有的键、值和查询都来自相同的位置，在本例中是编码器中前一层的输出。所述编码器中的每个位置都可以顾及所述编码器的前一层中的所有位置。</li>
-<li>解码器中的自注意力层允许解码器中的每个位置关注解码器中的所有位置，直到并包括该位置。</li>
-</ul>
-<h5 id="逐点式的前馈神经网络"><a href="#逐点式的前馈神经网络" class="headerlink" title="逐点式的前馈神经网络"></a>逐点式的前馈神经网络</h5><p>这部分包括两个线性转换，中间有一个ReLU激活函数。计算公式是<br>$$<br>\mathrm{FFN}(x)&#x3D;\max \left(0, x W_{1}+b_{1}\right) W_{2}+b_{2}<br>$$</p>
-<h5 id="Embedding-and-Softmax"><a href="#Embedding-and-Softmax" class="headerlink" title="Embedding and Softmax"></a>Embedding and Softmax</h5><p>与其他序列转换模型类似，使用学习到的嵌入将输入符号和输出符号转换为$d_{model}$维的向量。也使用通常学习到的线性变换和Softmax函数将解码器的输出转换为预测的下一个符号的概率。</p>
-<h5 id="位置编码"><a href="#位置编码" class="headerlink" title="位置编码"></a>位置编码</h5><p>由于本模型不包含循环和卷积，为了让模型利用序列的顺序，必须注入一些关于序列中符号的相对或绝对位置的信息。因此，在编码器和解码器堆栈底部的输入嵌入中添加了“位置编码”。位置编码与嵌入具有相同的$d_{model}$维数，因此可以将两者相加。在本文中，使用了不同频率的正弦和余弦函数，如公式所示<br>$$<br>\begin{aligned}<br>P E_{(p o s, 2 i)} &amp;&#x3D;\sin \left(p o s &#x2F; 10000^{2 i &#x2F; d_{\text {model }}}\right) \<br>P E_{(p o s, 2 i+1)} &amp;&#x3D;\cos \left(\text { pos } &#x2F; 10000^{2 i &#x2F; d_{\text {model }}}\right)<br>\end{aligned}<br>$$<br>其中，$pos$是位置，$i$是维数。也就是说，位置编码的每一维对应一个正弦信号。</p>
-<h4 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h4><p>在这项工作中，提出了Transformer，这是第一个完全基于注意力机制的序列转换模型，用多头自注意力取代了编码器-解码器结构中最常用的循环层。对于翻译任务，Transformer的训练速度比基于循环层或卷积层的架构要快得多。</p>
-<h4 id="更多资料"><a href="#更多资料" class="headerlink" title="更多资料"></a>更多资料</h4><ol>
-<li>图解Transformer（完整版）<a target="_blank" rel="noopener" href="https://mp.weixin.qq.com/s/cJqhESxTMy5cfj0EXh9s4w">https://mp.weixin.qq.com/s/cJqhESxTMy5cfj0EXh9s4w</a></li>
+<p><img src="/../images/xzst.jpg" alt="少有人走的路8: 寻找石头"></p>
+<p>这本书与<a href="https://xiepeng21.cn/posts/70e570a9/">《少有人走的路：心智成熟的旅程》</a>、<a href="https://xiepeng21.cn/posts/117e144d/">《少有人走的路2:勇敢地面对谎言》</a>、<a href="https://xiepeng21.cn/posts/ca5ef243/">《少有人走的路3：与心灵对话》</a>、<a href="https://xiepeng21.cn/posts/2cb15dfa/">《少有人走的路4:在焦虑的年代获得精神的成长》</a>、<a href="https://xiepeng21.cn/posts/7a6e1cf9/">《少有人走的路5：不一样的鼓声》</a>、<a href="https://xiepeng21.cn/posts/fd28cad8/">《少有人走的路6：真诚是生命的药》</a>与<a href="https://xiepeng21.cn/posts/76208d8e/">《少有人走的路7：靠窗的床》</a>共同形成了《少有人走的路》系列。</p>
+<p>以下内容是书中打动我，给我留下深刻印象的一些摘录和感悟。也欢迎大家在留言区留下那些触动你的摘录以及心得感悟。</p>
+<p>踏上生命的旅程，寻找石头，不仅仅是一颗颗新奇的小石头，还可以是一个个不至于让人滑倒的踏脚石。自己是一个爱好石头的人，寻找石头的过程，就是让自己的好奇心在大千世界延伸的一种方式。</p>
+<p>石头无声，但它们本身，便已说尽世间万象。</p>
+<p>卡尔·荣格把人类邪恶的根源归结为“拒绝面对阴影”，在这里，“阴影”被定义为我们自身的一部分，它包含那些我们不愿意具有的特质。我们不仅会企图对他人掩藏这部分自己，也对自己掩藏，我们不断试图将这部分的自己清扫至意识的地毯之下，如同藏起污物一样。而荣格所说的“拒绝”，指的是一种主动抵制的心理，远比我们平时被动抵制批评时的心理还要强烈。</p>
+<p>虽然我对很多事情不再确信无疑，但正是这些不确定和混乱，让我变得更安之若素，甚至开始感到享受。</p>
+<hr>
+<p>即将走到年尾，也将迎来2025年。</p>
+<p>过去的一年，看了一些书，记录一下，也希望新的一年，与书相伴，不断成长。</p>
+<ol>
+<li>《<a target="_blank" rel="noopener" href="https://book.douban.com/subject/35196138/">穿越小径分岔的花园</a>》：太过严格地归属于任何学科，会限制个人的知识独立性。</li>
+<li>《<a target="_blank" rel="noopener" href="https://book.douban.com/subject/36579580/">每个人都有自己的职场优势</a>》：找到优势，不是成为更好的自己，而是更好地成为自己。</li>
+<li>《<a target="_blank" rel="noopener" href="https://book.douban.com/subject/36491854/">意识机器</a>》：机器会有意识吗？意识和智能有什么关系？这本书会带领你解开这些问题的面纱。</li>
+<li>《<a target="_blank" rel="noopener" href="https://book.douban.com/subject/26769136/">为什么长大？</a>》：这本书回答了一些孩子们会问而大多数大人认为已经解答了的问题。比如怎么找到意义？怎么创造自己的生活？</li>
+<li>《<a target="_blank" rel="noopener" href="https://book.douban.com/subject/34887257/">活法</a>》：命运与因果交织，秉承善良，以利他之心在世间做人做事。</li>
+<li>《<a target="_blank" rel="noopener" href="https://book.douban.com/subject/23780225/">能断</a>》：凡所有相，皆是虚妄。</li>
+<li>《<a target="_blank" rel="noopener" href="https://book.douban.com/subject/36407267/">好情绪养成手册</a>》：一本值得多次阅读的自我接纳，情绪疗愈手册。</li>
+<li>《<a target="_blank" rel="noopener" href="https://book.douban.com/subject/27084650/">人生很短，做一个有趣的人</a>》：这本书是我的床头读物，每晚看一点，不知不觉，就看完了。</li>
+<li>《<a target="_blank" rel="noopener" href="https://book.douban.com/subject/20424526/">邓小平时代</a>》：既是设计师，也是实干家。</li>
+<li>《<a target="_blank" rel="noopener" href="https://book.douban.com/subject/30175059/">李光耀观天下</a>》：有大眼光、大格局，搞建设、谋发展的实干家。</li>
+<li>《<a target="_blank" rel="noopener" href="https://book.douban.com/subject/35899532/">有解：高效解决问题的关键7步</a>》：从战略和战术层面讲如何解决问题的书，实操性很强。</li>
+<li>《<a target="_blank" rel="noopener" href="https://book.douban.com/subject/24257486/">局外人</a>》：当外在环境不适合正常人生存的时候，正常反倒变成了不正常。重视自己的感受和情绪，相信自己的判断，勇敢地活出自己，自己就是自己的代言人。</li>
+<li>《<a target="_blank" rel="noopener" href="https://book.douban.com/subject/36357804/">为什么伟大不能被计划</a>》：如果我们能明确实现目标的踏脚石（Stepping Stone），那么规划是明智的；而当面对未知的领域时，不设定目标的创新才是关键所在。</li>
+<li>《<a target="_blank" rel="noopener" href="https://book.douban.com/subject/30297006/">我是我认识的最聪明的人</a>》：第一次看生物物理学家的自传，伊瓦尔·贾埃弗是个有趣的人，他的人生也挺波澜起伏的，很有故事性。</li>
+<li>《<a target="_blank" rel="noopener" href="https://book.douban.com/subject/36336313/">深度关系</a>》：从『建立信任』到『彼此成就』，愿我们都能在深度关系中更加了解自己，与他人一起成长。</li>
 </ol>
+<hr>
+<p>欢迎各位提出建议、问题，我们一起交流、学习、成长。</p>
+<p>“问渠那得清如许？为有源头活水来” ヾ(◍°∇°◍)ﾉﾞ</p>
+<p>——— 我在半亩方塘等你 ^_^</p>
 
                 
               </div>
@@ -375,7 +383,7 @@
     
       <span class="category-chain">
         
-  <a href="/categories/%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB/" class="category-chain-item">论文阅读</a>
+  <a href="/categories/%E9%9A%8F%E7%AC%94%E6%84%9F%E6%82%9F/" class="category-chain-item">随笔感悟</a>
   
   
 
@@ -390,9 +398,11 @@
     <div class="post-meta">
       <i class="iconfont icon-tags"></i>
       
-        <a href="/tags/Transformer/" class="print-no-link">#Transformer</a>
+        <a href="/tags/%E4%B9%A6%E5%B1%B1%E6%9C%89%E8%B7%AF/" class="print-no-link">#书山有路</a>
       
-        <a href="/tags/%E6%B3%A8%E6%84%8F%E5%8A%9B/" class="print-no-link">#注意力</a>
+        <a href="/tags/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/" class="print-no-link">#读书笔记</a>
+      
+        <a href="/tags/%E5%B0%91%E6%9C%89%E4%BA%BA%E8%B5%B0%E7%9A%84%E8%B7%AF/" class="print-no-link">#少有人走的路</a>
       
     </div>
   
@@ -404,8 +414,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>【论文笔记-4】Attention Is All You Need</div>
-      <div>https://xiepeng21.cn/posts/d3e954aa/</div>
+      <div>【书山有路-13】少有人走的路8：寻找石头</div>
+      <div>https://xiepeng21.cn/posts/559bb2b0/</div>
     </div>
     <div class="license-meta">
       
@@ -417,7 +427,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2020年10月26日</div>
+          <div>2024年12月24日</div>
         </div>
       
       
@@ -449,18 +459,12 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/posts/a944fccc/" title="【AAAI 2021】时空数据挖掘论文">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">【AAAI 2021】时空数据挖掘论文</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/posts/9ff4b4d5/" title="机器学习中的数学（一）">
-                        <span class="hidden-mobile">机器学习中的数学（一）</span>
+                      <a href="/posts/76208d8e/" title="【书山有路-12】少有人走的路7：靠窗的床">
+                        <span class="hidden-mobile">【书山有路-12】少有人走的路7：靠窗的床</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
