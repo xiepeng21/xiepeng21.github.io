@@ -18,30 +18,28 @@
   <meta name="author" content="Peter">
   <meta name="keywords" content="">
   
-    <meta name="description" content="ITRANSFORMER: INVERTED TRANSFORMERS ARE EFFECTIVE FOR TIME SERIES FORECASTING. Yong Liu, Tengge Hu, Haoran Zhang, Haixu Wu, Shiyu Wang, Lintao Ma, Mingsheng Long. ICLR 2024.">
+    <meta name="description" content="我们一起来读《人间有趣》这本书吧。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="【论文笔记-5】iTransformer">
-<meta property="og:url" content="https://xiepeng21.cn/posts/4b43950f/index.html">
+<meta property="og:title" content="【书山有路-18】人间有趣，生活百态">
+<meta property="og:url" content="https://xiepeng21.cn/posts/bea850b0/index.html">
 <meta property="og:site_name" content="半亩方塘">
-<meta property="og:description" content="ITRANSFORMER: INVERTED TRANSFORMERS ARE EFFECTIVE FOR TIME SERIES FORECASTING. Yong Liu, Tengge Hu, Haoran Zhang, Haixu Wu, Shiyu Wang, Lintao Ma, Mingsheng Long. ICLR 2024.">
+<meta property="og:description" content="我们一起来读《人间有趣》这本书吧。">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://xiepeng21.cn/images/iTransformer%E4%B8%8ETransformer%E5%8F%8A%E5%85%B6%E5%8F%98%E7%A7%8D%E7%9A%84%E6%AF%94%E8%BE%83.png">
-<meta property="og:image" content="https://xiepeng21.cn/images/iTransformer%E6%A1%86%E6%9E%B6.png">
-<meta property="og:image" content="https://xiepeng21.cn/images/Results_of_iTransformer.png">
-<meta property="article:published_time" content="2024-02-05T12:16:24.000Z">
-<meta property="article:modified_time" content="2024-02-05T12:57:35.569Z">
+<meta property="og:image" content="https://xiepeng21.cn/images/wzqjpj.jpg">
+<meta property="article:published_time" content="2025-02-25T01:42:57.000Z">
+<meta property="article:modified_time" content="2025-02-25T01:47:19.316Z">
 <meta property="article:author" content="Peter">
-<meta property="article:tag" content="时间序列预测">
-<meta property="article:tag" content="Transformer">
-<meta property="article:tag" content="iTransformer">
+<meta property="article:tag" content="书山有路">
+<meta property="article:tag" content="读书笔记">
+<meta property="article:tag" content="人间有趣">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://xiepeng21.cn/images/iTransformer%E4%B8%8ETransformer%E5%8F%8A%E5%85%B6%E5%8F%98%E7%A7%8D%E7%9A%84%E6%AF%94%E8%BE%83.png">
+<meta name="twitter:image" content="https://xiepeng21.cn/images/wzqjpj.jpg">
   
   
     <meta name="referrer" content="no-referrer-when-downgrade">
   
   
-  <title>【论文笔记-5】iTransformer - 半亩方塘</title>
+  <title>【书山有路-18】人间有趣，生活百态 - 半亩方塘</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -249,7 +247,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="【论文笔记-5】iTransformer"></span>
+            <span id="subtitle" data-typed-text="【书山有路-18】人间有趣，生活百态"></span>
           
         </div>
 
@@ -260,8 +258,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2024-02-05 20:16" pubdate>
-          2024年2月5日 晚上
+        <time datetime="2025-02-25 09:42" pubdate>
+          2025年2月25日 上午
         </time>
       </span>
     
@@ -272,7 +270,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          1.5k 字
+          649 字
         
       </span>
     
@@ -283,7 +281,7 @@
         
         
         
-          13 分钟
+          6 分钟
         
       </span>
     
@@ -328,80 +326,53 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">【论文笔记-5】iTransformer</h1>
+            <h1 id="seo-header">【书山有路-18】人间有趣，生活百态</h1>
             
             
               <div class="markdown-body">
                 
-                <p><strong><a target="_blank" rel="noopener" href="https://openreview.net/pdf?id=JePfAI8fah">ITRANSFORMER: INVERTED TRANSFORMERS ARE EFFECTIVE FOR TIME SERIES FORECASTING</a></strong>. Yong Liu, Tengge Hu, Haoran Zhang, Haixu Wu, Shiyu Wang, Lintao Ma, Mingsheng Long. ICLR 2024.</p>
+                <p>我们一起来读<a target="_blank" rel="noopener" href="https://book.douban.com/subject/35602602/">《人间有趣》</a>这本书吧。</p>
 <span id="more"></span>
 
-<p>这篇论文是<a href="https://xiepeng21.cn/posts/3d1ac43b/">ICLR2024时空数据挖掘论文系列</a>的论文笔记第1篇。</p>
-<h1 id="动机"><a href="#动机" class="headerlink" title="动机"></a>动机</h1><p>作者认为Transformer用于时间序列预测不够有效，是由于Transformer没有被正确地利用。</p>
-<h1 id="任务"><a href="#任务" class="headerlink" title="任务"></a>任务</h1><p>提出了iTransformer框架用于多元时间序列预测，这是一种倒置的Transformer框架，将注意力机制和前馈神经网络倒置。</p>
-<h1 id="方法"><a href="#方法" class="headerlink" title="方法"></a>方法</h1><ul>
-<li>用layer normalization和前馈神经网络来学习每个时间序列的非线性表示。</li>
-<li>用自注意力机制来学习多变量之间的关系。</li>
-</ul>
-<p><img src="/../images/iTransformer%E4%B8%8ETransformer%E5%8F%8A%E5%85%B6%E5%8F%98%E7%A7%8D%E7%9A%84%E6%AF%94%E8%BE%83.png" alt="iTransformer与Transformer及其变种的比较"></p>
-<p><img src="/../images/iTransformer%E6%A1%86%E6%9E%B6.png" alt="iTransformer框架"></p>
-<h1 id="评价"><a href="#评价" class="headerlink" title="评价"></a>评价</h1><ul>
-<li><p>Data</p>
-<ul>
-<li>ETT</li>
-<li>Weather</li>
-<li>Electricity</li>
-<li>Traffic</li>
-<li>Solar-Energy</li>
-<li>PEMS</li>
-<li>Market (6 subsets)</li>
-</ul>
+<p><img src="/../images/wzqjpj.jpg" alt="汪曾祺精品集（全四卷）"></p>
+<h2 id="作者简介"><a href="#作者简介" class="headerlink" title="作者简介"></a>作者简介</h2><p>这本书的作者是<strong>汪曾祺</strong>，当代著名的小说家、散文家、戏剧家。</p>
+<h2 id="内容概要"><a href="#内容概要" class="headerlink" title="内容概要"></a>内容概要</h2><p>这本书记录了他的生活中的有趣的人和事，他对生活充满了<strong>好奇心</strong>和<strong>探究欲</strong>，字里行间透露出喜怒哀乐与生活百态的滋味。这本书也是四册文集《人间有趣》、《人间草木》、《人间邂逅》、《人间有味》的其中一本。</p>
+<h2 id="阅读心得"><a href="#阅读心得" class="headerlink" title="阅读心得"></a>阅读心得</h2><p>生活的乐趣，须于生活中去寻。</p>
+<h2 id="精彩片段"><a href="#精彩片段" class="headerlink" title="精彩片段"></a>精彩片段</h2><ol>
+<li><p>大肚能容容天下难容之事，开颜一笑笑世间可笑之人。</p>
 </li>
-<li><p>Comparative Methods</p>
-<ul>
-<li>Transformer-based methods<ul>
-<li>Informer (Li et al., 2021)</li>
-<li>Autoformer (Wu et al., 2021)</li>
-<li>FEDformer (Zhou et al., 2022)</li>
-<li>Stationary (Liu et al., 2022b)</li>
-<li>Crossformer (Zhang &amp; Yan, 2023)</li>
-<li>PatchTST (Nie et al., 2023)</li>
-</ul>
+<li><p>这一串美丽的脚印把小和尚的心搞乱了。</p>
 </li>
-<li>Linear-based methods<ul>
-<li>DLinear (Zeng et al., 2023)</li>
-<li>TiDE (Das et al., 2023)</li>
-</ul>
+<li><p>他们的生活，他们的风俗，他们的是非标准、伦理道德观念和街里的穿长衣念过“子曰”的人完全不同。</p>
 </li>
-<li>TCN-based methods<ul>
-<li>SCINet (Liu et al., 2022a)</li>
-<li>TimesNet (Wu et al., 2023)</li>
-</ul>
+<li><p>人多以为鸭子是很唠叨的动物，其实鸭子也有默处的时候。</p>
 </li>
-</ul>
+<li><p>小鸡跟真正的春天一起来，气候也暖和了，花也开了。而小鸭子接着就带来了夏天。</p>
 </li>
-<li><p>Result<br><img src="/../images/Results_of_iTransformer.png" alt="对比方法实验结果"></p>
+<li><p>人不是一下饿死的，是慢慢地饿死的。食堂的红高粱饼子越来越不好吃，因为掺了糠。甜菜叶子汤也越来越不好喝，因为一点油也不放了。</p>
 </li>
-<li><p>Code</p>
-<ul>
-<li><a target="_blank" rel="noopener" href="https://github.com/thuml/iTransformer">https://github.com/thuml/iTransformer</a> 官方实现</li>
-<li><a target="_blank" rel="noopener" href="https://github.com/lucidrains/iTransformer">https://github.com/lucidrains/iTransformer</a> 第三方实现</li>
-</ul>
+<li><p>室雅何须大，花香不在多。</p>
 </li>
-<li><p>Reddit讨论<br><a target="_blank" rel="noopener" href="https://www.reddit.com/r/MachineLearning/comments/175ep6x/r_tsinghua_university_inverting_transformers/">https://www.reddit.com/r/MachineLearning/comments/175ep6x/r_tsinghua_university_inverting_transformers/</a></p>
+<li><p>杨素花人高马大，长腿，宽肩，浑身充满弹性，像一个打足了气的轮胎内带，紧绷绷的。</p>
 </li>
-<li><p>时间序列库TSlib： <a target="_blank" rel="noopener" href="https://github.com/thuml/Time-Series-Library">https://github.com/thuml/Time-Series-Library</a> 这里面包含了iTransformer及相关时间序列预测最新的代码实现</p>
+<li><p>施主到庵堂寺庙，图个幽静，荒荒凉凉的，连个坐的地方都没有，谁还愿意来烧香拜佛？</p>
 </li>
-</ul>
-<h1 id="展望"><a href="#展望" class="headerlink" title="展望"></a>展望</h1><p>文中提出的iTransformer框架，有望成为时间序列预测的基础骨干框架。</p>
-<h1 id="更多"><a href="#更多" class="headerlink" title="更多"></a>更多</h1><ol>
-<li>iTransformer论文解读<br><a target="_blank" rel="noopener" href="https://mp.weixin.qq.com/s/_PKwnt9hjJJyxUiEDZ1EhA">https://mp.weixin.qq.com/s/_PKwnt9hjJJyxUiEDZ1EhA</a></li>
-<li>【论文笔记-1】注意力人流量机器<br><a href="https://xiepeng21.cn/posts/a7c2a378/">https://xiepeng21.cn/posts/a7c2a378/</a></li>
-<li>【论文笔记-2】深度学习<br><a href="https://xiepeng21.cn/posts/c0d0024f/">https://xiepeng21.cn/posts/c0d0024f/</a></li>
-<li>【论文笔记-3】用于交通预测的多范围注意力双组分图卷积网络<br><a href="https://xiepeng21.cn/posts/e8cb7573/">https://xiepeng21.cn/posts/e8cb7573/</a></li>
-<li>【论文笔记-4】Attention Is All You Need<br><a href="https://xiepeng21.cn/posts/d3e954aa/">https://xiepeng21.cn/posts/d3e954aa/</a></li>
-<li>时空数据挖掘论文库<br><a target="_blank" rel="noopener" href="https://github.com/xiepeng21/research_spatio-temporal-data-mining">https://github.com/xiepeng21/research_spatio-temporal-data-mining</a></li>
+<li><p>练武的人走路都是这个走法，脚趾头抓着地。</p>
+</li>
+<li><p>扬州人早上皮包水（上茶馆），晚上水包皮（上澡堂子）。</p>
+</li>
+<li><p>一个人要兴旺发达，得有那么一点精气神。</p>
+</li>
+<li><p>家家户户离不开酱园。开门七件事，柴米油盐酱醋茶，倒有三件和酱园有关：油、酱、醋。</p>
+</li>
 </ol>
+<h2 id="相关书籍"><a href="#相关书籍" class="headerlink" title="相关书籍"></a>相关书籍</h2><ol>
+<li>《<a target="_blank" rel="noopener" href="https://book.douban.com/subject/35021754/">老残游记</a>》-刘鹗</li>
+</ol>
+<hr>
+<p>欢迎说说那些你觉得有趣的人和事儿。</p>
+<p>“问渠那得清如许？为有源头活水来” ヾ(◍°∇°◍)ﾉﾞ</p>
+<p>——— 我在半亩方塘等你 ^_^</p>
 
                 
               </div>
@@ -420,7 +391,7 @@
     
       <span class="category-chain">
         
-  <a href="/categories/%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB/" class="category-chain-item">论文阅读</a>
+  <a href="/categories/%E9%9A%8F%E7%AC%94%E6%84%9F%E6%82%9F/" class="category-chain-item">随笔感悟</a>
   
   
 
@@ -435,11 +406,11 @@
     <div class="post-meta">
       <i class="iconfont icon-tags"></i>
       
-        <a href="/tags/%E6%97%B6%E9%97%B4%E5%BA%8F%E5%88%97%E9%A2%84%E6%B5%8B/" class="print-no-link">#时间序列预测</a>
+        <a href="/tags/%E4%B9%A6%E5%B1%B1%E6%9C%89%E8%B7%AF/" class="print-no-link">#书山有路</a>
       
-        <a href="/tags/Transformer/" class="print-no-link">#Transformer</a>
+        <a href="/tags/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/" class="print-no-link">#读书笔记</a>
       
-        <a href="/tags/iTransformer/" class="print-no-link">#iTransformer</a>
+        <a href="/tags/%E4%BA%BA%E9%97%B4%E6%9C%89%E8%B6%A3/" class="print-no-link">#人间有趣</a>
       
     </div>
   
@@ -451,8 +422,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>【论文笔记-5】iTransformer</div>
-      <div>https://xiepeng21.cn/posts/4b43950f/</div>
+      <div>【书山有路-18】人间有趣，生活百态</div>
+      <div>https://xiepeng21.cn/posts/bea850b0/</div>
     </div>
     <div class="license-meta">
       
@@ -464,7 +435,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2024年2月5日</div>
+          <div>2025年2月25日</div>
         </div>
       
       
@@ -496,18 +467,12 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/posts/110e1f2a/" title="【节气养生】雨水">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">【节气养生】雨水</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/posts/f4f4854/" title="【节气养生】立春">
-                        <span class="hidden-mobile">【节气养生】立春</span>
+                      <a href="/posts/46def63a/" title="【半亩方塘】博客七周年纪念">
+                        <span class="hidden-mobile">【半亩方塘】博客七周年纪念</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
